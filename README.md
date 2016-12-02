@@ -7,7 +7,11 @@ The tags also contain the geometry files and the gcard to run gemc.
 
 Every tag is installed in /group/clas12/gemc
 
+To use: 
 
+source /group/clas12/gemc/environment.csh
+
+If no tag is given, the env will load the latest tag automatically.
 
 Tags
 ----
