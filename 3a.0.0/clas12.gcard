@@ -51,7 +51,6 @@
 	<option name="SPREAD_P" value="0*GeV, 0*deg, 0*deg"/>
 
 
-	<option name="INTEGRATEDRAW" value="bst, ctof, htcc, ft_cal, ft_hodo, dc, ec, ftof, pcal"/>
 	<option name="SAVE_ALL_MOTHERS" value="0"/>
 
 	<option name="PHYSICS" value="FTFP_BERT + STD + Optical"/>
