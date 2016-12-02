@@ -16,4 +16,4 @@ If no tag is given, the script will load the latest tag automatically.
 Tags
 ----
 
-- 3a.0.0: git commit f9e1251, Dec 1 2016. Includes FTOF and CTOF paddle delays from CCDB. 
+- 3a.0.0: git commit d3a5dc1, Dec 2 2016. Includes FTOF and CTOF paddle delays from CCDB, and CTOF center off-set.
