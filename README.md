@@ -11,10 +11,9 @@ To use:
 
 source /group/clas12/gemc/environment.csh
 
-If no tag is given, the env will load the latest tag automatically.
+If no tag is given, the script will load the latest tag automatically.
 
 Tags
 ----
-
 
 - 3a.0.0: git commit f9e1251, Dec 1 2016. Includes FTOF and CTOF paddle delays from CCDB. 
