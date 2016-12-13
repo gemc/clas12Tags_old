@@ -16,5 +16,6 @@ If no tag is given, the script will currently load 3a.0.0.
 Tags
 ----
 
+- 3a.0.2: same as 3a.0.1 but with DC time-to-distance implementation.
 - 3a.0.1: same as 3a.0.0 but ctof has status working.
 - 3a.0.0: git commit d3a5dc1, Dec 2 2016. Includes FTOF and CTOF paddle delays from CCDB, and CTOF center off-set.
