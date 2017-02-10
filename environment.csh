@@ -7,7 +7,7 @@ source /site/12gev_phys/production.csh 2.0
 if( "$1" != "" ) then
 	setenv CLAS12TAG $1
 else
-	setenv CLAS12TAG 3a.0.0
+	setenv CLAS12TAG 4a.0.0
 endif
 
 setenv GEMC /group/clas12/gemc/$CLAS12TAG/source
