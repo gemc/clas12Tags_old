@@ -21,3 +21,12 @@ Tags
 - 3a.0.2: same as 3a.0.1 but with CND fix.
 - 3a.0.1: same as 3a.0.0 but ctof has status working.
 - 3a.0.0: git commit d3a5dc1, Dec 2 2016. Includes FTOF and CTOF paddle delays from CCDB, and CTOF center off-set.
+
+
+
+To produce:
+-----------
+
+1. create new tag dir
+2. change gcard to point to new location
+3. change environment.csh to point to the new tag
