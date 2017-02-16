@@ -16,7 +16,7 @@ If no tag is given, the script will currently load 4a.0.0.
 Tags
 ----
 
-- 4a.0.0: KPP configuration. Same as 3a.1.0 but with correct DC geometry, EC gains from CCDB and FTOF time fix.
+- 4a.0.0: KPP configuration. Fixes in source and hit process for FTOF, added EC gains. Java geometry uses now coatjava 3. Database fixed for DC geometry.
 - 3a.1.0: same as 3a.0.2 but with DC time-to-distance implementation.
 - 3a.0.2: same as 3a.0.1 but with CND fix.
 - 3a.0.1: same as 3a.0.0 but ctof has status working.
