@@ -31,3 +31,4 @@ To produce:
 2. change gcard to point to new location
 3. change environment.csh to point to the new tag
 4. mkdir source, scons -c in $GEMC and copy files from $GEMC - make sure to remove .git files
+5. mkdir experiments, copy files from gemcApp/experiments
