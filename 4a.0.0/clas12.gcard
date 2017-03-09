@@ -5,6 +5,7 @@
 
 	<!-- central detectors -->
 	<detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/cnd/cnd"        factory="TEXT" variation="original"/>
+	<detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/bst/bst"        factory="TEXT" variation="java"/>
 
 
 	<!--	ctof, cad volumes	-->
