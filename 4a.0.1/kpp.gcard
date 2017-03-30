@@ -1,32 +1,32 @@
 <gcard>
 
     <!-- central detectors -->
-	<detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/bst/bst"        factory="TEXT" variation="java"/>
+	<detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/bst/bst"        factory="TEXT" variation="java"/>
 
     <!--	ctof, cad volumes	-->
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/ctof/ctof"         factory="TEXT" variation="cad"/>
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/ctof/kppCad/"      factory="CAD"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/ctof/ctof"         factory="TEXT" variation="cad"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/ctof/kppCad/"      factory="CAD"/>
 
     <detector name="svt">
         <position x="0*cm"  y="0*cm"  z="-127*cm"  />
     </detector>
 
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/htcc/htcc"      factory="TEXT" variation="original"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/htcc/htcc"      factory="TEXT" variation="original"/>
 
     <!-- magnets volumes-->
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/magnets/torus"      factory="TEXT" variation="original"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/magnets/torus"      factory="TEXT" variation="original"/>
 
     <!-- Beamline configuration: FT is used -->
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/beamline/beamline" factory="TEXT" variation="KPP"/>
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/ft/ft"             factory="TEXT" variation="KPP"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/beamline/beamline" factory="TEXT" variation="KPP"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/ft/ft"             factory="TEXT" variation="KPP"/>
 
 
     <!-- forward carriage -->
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="original"/>
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/dc/dc"              factory="TEXT" variation="java"/>
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/ftof/ftof"          factory="TEXT" variation="java"/>
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/ec/ec"              factory="TEXT" variation="java"/>
-    <detector name="/group/clas12/gemc/4a.0.0/experiments/clas12/pcal/pcal"          factory="TEXT" variation="java"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="original"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/dc/dc"              factory="TEXT" variation="java"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/ftof/ftof"          factory="TEXT" variation="java"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/ec/ec"              factory="TEXT" variation="java"/>
+    <detector name="/group/clas12/gemc/4a.0.1/experiments/clas12/pcal/pcal"          factory="TEXT" variation="java"/>
     <option name="SCALE_FIELD" value="clas12-torus-big, -0.5"/>
 
 
