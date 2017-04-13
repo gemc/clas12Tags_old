@@ -16,6 +16,7 @@ If no tag is given, the script will currently load 4a.0.0.
 Tags
 ----
 
+- 4a.0.2: Same as 4a.0.1 but with full (box, mirrors, pmts shields and WC) LTCC geometry / hit process routine.
 - 4a.0.1: Same as 4a.0.0 but with FTOF geometry fix
 - 4a.0.0: KPP configuration. Fixes in source and hit process for FTOF, added EC gains. Java geometry uses now coatjava 3. Database fixed for DC geometry. Linear time-to-distance for DC.
   CTOF in the KPP position configuration in the new kpp.gcard.
