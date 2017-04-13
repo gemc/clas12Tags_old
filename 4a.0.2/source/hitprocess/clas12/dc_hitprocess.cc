@@ -338,3 +338,15 @@ dcConstants dc_HitProcess::dcc = initializeDCConstants(1);
 
 
 
+// - voltage: returns a voltage value for a given time. The inputs are:
+// charge value (coming from chargeAtElectronics)
+// time (coming from timeAtElectronics)
+G4ThreeVector dc_HitProcess :: psmear(G4ThreeVector p)
+{
+	G4ThreeVector y(p);
+
+	y.setX(p.x() + 1);
+
+	return y;
+}
+
