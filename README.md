@@ -11,10 +11,19 @@ To use:
 
 source /group/clas12/gemc/environment.csh
 
-If no tag is given, the script will currently load 4a.0.0.
+If no tag is given, the script will currently load 4a.1.0.
 
 Tags
 ----
+
+- 4a.1.2: Same as 4a.0.2 with:
+
+  - fixed a bug that affect output file size 
+  - fixed bug that affected multiple cad imports
+  - added micromegas geometry and hit processes
+  - RF output correct frequency in the clas12 gcard
+  - updated FT geometry and hit process
+  - updated ftof geometry
 
 - 4a.0.2: Same as 4a.0.1 but with full (box, mirrors, pmts shields and WC) LTCC geometry / hit process routine.
 - 4a.0.1: Same as 4a.0.0 but with FTOF geometry fix
