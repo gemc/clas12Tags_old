@@ -16,7 +16,7 @@ If no tag is given, the script will currently load 4a.1.0.
 Tags
 ----
 
-- 4a.1.2: Same as 4a.0.2 with:
+- 4a.1.0: Same as 4a.0.2 with:
 
   - fixed a bug that affect output file size 
   - fixed bug that affected multiple cad imports
