@@ -24,6 +24,9 @@ Tags
   - RF output correct frequency in the clas12 gcard
   - updated FT geometry and hit process
   - updated ftof geometry
+  - added reading of FTOF reading of tdc conversion constants from the database
+  - check if strip_id is not empty in bmt_ and fmt_strip.cc, otherwise fill it.
+
 
 - 4a.0.2: Same as 4a.0.1 but with full (box, mirrors, pmts shields and WC) LTCC geometry / hit process routine.
 - 4a.0.1: Same as 4a.0.0 but with FTOF geometry fix
