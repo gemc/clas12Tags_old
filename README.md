@@ -16,7 +16,7 @@ If no tag is given, the script will currently load 4a.1.0.
 Tags
 ----
 
-- 4a.1.0: Same as 4a.1.0 with:
+- 4a.1.1: Same as 4a.1.0 with:
  
   - use JLAB_VERSION 2.1, with new mlibrary
   - updated micromegas geometry and digitization
