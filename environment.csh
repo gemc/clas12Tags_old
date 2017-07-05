@@ -9,7 +9,7 @@ endif
 if($CLAS12TAG == 4a.1.1) then
 	source /site/12gev_phys/production.csh 2.1
 else
-	source /site/12gev_phys/production.csh 2.1
+	source /site/12gev_phys/production.csh 2.0
 endif
 
 setenv GEMC /group/clas12/gemc/$CLAS12TAG/source
