@@ -20,7 +20,10 @@ Tags
  
   - use JLAB_VERSION 2.1, with new mlibrary
   - updated micromegas geometry and digitization
-  - updated RF timing, coming from 
+  - updated RF timing (mlibrary)
+  - realistic time to distance function
+  - CAD modeling of both the beamline and the torus
+  - using ctof javacad instead of cad (should be indentical)
 
 - 4a.1.0: Same as 4a.0.2 with:
 
@@ -51,5 +54,5 @@ To produce:
 1. create new tag dir
 2. change gcard to point to new location
 3. change environment.csh to point to the new tag
-4. mkdir source, scons -c in $GEMC and copy files from $GEMC - make sure to remove .git files
+4. scons -c in $GEMC and cp -r $GEMC then cd source and rm .git*
 5. mkdir experiments, copy files from gemcApp/experiments
