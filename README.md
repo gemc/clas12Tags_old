@@ -16,6 +16,12 @@ If no tag is given, the script will currently load 4a.1.0.
 Tags
 ----
 
+- 4a.1.0: Same as 4a.1.0 with:
+ 
+  - use JLAB_VERSION 2.1, with new mlibrary
+  - updated micromegas geometry and digitization
+  - updated RF timing, coming from 
+
 - 4a.1.0: Same as 4a.0.2 with:
 
   - fixed a bug that affect output file size 
