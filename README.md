@@ -21,7 +21,7 @@ Tags
   - use JLAB_VERSION 2.1, with new mlibrary
   - updated micromegas geometry and digitization
   - updated RF timing (mlibrary)
-  - realistic time to distance function
+  - realistic time to distance function for DC
   - CAD modeling of both the beamline and the torus
   - using ctof javacad instead of cad (should be indentical)
 
