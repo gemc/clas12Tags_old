@@ -38,6 +38,11 @@
 	<detector name="/group/clas12/gemc/4a.1.1/experiments/clas12/ltcc/cad/"          factory="CAD"/>
 	<option name="SCALE_FIELD" value="clas12-torus-big, -1"/>
 
+	<!--  removing BST Region 4 so this is BST+MM 3+3 -->
+	<detector name="region4">
+	    <existence exist="no" />
+	</detector>
+
 
 	<!-- hall field  -->
 	<option name="HALL_FIELD"  value="clas12-solenoid"/>
@@ -48,8 +53,7 @@
 
 
 	<!-- beam conditions -->
-	<option name="BEAM_P"   value="e-, 4.0*GeV, 20.0*deg, 10*deg"/>
-	<option name="SPREAD_P" value="0*GeV, 10*deg, 180*deg"/>
+	<option name="BEAM_P"   value="e-, 10.4*GeV, 00.0*deg, 00*deg"/>
 
 
 	<option name="SAVE_ALL_MOTHERS" value="0"/>
@@ -66,6 +70,7 @@
 	      If Backround is activated make sure to use LUMI_EVENT below instead.-->
 	<option name="LUMI_EVENT"  value="0, 248.5*ns, 4*ns" />
 	<option name="RFSETUP"     value="0.499, 40, 20" />
+
 
 
 	<!--  beam background. for 250 ns timewindow we have 124,000 e- on
