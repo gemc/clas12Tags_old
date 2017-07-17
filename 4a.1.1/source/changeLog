@@ -1,5 +1,25 @@
 Changelog for GEMC
 ==================
+
+7/14/17
+ - implemented mini-stagger for clas12 dc
+ - LTCC digitization: reading spe and sigma constants from CCDB. Using to produce adc spectrum
+
+7/13/17
+ - removing duplicate instructions in sensitive detector
+
+7/11/17
+ - added culling combo option in the GUI
+ - added button to show 100cm long axes
+
+7/10/17
+ - fixed taggin scheme for smeared info in particle summary bank
+ - better name for general scene: gemcLab
+ - field routine: skipping remaining symmetries after a match is found
+
+7/6/17
+ - fixed timewindow for mirror object, now behaving like flux correctly
+
 6/29/17
  - fixed beagle format
  - fixed user info clearing for each particle

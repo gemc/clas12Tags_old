@@ -64,24 +64,23 @@ G4bool sensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*)
 	// but will convert, and the pair will release energy
 	// so by default right now gammas are not recorded and the hit belongs to the pair
 	
-	G4VTouchable* THH = (G4VTouchable*) aStep->GetPreStepPoint()->GetTouchable();
-	string         aname    = THH->GetVolume(0)->GetName();                                     ///< Volume name	
-	
+	G4VTouchable* TH =  (G4VTouchable*) aStep->GetPreStepPoint()->GetTouchable();
+
 	if(depe == 0 && RECORD_PASSBY == 0 && aStep->GetTrack()->GetDefinition() != G4OpticalPhoton::OpticalPhotonDefinition())
 		return false;
 
 	// do not record Mirrors unless specified
-	if(HCname == "mirror" && RECORD_MIRROR == 0) return false;
+	if(aStep->GetTrack()->GetDefinition() == G4OpticalPhoton::OpticalPhotonDefinition() && RECORD_MIRROR == 0) return false;
 	
 	G4Track *trk = aStep->GetTrack();
+	// this is expensive should we really check?
 	if(trk->GetDefinition()->GetParticleName().find("unknown") != string::npos) return false;
 	
 	G4StepPoint   *prestep     = aStep->GetPreStepPoint();
 	G4StepPoint   *poststep    = aStep->GetPostStepPoint();
 	string         processName = "na";
 	
-	G4VTouchable* TH = (G4VTouchable*) aStep->GetPreStepPoint()->GetTouchable();
-	
+
 	///< Hit informations
 	///< The hit position is taken from PostStepPoint (inside the sensitive volume)
 	///< Transformation to local coordinates has to be done with prestep
@@ -113,7 +112,7 @@ G4bool sensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*)
 	// this should never happen though
 	if(ProcessHitRoutine == NULL)
 	{
-		cout << endl << "  !!! Error: >" << name << "< NOT FOUND IN  ProcessHit Map for volume: " << aname << " - exiting." << endl;
+		cout << endl << "  !!! Error: >" <<  GetDetectorHitType(name) << "< NOT FOUND IN  ProcessHit Map for volume: " << name << " - exiting." << endl;
 		return false;
 	}
 
