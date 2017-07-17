@@ -19,11 +19,18 @@ Tags
 - 4a.1.1: Same as 4a.1.0 with:
  
   - use JLAB_VERSION 2.1, with new mlibrary
-  - updated micromegas geometry and digitization
-  - updated RF timing (mlibrary)
-  - realistic time to distance function for DC
+  - Micromegas: updated  geometry and digitization
+  - DC: realistic time to distance function, reading constants from CCDB
+  - DC: ministagger for DC region 3: "even closer" SL 1,3,5: +300um, SL 2,4,6: -300um
+  - LTCC: Reading CCDB SPE calibration constants
+  - LTCC: Smearing ADC based on calibration constants
+  - CTOF javacad instead of cad (should be indentical)
+  - Fixed smeared infor in generated summary for FASTMC mode
   - CAD modeling of both the beamline and the torus
-  - using ctof javacad instead of cad (should be indentical)
+  - improved/fixed CND digitization routine
+  - updated RF timing (mlibrary) 
+  - BST+MM: using 3+3 configurations
+  
 
 - 4a.1.0: Same as 4a.0.2 with:
 
