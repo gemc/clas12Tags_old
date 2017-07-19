@@ -11,12 +11,12 @@ To use:
 
 source /group/clas12/gemc/environment.csh
 
-If no tag is given, the script will currently load 4a.1.0.
+If no tag is given, the script will currently load 4a.2.0.
 
 Tags
 ----
 
-- 4a.1.1: Same as 4a.1.0 with:
+- 4a.2.0: Same as 4a.1.0 with:
  
   - use JLAB_VERSION 2.1, with new mlibrary
   - Micromegas: updated  geometry and digitization
