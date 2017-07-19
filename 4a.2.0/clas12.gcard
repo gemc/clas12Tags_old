@@ -53,7 +53,7 @@
 
 
 	<!-- beam conditions -->
-	<option name="BEAM_P"   value="e-, 10.4*GeV, 00.0*deg, 00*deg"/>
+	<option name="BEAM_P"   value="e-, 10.6*GeV, 00.0*deg, 00*deg"/>
 
 
 	<option name="SAVE_ALL_MOTHERS" value="0"/>
