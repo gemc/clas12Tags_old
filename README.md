@@ -7,7 +7,7 @@ To use the latest tag (currently 4a.2.0):
 
 source /group/clas12/gemc/environment.csh
 
-You can also use a specific tag:
+You can also specific a different tag:
 
 source /group/clas12/gemc/environment.csh \<tag\> 
 
