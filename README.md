@@ -21,7 +21,7 @@ Tags
   - use JLAB_VERSION 2.1, with new mlibrary
   - Micromegas: updated  geometry and digitization
   - DC: realistic time to distance function, reading constants from CCDB
-  - DC: ministagger for DC region 3: "even closer" SL 1,3,5: +300um, SL 2,4,6: -300um
+  - DC: ministagger for DC region 3: "even closer" layers 1,3,5: +300um, SL 2,4,6: -300um
   - LTCC: Reading CCDB SPE calibration constants
   - LTCC: Smearing ADC based on calibration constants
   - CTOF javacad instead of cad (should be indentical)
