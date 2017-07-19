@@ -5,15 +5,15 @@ This is a series of clas12 specific tags of the GEMC source code and geometry, i
 
 To use the latest tag (currently 4a.2.0):
 
-source /group/clas12/gemc/environment.csh
+<pre> source /group/clas12/gemc/environment.csh</pre>
 
 You can also specific a different tag:
 
-source /group/clas12/gemc/environment.csh \<tag\> 
+<pre> source /group/clas12/gemc/environment.csh \<tag\>  </pre>
 
 To run gemc use the tagged gcard:
 
-gemc /group/clas12/gemc/4a.2.0/clas12.gcard -N=nevents -USE_GUI=0
+<pre> gemc /group/clas12/gemc/4a.2.0/clas12.gcard -N=nevents -USE_GUI=0 </pre>
 
 Tags
 ----
