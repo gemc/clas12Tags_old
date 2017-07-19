@@ -1,11 +1,7 @@
 # clas12Tags
 
 
-This is a series of tags of the GEMC source code to match the various simulation/calibration/reconstruction software versions.
-
-The tags also contain the geometry files and the gcard to run gemc.
-
-Tags are installed in /group/clas12/gemc
+This is a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
 To use the latest tag (currently 4a.2.0):
 
