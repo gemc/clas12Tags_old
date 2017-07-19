@@ -13,6 +13,10 @@ source /group/clas12/gemc/environment.csh \<tag\>
 
 If no tag is given, the script will currently load 4a.2.0.
 
+To use:
+
+gemc /group/clas12/gemc/4a.2.0/clas12.gcard -N=nevents -USE_GUI=0
+
 Tags
 ----
 
