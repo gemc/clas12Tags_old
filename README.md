@@ -9,7 +9,7 @@ Every tag is installed in /group/clas12/gemc
 
 To use: 
 
-source /group/clas12/gemc/environment.csh
+source /group/clas12/gemc/environment.csh <tag>
 
 If no tag is given, the script will currently load 4a.2.0.
 

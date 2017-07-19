@@ -30,7 +30,7 @@ cd $TAGTOINSTALL/source
 scons -c
 scons -j15 OPT=1
 mkdir -p bin/$OSRELEASE
-mv gemc bin/$OSRELEASE
+cp gemc bin/$OSRELEASE
 
 
 
