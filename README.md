@@ -5,15 +5,17 @@ This is a series of tags of the GEMC source code to match the various simulation
 
 The tags also contain the geometry files and the gcard to run gemc.
 
-Every tag is installed in /group/clas12/gemc
+Tags are installed in /group/clas12/gemc
 
-To use: 
+To use the latest tag (currently 4a.2.0):
 
-source /group/clas12/gemc/environment.csh \<tag\>
+source /group/clas12/gemc/environment.csh
 
-If no tag is given, the script will currently load 4a.2.0.
+You can also use a specific tag:
 
-To use:
+source /group/clas12/gemc/environment.csh \<tag\> 
+
+To run gemc use the tagged gcard:
 
 gemc /group/clas12/gemc/4a.2.0/clas12.gcard -N=nevents -USE_GUI=0
 
