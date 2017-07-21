@@ -125,12 +125,12 @@ static dcConstants initializeDCConstants(int runno)
 	// even closer:
 	// layers 1,3,5 have +300
 	// layers 2,4,6 have -300
-	dcc.miniStagger[0] = 300;
-	dcc.miniStagger[1] = -300;
-	dcc.miniStagger[2] = 300;
-	dcc.miniStagger[3] = -300;
-	dcc.miniStagger[4] = 300;
-	dcc.miniStagger[5] = -300;
+	dcc.miniStagger[0] = 0.0300;
+	dcc.miniStagger[1] = -0.0300;
+	dcc.miniStagger[2] = 0.0300;
+	dcc.miniStagger[3] = -0.0300;
+	dcc.miniStagger[4] = 0.0300;
+	dcc.miniStagger[5] = -0.0300;
 
 
 	// loading translation table
