@@ -18,13 +18,12 @@
 
 	<!-- magnets -->
 	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/magnets/solenoid" factory="TEXT" variation="original"/>
-	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/magnets/cad/"     factory="CAD" />
+	<detector name="/group/clas12/gemc/4a.1.0/experiments/clas12/magnets/torus"    factory="TEXT" variation="original"/>
 
 
-	<!-- Beamline configuration: FT is used. Cad for the beamline -->
-    	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
-    	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/beamline/cadBeamline/" factory="CAD"/>
-        <detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/beamline/beamlinePipes" factory="TEXT" variation="FTOn"/>
+    <!-- Beamline configuration: FT is used -->
+    <detector name="/group/clas12/gemc/4a.1.0/experiments/clas12/beamline/beamline" factory="TEXT" variation="FTOn"/>
+    <detector name="/group/clas12/gemc/4a.1.0/experiments/clas12/ft/ft"             factory="TEXT" variation="FTOn"/>
 
 	<!-- forward carriage -->
 	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="original"/>
@@ -35,14 +34,7 @@
 	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/pcal/pcal"          factory="TEXT" variation="java"/>
 	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
 	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
-	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/ltcc/cad/"          factory="CAD"/>
 	<option name="SCALE_FIELD" value="clas12-torus-big, -1"/>
-
-	<!--  removing BST Region 4 so this is BST+MM 3+3 -->
-	<detector name="region4">
-	    <existence exist="no" />
-	</detector>
-
 
 	<!-- hall field  -->
 	<option name="HALL_FIELD"  value="clas12-solenoid"/>
@@ -57,6 +49,7 @@
 
 
 	<option name="SAVE_ALL_MOTHERS" value="0"/>
+    <option name="RECORD_MIRRORS"   value="1"/>
 
 	<option name="PHYSICS" value="FTFP_BERT + STD + Optical"/>
 
@@ -82,7 +75,7 @@
 	
 	<!--
 	<option name="LUMI_EVENT"     value="124000, 248.5*ns, 4*ns" />
-	<option name="LUMI_P"         value="e-, 11*GeV, 0*deg, 0*deg" />
+	<option name="LUMI_P"         value="e-, 10.6*GeV, 0*deg, 0*deg" />
 	<option name="LUMI_V"         value="(0.,0.,-4.5)cm" />
 	<option name="LUMI_SPREAD_V"  value="(0.01, 0.01)cm" />
 	 -->
