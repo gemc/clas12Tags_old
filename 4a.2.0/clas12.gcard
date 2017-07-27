@@ -35,6 +35,9 @@
 	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
 	<detector name="/group/clas12/gemc/4a.2.0/experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
 	<option name="SCALE_FIELD" value="clas12-torus-big, -1"/>
+	 <detector name="FMT">
+         <existence exist="no" />
+         </detector>
 
 	<!-- hall field  -->
 	<option name="HALL_FIELD"  value="clas12-solenoid"/>
@@ -49,7 +52,7 @@
 
 
 	<option name="SAVE_ALL_MOTHERS" value="0"/>
-    <option name="RECORD_MIRRORS"   value="1"/>
+       <option name="RECORD_MIRRORS"   value="1"/>
 
 	<option name="PHYSICS" value="FTFP_BERT + STD + Optical"/>
 
