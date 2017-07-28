@@ -251,6 +251,21 @@ map<string, double> dc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 			
 			//Now calculate alpha according to Macs definition:
 			alpha = asin((const1*rotated_vector.x() + const2*rotated_vector.y())/rotated_vector.mag())/deg;
+			
+
+			// compute reduced alpha (VZ)
+		     	// alpha in radians
+			double ralpha = fabs(alpha*deg);
+
+			while (ralpha > pi / 3.) {
+				ralpha -= pi / 3.;
+			}
+			if (ralpha > pi / 6.) {
+				ralpha = pi / 3. - ralpha;
+			}
+			//alpha in degrees (reduced alpha always between 0 and 30 deg.)
+			alpha = ralpha/deg;
+
 			doca = DOCA.mag();
 			if(DOCA.y() >=0 ) LR = 1;
 			else  LR = -1;
