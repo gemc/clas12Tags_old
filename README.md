@@ -18,6 +18,11 @@ To run gemc use the tagged gcard:
 Tags
 ----
 
+- 4a.2.1: Same as 4a.2.0 with:
+
+	- fixes to CAD modeling of both the beamline and the torus
+	- fixed CND / CTOF overlaps
+
 - 4a.2.0: Same as 4a.1.0 with:
  
   - use JLAB_VERSION 2.1, with new mlibrary
@@ -28,10 +33,9 @@ Tags
   - LTCC: Smearing ADC based on calibration constants
   - CTOF javacad instead of cad (should be indentical)
   - Fixed smeared infor in generated summary for FASTMC mode
-  - CAD modeling of both the beamline and the torus
   - improved/fixed CND digitization routine
   - updated RF timing (mlibrary) 
-  - BST+MM: using 3+3 configurations
+  - BST+MM: using 3+3 configurations (no FMT)
   
 
 - 4a.1.0: Same as 4a.0.2 with:
