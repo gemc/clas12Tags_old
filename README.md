@@ -67,5 +67,13 @@ To produce:
 1. create new tag dir
 2. change gcard to point to new location
 3. change environment.csh to point to the new tag
-4. scons -c in $GEMC and cp -r $GEMC then cd source and rm .git*
+4. copy $GEMC to source and clean up:
+
+    - cd $GEMC
+	- scons -c
+    - cd newtag
+    - cp -r $GEMC source
+	- cd source
+	- rm -rf .git*
+
 5. mkdir experiments, copy files from gemcApp/experiments
