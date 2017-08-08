@@ -75,5 +75,7 @@ To produce:
     - cp -r $GEMC source
 	- cd source
 	- rm -rf .git*
+	- cd api
+	- rm -rf .git*
 
 5. mkdir experiments, copy files from gemcApp/experiments
