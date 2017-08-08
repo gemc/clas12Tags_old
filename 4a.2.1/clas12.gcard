@@ -18,12 +18,13 @@
 
 	<!-- magnets -->
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/magnets/solenoid" factory="TEXT" variation="original"/>
-	<detector name="/group/clas12/gemc/4a.1.0/experiments/clas12/magnets/torus"    factory="TEXT" variation="original"/>
+    <detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/magnets/cad/"     factory="CAD" />
 
 
     <!-- Beamline configuration: FT is used -->
-    <detector name="/group/clas12/gemc/4a.1.0/experiments/clas12/beamline/beamline" factory="TEXT" variation="FTOn"/>
-    <detector name="/group/clas12/gemc/4a.1.0/experiments/clas12/ft/ft"             factory="TEXT" variation="FTOn"/>
+	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
+   	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/beamline/cadBeamline/" factory="CAD"/>
+    <detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/beamline/beamlinePipes" factory="TEXT" variation="FTOn"/>
 
 	<!-- forward carriage -->
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="original"/>
@@ -35,9 +36,9 @@
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
 	<option name="SCALE_FIELD" value="clas12-torus-big, -1"/>
-	 <detector name="FMT">
-         <existence exist="no" />
-         </detector>
+	<detector name="FMT">
+		<existence exist="no" />
+	</detector>
 
 	<!-- hall field  -->
 	<option name="HALL_FIELD"  value="clas12-solenoid"/>
@@ -48,7 +49,7 @@
 
 
 	<!-- beam conditions -->
-	<option name="BEAM_P"   value="e-, 10.6*GeV, 00.0*deg, 00*deg"/>
+	<option name="BEAM_P"   value="e-, 10.6*GeV, 0.0*deg, 0*deg"/>
 
 
 	<option name="SAVE_ALL_MOTHERS" value="0"/>
@@ -80,7 +81,7 @@
 	<option name="LUMI_EVENT"     value="124000, 248.5*ns, 4*ns" />
 	<option name="LUMI_P"         value="e-, 10.6*GeV, 0*deg, 0*deg" />
 	<option name="LUMI_V"         value="(0.,0.,-4.5)cm" />
-	<option name="LUMI_SPREAD_V"  value="(0.01, 0.01)cm" />
+	<option name="LUMI_SPREAD_V"  value="(0.03, 0.03)cm" />
 	 -->
 
 
