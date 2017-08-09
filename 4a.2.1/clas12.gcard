@@ -35,12 +35,15 @@
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/pcal/pcal"          factory="TEXT" variation="java"/>
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
-	<option name="SCALE_FIELD" value="clas12-torus-big, -1"/>
 	<detector name="FMT">
 		<existence exist="no" />
 	</detector>
 
-	<!-- hall field  -->
+	<!-- you can scale the fields here. Remember torus -1 means e- INBENDING  -->
+	<option name="SCALE_FIELD" value="clas12-torus-big, -1"/>
+	<option name="SCALE_FIELD" value="clas12-solenoid, 1"/>
+
+    <!-- hall field  -->
 	<option name="HALL_FIELD"  value="clas12-solenoid"/>
 
 	<!-- fields, precise mode -->

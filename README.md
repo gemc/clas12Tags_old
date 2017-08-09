@@ -15,6 +15,16 @@ To run gemc use the tagged gcard:
 
 <pre> gemc /group/clas12/gemc/4a.2.0/clas12.gcard -N=nevents -USE_GUI=0 </pre>
 
+You can change the magnetic field using the SCALE_FIELD option. To do that copy the gcard somewhere first, then modify it. The gcard can work from any location.
+Example on how to run at 80% torus field (inbending) and 60% solenoid field:
+
+<pre>
+
+ <option name="SCALE_FIELD" value="clas12-torus-big, -0.8"/>
+ <option name="SCALE_FIELD" value="clas12-solenoid, 0.6"/>
+
+</pre>
+
 Tags
 ----
 
