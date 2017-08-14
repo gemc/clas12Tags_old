@@ -35,6 +35,7 @@
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/pcal/pcal"          factory="TEXT" variation="java"/>
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
+	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ltcc/cad/"          factory="CAD"/>
 	<detector name="FMT">
 		<existence exist="no" />
 	</detector>
