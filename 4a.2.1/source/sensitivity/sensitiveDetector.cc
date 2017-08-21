@@ -361,6 +361,8 @@ int sensitiveDetector::processID(string procName)
 	if(procName == "ionIoni")               return 120;
 	if(procName == "ionInelastic")          return 121;
 	if(procName == "tInelastic")            return 130;
+	if(procName == "xi0Inelastic")          return 140;
+	if(procName == "omega-Inelastic")       return 150;
 
 	if(procName == "na")                    return 999;
 
