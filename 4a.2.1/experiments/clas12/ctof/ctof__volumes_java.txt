@@ -46,54 +46,6 @@
               sc46 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  |   22  46
               sc47 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  |   22  47
               sc48 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  |   22  48
-             lgu01 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu02 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu03 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu04 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu05 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu06 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu07 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu08 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu09 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu10 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu11 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu12 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu13 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu14 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu15 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu16 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu17 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu18 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu19 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu20 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu21 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu22 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu23 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu24 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu25 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu26 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu27 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu28 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu29 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu30 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu31 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu32 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu33 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu34 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu35 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu36 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu37 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu38 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu39 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu40 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu41 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu42 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu43 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu44 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu45 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu46 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu47 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
-             lgu48 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
              lgd01 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
              lgd02 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
              lgd03 |       fc | 0.000000*cm 0.000000*cm 127.327000*cm | 0.0*deg 180.0*deg 0.0*deg |      Stl |  | 
