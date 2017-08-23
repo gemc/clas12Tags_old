@@ -31,17 +31,23 @@ Tags
 	- fixes to CAD modeling of both the beamline and the torus
 	- forward carriage 
 	- fixed CND / CTOF overlaps
-	- updated latest micromegas geometry and digitiation
+	- updated latest micromegas geometry
+	- MM: Adjust transverse diffusion and ionization potential 
 	- updated latest BST
 	- 3 + 3 configuration BST + MM
 	- new vacuum pipe
 	- new shield downsttream of the torus
 	- LTCC box hierarchy fixed
 	- LTCC frame is CAD + copies 
+	- corrected mini-stagger values for DC
+	- Added TDC calibration constants to ec,pcal hitprocess
+	- FADC mode 1 (still tuning it to make it exactly like Serguei DAQ)
+	- reading tdc_conv for ctof from database
 	
 	Remaining issues:
 	
 	- some cad elements in the upstream shielding need refining
+	- finalize FADC
 	
 
 - 4a.2.0: Same as 4a.1.0 with:
