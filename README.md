@@ -29,7 +29,20 @@ Tags
 - 4a.2.1: Same as 4a.2.0 with:
 
 	- fixes to CAD modeling of both the beamline and the torus
+	- forward carriage 
 	- fixed CND / CTOF overlaps
+	- updated latest micromegas geometry and digitiation
+	- updated latest BST
+	- 3 + 3 configuration BST + MM
+	- new vacuum pipe
+	- new shield downsttream of the torus
+	- LTCC box hierarchy fixed
+	- LTCC frame is CAD + copies 
+	
+	Remaining issues:
+	
+	- some cad elements in the upstream shielding need refining
+	
 
 - 4a.2.0: Same as 4a.1.0 with:
  
