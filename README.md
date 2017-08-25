@@ -43,6 +43,7 @@ Tags
 	- Added TDC calibration constants to ec,pcal hitprocess
 	- FADC mode 1 (still tuning it to make it exactly like Serguei DAQ)
 	- reading tdc_conv for ctof from database
+	- fixed an issue with the header bank where the LUND info index was not correct
 	
 	Remaining issues:
 	
