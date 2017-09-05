@@ -1,8 +1,7 @@
 <gcard>
 
 	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
-    <detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/targets/cad/" factory="CAD"/>
-    <detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/targets/target" factory="TEXT" variation="cad"/>
+	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/targets/target" factory="TEXT" variation="lH2"/>
 
 	<!-- central detectors 	-->
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/cnd/cnd"               factory="TEXT" variation="original"/>
@@ -25,7 +24,7 @@
     <!-- Beamline configuration: FT is used -->
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
    	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/beamline/cadBeamline/" factory="CAD"/>
-    <detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/beamline/beamline"     factory="TEXT" variation="FTOn"/>
+	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/beamline/beamline"     factory="TEXT" variation="FTOn"/>
 
 	<!-- forward carriage -->
 	<detector name="/group/clas12/gemc/4a.2.1/experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="original"/>
