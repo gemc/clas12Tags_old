@@ -29,7 +29,7 @@ Tags
 - 4a.2.1: Same as 4a.2.0 with:
 
 	- fixes to CAD modeling of both the beamline and the torus
-	- forward carriage 
+	- forward carriage volume fixed to accomodate beamline and shielding
 	- fixed CND / CTOF overlaps
 	- updated latest micromegas geometry
 	- MM: Adjust transverse diffusion and ionization potential 
@@ -49,6 +49,9 @@ Tags
 	
 	- some cad elements in the upstream shielding need refining
 	- finalize FADC
+	- new target design
+	- LTCC remaining overlaps
+	- LUND infos in correct EVIO format
 	
 
 - 4a.2.0: Same as 4a.1.0 with:
