@@ -45,7 +45,7 @@ Tags
 	- reading tdc_conv for ctof from database
 	- fixed an issue with the header bank where the LUND info index was not correct
 	
-	Remaining issues:
+	Remaining issues: tag 4a.2.2
 	
 	- some cad elements in the upstream shielding need refining
 	- finalize FADC
