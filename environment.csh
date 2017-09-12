@@ -3,13 +3,13 @@
 if( "$1" != "" ) then
 	setenv CLAS12TAG $1
 else
-	setenv CLAS12TAG 4a.2.0
+	setenv CLAS12TAG 4a.2.1
 endif
 
 setenv GEMC /group/clas12/gemc/$CLAS12TAG/source
 setenv GEMC_VERSION $CLAS12TAG
 
-if($CLAS12TAG == 4a.2.0) then
+if($CLAS12TAG == 4a.2.1 || $CLAS12TAG == 4a.2.2) then
 	source /site/12gev_phys/production.csh 2.1 keepmine
 else
 	source /site/12gev_phys/production.csh 2.0 keepmine
