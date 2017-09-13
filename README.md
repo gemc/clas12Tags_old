@@ -3,7 +3,7 @@
 
 This is a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-To use the latest tag (currently 4a.2.0):
+To use the latest tag (currently 4a.2.1):
 
 ```source /group/clas12/gemc/environment.csh```
 
@@ -13,7 +13,7 @@ You can also specific a different tag:
 
 To run gemc use the tagged gcard:
 
-```gemc /group/clas12/gemc/4a.2.0/clas12.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/4a.2.1/clas12.gcard -N=nevents -USE_GUI=0 ```
 
 You can change the magnetic field using the SCALE_FIELD option. To do that copy the gcard somewhere first, then modify it. The gcard can work from any location.
 Example on how to run at 80% torus field (inbending) and 60% solenoid field:
