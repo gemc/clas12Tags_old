@@ -26,6 +26,14 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 Tags
 ----
 
+- 4a.2.2: Same as 4a.2.1 with:
+
+	- (target from CAD)
+	- (new geant4 version)
+	- htcc wc invisible
+	- no transparency in MM
+	
+
 - 4a.2.1: Same as 4a.2.0 with:
 
 	- fixes to CAD modeling of both the beamline and the torus
