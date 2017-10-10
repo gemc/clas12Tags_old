@@ -29,8 +29,6 @@ Tags
 Future:
 -------
 
-- 4a.2.4 :clock4: : Same as 4a.2.3 with:
-
 
 - 4a.2.3 :clock4: : Same as 4a.2.2 with:
 
