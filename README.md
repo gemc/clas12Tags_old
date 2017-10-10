@@ -24,16 +24,22 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 ```
 
 Tags
-----
+====
+
+Future:
+-------
 
 - 4a.2.4 :clock4: : Same as 4a.2.3 with:
-	- (new geant4 version) :soon:
 
 
 - 4a.2.3 :clock4: : Same as 4a.2.2 with:
 
 	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
 	- background merging algorithm
+	- (new geant4 version) :soon:
+
+In development:
+---------------
 
 - 4a.2.2 :clock4: : Same as 4a.2.1 with:
 
@@ -45,6 +51,8 @@ Tags
 	- (rotate LUND bank to flat) :soon:
 
 	
+Production:
+-----------
 
 - 4a.2.1: Same as 4a.2.0 with:
 
