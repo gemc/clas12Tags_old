@@ -47,6 +47,7 @@ In development:
 	- threshold mechanism
 	- (RF shift from target center) :soon:
 	- (rotate LUND bank to flat) :soon:
+	- (final beamline configuration) :soon:
 
 	
 Production:
