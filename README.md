@@ -45,9 +45,9 @@ In development:
 	- htcc wc invisible
 	- no transparency in MM
 	- threshold mechanism
+	- rotate LUND bank to flat 
+	- final beamline configuration
 	- (RF shift from target center) :soon:
-	- (rotate LUND bank to flat) :soon:
-	- (final beamline configuration) :soon:
 
 	
 Production:
