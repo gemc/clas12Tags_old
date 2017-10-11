@@ -1,9 +1,19 @@
 Changelog for GEMC
 ==================
 
+10/11/17
+ - user info bank defaulted to size 25, indexed by particle like the rest of the bank
+
+10/3/17
+ - added detector threshold variable detectorThreshold that can be set and used in the digitization routine in conjuction with writeHit
+ - added bool detector variable writeHit to decide if a hit is written or not in the output
+ - fixed bug that crashed output routine in case no hits were presented to it
+
+
 8/30/17
- - do not initialize ltcc before digitization starts (not needed)"
+ - do not initialize ltcc before digitization starts (not needed)
  - added two processes to catalogue
+ - fixed the DC staggering indexing
 
 8/25/17
  - fixed an issue with the header bank where the LUND info index was not correct
