@@ -23,12 +23,23 @@ FTOn, FTOff configurations
 The default configuration for the first experiment is with "FTOn" (Figure 1, Left): complete forward tagger is fully operational.
 The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
 
-<img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png"   align="left"  width="400" />
-<img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png"  align="right" width="400" />
-<br><br><br><br><br><br><br><br><br><br><br><br>
-*Figure 1: Left: FTOn. Right: FTOff*
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
 
-<br><br>
+
+
+
+To change configuration from FTOn to FTOff, replace the lines:
+
+
+ ```     <detector name="beamline" factory="TEXT" variation="FTOn"/>
+         <detector name="cadBeamline/" factory="CAD"/> ```
+    
+With:
+
+
+ ```     <detector name="beamline" factory="TEXT" variation="FTOff"/>
+         <detector name="cadBeamlineFTOFF/" factory="CAD"/> ```
 
 
 
