@@ -65,8 +65,10 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
  <option name="SCALE_FIELD" value="clas12-solenoid, 0.6"/>
 ```
 
-Tags
-====
+<br><br>
+
+Software, Geometry Tags
+=======================
 
 Future:
 -------
