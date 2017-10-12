@@ -31,7 +31,10 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 <br><br>
 <br><br>
 <br><br>
-<br><br>
+<br>
+Figure 1. Left: FT On configuration: Full, OperationalForward Tagger. Right: FT Off configuration: FT Tracker replaced by shielding, Tungsten Cone moved upstream, FT if turned off.
+
+<br>
 
 
 
