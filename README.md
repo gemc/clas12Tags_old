@@ -1,7 +1,5 @@
-# clas12Tags
 
-
-This is a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
+The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
 To use the latest tag (currently 4a.2.1):
 
@@ -15,6 +13,54 @@ To run gemc use the tagged gcard:
 
 ```gemc /group/clas12/gemc/4a.2.1/clas12.gcard -N=nevents -USE_GUI=0 ```
 
+<br>
+
+FTOn, FTOff configurations
+--------------------------
+
+The default configuration for the first experiment is with "FTOn" (Figure 1, Left): complete forward tagger is fully operational.
+The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
+
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+###### Figure 1. Left: FT On configuration: Full, OperationalForward Tagger. Right: FT Off configuration: FT Tracker replaced by shielding, Tungsten Cone moved upstream, FT if turned off.
+
+<br>
+
+
+
+To change configuration from FTOn to FTOff, replace the keywords and variations as follows:
+
+
+```     
+<detector name="beamline" factory="TEXT" variation="FTOn"/>
+<detector name="cadBeamline/" factory="CAD"/> 
+```
+    
+With:
+
+
+```
+<detector name="beamline" factory="TEXT" variation="FTOff"/>
+<detector name="cadBeamlineFTOFF/" factory="CAD"/> 
+```
+
+
+
+<br><br>
+
+Magnetic Fields Scaling
+-----------------------
+
 You can change the magnetic field using the SCALE_FIELD option. To do that copy the gcard somewhere first, then modify it. The gcard can work from any location.
 Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 
@@ -23,8 +69,10 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
  <option name="SCALE_FIELD" value="clas12-solenoid, 0.6"/>
 ```
 
-Tags
-====
+<br><br>
+
+Software, Geometry Tags
+=======================
 
 Future:
 -------
@@ -35,6 +83,8 @@ Future:
 	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
 	- background merging algorithm
 	- (new geant4 version) :soon:
+	- (RF shift from target center) :soon:
+
 
 In development:
 ---------------
@@ -47,7 +97,6 @@ In development:
 	- threshold mechanism
 	- rotate LUND bank to flat 
 	- final beamline configuration
-	- (RF shift from target center) :soon:
 
 	
 Production:
