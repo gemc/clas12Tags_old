@@ -33,16 +33,18 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 To change configuration from FTOn to FTOff, replace the lines:
 
 
- ```     <detector name="beamline" factory="TEXT" variation="FTOn"/>
-         <detector name="cadBeamline/" factory="CAD"/> 
- ```
+```     
+<detector name="beamline" factory="TEXT" variation="FTOn"/>
+<detector name="cadBeamline/" factory="CAD"/> 
+```
     
 With:
 
 
- ```     <detector name="beamline" factory="TEXT" variation="FTOff"/>
-         <detector name="cadBeamlineFTOFF/" factory="CAD"/> 
- ```
+```
+<detector name="beamline" factory="TEXT" variation="FTOff"/>
+<detector name="cadBeamlineFTOFF/" factory="CAD"/> 
+```
 
 
 
