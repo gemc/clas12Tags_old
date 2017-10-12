@@ -15,7 +15,7 @@ To run gemc use the tagged gcard:
 
 ```gemc /group/clas12/gemc/4a.2.1/clas12.gcard -N=nevents -USE_GUI=0 ```
 
-<br><br>
+<br>
 
 FTOn, FTOff configurations
 --------------------------
@@ -26,7 +26,6 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
 
-<br><br>
 <br><br>
 <br><br>
 <br><br>
