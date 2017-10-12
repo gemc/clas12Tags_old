@@ -38,7 +38,7 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 
 
 
-To change configuration from FTOn to FTOff, replace the keywords and variations as follows:
+To change configuration from FTOn to FTOff, replace the keywords and variations from:
 
 
 ```     
@@ -46,7 +46,7 @@ To change configuration from FTOn to FTOff, replace the keywords and variations 
 <detector name="cadBeamline/" factory="CAD"/> 
 ```
     
-With:
+to:
 
 
 ```
