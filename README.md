@@ -38,7 +38,7 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 
 
 
-To change configuration from FTOn to FTOff, replace the lines:
+To change configuration from FTOn to FTOff, replace the keywords and variations as follows:
 
 
 ```     
