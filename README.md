@@ -24,8 +24,9 @@ The default configuration for the first experiment is with "FTOn" (Figure 1, Lef
 The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
 
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
-<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
 
+<br><br>
 
 
 
@@ -33,13 +34,15 @@ To change configuration from FTOn to FTOff, replace the lines:
 
 
  ```     <detector name="beamline" factory="TEXT" variation="FTOn"/>
-         <detector name="cadBeamline/" factory="CAD"/> ```
+         <detector name="cadBeamline/" factory="CAD"/> 
+ ```
     
 With:
 
 
  ```     <detector name="beamline" factory="TEXT" variation="FTOff"/>
-         <detector name="cadBeamlineFTOFF/" factory="CAD"/> ```
+         <detector name="cadBeamlineFTOFF/" factory="CAD"/> 
+ ```
 
 
 
