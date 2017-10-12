@@ -1,7 +1,5 @@
-# clas12Tags
 
-
-This is a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
+The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
 To use the latest tag (currently 4a.2.1):
 
