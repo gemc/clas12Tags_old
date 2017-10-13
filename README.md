@@ -21,6 +21,9 @@ FTOn, FTOff configurations
 The default configuration for the first experiment is with "FTOn" (Figure 1, Left): complete forward tagger is fully operational.
 The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
 
+The simulations in preparation of the first experiment should use the default version FTON.
+FTOFF will be used only by experts for special studies in preparation for the engineering run.
+
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
 
@@ -74,29 +77,6 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 Software, Geometry Tags
 =======================
 
-Future:
--------
-
-
-- 4a.2.3 :clock4: : Same as 4a.2.2 with:
-
-	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
-	- background merging algorithm
-	- (new geant4 version) :soon:
-	- (RF shift from target center) :soon:
-
-
-In development:
----------------
-
-- 4a.2.2 :clock4: : Same as 4a.2.1 with:
-
-	- target from CAD
-	- htcc wc invisible
-	- no transparency in MM
-	- threshold mechanism
-	- rotate LUND bank to flat 
-	- final beamline configuration
 
 	
 Production:
@@ -121,14 +101,32 @@ Production:
 	- reading tdc_conv for ctof from database
 	- fixed an issue with the header bank where the LUND info index was not correct
 	
-	Remaining issues: tag 4a.2.2
 	
-	- some cad elements in the upstream shielding need refining
-	- finalize FADC
-	- new target design
-	- LTCC remaining overlaps
-	- LUND infos in correct EVIO format
-	
+In development:
+---------------
+
+- 4a.2.2 :clock4: : Same as 4a.2.1 with:
+
+	- target from CAD
+	- htcc wc invisible
+	- no transparency in MM
+	- threshold mechanism
+	- rotate LUND bank to flat 
+	- final beamline configuration
+
+- 4a.2.3 :clock4: : Same as 4a.2.2 with:
+
+	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
+	- background merging algorithm
+	- (new geant4 version) :soon:
+	- (RF shift from target center) :soon:
+
+
+
+
+Previouss Tag:
+--------------
+
 
 - 4a.2.0: Same as 4a.1.0 with:
  
