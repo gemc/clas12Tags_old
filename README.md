@@ -82,7 +82,7 @@ Software, Geometry Tags
 Production:
 -----------
 
-- 4a.2.1: Same as 4a.2.0 with:
+- 4a.2.1: Same as 4a.2.0 with in addition:
 
 	- fixes to CAD modeling of both the beamline and the torus
 	- forward carriage volume fixed to accomodate beamline and shielding
@@ -108,7 +108,7 @@ Production:
 In development:
 ---------------
 
-- 4a.2.2 :clock4: : Same as 4a.2.1 with:
+- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
 
 	- target from CAD
 	- htcc wc invisible
@@ -122,7 +122,7 @@ In development:
 
 <br>
 
-- 4a.2.3 :clock4: : Same as 4a.2.2 with:
+- 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
 
 	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
 	- background merging algorithm
@@ -136,7 +136,7 @@ Previous Tags:
 --------------
 
 
-- 4a.2.0: Same as 4a.1.0 with:
+- 4a.2.0: Same as 4a.1.0 with in addition:
  
   - use JLAB_VERSION 2.1, with new mlibrary
   - Micromegas: updated  geometry and digitization
@@ -151,7 +151,7 @@ Previous Tags:
   - BST+MM: using 3+3 configurations (no FMT)
   
 
-- 4a.1.0: Same as 4a.0.2 with:
+- 4a.1.0: Same as 4a.0.2 with in addition:
 
   - fixed a bug that affect output file size 
   - fixed bug that affected multiple cad imports
@@ -163,14 +163,40 @@ Previous Tags:
   - check if strip_id is not empty in bmt_ and fmt_strip.cc, otherwise fill it.
 
 
-- 4a.0.2: Same as 4a.0.1 but with full (box, mirrors, pmts shields and WC) LTCC geometry / hit process routine.
-- 4a.0.1: Same as 4a.0.0 but with FTOF geometry fix
-- 4a.0.0: KPP configuration. Fixes in source and hit process for FTOF, added EC gains. Java geometry uses now coatjava 3. Database fixed for DC geometry. Linear time-to-distance for DC.
-  CTOF in the KPP position configuration in the new kpp.gcard.
-- 3a.1.0: same as 3a.0.2 but with DC time-to-distance implementation.
-- 3a.0.2: same as 3a.0.1 but with CND fix.
-- 3a.0.1: same as 3a.0.0 but ctof has status working.
-- 3a.0.0: git commit d3a5dc1, Dec 2 2016. Includes FTOF and CTOF paddle delays from CCDB, and CTOF center off-set.
+- 4a.0.2: Same as 4a.0.1 with in addition: 
+  
+  - full (box, mirrors, pmts shields and WC) LTCC geometry 
+  - LTCC hit process routine.
+
+- 4a.0.1: Same as 4a.0.0 with in addition: 
+
+  - FTOF geometry fix
+
+- 4a.0.0: KPP configuration: 
+
+  - Fixes in source and hit process for FTOF
+  - added EC gains. 
+  - Java geometry uses now coatjava 3. 
+  - Database fixed for DC geometry. 
+  - Linear time-to-distance for DC.
+  - CTOF in the KPP position configuration in the new kpp.gcard.
+  
+- 3a.1.0: same as 3a.0.2 with in addition:
+
+  - DC time-to-distance implementation.
+  
+- 3a.0.2: same as 3a.0.1 with  in addition: 
+
+ - CND fix.
+ 
+- 3a.0.1: same as 3a.0.0 with  in addition:
+
+  - ctof has status working.
+  
+- 3a.0.0: git commit d3a5dc1, Dec 2 2016. Includes:
+
+  - FTOF and CTOF paddle delays from CCDB
+  - CTOF center off-set.
 
 
 
