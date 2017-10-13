@@ -101,7 +101,10 @@ Production:
 	- reading tdc_conv for ctof from database
 	- fixed an issue with the header bank where the LUND info index was not correct
 	
-	
+
+<br>
+
+
 In development:
 ---------------
 
@@ -113,6 +116,10 @@ In development:
 	- threshold mechanism
 	- rotate LUND bank to flat 
 	- final beamline configuration
+	- LTCC sector 4 removed
+	- LTCC sector 1 removed :soon:
+
+
 
 - 4a.2.3 :clock4: : Same as 4a.2.2 with:
 
@@ -122,7 +129,7 @@ In development:
 	- (RF shift from target center) :soon:
 
 
-
+<br>
 
 Previouss Tag:
 --------------
