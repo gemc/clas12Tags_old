@@ -120,7 +120,7 @@ In development:
 	- LTCC sector 1 removed :soon:
 
 
-
+<br>
 - 4a.2.3 :clock4: : Same as 4a.2.2 with:
 
 	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
