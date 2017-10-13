@@ -132,7 +132,7 @@ In development:
 
 <br>
 
-Previouss Tag:
+Previous Tags:
 --------------
 
 
