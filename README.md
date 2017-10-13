@@ -21,8 +21,8 @@ FTOn, FTOff configurations
 The default configuration for the first experiment is with "FTOn" (Figure 1, Left): complete forward tagger is fully operational.
 The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
 
-The simulations in preparation of the first experiment should use the default version FTON.
-FTOFF will be used only by experts for special studies in preparation for the engineering run.
+The simulations in preparation of the first experiment should use the default version FTOn.
+FTOff will be used only by experts for special studies in preparation for the engineering run.
 
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
