@@ -187,7 +187,7 @@ Previous Tags:
   
 - 3a.0.2: same as 3a.0.1 with  in addition: 
 
- - CND fix.
+  - CND fix.
  
 - 3a.0.1: same as 3a.0.0 with  in addition:
 
