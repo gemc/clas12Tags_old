@@ -35,7 +35,7 @@ mv gemc bin/$OSRELEASE
 cp bin/$OSRELEASE/gemc .
 
 # making sure the api is there
-ln -s /site/12gev_phys/2.1/Linux_CentOS7.2.1511-x86_64-gcc4.8.5/gemc/2.5/api .
+ln -fs /site/12gev_phys/2.1/Linux_CentOS7.2.1511-x86_64-gcc4.8.5/gemc/2.5/api .
 
 
 
