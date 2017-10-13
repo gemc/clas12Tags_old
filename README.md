@@ -21,6 +21,9 @@ FTOn, FTOff configurations
 The default configuration for the first experiment is with "FTOn" (Figure 1, Left): complete forward tagger is fully operational.
 The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
 
+The simulations in preparation of the first experiment should use the default version FTOn.
+FTOff will be used only by experts for special studies in preparation for the engineering run.
+
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
 
@@ -38,7 +41,7 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 
 
 
-To change configuration from FTOn to FTOff, replace the keywords and variations as follows:
+To change configuration from FTOn to FTOff, replace the keywords and variations from:
 
 
 ```     
@@ -46,7 +49,7 @@ To change configuration from FTOn to FTOff, replace the keywords and variations 
 <detector name="cadBeamline/" factory="CAD"/> 
 ```
     
-With:
+to:
 
 
 ```
@@ -74,35 +77,12 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 Software, Geometry Tags
 =======================
 
-Future:
--------
-
-
-- 4a.2.3 :clock4: : Same as 4a.2.2 with:
-
-	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
-	- background merging algorithm
-	- (new geant4 version) :soon:
-	- (RF shift from target center) :soon:
-
-
-In development:
----------------
-
-- 4a.2.2 :clock4: : Same as 4a.2.1 with:
-
-	- target from CAD
-	- htcc wc invisible
-	- no transparency in MM
-	- threshold mechanism
-	- rotate LUND bank to flat 
-	- final beamline configuration
 
 	
 Production:
 -----------
 
-- 4a.2.1: Same as 4a.2.0 with:
+- 4a.2.1: Same as 4a.2.0 with in addition:
 
 	- fixes to CAD modeling of both the beamline and the torus
 	- forward carriage volume fixed to accomodate beamline and shielding
@@ -121,16 +101,42 @@ Production:
 	- reading tdc_conv for ctof from database
 	- fixed an issue with the header bank where the LUND info index was not correct
 	
-	Remaining issues: tag 4a.2.2
-	
-	- some cad elements in the upstream shielding need refining
-	- finalize FADC
-	- new target design
-	- LTCC remaining overlaps
-	- LUND infos in correct EVIO format
-	
 
-- 4a.2.0: Same as 4a.1.0 with:
+<br>
+
+
+In development:
+---------------
+
+- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
+
+	- target from CAD
+	- htcc wc invisible
+	- no transparency in MM
+	- threshold mechanism
+	- rotate LUND bank to flat 
+	- final beamline configuration
+	- LTCC sector 4 removed
+	- LTCC sector 1 removed :soon:
+
+
+<br>
+
+- 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
+
+	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
+	- background merging algorithm
+	- (new geant4 version) :soon:
+	- (RF shift from target center) :soon:
+
+
+<br>
+
+Previous Tags:
+--------------
+
+
+- 4a.2.0: Same as 4a.1.0 with in addition:
  
   - use JLAB_VERSION 2.1, with new mlibrary
   - Micromegas: updated  geometry and digitization
@@ -145,7 +151,7 @@ Production:
   - BST+MM: using 3+3 configurations (no FMT)
   
 
-- 4a.1.0: Same as 4a.0.2 with:
+- 4a.1.0: Same as 4a.0.2 with in addition:
 
   - fixed a bug that affect output file size 
   - fixed bug that affected multiple cad imports
@@ -157,14 +163,40 @@ Production:
   - check if strip_id is not empty in bmt_ and fmt_strip.cc, otherwise fill it.
 
 
-- 4a.0.2: Same as 4a.0.1 but with full (box, mirrors, pmts shields and WC) LTCC geometry / hit process routine.
-- 4a.0.1: Same as 4a.0.0 but with FTOF geometry fix
-- 4a.0.0: KPP configuration. Fixes in source and hit process for FTOF, added EC gains. Java geometry uses now coatjava 3. Database fixed for DC geometry. Linear time-to-distance for DC.
-  CTOF in the KPP position configuration in the new kpp.gcard.
-- 3a.1.0: same as 3a.0.2 but with DC time-to-distance implementation.
-- 3a.0.2: same as 3a.0.1 but with CND fix.
-- 3a.0.1: same as 3a.0.0 but ctof has status working.
-- 3a.0.0: git commit d3a5dc1, Dec 2 2016. Includes FTOF and CTOF paddle delays from CCDB, and CTOF center off-set.
+- 4a.0.2: Same as 4a.0.1 with in addition: 
+  
+  - full (box, mirrors, pmts shields and WC) LTCC geometry 
+  - LTCC hit process routine.
+
+- 4a.0.1: Same as 4a.0.0 with in addition: 
+
+  - FTOF geometry fix
+
+- 4a.0.0: KPP configuration: 
+
+  - Fixes in source and hit process for FTOF
+  - added EC gains. 
+  - Java geometry uses now coatjava 3. 
+  - Database fixed for DC geometry. 
+  - Linear time-to-distance for DC.
+  - CTOF in the KPP position configuration in the new kpp.gcard.
+  
+- 3a.1.0: same as 3a.0.2 with in addition:
+
+  - DC time-to-distance implementation.
+  
+- 3a.0.2: same as 3a.0.1 with  in addition: 
+
+  - CND fix.
+ 
+- 3a.0.1: same as 3a.0.0 with  in addition:
+
+  - ctof has status working.
+  
+- 3a.0.0: git commit d3a5dc1, Dec 2 2016. Includes:
+
+  - FTOF and CTOF paddle delays from CCDB
+  - CTOF center off-set.
 
 
 
