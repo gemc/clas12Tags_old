@@ -117,8 +117,9 @@ In development:
 	- rotate LUND bank to flat 
 	- final beamline configuration
 	- LTCC sector 4 removed
-	- LTCC sector 1 removed :soon:
+	- LTCC sector 1 removed
 	- DC: Removed unused lines and calculation of smeared doca
+	- generator user information are now in two dedicate banks: user header (TAG 11), and user particle infos (TAG 22)
 
 
 
