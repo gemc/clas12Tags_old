@@ -45,6 +45,7 @@ To change configuration from FTOn to FTOff, replace the keywords and variations 
 
 
 ```     
+<detector name="ft" factory="TEXT" variation="FTOn"/>
 <detector name="beamline" factory="TEXT" variation="FTOn"/>
 <detector name="cadBeamline/" factory="CAD"/> 
 ```
@@ -53,6 +54,7 @@ to:
 
 
 ```
+<detector name="ft" factory="TEXT" variation="FTOff"/>
 <detector name="beamline" factory="TEXT" variation="FTOff"/>
 <detector name="cadBeamlineFTOFF/" factory="CAD"/> 
 ```
