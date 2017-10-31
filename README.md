@@ -122,6 +122,8 @@ In development:
 	- LTCC sector 1 removed
 	- DC: Removed unused lines and calculation of smeared doca
 	- generator user information are now in two dedicate banks: user header (TAG 11), and user particle infos (TAG 22)
+	- MM overlaps with target fixed
+	- New numbering scheme for CTOF, CND
 
 
 
