@@ -135,8 +135,9 @@ In development:
 	- background merging algorithm :soon:
 	- CTOF, FTOF Paddle to PMT digitization for FADC :soon:
 	- Solenoid from CAD models :soon:
-	- (new geant4 version) :soon:
-	- (RF shift from target center) :soon:
+	- Correct field geant4-caching
+	- new geant4 version :soon:
+	- RF shift from target center :soon:
 
 
 <br>
