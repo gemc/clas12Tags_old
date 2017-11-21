@@ -1,7 +1,7 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-To use the latest tag (currently 4a.2.1):
+To use the latest production tag (currently 4a.2.2):
 
 ```source /group/clas12/gemc/environment.csh```
 
@@ -11,7 +11,7 @@ You can also specific a different tag:
 
 To run gemc use the tagged gcard:
 
-```gemc /group/clas12/gemc/4a.2.1/clas12.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/4a.2.2/clas12.gcard -N=nevents -USE_GUI=0 ```
 
 <br>
 
@@ -84,39 +84,13 @@ Software, Geometry Tags
 Production:
 -----------
 
-- 4a.2.1: Same as 4a.2.0 with in addition:
-
-	- fixes to CAD modeling of both the beamline and the torus
-	- forward carriage volume fixed to accomodate beamline and shielding
-	- fixed CND / CTOF overlaps
-	- updated latest micromegas geometry
-	- MM: Adjust transverse diffusion and ionization potential 
-	- updated latest BST
-	- 3 + 3 configuration BST + MM
-	- new vacuum pipe
-	- new shield downsttream of the torus
-	- LTCC box hierarchy fixed
-	- LTCC frame is CAD + copies 
-	- corrected mini-stagger values for DC
-	- Added TDC calibration constants to ec,pcal hitprocess
-	- FADC mode 1 (still tuning it to make it exactly like Serguei DAQ)
-	- reading tdc_conv for ctof from database
-	- fixed an issue with the header bank where the LUND info index was not correct
-	
-
-<br>
-
-
-In development:
----------------
-
 - 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
 
 	- target from CAD
 	- htcc wc invisible
 	- no transparency in MM
 	- threshold mechanism
-	- rotate LUND bank to flat 
+	- rotate LUND bank to flat
 	- final beamline configuration
 	- LTCC sector 4 removed
 	- LTCC sector 1 removed
@@ -124,6 +98,14 @@ In development:
 	- generator user information are now in two dedicate banks: user header (TAG 11), and user particle infos (TAG 22)
 	- MM overlaps with target fixed
 	- New numbering scheme for CTOF, CND
+
+
+
+<br>
+
+
+In development:
+---------------
 
 
 
@@ -144,7 +126,24 @@ In development:
 
 Previous Tags:
 --------------
+- 4a.2.1: Same as 4a.2.0 with in addition:
 
+	- fixes to CAD modeling of both the beamline and the torus
+	- forward carriage volume fixed to accomodate beamline and shielding
+	- fixed CND / CTOF overlaps
+	- updated latest micromegas geometry
+	- MM: Adjust transverse diffusion and ionization potential
+	- updated latest BST
+	- 3 + 3 configuration BST + MM
+	- new vacuum pipe
+	- new shield downsttream of the torus
+	- LTCC box hierarchy fixed
+	- LTCC frame is CAD + copies
+	- corrected mini-stagger values for DC
+	- Added TDC calibration constants to ec,pcal hitprocess
+	- FADC mode 1 (still tuning it to make it exactly like Serguei DAQ)
+	- reading tdc_conv for ctof from database
+	- fixed an issue with the header bank where the LUND info index was not correct
 
 - 4a.2.0: Same as 4a.1.0 with in addition:
  
