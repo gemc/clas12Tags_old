@@ -84,6 +84,8 @@ Software, Geometry Tags
 Production:
 -----------
 
+<br>
+
 - 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
 
 	- target from CAD
@@ -106,7 +108,6 @@ Production:
 
 In development:
 ---------------
-
 
 <br>
 
