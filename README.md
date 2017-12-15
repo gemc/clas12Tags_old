@@ -108,16 +108,20 @@ In development:
 ---------------
 
 
-
 <br>
 
 - 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
 
-	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) :soon:
-	- background merging algorithm :soon:
-	- CTOF, FTOF Paddle to PMT digitization for FADC :soon:
-	- Solenoid from CAD models :soon:
+	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) 
+	- background merging algorithm 
+	- CTOF, FTOF Paddle to PMT digitization for FADC
 	- Correct field geant4-caching
+
+<br>
+
+- 4a.2.4 :clock4: : Same as 4a.2.2 with in addition:
+
+	- Solenoid from CAD models :soon:
 	- new geant4 version :soon:
 	- RF shift from target center :soon:
 
