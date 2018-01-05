@@ -49,7 +49,7 @@
 
 	<!-- fields, precise mode -->
 	<option name="FIELD_PROPERTIES" value="clas12-torus-big, 2*mm, G4ClassicalRK4, linear"/>
-	<option name="FIELD_PROPERTIES" value="clas12-solenoid,  1*mm, G4HelixSimpleRunge, linear"/>
+	<option name="FIELD_PROPERTIES" value="clas12-solenoid,  1*mm, G4ClassicalRK4, linear"/>
 
 
 	<!-- beam conditions -->

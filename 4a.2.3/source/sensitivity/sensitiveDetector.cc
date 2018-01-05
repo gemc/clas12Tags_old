@@ -76,18 +76,19 @@ void sensitiveDetector::Initialize(G4HCofThisEvent* HCE)
 
 vector<BackgroundHit*> sensitiveDetector::getNextBackgroundEvent()
 {
+	if(backgroundHits != nullptr) {
 
-	backgroundEventNumber++;
+		backgroundEventNumber++;
+		if(backgroundEventNumber == backgroundHits->size()) {
+			backgroundEventNumber = 1;
+		}
 
-	if(backgroundEventNumber == backgroundHits->size()) {
-		backgroundEventNumber = 1;
+
+		if(backgroundHits->find(backgroundEventNumber) != backgroundHits->end()) {
+			return (*backgroundHits)[backgroundEventNumber];
+		}
 	}
-
-	if(backgroundHits->find(backgroundEventNumber) != backgroundHits->end()) {
-		return (*backgroundHits)[backgroundEventNumber];
-	} else {
-		return {nullptr};
-	}
+	return {nullptr};
 }
 
 
@@ -377,7 +378,8 @@ int sensitiveDetector::processID(string procName)
 	if(procName == "positronNuclear")       return 9;
 	if(procName == "CoulombScat")           return 10;
 	if(procName == "Cerenkov")              return 11;
-	if(procName == "Scintillation")         return 12;
+	if(procName == "Scintillation")		return 12;
+	if(procName == "SynRad")           	return 13;
 	if(procName == "hadElastic")            return 20;
 	if(procName == "hBrems")                return 21;
 	if(procName == "hIoni")                 return 22;

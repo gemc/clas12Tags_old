@@ -116,7 +116,9 @@ class gMappedField : public G4MagneticField
 		unsigned int *np;
 		void initializeMap();
 		
-	
+		gcoord getCoordinateWithSpeed(int speed);   ///< return coordinate based on speed
+		gcoord getCoordinateWithName(string name);  ///< return coordinate based on type
+		
 		// returns the field at point x. This is a dispatcher for the various symmetries below
 		void GetFieldValue( const double x[3], double *Bfield) const;
 		
