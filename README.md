@@ -117,6 +117,7 @@ In development:
 	- background merging algorithm 
 	- CTOF, FTOF Paddle to PMT digitization for FADC
 	- Correct field geant4-caching
+	- Solenoid integration method: G4ClassicalRK4 to fix some geant4 navigation issues in the field. Slower but more reliable.
 
 <br>
 
