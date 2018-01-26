@@ -252,6 +252,8 @@ void PhysicsList::SetCutForProton(double cut)
 #include "NuBeam.hh"
 
 #include "G4OpticalPhysics.hh"
+#include "G4SynchrotronRadiation.hh"
+#include "G4SynchrotronRadiationInMat.hh"
 
 #include "G4StepLimiter.hh"
 
@@ -363,6 +365,7 @@ void PhysicsList::ConstructProcess()
 {
 	AddTransportation();
 	int fastmcMode = gemcOpt.optMap["FASTMCMODE"].arg;
+	int synrad = gemcOpt.optMap["SYNRAD"].arg;
 
 	if(fastmcMode < 2) {
 		G4ProcessTable* processTable = G4ProcessTable::GetProcessTable();
@@ -376,7 +379,15 @@ void PhysicsList::ConstructProcess()
 		for(size_t i=0; i<g4HadronicPhysics.size(); i++)
 			g4HadronicPhysics[i]->ConstructProcess();
 
-	//	 auto theParticleIterator = GetParticleIterator();
+		// sync radiation
+		G4SynchrotronRadiation*      fSync    = nullptr;
+		G4SynchrotronRadiationInMat* fSyncMat = nullptr;
+
+			 if (synrad == 1) fSync    = new G4SynchrotronRadiation();
+		else if (synrad == 2) fSyncMat = new G4SynchrotronRadiationInMat();
+		//G4AutoDelete::Register(fSync);
+
+//		 auto theParticleIterator = GetParticleIterator();
 
 		// PhysicsList contains theParticleIterator
 		theParticleIterator->reset();
@@ -394,7 +405,34 @@ void PhysicsList::ConstructProcess()
 				if(verbosity > 2)
 					cout << "   >  Adding Step Limiter for " << pname << endl;
 
-				pmanager->AddProcess(new G4StepLimiter,       -1,-1,3);
+				pmanager->AddProcess(new G4StepLimiter,       -1,-1, 3);
+			}
+
+			// G4SynchrotronRadiation if requested
+			if (synrad == 1) {
+
+				if (pname == "e-") {
+					//electron
+					pmanager->AddProcess(fSync,               -1,-1, 4);
+					pmanager->AddProcess(new G4StepLimiter,   -1,-1, 5);
+
+				} else if (pname == "e+") {
+					//positron
+					pmanager->AddProcess(fSync,              -1,-1, 5);
+					pmanager->AddProcess(new G4StepLimiter,  -1,-1, 6);
+				}
+			} else if (synrad == 2) {
+
+				if (pname == "e-") {
+					//electron
+					pmanager->AddProcess(fSyncMat,            -1,-1, 4);
+					pmanager->AddProcess(new G4StepLimiter,   -1,-1, 5);
+
+				} else if (pname == "e+") {
+					//positron
+					pmanager->AddProcess(fSyncMat,           -1,-1, 5);
+					pmanager->AddProcess(new G4StepLimiter,  -1,-1, 6);
+				}
 			}
 
 			if(muonRadDecay){
