@@ -3,7 +3,7 @@
 if( "$1" != "" ) then
 	setenv CLAS12TAG $1
 else
-	setenv CLAS12TAG 4a.2.1
+	setenv CLAS12TAG 4a.2.2
 endif
 
 setenv GEMC /group/clas12/gemc/$CLAS12TAG/source
