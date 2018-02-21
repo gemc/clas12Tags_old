@@ -119,6 +119,7 @@ In development:
 	- Correct field geant4-caching
 	- Solenoid integration method: G4ClassicalRK4 to fix some geant4 navigation issues in the field. Slower but more reliable (should have less crashes)
 	- SYNRAD option to activate synchrotone radiation in vacuum (SYNRAD=1) or any material (SYNRAD=2)
+	- background merging algorithm in digitization: DC, BST and MM.
 
 <br>
 
