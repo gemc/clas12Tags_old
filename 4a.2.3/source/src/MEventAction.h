@@ -137,7 +137,7 @@ public:
 	string SIGNALVT;        ///< List of detectors for which voltage versus time need to be saved
 	string RFSETUP;         ///< Parameters for RF setup
 	int fastMCMode;         ///< In fast MC mode, the particle smeared/unsmeared momenta are saved
-
+	int requestedNevents;
 
 	// sampling time of electronics (typically FADC)
 	// and number of samplings
@@ -156,8 +156,9 @@ private:
 	string BGFILE;           ///< filename containing background hits
 	GBackgroundHits *backgroundHits;
 
-	// bookkeeping of background events
-	int backgroundEventNumber;
+	// bookkeeping of background events for each system
+	map<string, int> backgroundEventNumber;
+
 	vector<BackgroundHit*> getNextBackgroundEvent(string forSystem);
 
 
