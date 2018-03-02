@@ -114,12 +114,13 @@ In development:
 - 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
 
 	- (ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle) 
-	- background merging algorithm 
+	- background merging algorithm framework
 	- CTOF, FTOF Paddle to PMT digitization for FADC
 	- Correct field geant4-caching
 	- Solenoid integration method: G4ClassicalRK4 to fix some geant4 navigation issues in the field. Slower but more reliable (should have less crashes)
 	- SYNRAD option to activate synchrotone radiation in vacuum (SYNRAD=1) or any material (SYNRAD=2)
-	- background merging algorithm in digitization: DC, BST and MM.
+	- background merging algorithm implementation in digitization: DC, BST and MM.
+	- dc gas material changed to 90% Ar, 10% G4_CARBON_DIOXIDE.
 
 <br>
 
