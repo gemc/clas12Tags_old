@@ -122,7 +122,7 @@ In development:
 	- SYNRAD option to activate synchrotone radiation in vacuum (SYNRAD=1) or any material (SYNRAD=2)
 	- dc gas material changed to 90% Ar, 10% G4_CARBON_DIOXIDE.
 	- RF shift from target center :soon:
-	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle
+	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
 
 <br>
 
