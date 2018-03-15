@@ -121,14 +121,14 @@ In development:
 	- Solenoid integration method: G4ClassicalRK4 to fix some geant4 navigation issues in the field. Slower but more reliable (should have less crashes)
 	- SYNRAD option to activate synchrotone radiation in vacuum (SYNRAD=1) or any material (SYNRAD=2)
 	- dc gas material changed to 90% Ar, 10% G4_CARBON_DIOXIDE.
-	- new geant4 version :soon:
+	- RF shift from target center :soon:
 
 <br>
 
 - 4a.2.4 :clock4: : Same as 4a.2.3 with in addition:
 
 	- Solenoid from CAD models :soon:
-	- RF shift from target center :soon:
+	- new geant4 version :soon:
 
 
 <br>
