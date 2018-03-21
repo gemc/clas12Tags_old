@@ -121,7 +121,10 @@ In development:
 	- Solenoid integration method: G4ClassicalRK4 to fix some geant4 navigation issues in the field. Slower but more reliable (should have less crashes)
 	- SYNRAD option to activate synchrotone radiation in vacuum (SYNRAD=1) or any material (SYNRAD=2)
 	- dc gas material changed to 90% Ar, 10% G4_CARBON_DIOXIDE.
-	- RF shift from target center :soon:
+	- RF shift from target center: added option RFSTART: Radio-frequency time model. Available values are:
+	  - "eventVertex, 0, 0, 0" (default): the RF time is the event start time + the light time-distance of the first particle from the point (0,0,0)
+          - "eventTime".....................: the RF time is identical to the event start time
+
 	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
 
 <br>
