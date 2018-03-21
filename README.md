@@ -123,7 +123,7 @@ In development:
 	- dc gas material changed to 90% Ar, 10% G4_CARBON_DIOXIDE.
 	- RF shift from target center: added option RFSTART: Radio-frequency time model. Available values are:
 	  - "eventVertex, 0, 0, 0" (default): the RF time is the event start time + the light time-distance of the first particle from the point (0,0,0)
-          - "eventTime".....................: the RF time is identical to the event start time
+	  - "eventTime".....................: the RF time is identical to the event start time
 
 	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
 
