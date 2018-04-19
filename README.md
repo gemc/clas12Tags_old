@@ -86,30 +86,6 @@ Production:
 
 <br>
 
-- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
-
-	- target from CAD
-	- htcc wc invisible
-	- no transparency in MM
-	- threshold mechanism
-	- rotate LUND bank to flat
-	- final beamline configuration
-	- LTCC sector 4 removed
-	- LTCC sector 1 removed
-	- DC: Removed unused lines and calculation of smeared doca
-	- generator user information are now in two dedicate banks: user header (TAG 11), and user particle infos (TAG 22)
-	- MM overlaps with target fixed
-	- New numbering scheme for CTOF, CND
-
-
-
-<br>
-
-
-In development:
----------------
-
-<br>
 
 - 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
 
@@ -129,6 +105,13 @@ In development:
 
 <br>
 
+
+
+In development:
+---------------
+
+<br>
+
 - 4a.2.4 :clock4: : Same as 4a.2.3 with in addition:
 
 	- Solenoid from CAD models :soon:
@@ -139,6 +122,25 @@ In development:
 
 Previous Tags:
 --------------
+
+
+- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
+
+	- target from CAD
+	- htcc wc invisible
+	- no transparency in MM
+	- threshold mechanism
+	- rotate LUND bank to flat
+	- final beamline configuration
+	- LTCC sector 4 removed
+	- LTCC sector 1 removed
+	- DC: Removed unused lines and calculation of smeared doca
+	- generator user information are now in two dedicate banks: user header (TAG 11), and user particle infos (TAG 22)
+	- MM overlaps with target fixed
+	- New numbering scheme for CTOF, CND
+
+<br>
+
 - 4a.2.1: Same as 4a.2.0 with in addition:
 
 	- fixes to CAD modeling of both the beamline and the torus
