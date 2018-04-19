@@ -101,7 +101,6 @@ Production:
 	  - "eventVertex, 0, 0, 0" (default): the RF time is the event start time + the light time-distance of the first particle from the point (0,0,0)
 	  - "eventTime".....................: the RF time is identical to the event start time
 
-	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
 
 <br>
 
@@ -116,6 +115,7 @@ In development:
 
 	- Solenoid from CAD models :soon:
 	- new geant4 version :soon:
+	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
 
 
 <br>
