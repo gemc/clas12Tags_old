@@ -1,7 +1,7 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-To use the latest production tag (currently 4a.2.2):
+To use the latest production tag (currently 4a.2.3):
 
 ```source /group/clas12/gemc/environment.csh```
 
@@ -11,7 +11,7 @@ You can also specific a different tag:
 
 To run gemc use the tagged gcard:
 
-```gemc /group/clas12/gemc/4a.2.2/clas12.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/4a.2.3/clas12.gcard -N=nevents -USE_GUI=0 ```
 
 <br>
 
