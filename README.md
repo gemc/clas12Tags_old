@@ -86,30 +86,6 @@ Production:
 
 <br>
 
-- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
-
-	- target from CAD
-	- htcc wc invisible
-	- no transparency in MM
-	- threshold mechanism
-	- rotate LUND bank to flat
-	- final beamline configuration
-	- LTCC sector 4 removed
-	- LTCC sector 1 removed
-	- DC: Removed unused lines and calculation of smeared doca
-	- generator user information are now in two dedicate banks: user header (TAG 11), and user particle infos (TAG 22)
-	- MM overlaps with target fixed
-	- New numbering scheme for CTOF, CND
-
-
-
-<br>
-
-
-In development:
----------------
-
-<br>
 
 - 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
 
@@ -125,7 +101,13 @@ In development:
 	  - "eventVertex, 0, 0, 0" (default): the RF time is the event start time + the light time-distance of the first particle from the point (0,0,0)
 	  - "eventTime".....................: the RF time is identical to the event start time
 
-	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
+
+<br>
+
+
+
+In development:
+---------------
 
 <br>
 
@@ -133,12 +115,32 @@ In development:
 
 	- Solenoid from CAD models :soon:
 	- new geant4 version :soon:
+	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
 
 
 <br>
 
 Previous Tags:
 --------------
+
+
+- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
+
+	- target from CAD
+	- htcc wc invisible
+	- no transparency in MM
+	- threshold mechanism
+	- rotate LUND bank to flat
+	- final beamline configuration
+	- LTCC sector 4 removed
+	- LTCC sector 1 removed
+	- DC: Removed unused lines and calculation of smeared doca
+	- generator user information are now in two dedicate banks: user header (TAG 11), and user particle infos (TAG 22)
+	- MM overlaps with target fixed
+	- New numbering scheme for CTOF, CND
+
+<br>
+
 - 4a.2.1: Same as 4a.2.0 with in addition:
 
 	- fixes to CAD modeling of both the beamline and the torus
