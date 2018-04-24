@@ -76,6 +76,21 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 
 <br><br>
 
+
+How to install
+--------------
+
+The clas12tags can be installed on top of an existing [jlab installation](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.2_install.html).
+To do that:
+
+# clone https://github.com/gemc/clas12Tags
+# cd to the tag you want to use
+# type `<scons -j4 OPT=1>`
+
+This will compile a gemc executable in that directory. Remember to use the full path to that executable when running gemc, otherwise the OS will pick up the default from the $GEMC env variable.
+
+<br><br>
+
 Software, Geometry Tags
 =======================
 
