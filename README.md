@@ -1,6 +1,8 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
+## Current PRODUCTION version: **4a.2.3**, compatible with **COATJAVA 5b.3.3** and above.
+
 To use the latest production tag (currently 4a.2.3):
 
 ```source /group/clas12/gemc/environment.csh```
