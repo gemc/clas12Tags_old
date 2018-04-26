@@ -1,7 +1,7 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-#### Current PRODUCTION version: **_4a.2.3_**, compatible with **_COATJAVA 5b.3.3_** and above.
+### Current PRODUCTION version: **_4a.2.3_**, compatible with **_COATJAVA 5b.3.3_** and above.
 
 <hr>
 
@@ -16,6 +16,10 @@ You can also specific a different tag:
 To run gemc use the tagged gcard:
 
 ```gemc /group/clas12/gemc/4a.2.3/clas12.gcard -N=nevents -USE_GUI=0 ```
+
+To run gemc using the new magnetic field ma[:
+
+```gemc /group/clas12/gemc/4a.2.3/clas12NF.gcard -N=nevents -USE_GUI=0 ```
 
 <br>
 
@@ -67,8 +71,8 @@ to:
 
 <br><br>
 
-Magnetic Fields Scaling
------------------------
+Magnetic Fields
+---------------
 
 You can change the magnetic field using the SCALE_FIELD option. To do that copy the gcard somewhere first, then modify it. The gcard can work from any location.
 Example on how to run at 80% torus field (inbending) and 60% solenoid field:
