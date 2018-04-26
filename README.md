@@ -17,7 +17,7 @@ To run gemc use the tagged gcard:
 
 ```gemc /group/clas12/gemc/4a.2.3/clas12.gcard -N=nevents -USE_GUI=0 ```
 
-To run gemc using the new magnetic field ma[:
+To run gemc using the **new magnetic field map**:
 
 ```gemc /group/clas12/gemc/4a.2.3/clas12NF.gcard -N=nevents -USE_GUI=0 ```
 
