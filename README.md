@@ -1,7 +1,9 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-### Current PRODUCTION version: **4a.2.3**, compatible with **COATJAVA 5b.3.3** and above.
+#### Current PRODUCTION version: **_4a.2.3_**, compatible with **_COATJAVA 5b.3.3_** and above.
+
+<hr>
 
 To use the latest production tag (currently 4a.2.3):
 
@@ -104,7 +106,7 @@ Production:
 <br>
 
 
-- 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
+- 4a.2.3 (compatible with COATJAVA 5b.3.3): Same as 4a.2.2 with in addition:
 
 	- ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle)
 	- CTOF, FTOF Paddle to PMT digitization for FADC
@@ -128,7 +130,7 @@ In development:
 
 <br>
 
-- 4a.2.4 :clock4: : Same as 4a.2.3 with in addition:
+- 4a.2.4: Same as 4a.2.3 with in addition:
 
 	- Solenoid from CAD models :soon:
 	- new geant4 version :soon:
@@ -141,7 +143,7 @@ Previous Tags:
 --------------
 
 
-- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
+- 4a.2.2: Same as 4a.2.1 with in addition:
 
 	- target from CAD
 	- htcc wc invisible
