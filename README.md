@@ -1,6 +1,10 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
+### Current PRODUCTION version: **_4a.2.3_**, compatible with **_COATJAVA 5b.3.3_** and above.
+
+<hr>
+
 To use the latest production tag (currently 4a.2.3):
 
 ```source /group/clas12/gemc/environment.csh```
@@ -12,6 +16,10 @@ You can also specific a different tag:
 To run gemc use the tagged gcard:
 
 ```gemc /group/clas12/gemc/4a.2.3/clas12.gcard -N=nevents -USE_GUI=0 ```
+
+To run gemc using the **new magnetic field map**:
+
+```gemc /group/clas12/gemc/4a.2.3/clas12NF.gcard -N=nevents -USE_GUI=0 ```
 
 <br>
 
@@ -63,8 +71,8 @@ to:
 
 <br><br>
 
-Magnetic Fields Scaling
------------------------
+Magnetic Fields
+---------------
 
 You can change the magnetic field using the SCALE_FIELD option. To do that copy the gcard somewhere first, then modify it. The gcard can work from any location.
 Example on how to run at 80% torus field (inbending) and 60% solenoid field:
@@ -102,7 +110,7 @@ Production:
 <br>
 
 
-- 4a.2.3 :clock4: : Same as 4a.2.2 with in addition:
+- 4a.2.3 (compatible with COATJAVA 5b.3.3): Same as 4a.2.2 with in addition:
 
 	- ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle)
 	- CTOF, FTOF Paddle to PMT digitization for FADC
@@ -126,7 +134,7 @@ In development:
 
 <br>
 
-- 4a.2.4 :clock4: : Same as 4a.2.3 with in addition:
+- 4a.2.4: Same as 4a.2.3 with in addition:
 
 	- Solenoid from CAD models :soon:
 	- new geant4 version :soon:
@@ -139,7 +147,7 @@ Previous Tags:
 --------------
 
 
-- 4a.2.2 :clock4: : Same as 4a.2.1 with in addition:
+- 4a.2.2: Same as 4a.2.1 with in addition:
 
 	- target from CAD
 	- htcc wc invisible
