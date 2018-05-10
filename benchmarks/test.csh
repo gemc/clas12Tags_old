@@ -8,6 +8,6 @@ foreach g (`\ls *.gcard`)
 	echo
 
 	rm -f $c.txt
-	gemc $g -USE_GUI=0 -N=5000 > $c.txt
+	gemc $g -USE_GUI=0 -N=5000 -PRODUCTIONCUT=20 > $c.txt
 
 end

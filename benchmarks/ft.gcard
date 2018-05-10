@@ -28,7 +28,10 @@
 	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/beamline/vacuumLine/"  factory="CAD"/>
 	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/beamline/beamline"     factory="TEXT" variation="FTOn"/>
 
-	
+	<!-- forward carriage -->
+	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
+	<option name="NO_FIELD" value="TorusSymmetric"/>
+
 	
 	
 	
