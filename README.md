@@ -141,6 +141,7 @@ In development:
 	- FMT background hits
 	- solenoid field rotation
 	- production cut set for individual volumes in the options
+	- use run number 10 as default in the gcard
 
 
 <br>
