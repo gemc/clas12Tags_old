@@ -136,6 +136,17 @@ In development:
 
 - 4a.2.4: Same as 4a.2.3 with in addition:
 
+	- Use new torus field map
+	- FMT shift by 8mm
+	- FMT background hits
+	- solenoid field rotation
+	- production cut set for individual volumes in the options
+
+
+<br>
+
+- 4a.2.5: Same as 4a.2.4 with in addition:
+
 	- Solenoid from CAD models :soon:
 	- new geant4 version :soon:
 	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
