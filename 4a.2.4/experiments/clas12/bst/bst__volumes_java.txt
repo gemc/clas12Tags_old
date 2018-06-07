@@ -833,7 +833,7 @@ epoxyMinorPk_m2_s3_r2 | epoxyAndRailAndPads_m2_s3_r2 | -1.400000*cm 0.000000*cm 
      pad6_m2_s3_r2 | epoxyAndRailAndPads_m2_s3_r2 | -0.600000*cm 0.000200*cm -2.318900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
      pad7_m2_s3_r2 | epoxyAndRailAndPads_m2_s3_r2 | -0.600000*cm 0.000200*cm -5.329900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
      pad8_m2_s3_r2 | epoxyAndRailAndPads_m2_s3_r2 | -0.600000*cm 0.000200*cm -9.411000*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
-        sector4_r2 |  region2 | -9.225548*cm -2.105671*cm 0.000000*cm | ordered: zyx 77.14285714285715*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
+        sector4_r2 |  region2 | -9.225548*cm -2.105671*cm 0.000000*cm | ordered: zyx 77.14285714285714*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
   heatSinkCu_s4_r2 | sector4_r2 | 0.000000*cm 0.002500*cm -17.646250*cm | 0 0 0 |      Box | 2.035*cm 0.1275*cm 3.2665*cm  | 
 heatSinkRidge_s4_r2 | sector4_r2 | 0.000000*cm 0.149000*cm -20.132750*cm | 0 0 0 |      Box | 2.035*cm 0.019000000000000003*cm 0.78*cm  | 
     rohacell_s4_r2 | sector4_r2 | 0.000000*cm 0.000000*cm 3.266500*cm | 0 0 0 |      Box | 2.0500000000000003*cm 0.125*cm 17.646250000000002*cm  | 
@@ -961,7 +961,7 @@ epoxyMinorPk_m2_s5_r2 | epoxyAndRailAndPads_m2_s5_r2 | -1.400000*cm 0.000000*cm 
      pad6_m2_s5_r2 | epoxyAndRailAndPads_m2_s5_r2 | -0.600000*cm 0.000200*cm -2.318900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
      pad7_m2_s5_r2 | epoxyAndRailAndPads_m2_s5_r2 | -0.600000*cm 0.000200*cm -5.329900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
      pad8_m2_s5_r2 | epoxyAndRailAndPads_m2_s5_r2 | -0.600000*cm 0.000200*cm -9.411000*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
-        sector6_r2 |  region2 | -7.398315*cm 5.899959*cm 0.000000*cm | ordered: zyx 128.57142857142856*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
+        sector6_r2 |  region2 | -7.398315*cm 5.899959*cm 0.000000*cm | ordered: zyx 128.57142857142858*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
   heatSinkCu_s6_r2 | sector6_r2 | 0.000000*cm 0.002500*cm -17.646250*cm | 0 0 0 |      Box | 2.035*cm 0.1275*cm 3.2665*cm  | 
 heatSinkRidge_s6_r2 | sector6_r2 | 0.000000*cm 0.149000*cm -20.132750*cm | 0 0 0 |      Box | 2.035*cm 0.019000000000000003*cm 0.78*cm  | 
     rohacell_s6_r2 | sector6_r2 | 0.000000*cm 0.000000*cm 3.266500*cm | 0 0 0 |      Box | 2.0500000000000003*cm 0.125*cm 17.646250000000002*cm  | 
@@ -1025,7 +1025,7 @@ epoxyMinorPk_m2_s6_r2 | epoxyAndRailAndPads_m2_s6_r2 | -1.400000*cm 0.000000*cm 
      pad6_m2_s6_r2 | epoxyAndRailAndPads_m2_s6_r2 | -0.600000*cm 0.000200*cm -2.318900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
      pad7_m2_s6_r2 | epoxyAndRailAndPads_m2_s6_r2 | -0.600000*cm 0.000200*cm -5.329900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
      pad8_m2_s6_r2 | epoxyAndRailAndPads_m2_s6_r2 | -0.600000*cm 0.000200*cm -9.411000*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
-        sector7_r2 |  region2 | -4.105755*cm 8.525688*cm 0.000000*cm | ordered: zyx 154.2857142857143*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
+        sector7_r2 |  region2 | -4.105755*cm 8.525688*cm 0.000000*cm | ordered: zyx 154.28571428571428*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
   heatSinkCu_s7_r2 | sector7_r2 | 0.000000*cm 0.002500*cm -17.646250*cm | 0 0 0 |      Box | 2.035*cm 0.1275*cm 3.2665*cm  | 
 heatSinkRidge_s7_r2 | sector7_r2 | 0.000000*cm 0.149000*cm -20.132750*cm | 0 0 0 |      Box | 2.035*cm 0.019000000000000003*cm 0.78*cm  | 
     rohacell_s7_r2 | sector7_r2 | 0.000000*cm 0.000000*cm 3.266500*cm | 0 0 0 |      Box | 2.0500000000000003*cm 0.125*cm 17.646250000000002*cm  | 
@@ -1281,7 +1281,7 @@ epoxyMinorPk_m2_s10_r2 | epoxyAndRailAndPads_m2_s10_r2 | -1.400000*cm 0.000000*c
     pad6_m2_s10_r2 | epoxyAndRailAndPads_m2_s10_r2 | -0.600000*cm 0.000200*cm -2.318900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad7_m2_s10_r2 | epoxyAndRailAndPads_m2_s10_r2 | -0.600000*cm 0.000200*cm -5.329900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad8_m2_s10_r2 | epoxyAndRailAndPads_m2_s10_r2 | -0.600000*cm 0.000200*cm -9.411000*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
-       sector11_r2 |  region2 | 9.225548*cm 2.105671*cm 0.000000*cm | ordered: zyx 257.1428571428571*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
+       sector11_r2 |  region2 | 9.225548*cm 2.105671*cm 0.000000*cm | ordered: zyx 257.14285714285717*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
  heatSinkCu_s11_r2 | sector11_r2 | 0.000000*cm 0.002500*cm -17.646250*cm | 0 0 0 |      Box | 2.035*cm 0.1275*cm 3.2665*cm  | 
 heatSinkRidge_s11_r2 | sector11_r2 | 0.000000*cm 0.149000*cm -20.132750*cm | 0 0 0 |      Box | 2.035*cm 0.019000000000000003*cm 0.78*cm  | 
    rohacell_s11_r2 | sector11_r2 | 0.000000*cm 0.000000*cm 3.266500*cm | 0 0 0 |      Box | 2.0500000000000003*cm 0.125*cm 17.646250000000002*cm  | 
@@ -1409,7 +1409,7 @@ epoxyMinorPk_m2_s12_r2 | epoxyAndRailAndPads_m2_s12_r2 | -1.400000*cm 0.000000*c
     pad6_m2_s12_r2 | epoxyAndRailAndPads_m2_s12_r2 | -0.600000*cm 0.000200*cm -2.318900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad7_m2_s12_r2 | epoxyAndRailAndPads_m2_s12_r2 | -0.600000*cm 0.000200*cm -5.329900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad8_m2_s12_r2 | epoxyAndRailAndPads_m2_s12_r2 | -0.600000*cm 0.000200*cm -9.411000*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
-       sector13_r2 |  region2 | 7.398315*cm -5.899959*cm 0.000000*cm | ordered: zyx 308.5714285714286*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
+       sector13_r2 |  region2 | 7.398315*cm -5.899959*cm 0.000000*cm | ordered: zyx 308.57142857142856*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
  heatSinkCu_s13_r2 | sector13_r2 | 0.000000*cm 0.002500*cm -17.646250*cm | 0 0 0 |      Box | 2.035*cm 0.1275*cm 3.2665*cm  | 
 heatSinkRidge_s13_r2 | sector13_r2 | 0.000000*cm 0.149000*cm -20.132750*cm | 0 0 0 |      Box | 2.035*cm 0.019000000000000003*cm 0.78*cm  | 
    rohacell_s13_r2 | sector13_r2 | 0.000000*cm 0.000000*cm 3.266500*cm | 0 0 0 |      Box | 2.0500000000000003*cm 0.125*cm 17.646250000000002*cm  | 
@@ -2498,7 +2498,7 @@ epoxyMinorPk_m2_s15_r3 | epoxyAndRailAndPads_m2_s15_r3 | -1.400000*cm 0.000000*c
     pad6_m2_s15_r3 | epoxyAndRailAndPads_m2_s15_r3 | -0.600000*cm 0.000200*cm -2.318900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad7_m2_s15_r3 | epoxyAndRailAndPads_m2_s15_r3 | -0.600000*cm 0.000200*cm -5.329900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad8_m2_s15_r3 | epoxyAndRailAndPads_m2_s15_r3 | -0.600000*cm 0.000200*cm -9.411000*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
-       sector16_r3 |  region3 | 10.570966*cm -6.103150*cm 0.000000*cm | ordered: zyx 300.00000000000006*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
+       sector16_r3 |  region3 | 10.570966*cm -6.103150*cm 0.000000*cm | ordered: zyx 300.0*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
  heatSinkCu_s16_r3 | sector16_r3 | 0.000000*cm 0.002500*cm -17.646250*cm | 0 0 0 |      Box | 2.035*cm 0.1275*cm 3.2665*cm  | 
 heatSinkRidge_s16_r3 | sector16_r3 | 0.000000*cm 0.149000*cm -20.132750*cm | 0 0 0 |      Box | 2.035*cm 0.019000000000000003*cm 0.78*cm  | 
    rohacell_s16_r3 | sector16_r3 | 0.000000*cm 0.000000*cm 3.266500*cm | 0 0 0 |      Box | 2.0500000000000003*cm 0.125*cm 17.646250000000002*cm  | 
@@ -2626,7 +2626,7 @@ epoxyMinorPk_m2_s17_r3 | epoxyAndRailAndPads_m2_s17_r3 | -1.400000*cm 0.000000*c
     pad6_m2_s17_r3 | epoxyAndRailAndPads_m2_s17_r3 | -0.600000*cm 0.000200*cm -2.318900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad7_m2_s17_r3 | epoxyAndRailAndPads_m2_s17_r3 | -0.600000*cm 0.000200*cm -5.329900*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
     pad8_m2_s17_r3 | epoxyAndRailAndPads_m2_s17_r3 | -0.600000*cm 0.000200*cm -9.411000*cm | ordered: zyx 0.0*deg 0.0*deg -90.0*deg |     Tube | 0.0*cm 0.15000000000000002*cm 0.00305*cm 0.0*rad 360.0*rad  | 
-       sector18_r3 |  region3 | 4.174800*cm -11.470170*cm 0.000000*cm | ordered: zyx 340.0*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
+       sector18_r3 |  region3 | 4.174800*cm -11.470170*cm 0.000000*cm | ordered: zyx 339.99999999999994*deg 0.0*deg 0.0*deg |      Box | 2.1*cm 0.2581*cm 20.912750000000003*cm  | 
  heatSinkCu_s18_r3 | sector18_r3 | 0.000000*cm 0.002500*cm -17.646250*cm | 0 0 0 |      Box | 2.035*cm 0.1275*cm 3.2665*cm  | 
 heatSinkRidge_s18_r3 | sector18_r3 | 0.000000*cm 0.149000*cm -20.132750*cm | 0 0 0 |      Box | 2.035*cm 0.019000000000000003*cm 0.78*cm  | 
    rohacell_s18_r3 | sector18_r3 | 0.000000*cm 0.000000*cm 3.266500*cm | 0 0 0 |      Box | 2.0500000000000003*cm 0.125*cm 17.646250000000002*cm  | 
