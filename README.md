@@ -78,7 +78,7 @@ You can change the magnetic field using the SCALE_FIELD option. To do that copy 
 Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 
 ```
- <option name="SCALE_FIELD" value="clas12-torus-big, -0.8"/>
+ <option name="SCALE_FIELD" value="TorusSymmetric, -0.8"/>
  <option name="SCALE_FIELD" value="clas12-solenoid, 0.6"/>
 ```
 
