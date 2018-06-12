@@ -97,6 +97,9 @@ To do that:
 
 This will compile a gemc executable in that directory. Remember to use the full path to that executable when running gemc, otherwise the OS will pick up the default from the $GEMC env variable.
 
+Each tag has the production gcard inside its directory. To use: change the path from 
+``` /group/clas12/gemc/4a.2.3 ``` to the location of your tag.
+
 <br><br>
 
 Software, Geometry Tags
