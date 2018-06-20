@@ -106,7 +106,7 @@ To use an empty target instead:
 How to install
 --------------
 
-The clas12tags can be installed on top of an existing [jlab installation](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.2_install.html).
+The clas12tags can be installed on top of an existing [jlab installation. For 4a.2.3 it's JLAB_VERSION 2.1](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.2_install.html).
 To do that:
 
 1. clone https://github.com/gemc/clas12Tags
