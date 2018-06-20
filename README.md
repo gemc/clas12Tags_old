@@ -160,9 +160,9 @@ In development:
 	- Use new torus field map
 	- FMT shift by 8mm
 	- use run number 11 as default in the gcard
-	- FMT background hits :soon:
+	- FMT background hits
 	- solenoid field rotation :soon:
-	- production cut set for individual volumes in the options :soon:
+	- production cut set for individual volumes in the options
 
 
 <br>
