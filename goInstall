@@ -26,15 +26,15 @@ git pull
 
 cd $TAGTOINSTALL/source
 scons -c
-scons -j15 OPT=1
+scons -j4 OPT=1
 mkdir -p bin/$OSRELEASE
 
 # cp could not work if the executable is in use, but "mv" will work
 mv gemc bin/$OSRELEASE
-cp bin/$OSRELEASE/gemc .
+cp bin/$OSRELEASE/gemc ./
 
 # making sure the api is present
-git clone https://github.com/gemc/api .
+git clone https://github.com/gemc/api 
 
 
 

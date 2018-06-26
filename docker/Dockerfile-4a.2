@@ -40,18 +40,26 @@
 #
 #--------------------------------------------------------------------------
 
-FROM jeffersonlab/jlabce:2.1
+FROM jeffersonlab/jlabce:2.2
 LABEL maintainer "Maurizio Ungaro <ungaro@jlab.org>"
 
 ENV JLAB_ROOT /jlab
-ENV JLAB_VERSION 2.1
+ENV JLAB_VERSION 2.2
 ENV CLAS12TAG 4a.2.3
 
 WORKDIR $JLAB_ROOT
 
+# Notice: we need a symbolic link to the mlibrary include as it was missing.
+# Should not be needed in 2.3 and up (we also need to fix it there)
+# Also notice: gemc needs to be compatible with the latest version of geant4.
 RUN git clone https://github.com/gemc/clas12Tags.git \
-	&& cd $JLAB_ROOT/clas12Tags \
 	&& source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh \
+	&& cd $MLIBRARY \
+	&& mkdir cadmesh \
+	&& cd cadmesh \
+	&& ln -s ../include . \
+	&& cd $JLAB_ROOT/clas12Tags \
+	&& cp $GEMC/physics/PhysicsList.cc $CLAS12TAG/source/physics/ \
 	&& ./goInstall $CLAS12TAG
 
 ADD docker/environment.csh /jlab/clas12tags
