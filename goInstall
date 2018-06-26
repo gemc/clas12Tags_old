@@ -1,6 +1,7 @@
 #!/bin/csh -f
 
 # scripts to be run at JLAB
+# Warning: must be run at the top dir location where the tags sub-dir are located
 
 if($#argv != 1) then
 	echo " "
@@ -14,15 +15,12 @@ echo
 echo Remember to change the gemc tag in gemc.cc
 echo
 
-
 set TAGTOINSTALL = $1
-
 
 echo
 echo Installing gemc clas12 tag $TAGTOINSTALL on $OSRELEASE
 
-# making sure all versions are there
-cd /group/clas12/gemc
+# making sure we got the latest version
 git pull
 
 
@@ -30,12 +28,13 @@ cd $TAGTOINSTALL/source
 scons -c
 scons -j15 OPT=1
 mkdir -p bin/$OSRELEASE
+
 # cp could not work if the executable is in use, but "mv" will work
 mv gemc bin/$OSRELEASE
 cp bin/$OSRELEASE/gemc .
 
-# making sure the api is there
-ln -fs /site/12gev_phys/2.1/Linux_CentOS7.2.1511-x86_64-gcc4.8.5/gemc/2.5/api .
+# making sure the api is present
+git clone https://github.com/gemc/api .
 
 
 
