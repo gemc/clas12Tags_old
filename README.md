@@ -288,10 +288,10 @@ To produce:
 3. change environment.csh to point to the new tag
 4. copy $GEMC to source and clean up:
 
-    - cd $GEMC
+	- cd $GEMC
 	- scons -c
-    - cd newtag
-    - cp -r $GEMC source
+	- cd newtag
+	- cp -r $GEMC source
 	- cd source
 	- rm -rf .git*
 	- cd api

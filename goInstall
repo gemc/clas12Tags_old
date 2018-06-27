@@ -1,7 +1,9 @@
 #!/bin/csh -f
 
-# scripts to be run at JLAB
+# Script to compile a gemc tag and install it inside a bin/$OSRELEASE subdir of source
+#
 # Warning: must be run at the top dir location where the tags sub-dir are located
+# Make sure the api is present
 
 if($#argv != 1) then
 	echo " "
@@ -33,8 +35,6 @@ mkdir -p bin/$OSRELEASE
 mv gemc bin/$OSRELEASE
 cp bin/$OSRELEASE/gemc ./
 
-# making sure the api is present
-git clone https://github.com/gemc/api 
 
 
 

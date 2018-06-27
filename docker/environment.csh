@@ -14,4 +14,4 @@ setenv GEMC /jlab/clas12tags/$CLAS12TAG/source
 setenv GEMC_VERSION $CLAS12TAG
 
 
-source source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh keepmine
+source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh keepmine
