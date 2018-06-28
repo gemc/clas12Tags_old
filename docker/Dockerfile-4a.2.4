@@ -32,7 +32,7 @@
 # Remember to find/replace the <tag> and JLAB_VERSION with the newest one
 # Remember to match clas12tags and JLAB_VERSION in environment.csh
 #
-#   docker build -t clas12tags:4a.2.4 .
+#   docker build -f Dockerfile-4a.2.4 -t clas12tags:4a.2.4 .
 #
 #   docker tag clas12tags:4a.2.4 jeffersonlab/clas12tags:4a.2.4
 #
@@ -51,14 +51,12 @@ WORKDIR $JLAB_ROOT
 
 # Notice: we need a symbolic link to the mlibrary include as it was missing.
 # Should not be needed in 2.3 and up (we also need to fix it there)
-# Also notice: gemc needs to be compatible with the latest version of geant4.
-# That is accomplished using $GEMC/physics/PhysicsList.cc
-#
+# Also notice: the TorusSymmetric.dat field is downloaded manually. It will be downloaded with go_field in the installation
 
 RUN git clone https://github.com/gemc/clas12Tags.git \
 	&& source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh \
 	&& cd $MLIBRARY \
-	&& mkdir cadmesh \
+	&& mkdir -p cadmesh \
 	&& cd cadmesh \
 	&& ln -s ../include . \
 	&& cd $JLAB_ROOT/clas12Tags \
@@ -66,9 +64,10 @@ RUN git clone https://github.com/gemc/clas12Tags.git \
 	&& ./goInstall $CLAS12TAG \
 	&& rm /etc/profile.d/jlab.csh \
 	&& mkdir $JLAB_ROOT/workdir \
-	&& cp $JLAB_ROOT/clas12Tags/$CLAS12TAG/clas12.gcard $JLAB_ROOT/workdir
+	&& cp $JLAB_ROOT/clas12Tags/$CLAS12TAG/clas12.gcard $JLAB_ROOT/workdir \
+	&& cd /jlab/noarch/data \
+	&& wget http://clasweb.jlab.org/12gev/field_maps/TorusSymmetric.dat
 
 WORKDIR $JLAB_ROOT/workdir
 ADD environment.csh /etc/profile.d
-
 
