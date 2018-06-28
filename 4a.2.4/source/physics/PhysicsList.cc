@@ -387,7 +387,7 @@ void PhysicsList::ConstructProcess()
 		else if (synrad == 2) fSyncMat = new G4SynchrotronRadiationInMat();
 		//G4AutoDelete::Register(fSync);
 
-//		 auto theParticleIterator = GetParticleIterator();
+		 auto theParticleIterator = GetParticleIterator();
 
 		// PhysicsList contains theParticleIterator
 		theParticleIterator->reset();

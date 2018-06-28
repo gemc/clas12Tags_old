@@ -155,14 +155,14 @@ In development:
 
 <br>
 
-- 4a.2.4: Same as 4a.2.3 with in addition:
+- 4a.2.4: Same as 4a.2.3 but uses JLAB_VERSION 2.2. In addition:
 
 	- Use new torus field map
 	- FMT shift by 8mm
 	- use run number 11 as default in the gcard
 	- FMT background hits
-	- solenoid field rotation :soon:
 	- production cut set for individual volumes in the options
+	- new geant4 version
 
 
 <br>
@@ -170,8 +170,8 @@ In development:
 - 4a.2.5: Same as 4a.2.4 with in addition:
 
 	- Solenoid from CAD models :soon:
-	- new geant4 version :soon:
 	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
+	- solenoid field rotation :soon:
 
 
 <br>
