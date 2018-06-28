@@ -8,3 +8,4 @@ setenv GEMC /jlab/clas12Tags/$CLAS12TAG/source
 setenv GEMC_VERSION $CLAS12TAG
 
 source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.csh keepmine
+setenv GEMC_DATA_DIR /jlab/clas12Tags/$CLAS12TAG

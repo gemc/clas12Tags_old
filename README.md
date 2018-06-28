@@ -163,6 +163,7 @@ In development:
 	- FMT background hits
 	- production cut set for individual volumes in the options
 	- new geant4 version
+   - env variable "GEMC_DATA_DIR" as a base path in the gcard (gcard is now portable to other systems)
 
 
 <br>
