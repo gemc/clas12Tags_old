@@ -5,9 +5,9 @@ The clas12Tags are a series of clas12 specific tags of the GEMC source code and 
 
 <hr>
 
-To use the latest production tag (currently 4a.2.3)::
+To use the latest production tag (currently 4a.2.3):
 
- source /group/clas12/gemc/environment.csh
+```source /group/clas12/gemc/environment.csh```
 
 You can also specific a different tag:
 
@@ -102,10 +102,11 @@ To use an empty target instead:
 <br><br>
 
 How to install
---------------
+----------------
 
 Starting with 4a.2.4 gemc is distributed `using docker<https://gemc.jlab.org/gemc/html/docker.html>`_.
 
+<br><br>
 
 How to install (4a.2.3 and earlier versions)
 --------------------------------------------
