@@ -104,7 +104,7 @@ To use an empty target instead:
 How to install
 ----------------
 
-Starting with 4a.2.4 gemc is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> using docker</a>
+Starting with 4a.2.4 gemc is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> using docker</a>.
 
 <br><br>
 
