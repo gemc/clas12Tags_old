@@ -39,6 +39,10 @@
 #   docker push jeffersonlab/clas12tags:4a.2.4
 #
 #--------------------------------------------------------------------------
+#
+# To run in batch mode:
+#
+# 
 
 FROM jeffersonlab/jlabce:2.2
 LABEL maintainer "Maurizio Ungaro <ungaro@jlab.org>"
@@ -63,11 +67,16 @@ RUN git clone https://github.com/gemc/clas12Tags.git \
 	&& cp $GEMC/physics/PhysicsList.cc $CLAS12TAG/source/physics/ \
 	&& ./goInstall $CLAS12TAG \
 	&& rm /etc/profile.d/jlab.csh \
+	&& rm /etc/profile.d/jlab.sh \
 	&& mkdir $JLAB_ROOT/workdir \
 	&& cp $JLAB_ROOT/clas12Tags/$CLAS12TAG/clas12.gcard $JLAB_ROOT/workdir \
 	&& cd /jlab/noarch/data \
-	&& wget http://clasweb.jlab.org/12gev/field_maps/TorusSymmetric.dat
+	&& rm clas12TorusOriginalMap.dat \
+	&& wget -q http://clasweb.jlab.org/12gev/field_maps/TorusSymmetric.dat
 
 WORKDIR $JLAB_ROOT/workdir
 ADD environment.csh /etc/profile.d
+ADD environment.sh /etc/profile.d
 
+# The jlab.sh in 2.2 is not working properly. Installing the latest one instead
+ADD jlab.sh /jlab/2.2/ce
