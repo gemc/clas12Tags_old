@@ -101,6 +101,21 @@ To use an empty target instead:
 
 <br><br>
 
+
+Removing a detector or a volume
+-------------------------------
+
+You can remove/comment out the ```<detector>``` tag in the gcard to remove a whole system.
+To remove individual elements, use the existance tag in the gcard. For example, to remove the forward micromegas:
+
+```
+       <detector name="FMT">
+                <existence exist="no" />
+        </detector>
+```
+
+<br><br>
+
 How to install
 ----------------
 
@@ -125,9 +140,9 @@ Each tag has the production gcard inside its directory. To use: change the path 
 
 <br><br>
 
+
 Software, Geometry Tags
 =======================
-
 
 	
 Production:
