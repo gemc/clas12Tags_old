@@ -7,7 +7,7 @@
 	<!-- central detectors 	-->
 	<detector name="experiments/clas12/cnd/cnd"               factory="TEXT" variation="original"/>
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="java"/>
-	<!-- detector name="experiments/clas12/bst/bstShield"               factory="TEXT" variation="w51"  --> 
+	<!-- detector name="experiments/clas12/bstShield/bstShield"               factory="TEXT" variation="w51"  --> 
 	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
 	
 	
