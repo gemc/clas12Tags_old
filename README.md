@@ -184,8 +184,9 @@ In development:
 	- production cut set for individual volumes in the options
 	- new geant4 version
 	- env variable "GEMC_DATA_DIR" as a base path in the gcard (gcard is now portable to other systems)
-	- bst tungsten and heat shield added
-	- LTCC Nose CAD model added
+	- bst tungsten and heat shield
+	- LTCC Nose CAD model
+	- magnetic field map displacements and rotations with command line options
 
 
 <br>
@@ -194,7 +195,6 @@ In development:
 
 	- Solenoid from CAD models :soon:
 	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
-	- solenoid field rotation :soon:
 
 
 <br>
