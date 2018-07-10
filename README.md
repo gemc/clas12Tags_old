@@ -187,6 +187,7 @@ In development:
 	- bst tungsten and heat shield
 	- LTCC Nose CAD model
 	- magnetic field map displacements and rotations with command line options
+	- FAST MC mode 10, 20 output fixed
 
 
 <br>
