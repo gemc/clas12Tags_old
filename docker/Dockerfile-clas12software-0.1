@@ -1,0 +1,75 @@
+#--------------------------------------------------------------------------
+# JLab Software for 0.1 and up
+#
+# This Dockerfile describes the clas12 Software containers that adds reconstruction software to clas12Tags versions:
+# 0.1
+#
+# It relies on the jlabce base image for CLHEP, GEANT4, and ROOT as well as several system
+# packages. This is based on David Lawrence docker builds in 	https://gitlab.com/ESC/containers.git
+#
+# This will create a docker image that includes both a noVNC-webserver
+# and VNC-server that can be used to view graphics on the host using
+# either a native webrowser (HTML5 enabled) or a native VNC viewer. This
+# includes the ability to view OpenGL graphics.
+#
+# The graphics support was originally inspired by the Docker-opengl project
+# here:
+#
+#  https://github.com/thewtex/docker-opengl
+#
+# In the end, the only thing used from that was the idea to use
+# noVNC. Thus, we do not include their license. However, I do want to give
+# them credit for inspiring this work.
+#
+#  The container should be run with the "-p 6080:6080" option to allow
+# outside connections to see the webserver. To connect to the VNC
+# server directly, you should add the "-p 5900:5900" option. (Both
+# can be included if you like.) Once inside the container, run "xstart"
+# to fire up the servers. Then follow the directions for connecting.
+#
+#--------------------------------------------------------------------------
+#
+# Remember to find/replace the <tag> and version with the newest one
+#
+#   docker build -f Dockerfile-clas12Software-0.1 -t clas12software:0.1 .
+#
+#   docker tag clas12software:0.1 jeffersonlab/clas12software:0.1
+#
+#   docker push jeffersonlab/clas12software:0.1
+#
+#--------------------------------------------------------------------------
+#
+# To run in batch mode:
+#
+
+FROM jeffersonlab/clas12tags:4a.2.4
+LABEL maintainer "Maurizio Ungaro <ungaro@jlab.org>"
+
+ENV JLAB_ROOT /jlab
+ENV JLAB_VERSION 2.2
+ENV CLAS12TAG 4a.2.4
+
+WORKDIR $JLAB_ROOT
+
+# Notice: we need a symbolic link to the mlibrary include as it was missing.
+# Should not be needed in 2.3 and up (we also need to fix it there)
+# Also notice: the TorusSymmetric.dat field is downloaded manually. It will be downloaded with go_field in the installation
+
+RUN source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh \
+	&& mkdir -p $JLAB_SOFTWARE/clas12/lib \
+	&& mkdir -p $JLAB_SOFTWARE/clas12/bin \
+	&& mkdir -p $JLAB_SOFTWARE/clas12/inc \
+	&& export CLAS12_BIN=$JLAB_SOFTWARE/clas12/bin \
+	&& wget https://userweb.jlab.org/~gavalian/software/Clas12Tool.tar.gz \
+	&& tar -zxvf Clas12Tool.tar.gz \
+	&& cd Clas12Tool \
+	&& make \
+	&& cd .. \
+	&& rm -rf Clas12Tool
+
+WORKDIR $JLAB_ROOT/workdir
+ADD environment.csh /etc/profile.d
+ADD environment.sh /etc/profile.d
+
+# The jlab.sh in 2.2 is not working properly. Installing the latest one instead
+ADD jlab.sh /jlab/2.2/ce

@@ -1,5 +1,9 @@
 #!/bin/bash
 #
+#
+# TEMPORARY FILE UNTIL 2.3 IS RELEASED
+#
+#
 # You must source this script.
 #   - It requires JLAB_ROOT and JLAB_VERSION to be set to something sensible
 #   - At your bash prompt type: ". <path>/jlab.sh"
