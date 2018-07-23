@@ -188,6 +188,7 @@ In development:
 	- LTCC Nose CAD model
 	- magnetic field map displacements and rotations with command line options
 	- FAST MC mode 10, 20 output fixed
+	- new solenoid field map used by default
 
 
 <br>
