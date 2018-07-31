@@ -31,7 +31,7 @@
 #
 # Remember to find/replace the <tag> and version with the newest one
 #
-#   docker build -f Dockerfile-clas12Software-0.1 -t clas12software:0.1 .
+#   docker build -f Dockerfile-clas12software-0.1 -t clas12software:0.1 .
 #
 #   docker tag clas12software:0.1 jeffersonlab/clas12software:0.1
 #
@@ -41,6 +41,9 @@
 #
 # To run in batch mode:
 #
+#  docker run -it --rm jeffersonlab/clas12software:0.1 bash
+#
+#--------------------------------------------------------------------------
 
 FROM jeffersonlab/clas12tags:4a.2.4
 LABEL maintainer "Maurizio Ungaro <ungaro@jlab.org>"
@@ -65,11 +68,9 @@ RUN source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh \
 	&& cd Clas12Tool \
 	&& make \
 	&& cd .. \
-	&& rm -rf Clas12Tool
-
-WORKDIR $JLAB_ROOT/workdir
-ADD environment.csh /etc/profile.d
-ADD environment.sh /etc/profile.d
-
-# The jlab.sh in 2.2 is not working properly. Installing the latest one instead
-ADD jlab.sh /jlab/2.2/ce
+	&& rm -rf Clas12Tool \
+	&& export CLARA_HOME=$JLAB_ROOT/$JLAB_VERSION/claraHome \
+	&& mkdir -p $CLARA_HOME/tmp \
+	&& cd  $CLARA_HOME/tmp \
+	&& wget  --no-check-certificate https://claraweb.jlab.org/clara/_downloads/install-claracre-clas.sh \
+	&& chmod u+x install-claracre-clas.sh

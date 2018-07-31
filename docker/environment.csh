@@ -14,6 +14,8 @@ setenv CLAS12_LIB $JLAB_SOFTWARE/clas12/lib
 setenv CLAS12_INC $JLAB_SOFTWARE/clas12/inc
 setenv CLAS12_BIN $JLAB_SOFTWARE/clas12/bin
 
+setenv CLARA_HOME $JLAB_ROOT/$JLAB_VERSION/claraHome
+
 setenv PATH ${PATH}:${CLAS12_BIN}
 
 set autolist
