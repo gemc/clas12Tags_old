@@ -70,7 +70,11 @@ RUN source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh \
 	&& cd .. \
 	&& rm -rf Clas12Tool \
 	&& export CLARA_HOME=$JLAB_ROOT/$JLAB_VERSION/claraHome \
-	&& mkdir -p $CLARA_HOME/tmp \
-	&& cd  $CLARA_HOME/tmp \
+	&& mkdir -p $CLARA_HOME /jlab/tmp \
+	&& cd /jlab/tmp \
 	&& wget  --no-check-certificate https://claraweb.jlab.org/clara/_downloads/install-claracre-clas.sh \
-	&& chmod u+x install-claracre-clas.sh
+	&& chmod u+x install-claracre-clas.sh \
+	&& ./install-claracre-clas.sh -v 5b.6.1 \
+	&& cd /jlab \
+	&& rm -rf tmp
+

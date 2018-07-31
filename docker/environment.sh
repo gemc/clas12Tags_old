@@ -13,10 +13,10 @@ export GEMC_DATA_DIR=/jlab/clas12Tags/$CLAS12TAG
 export CLAS12_LIB=$JLAB_SOFTWARE/clas12/lib
 export CLAS12_INC=$JLAB_SOFTWARE/clas12/inc
 export CLAS12_BIN=$JLAB_SOFTWARE/clas12/bin
+export CLARA_HOME=$JLAB_SOFTWARE/clas12/claraHome
+export COATJAVA=$CLARA_HOME/plugins/clas12
 
-export CLARA_HOME=$JLAB_ROOT/$JLAB_VERSION/claraHome
-
-export PATH=${PATH}:${CLAS12_BIN}
+export PATH=${PATH}:${CLAS12_BIN}:${COATJAVA}/bin
 
 
 set autolist
