@@ -78,3 +78,11 @@ RUN source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh \
 	&& cd /jlab \
 	&& rm -rf tmp
 
+# The lines below are a repetition of clas12tags just in case the environment changed
+# So we don't need to re-build the clas12tags container
+WORKDIR $JLAB_ROOT/workdir
+ADD environment.csh /etc/profile.d
+ADD environment.sh /etc/profile.d
+
+# The jlab.sh in 2.2 is not working properly. Installing the latest one instead
+ADD jlab.sh /jlab/2.2/ce
