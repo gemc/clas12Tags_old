@@ -75,7 +75,8 @@ RUN git clone https://github.com/gemc/clas12Tags.git \
 	&& cp $JLAB_ROOT/clas12Tags/$CLAS12TAG/clas12.gcard $JLAB_ROOT/workdir \
 	&& cd /jlab/noarch/data \
 	&& rm clas12TorusOriginalMap.dat \
-	&& wget -q http://clasweb.jlab.org/12gev/field_maps/TorusSymmetric.dat
+	&& wget -q http://clasweb.jlab.org/12gev/field_maps/TorusSymmetric.dat \
+	&& wget -q http://clasweb.jlab.org/12gev/field_maps/clas12NewSolenoidFieldMap.dat
 
 WORKDIR $JLAB_ROOT/workdir
 ADD environment.csh /etc/profile.d
