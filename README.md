@@ -1,11 +1,11 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-### Current PRODUCTION version: **_4a.2.3_**, compatible with **_COATJAVA 5b.3.3_** and above. JLAB_SOFTWARE version: 2.1.
+### Current PRODUCTION version: **_4a.2.4_**, compatible with **_COATJAVA 5b.3.3_** and above. JLAB_SOFTWARE version: 2.1.
 
 <hr>
 
-To use the latest production tag (currently 4a.2.3):
+To use the latest production tag (currently 4a.2.4):
 
 ```source /group/clas12/gemc/environment.csh```
 
@@ -15,11 +15,11 @@ You can also specific a different tag:
 
 To run gemc use the tagged gcard:
 
-```gemc /group/clas12/gemc/4a.2.3/clas12.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/4a.2.4/clas12.gcard -N=nevents -USE_GUI=0 ```
 
 To run gemc using the **new magnetic field map**:
 
-```gemc /group/clas12/gemc/4a.2.3/clas12NF.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/4a.2.4/clas12NF.gcard -N=nevents -USE_GUI=0 ```
 
 <br>
 
@@ -123,20 +123,21 @@ Starting with 4a.2.4 gemc is distributed  <a href="https://gemc.jlab.org/gemc/ht
 
 <br><br>
 
-How to install (4a.2.3 and earlier versions)
-------------------------------------------------
+How to get and compile the clas12Tags
+-------------------------------------
 
-The clas12tags can be installed on top of an existing [jlab installation. For 4a.2.3 it's JLAB_VERSION 2.1](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.1_install.html).
-To do that:
+The clas12tags can be installed on top of an existing [jlab installation.
+For 4a.2.4 it's JLAB_VERSION 2.2](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.2_install.html):
 
 1. clone https://github.com/gemc/clas12Tags
 2. cd to the tag you want to use
 3. type `<scons -j4 OPT=1>`
 
-This will compile a gemc executable in that directory. Remember to use the full path to that executable when running gemc, otherwise the OS will pick up the default from the $GEMC env variable.
+This will compile a gemc executable in that directory. Remember to use the full path to that executable when running gemc,
+otherwise the OS will pick up the default from the $GEMC env variable.
 
 Each tag has the production gcard inside its directory. To use: change the path from 
-``` /group/clas12/gemc/4a.2.3 ``` to the proper location of your disk.
+``` /group/clas12/gemc/4a.2.4 ``` to the proper location of your disk.
 
 <br><br>
 
