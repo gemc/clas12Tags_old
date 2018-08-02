@@ -150,31 +150,6 @@ Production:
 
 <br>
 
-
-- 4a.2.3 (compatible with COATJAVA 5b.3.3): Same as 4a.2.2 with in addition:
-
-	- ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle)
-	- CTOF, FTOF Paddle to PMT digitization for FADC
-	- background merging algorithm framework
-	- background merging algorithm implementation in digitization: DC, BST and MM.
-	- Correct field geant4-caching
-	- Solenoid integration method: G4ClassicalRK4 to fix some geant4 navigation issues in the field. Slower but more reliable (should have less crashes)
-	- SYNRAD option to activate synchrotone radiation in vacuum (SYNRAD=1) or any material (SYNRAD=2)
-	- dc gas material changed to 90% Ar, 10% G4_CARBON_DIOXIDE.
-	- RF shift from target center: added option RFSTART: Radio-frequency time model. Available values are:
-	  - "eventVertex, 0, 0, 0" (default): the RF time is the event start time + the light time-distance of the first particle from the point (0,0,0)
-	  - "eventTime".....................: the RF time is identical to the event start time
-
-
-<br>
-
-
-
-In development:
----------------
-
-<br>
-
 - 4a.2.4: Same as 4a.2.3 but uses JLAB_VERSION 2.2. In addition:
 
 	- Use new torus field map
@@ -193,16 +168,43 @@ In development:
 
 <br>
 
+
+
+In development:
+---------------
+
+<br>
+
+
+
+<br>
+
 - 4a.2.5: Same as 4a.2.4 with in addition:
 
 	- Solenoid from CAD models :soon:
-	- cnd banks: 1 ADC output / pmt instead of ADCU/ADCD for a single paddle :soon:
-
+	- Updated DC geometry using latest survey (May 18 Entry in DB) :soon:
+	- Geometry variation gcard option :soon:
 
 <br>
 
 Previous Tags:
 --------------
+
+
+- 4a.2.3 (compatible with COATJAVA 5b.3.3): Same as 4a.2.2 with in addition:
+
+	- ctof, ftof banks: 1 ADC output / pmt instead of ADCL/ADCR for a single paddle)
+	- CTOF, FTOF Paddle to PMT digitization for FADC
+	- background merging algorithm framework
+	- background merging algorithm implementation in digitization: DC, BST and MM.
+	- Correct field geant4-caching
+	- Solenoid integration method: G4ClassicalRK4 to fix some geant4 navigation issues in the field. Slower but more reliable (should have less crashes)
+	- SYNRAD option to activate synchrotone radiation in vacuum (SYNRAD=1) or any material (SYNRAD=2)
+	- dc gas material changed to 90% Ar, 10% G4_CARBON_DIOXIDE.
+	- RF shift from target center: added option RFSTART: Radio-frequency time model. Available values are:
+	  - "eventVertex, 0, 0, 0" (default): the RF time is the event start time + the light time-distance of the first particle from the point (0,0,0)
+	  - "eventTime".....................: the RF time is identical to the event start time
+
 
 
 - 4a.2.2: Same as 4a.2.1 with in addition:
