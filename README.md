@@ -176,15 +176,11 @@ In development:
 
 <br>
 
-
-
-<br>
-
 - 4a.2.5: Same as 4a.2.4 with in addition:
 
-	- Solenoid from CAD models :soon:
 	- Updated DC geometry using latest survey (May 18 Entry in DB) :soon:
-	- Geometry variation gcard option :soon:
+	- Geometry variation as a gcard option :soon:
+	- variations for rg-a different run-periods
 
 <br>
 
@@ -312,6 +308,7 @@ To produce:
 -----------
 
 1. create new tag dir
+2. cp experiments and gcard form old tag to keep track of new changes
 2. change gcard to point to new location
 3. change environment.csh to point to the new tag
 4. copy $GEMC to source and clean up:
