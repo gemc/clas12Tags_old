@@ -1,9 +1,10 @@
 <gcard>
 	
 	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
-	<detector name="experiments/clas12/targets/cad/" factory="CAD"/>
-	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="cad"/>
-	
+	<detector name="experiments/clas12/targets/cad/"                     factory="CAD"/>
+	<detector name="experiments/clas12/targets/target"                   factory="TEXT" variation="cad"/>
+	<detector name="experiments/clas12/vacuumExtension/vacuumExtension"  factory="TEXT" variation="original"/>
+
 	<!-- central detectors 	-->
 	<detector name="experiments/clas12/cnd/cnd"               factory="TEXT" variation="original"/>
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="java"/>
@@ -80,6 +81,7 @@
 	<option name="RFSETUP"     value="0.499, 40, 20" />
 	
 	
+	
 	<!--  beam background. for 250 ns timewindow we have 124,000 e- on
 	 a LH2 target at 10^35 luminosity
 	 I suggest in this case to set SAVE_ALL_MOTHERS to 0
@@ -109,5 +111,11 @@
 	 <detector name="FMT">
 	 	<existence exist="no" />
 	 </detector>
+	<detector name="airPipe">
+		<existence exist="no" />
+	</detector>
+ 
+
+	
 	
 </gcard>

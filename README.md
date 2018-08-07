@@ -181,6 +181,7 @@ In development:
 	- Updated DC geometry using latest survey (May 18 Entry in DB) :soon:
 	- Geometry variation as a gcard option :soon:
 	- variations for rg-a different run-periods
+	- Fixed bug that prevented material name from being displayed in the GUI
 
 <br>
 
@@ -322,4 +323,4 @@ To produce:
 	- cd api
 	- rm -rf .git*
 
-5. mkdir experiments, copy files from gemcApp/experiments
+5. change gemc.cc tag to new tag
