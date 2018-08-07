@@ -23,29 +23,6 @@ To run gemc using the **new magnetic field map**:
 
 <br>
 
-FTOn, FTOff configurations
---------------------------
-
-The default configuration for the first experiment is with "FTOn" (Figure 1, Left): complete forward tagger is fully operational.
-The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
-
-The simulations in preparation of the first experiment should use the default version FTOn.
-FTOff will be used only by experts for special studies in preparation for the engineering run.
-
-<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
-<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
-
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br>
-
-
-###### Figure 1. Left: FT On configuration: Full, OperationalForward Tagger. Right: FT Off configuration: FT Tracker replaced by shielding, Tungsten Cone moved upstream, FT if turned off.
-
-<br>
 
 
 
@@ -304,6 +281,37 @@ Previous Tags:
   - FTOF and CTOF paddle delays from CCDB
   - CTOF center off-set.
 
+<br>
+
+Other notes
+===========
+
+FTOn, FTOff configurations
+--------------------------
+
+The default configuration for the first experiment is with "FTOn" (Figure 1, Left): complete forward tagger is fully operational.
+The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagger tracker is replaced with shielding, and the tungsten cone is moved upstream.
+
+The simulations in preparation of the first experiment should use the default version FTOn.
+FTOff will be used only by experts for special studies in preparation for the engineering run.
+
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+###### Figure 1. Left: FT On configuration: Full, OperationalForward Tagger. Right: FT Off configuration: FT Tracker replaced by shielding, Tungsten Cone moved upstream, FT if turned off.
+
+
+
+
+<br>
 
 
 To produce:
