@@ -1,7 +1,7 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/4a.2.5/clas12.png" align="center"" width="800" ></a>
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/4a.2.5/clas12.png" align="center" width="800" ></a>
 
 <br><br>
 <br><br>
