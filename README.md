@@ -1,6 +1,8 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
+<br>
+
 ### Current PRODUCTION version: **_4a.2.4_**, compatible with **_COATJAVA 5b.6.1_** and above. JLAB_SOFTWARE version: 2.2.
 
 <hr>
@@ -15,13 +17,9 @@ To run gemc use the tagged gcard:
 ```gemc /group/clas12/gemc/4a.2.4/clas12.gcard -N=nevents -USE_GUI=0 ```
 
 
-<br>
-
-
-
-
 
 <br><br>
+
 
 Magnetic Fields
 ---------------
@@ -31,7 +29,7 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 
 ```
  <option name="SCALE_FIELD" value="TorusSymmetric, -0.8"/>
- <option name="SCALE_FIELD" value="clas12-solenoid, 0.6"/>
+ <option name="SCALE_FIELD" value="clas12-newSolenoid, 0.6"/>
 ```
 
 <br><br>
@@ -305,6 +303,8 @@ to:
 <detector name="cadBeamlineFTOFF/" factory="CAD"/>
 ```
 
+
+<br>
 
 Different tag environment
 -------------------------
