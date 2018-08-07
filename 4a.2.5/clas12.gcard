@@ -32,7 +32,6 @@
 	<!-- forward carriage -->
 	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
 	
-	<!--
 	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="java"/>
 	<detector name="experiments/clas12/ftof/ftof"          factory="TEXT" variation="java"/>
 	<detector name="experiments/clas12/ec/ec"              factory="TEXT" variation="java"/>
@@ -40,7 +39,6 @@
 	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
 	<detector name="experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
 	<detector name="experiments/clas12/ltcc/cad/"          factory="CAD"/>
-	 -->
 
 	
 	<!-- you can scale the fields here. Remember torus -1 means e- INBENDING  -->

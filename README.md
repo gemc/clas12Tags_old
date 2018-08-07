@@ -1,6 +1,9 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
+<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/4a.2.5/clas12.png" align="left" width="400" ></a>
+
+
 <br>
 
 ### Current PRODUCTION version: **_4a.2.4_**, compatible with **_COATJAVA 5b.6.1_** and above. JLAB_SOFTWARE version: 2.2.
