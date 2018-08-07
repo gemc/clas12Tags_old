@@ -9,17 +9,11 @@ To use the latest production tag (currently 4a.2.4):
 
 ```source /group/clas12/gemc/environment.csh```
 
-You can also specific a different tag:
-
-```source /group/clas12/gemc/environment.csh <tag>  ```
 
 To run gemc use the tagged gcard:
 
 ```gemc /group/clas12/gemc/4a.2.4/clas12.gcard -N=nevents -USE_GUI=0 ```
 
-To run gemc using the **new magnetic field map**:
-
-```gemc /group/clas12/gemc/4a.2.4/clas12NF.gcard -N=nevents -USE_GUI=0 ```
 
 <br>
 
@@ -267,6 +261,8 @@ Previous Tags:
 Other notes
 ===========
 
+<br>
+
 FTOn, FTOff configurations
 --------------------------
 
@@ -308,6 +304,17 @@ to:
 <detector name="beamline" factory="TEXT" variation="FTOff"/>
 <detector name="cadBeamlineFTOFF/" factory="CAD"/>
 ```
+
+
+Different tag environment
+-------------------------
+
+You can specific a different tag in the environment command line:
+
+```source /group/clas12/gemc/environment.csh <tag>  ```
+
+
+
 
 
 <br>
