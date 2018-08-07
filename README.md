@@ -26,25 +26,6 @@ To run gemc using the **new magnetic field map**:
 
 
 
-To change configuration from FTOn to FTOff, replace the keywords and variations from:
-
-
-```     
-<detector name="ft" factory="TEXT" variation="FTOn"/>
-<detector name="beamline" factory="TEXT" variation="FTOn"/>
-<detector name="cadBeamline/" factory="CAD"/> 
-```
-    
-to:
-
-
-```
-<detector name="ft" factory="TEXT" variation="FTOff"/>
-<detector name="beamline" factory="TEXT" variation="FTOff"/>
-<detector name="cadBeamlineFTOFF/" factory="CAD"/> 
-```
-
-
 
 <br><br>
 
@@ -308,7 +289,25 @@ FTOff will be used only by experts for special studies in preparation for the en
 
 ###### Figure 1. Left: FT On configuration: Full, OperationalForward Tagger. Right: FT Off configuration: FT Tracker replaced by shielding, Tungsten Cone moved upstream, FT if turned off.
 
+<br>
 
+To change configuration from FTOn to FTOff, replace the keywords and variations from:
+
+
+```
+<detector name="ft" factory="TEXT" variation="FTOn"/>
+<detector name="beamline" factory="TEXT" variation="FTOn"/>
+<detector name="cadBeamline/" factory="CAD"/>
+```
+
+to:
+
+
+```
+<detector name="ft" factory="TEXT" variation="FTOff"/>
+<detector name="beamline" factory="TEXT" variation="FTOff"/>
+<detector name="cadBeamlineFTOFF/" factory="CAD"/>
+```
 
 
 <br>
