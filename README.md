@@ -4,7 +4,6 @@ The clas12Tags are a series of clas12 specific tags of the GEMC source code and 
 <a align="center" href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/4a.2.5/clas12.png" align="center" width="850" ></a>
 
 <br><br>
-<br><br>
 
 ###### The CLAS12 detector in the simulation. The electron beam is going from left to right.
 
