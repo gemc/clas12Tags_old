@@ -12,6 +12,8 @@ To use the latest production tag (currently 4a.2.4):
 ```source /group/clas12/gemc/environment.csh```
 
 
+<br>
+
 To run gemc use the tagged gcard:
 
 ```gemc /group/clas12/gemc/4a.2.4/clas12.gcard -N=nevents -USE_GUI=0 ```
@@ -24,7 +26,7 @@ To run gemc use the tagged gcard:
 Magnetic Fields
 ---------------
 
-You can change the magnetic field using the SCALE_FIELD option. To do that copy the gcard somewhere first, then modify it. The gcard can work from any location.
+You can scale magnetic fields using the SCALE_FIELD option. To do that copy the gcard somewhere first, then modify it. The gcard can work from any location.
 Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 
 ```
