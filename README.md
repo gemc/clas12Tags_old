@@ -136,10 +136,13 @@ In development:
 
 - 4a.2.5: Same as 4a.2.4 with in addition:
 
-	- Updated DC geometry using latest survey (May 18 Entry in DB) :soon:
+	- Updated DC geometry using latest survey (May 18 Entry in DB) 
 	- Geometry variation as a gcard option :soon:
 	- variations for rg-a different run-periods
 	- Fixed bug that prevented material name from being displayed in the GUI
+	- 3d cartesian field map support
+	- new geant4 version: 10.4.p02
+
 
 <br>
 
