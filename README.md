@@ -138,7 +138,7 @@ In development:
 
 	- Updated DC geometry using latest survey (May 18 Entry in DB) 
 	- Geometry variation as a gcard option :soon:
-	- variations for rg-a different run-periods
+	- variations for rg-a different run-periods:soon:
 	- Fixed bug that prevented material name from being displayed in the GUI
 	- 3d cartesian field map support
 	- new geant4 version: 10.4.p02
