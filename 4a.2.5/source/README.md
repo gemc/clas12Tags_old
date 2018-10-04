@@ -1,3 +1,10 @@
+
+ ![Platform](https://img.shields.io/badge/platform-macos%20|%20linux-green.svg)
+ ![Language](https://img.shields.io/badge/language-c++-red.svg)
+ ![Libraries](https://img.shields.io/badge/libraries-cad%20|%20geant4-blue.svg)
+
+
+
 <b>GE</b>ant4 <b>M</b>onte-<b>C</b>arlo
 
 
@@ -76,20 +83,10 @@ produce radiation, hits, secondaries. The geant4 results are then collected and 
 </p>
 
 
-========
 
-
-### Platform Supported:
-
-* Linux (32, 64)
-* Mac OS
-
-
-========
 
 ### Documentation:
 * <a href="http://gemc.jlab.org"> gemc home page </a>
 
-========
 
 
