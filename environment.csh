@@ -10,6 +10,7 @@ endif
 setenv GEMC /group/clas12/gemc/$CLAS12TAG/source
 setenv GEMC_VERSION $CLAS12TAG
 setenv GEMC_DATA_DIR /group/clas12/gemc/$CLAS12TAG
+setenv FIELD_DIR /site/12gev_phys/noarch/data
 
 if($CLAS12TAG == 4a.2.5) then
 	source /site/12gev_phys/softenv.csh 2.3 keepmine
