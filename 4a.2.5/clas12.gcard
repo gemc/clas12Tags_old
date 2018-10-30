@@ -1,19 +1,18 @@
 <gcard>
 	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
-	<detector name="experiments/clas12/targets/cad/" factory="CAD"/>
+	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
 	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="cad"/>
 	
 	<!-- central detectors 	-->
-	<detector name="experiments/clas12/cnd/cnd"               factory="TEXT" variation="original"/>
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="java"/>
 	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
 	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
-	
-	
+
 	<!--ctof, cad  -->
 	<detector name="experiments/clas12/ctof/ctof"      factory="TEXT" variation="cad"/>
 	<detector name="experiments/clas12/ctof/javacad/"  factory="CAD"/>
-	
+	<detector name="experiments/clas12/cnd/cnd"        factory="TEXT" variation="original"/>
+
 	<!--high threshold cherenkov -->
 	<detector name="experiments/clas12/htcc/htcc"      factory="TEXT" variation="original"/>
 	
