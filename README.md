@@ -142,6 +142,7 @@ In development:
 	- Fixed bug that prevented material name from being displayed in the GUI
 	- 3d cartesian field map support
 	- new geant4 version: 10.4.p02
+	- 51 micron tungsten shield (for bst) surrounding the target
 
 
 <br>
