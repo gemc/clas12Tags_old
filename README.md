@@ -143,6 +143,8 @@ In development:
 	- 3d cartesian field map support
 	- new geant4 version: 10.4.p02
 	- 51 micron tungsten shield (for bst) surrounding the target
+   - calorimeters: reading ecal effective velocity from CCDB
+   - change htcc time offset table to use the same used in reconstruction
 
 
 <br>
