@@ -110,7 +110,7 @@ Production:
 
 <br>
 
-- 4a.2.5: Same as 4a.2.4 with in addition:
+- 4a.2.5: **COATJAVA: 5b.7.1**, **JLAB_VERSION: 2.3**:
 
 	- Updated DC geometry using latest survey (May 18 Entry in DB) 
 	- Geometry variation as a gcard option :soon:
@@ -143,7 +143,7 @@ In development:
 Previous Tags:
 --------------
 
-- 4a.2.4: Same as 4a.2.3 but uses JLAB_VERSION 2.2. In addition:
+- 4a.2.4: **COATJAVA: 5b.6.1**, **JLAB_VERSION: 2.2**:
 
 	- Use new torus field map
 	- FMT shift by 8mm
