@@ -3,8 +3,8 @@
 if( "$1" != "" ) then
 	setenv CLAS12TAG $1
 else
-	setenv CLAS12TAG 4a.2.4
-	echo Warning: TAG not given, set to default 4a.2.4
+	setenv CLAS12TAG 4a.2.5
+	echo Warning: TAG not given, set to default 4a.2.5
 endif
 
 setenv GEMC /group/clas12/gemc/$CLAS12TAG/source
