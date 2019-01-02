@@ -9,7 +9,7 @@ The clas12Tags are a series of clas12 specific tags of the GEMC source code and 
 
 <br>
 
-### Current PRODUCTION version: **_4a.2.5_**, compatible with **_COATJAVA 5b.7.1_** and above. JLAB_SOFTWARE version: 2.23
+### Current PRODUCTION version: **4a.2.5**, compatible with **COATJAVA 5b.7.1** and above. JLAB_SOFTWARE version: 2.3
 
 <hr>
 
@@ -131,7 +131,7 @@ In development:
 
 <br>
 
-- 4a.2.6: Same as 4a.2.5 with in addition:
+- 4a.2.6: 
 	- new geant4 version: 10.5
 
 
