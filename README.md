@@ -9,11 +9,11 @@ The clas12Tags are a series of clas12 specific tags of the GEMC source code and 
 
 <br>
 
-### Current PRODUCTION version: **_4a.2.4_**, compatible with **_COATJAVA 5b.6.1_** and above. JLAB_SOFTWARE version: 2.2.
+### Current PRODUCTION version: **_4a.2.5_**, compatible with **_COATJAVA 5b.7.1_** and above. JLAB_SOFTWARE version: 2.23
 
 <hr>
 
-To use the latest production tag (currently 4a.2.4):
+To use the latest production tag (currently 4a.2.5):
 
 ```source /group/clas12/gemc/environment.csh```
 
@@ -22,7 +22,7 @@ To use the latest production tag (currently 4a.2.4):
 
 To run gemc use the tagged gcard:
 
-```gemc /group/clas12/gemc/4a.2.4/clas12.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/4a.2.5/clas12.gcard -N=nevents -USE_GUI=0 ```
 
 
 
