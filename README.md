@@ -85,7 +85,7 @@ How to get and compile the clas12Tags
 -------------------------------------
 
 The clas12tags can be installed on top of an existing [jlab installation.
-For 4a.2.4 it's JLAB_VERSION 2.2](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.2_install.html):
+For 4a.2.5 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
 
 1. clone https://github.com/gemc/clas12Tags
 2. cd to the tag you want to use
@@ -95,7 +95,7 @@ This will compile a gemc executable in that directory. Remember to use the full 
 otherwise the OS will pick up the default from the $GEMC env variable.
 
 Each tag has the production gcard inside its directory. To use: change the path from 
-``` /group/clas12/gemc/4a.2.4 ``` to the proper location of your disk.
+``` /group/clas12/gemc/4a.2.5 ``` to the proper location of your disk.
 
 <br><br>
 
@@ -107,30 +107,6 @@ Software, Geometry Tags
 	
 Production:
 -----------
-
-<br>
-
-- 4a.2.4: Same as 4a.2.3 but uses JLAB_VERSION 2.2. In addition:
-
-	- Use new torus field map
-	- FMT shift by 8mm
-	- use run number 11 as default in the gcard
-	- FMT background hits
-	- production cut set for individual volumes in the options
-	- new geant4 version
-	- env variable "GEMC_DATA_DIR" as a base path in the gcard (gcard is now portable to other systems)
-	- bst tungsten and heat shield
-	- LTCC Nose CAD model
-	- magnetic field map displacements and rotations with command line options
-	- FAST MC mode 10, 20 output fixed
-	- new solenoid field map used by default (scaled by -1)
-
-
-<br>
-
-
-In development:
----------------
 
 <br>
 
@@ -149,8 +125,40 @@ In development:
 
 <br>
 
+
+In development:
+---------------
+
+<br>
+
+- 4a.2.6: Same as 4a.2.5 with in addition:
+	- new geant4 version: 10.5
+
+
+<br>
+
+
+
+
 Previous Tags:
 --------------
+
+- 4a.2.4: Same as 4a.2.3 but uses JLAB_VERSION 2.2. In addition:
+
+	- Use new torus field map
+	- FMT shift by 8mm
+	- use run number 11 as default in the gcard
+	- FMT background hits
+	- production cut set for individual volumes in the options
+	- new geant4 version
+	- env variable "GEMC_DATA_DIR" as a base path in the gcard (gcard is now portable to other systems)
+	- bst tungsten and heat shield
+	- LTCC Nose CAD model
+	- magnetic field map displacements and rotations with command line options
+	- FAST MC mode 10, 20 output fixed
+	- new solenoid field map used by default (scaled by -1)
+
+<br>
 
 
 - 4a.2.3 (compatible with COATJAVA 5b.3.3): Same as 4a.2.2 with in addition:
