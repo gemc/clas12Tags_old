@@ -131,8 +131,8 @@ In development:
 
 <br>
 
-- 4a.2.6: 
-	- new geant4 version: 10.5
+- 4.3.1:
+	- Support alternative, run dependent configurations
 
 
 <br>
