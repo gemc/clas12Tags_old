@@ -1,7 +1,7 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-<a align="center" href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/4a.2.5/clas12.png" align="center" width="850" ></a>
+<a align="center" href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/4.3.0/clas12.png" align="center" width="850" ></a>
 
 ###### The CLAS12 detector in the simulation. The electron beam is going from left to right.
 
@@ -9,11 +9,11 @@ The clas12Tags are a series of clas12 specific tags of the GEMC source code and 
 
 <br>
 
-### Current PRODUCTION version: **4a.2.5**, compatible with **COATJAVA 5.7.4** and above. JLAB_SOFTWARE version: 2.3
+### Current PRODUCTION version: **4.3.0**, compatible with **COATJAVA 5.7.4** and above. JLAB_SOFTWARE version: 2.3
 
 <hr>
 
-To use the latest production tag (currently 4a.2.5):
+To use the latest production tag (currently 4.3.0):
 
 ```source /group/clas12/gemc/environment.csh```
 
@@ -22,7 +22,7 @@ To use the latest production tag (currently 4a.2.5):
 
 To run gemc use the tagged gcard:
 
-```gemc /group/clas12/gemc/4a.2.5/clas12.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/4.3.0/clas12.gcard -N=nevents -USE_GUI=0 ```
 
 
 
@@ -85,7 +85,7 @@ How to get and compile the clas12Tags
 -------------------------------------
 
 The clas12tags can be installed on top of an existing [jlab installation.
-For 4a.2.5 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
+For 4.3.0 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
 
 1. clone https://github.com/gemc/clas12Tags
 2. cd to the tag you want to use
@@ -95,7 +95,7 @@ This will compile a gemc executable in that directory. Remember to use the full 
 otherwise the OS will pick up the default from the $GEMC env variable.
 
 Each tag has the production gcard inside its directory. To use: change the path from 
-``` /group/clas12/gemc/4a.2.5 ``` to the proper location of your disk.
+``` /group/clas12/gemc/4.3.0 ``` to the proper location of your disk.
 
 <br><br>
 
@@ -110,7 +110,7 @@ Production:
 
 <br>
 
-- 4a.2.5: **COATJAVA: 5.7.4**, **JLAB_VERSION: 2.3**:
+- 4.3.0: **COATJAVA: 5.7.4**, **JLAB_VERSION: 2.3**:
 
 	- Updated DC geometry using latest survey (May 18 Entry in DB) 
 	- Geometry variation as a gcard option :soon:
