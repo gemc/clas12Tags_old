@@ -119,8 +119,8 @@ Production:
 	- 3d cartesian field map support
 	- new geant4 version: 10.4.p02
 	- 51 micron tungsten shield (for bst) surrounding the target
-   	- calorimeters: reading ecal effective velocity from CCDB
-   	- change htcc time offset table to use the same used in reconstruction
+	- calorimeters: reading ecal effective velocity from CCDB
+	- change htcc time offset table to use the same used in reconstruction
 	- Tony Forest: Added polarized target geometry/material and cad volume.
 
 
@@ -133,7 +133,8 @@ In development:
 <br>
 
 - 4.3.1:
-	- Support alternative, run dependent configurations
+	- Support alternative, run dependent configurations :soon:
+	- FTOF Time resolution updated based on data
 
 
 <br>

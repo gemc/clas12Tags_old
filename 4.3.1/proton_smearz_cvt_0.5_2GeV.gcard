@@ -1,0 +1,49 @@
+<gcard>
+	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
+	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
+	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="cad"/>
+	
+	<!-- central detectors 	-->
+	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="java"/>
+	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
+	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
+
+
+	
+	<!-- you can scale the fields here. Remember torus -1 means e- INBENDING  -->
+	<option name="SCALE_FIELD" value="clas12-newSolenoid, -1"/>
+	
+	<!-- hall field  -->
+	<option name="HALL_FIELD"  value="clas12-newSolenoid"/>
+	
+	<!-- fields, precise mode -->
+	<option name="FIELD_PROPERTIES" value="clas12-newSolenoid, 1*mm, G4ClassicalRK4, linear"/>
+
+    <!-- forward carriage -->
+
+    <!-- beam conditions -->
+    <option name="BEAM_P"   value="proton, 1.25*GeV, 80.0*deg, 0*deg"/>
+    <option name="SPREAD_V" value="(0.0, 2.5)cm"/>
+    <option name="SPREAD_P" value="0.75*GeV, 45*deg, 180*deg"/>
+
+    <option name="INTEGRATEDRAW" value="bst, bmt"/>
+	<option name="SAVE_ALL_MOTHERS" value="0"/>
+	<option name="RECORD_MIRRORS"   value="0"/>
+	
+	<option name="PHYSICS" value="FTFP_BERT + STD + Optical"/>
+	
+	<option name="OUTPUT"   value="evio, out.ev"/>
+	
+	<!--  Will print message every 500 events -->
+	<option name="PRINT_EVENT"    value="500" />
+	
+	<!--  Run Number 11, picked up by digitization routines -->
+	<option name="RUNNO"    value="11" />
+	
+
+	<!--  FMT is removed in 4a.2.5 -->
+	 <detector name="FMT">
+	 	<existence exist="no" />
+	 </detector>
+	
+</gcard>
