@@ -113,8 +113,6 @@ Production:
 - 4.3.0: **COATJAVA: 5.7.4**, **JLAB_VERSION: 2.3**:
 
 	- Updated DC geometry using latest survey (May 18 Entry in DB) 
-	- Geometry variation as a gcard option :soon:
-	- variations for rg-a different run-periods:soon:
 	- Fixed bug that prevented material name from being displayed in the GUI
 	- 3d cartesian field map support
 	- new geant4 version: 10.4.p02
@@ -135,6 +133,8 @@ In development:
 - 4.3.1:
 	- Support alternative, run dependent configurations :soon:
 	- FTOF Time resolution updated based on data
+	- Geometry variation as a gcard option :soon:
+	- variations for rg-a different run-periods:soon:
 
 
 <br>
