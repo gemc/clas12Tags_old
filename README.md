@@ -139,6 +139,8 @@ In development:
 	- Gemc configuration written to evio file with json strings :soon:
 	- gcards for rg-a different run-periods:soon:
 	- gcards for rg-b different run-periods:soon:
+	- gcards for rg-k different run-periods:soon:
+
 
 <br>
 
