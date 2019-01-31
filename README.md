@@ -131,10 +131,20 @@ In development:
 <br>
 
 - 4.3.1:
-	- Support alternative, run dependent configurations :soon:
 	- FTOF Time resolution updated based on data
+	- Option SAVE_SELECTED to save RNG state for certain particles, detector
+	- Option SAVE_ALL_ANCESTORS to save complete particles hierarchy in output (evio2root also updated)
+	- Option RERUN_SELECTED to re-run events saved with SAVE_SELECTED
+	- Extend beam background merging to all detectors :soon:
+	- Gemc configuration written to evio file with json strings :soon:
 	- Geometry variation as a gcard option :soon:
-	- variations for rg-a different run-periods:soon:
+	- gcards for rg-a different run-periods:soon:
+	- gcards for rg-b different run-periods:soon:
+
+- 4.3.2:
+	- Support alternative, run dependent configurations :soon:
+	- Geometry variation as a gcard option :soon:
+
 
 
 <br>
