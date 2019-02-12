@@ -29,6 +29,72 @@ To run gemc use the tagged gcard:
 <br><br>
 
 
+Run Configurations
+------------------
+
+- Run group A Spring 2018:
+
+  - Central detector shifted 19.4mm upstream
+  - target (LH2) at (1.2, 1.1, -30) mm  ???
+  - HTCC shfted 9.5mm upstream
+  - FT On configuration
+  - FMT present
+  - Torus polarity: -1, 1, -0.75, 0.75
+  - Solenoid polarity: -1
+  - Beam Current: from 5 to 75 nA
+
+- Run group A Fall 2018:
+
+  - Central detector shifted 19.4mm upstream ???
+  - target (LH2) at (1.2, 1.1, -30) mm
+  - HTCC shfted 9.5mm upstream  ???
+  - FT On configuration
+  - FMT not present
+  - Torus polarity: -1, 1,
+  - Solenoid polarity: -1
+  - Beam Current: from 5 to 75 nA
+
+- Run group K First part:
+
+  - Central detector shifted 19.4mm upstream ???
+  - target (LH2) at (1.2, 1.1, -30) mm ???
+  - HTCC shfted 9.5mm upstream  ???
+  - FT On configuration
+  - FMT not present
+  - Torus polarity:  1
+  - Solenoid polarity: -1
+  - Beam Current: from 5 to 75 nA
+
+
+- Run group K Second part:
+
+  - Central detector shifted 19.4mm upstream ???
+  - target (LH2) at (1.2, 1.1, -30) mm ???
+  - HTCC shfted 9.5mm upstream  ???
+  - FT Off configuration
+  - FMT not present
+  - Torus polarity:  1
+  - Solenoid polarity: -1
+  - Beam Current: from 5 to 75 nA
+
+
+- Run group B Winter 2019:
+
+  - Central detector shifted 19.4mm upstream ???
+  - target (Deuterium) at (1.2, 1.1, -30) mm ???
+  - HTCC shfted 9.5mm upstream  ???
+  - FT On configuration
+  - FMT not present
+  - Torus polarity:  -1
+  - Solenoid polarity: -1
+  - Beam Current: from 5 to 75 nA
+
+
+
+
+
+<br><br>
+
 Magnetic Fields
 ---------------
 
