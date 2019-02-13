@@ -35,7 +35,7 @@ Run Configurations
 - Run group A Spring 2018:
 
   - Central detector shifted 19.4mm upstream
-  - target (LH2) at (1.2, 1.1, -30) mm  ???
+  - target (LH2) at (0, 0, -19.4) mm  
   - HTCC shfted 9.5mm upstream
   - FT On configuration
   - FMT present
@@ -45,9 +45,9 @@ Run Configurations
 
 - Run group A Fall 2018:
 
-  - Central detector shifted 19.4mm upstream ???
+  - Central detector shifted 30 mm upstream
   - target (LH2) at (1.2, 1.1, -30) mm
-  - HTCC shfted 9.5mm upstream  ???
+  - HTCC shfted 19.5mm upstream 
   - FT On configuration
   - FMT not present
   - Torus polarity: -1, 1,
@@ -56,38 +56,40 @@ Run Configurations
 
 - Run group K First part:
 
-  - Central detector shifted 19.4mm upstream ???
-  - target (LH2) at (1.2, 1.1, -30) mm ???
-  - HTCC shfted 9.5mm upstream  ???
+  - Central detector shifted 30 mm upstream
+  - target (LH2) at (1.2, 1.1, -30) mm
+  - HTCC shfted 19.5mm upstream 
   - FT On configuration
   - FMT not present
-  - Torus polarity:  1
+  - Torus polarity: 1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
 
 
 - Run group K Second part:
 
-  - Central detector shifted 19.4mm upstream ???
-  - target (LH2) at (1.2, 1.1, -30) mm ???
-  - HTCC shfted 9.5mm upstream  ???
+ - Central detector shifted 30 mm upstream
+  - target (LH2) at (1.2, 1.1, -30) mm
+  - HTCC shfted 19.5mm upstream 
   - FT Off configuration
   - FMT not present
-  - Torus polarity:  1
+  - Torus polarity: 1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
+
 
 
 - Run group B Winter 2019:
 
-  - Central detector shifted 19.4mm upstream ???
-  - target (Deuterium) at (1.2, 1.1, -30) mm ???
-  - HTCC shfted 9.5mm upstream  ???
+  - Central detector shifted 30 mm upstream
+  - target (LH2) at (1.2, 1.1, -30) mm
+  - HTCC shfted 19.5mm upstream 
   - FT On configuration
   - FMT not present
-  - Torus polarity:  -1
+  - Torus polarity: -1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
+
 
 
 
