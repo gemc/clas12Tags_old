@@ -39,6 +39,7 @@ Run Configurations
   - HTCC shfted 9.5mm upstream
   - FT On configuration
   - FMT present
+  - LTCC sectors: 2 (N2), 3 (N2), 5 (old C4F10), 6
   - Torus polarity: -1, 1, -0.75, 0.75
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
@@ -50,6 +51,7 @@ Run Configurations
   - HTCC shfted 19.5mm upstream 
   - FT On configuration
   - FMT not present
+  - LTCC sectors: 3 (50% C4F10), 5 (N2)
   - Torus polarity: -1, 1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
@@ -61,6 +63,7 @@ Run Configurations
   - HTCC shfted 19.5mm upstream 
   - FT On configuration
   - FMT not present
+  - LTCC sectors: 3 (50% C4F10), 5 (N2)
   - Torus polarity: 1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
@@ -73,6 +76,7 @@ Run Configurations
   - HTCC shfted 19.5mm upstream 
   - FT Off configuration
   - FMT not present
+  - LTCC sectors: 3 (50% C4F10), 5 (N2)
   - Torus polarity: 1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
@@ -86,6 +90,7 @@ Run Configurations
   - HTCC shfted 19.5mm upstream 
   - FT On configuration
   - FMT not present
+  - LTCC sectors: 3 (C4F10), 5 (C4F10)
   - Torus polarity: -1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
