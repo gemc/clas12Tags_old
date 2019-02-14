@@ -68,7 +68,7 @@ Run Configurations
 
 - Run group K Second part:
 
- - Central detector shifted 30 mm upstream
+  - Central detector shifted 30 mm upstream
   - target (LH2) at (1.2, 1.1, -30) mm
   - HTCC shfted 19.5mm upstream 
   - FT Off configuration
