@@ -213,6 +213,8 @@ In development:
 	- gcards for rg-a different run-periods:soon:
 	- gcards for rg-b different run-periods:soon:
 	- gcards for rg-k different run-periods:soon:
+	- ec, pcal digitization removed obsolete constants
+	- moved ftof shield in the correct position
 
 
 <br>
