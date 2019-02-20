@@ -469,10 +469,16 @@ void goptions::setGoptions()
 	optMap["SAVE_ALL_MOTHERS"].arg = 0;
 	optMap["SAVE_ALL_MOTHERS"].name = "Set to 1 to save mother vertex and pid infos in output. High Memory Usage";
 	optMap["SAVE_ALL_MOTHERS"].help  = "Set to 1 to save mother vertex and pid infos in output. High Memory Usage. Default is 0.\n";
-	optMap["SAVE_ALL_MOTHERS"].help += "Set to 2 to save in LUND format particles that generate hits (unless mother also generate hits)\n";
-	optMap["SAVE_ALL_MOTHERS"].help += "Set to 3 to save in LUND format particles that generate hits (even if mother also generate hits)\n";
+	optMap["SAVE_ALL_MOTHERS"].help += "                       2: saves in LUND format any particle that generate hits\n";
+	optMap["SAVE_ALL_MOTHERS"].help += "                       3: same as 2 but if a track’s mother also produced hits, only the mother is saved so the hits are not double counted\n";
 	optMap["SAVE_ALL_MOTHERS"].type = 0;
 	optMap["SAVE_ALL_MOTHERS"].ctgr = "control";
+	
+	optMap["SAVE_ALL_ANCESTORS"].arg = 0;
+	optMap["SAVE_ALL_ANCESTORS"].name = "Set to 1 to save all ancestors of hits in output. High Memory Usage";
+	optMap["SAVE_ALL_ANCESTORS"].help  = "Set to 1 to save all ancestors of hits. High Memory Usage. Default is 0.\n";
+	optMap["SAVE_ALL_ANCESTORS"].type = 0;
+	optMap["SAVE_ALL_ANCESTORS"].ctgr = "control";
 	
 	optMap["HIGH_RES"].arg = 1;
 	optMap["HIGH_RES"].name = "Use High Resolution Graphics";
@@ -599,12 +605,20 @@ void goptions::setGoptions()
 	// Activates RNG saving for selected events
 	optMap["SAVE_SELECTED"].args  = "";
 	optMap["SAVE_SELECTED"].help  = "Save events with selected hit types\n";
-	optMap["SAVE_SELECTED"].help  = "  arg is list of id, pid, low limit, high limit, variable[, directory]\n";
-	optMap["SAVE_SELECTED"].help  = "  e.g. 7xx10000, 11, 0.0*MeV, 2000*MeV, trackE, /.\n";
+	optMap["SAVE_SELECTED"].help  += "  arg is list of id, pid, low limit, high limit, variable[, directory]\n";
+	optMap["SAVE_SELECTED"].help  += "  e.g. 7xx10000, 11, 0.0*MeV, 2000*MeV, trackE, /.\n";
 	optMap["SAVE_SELECTED"].name  = "Save events with selected hit types";
 	optMap["SAVE_SELECTED"].type  = 1;
 	optMap["SAVE_SELECTED"].ctgr  = "output";
 	
+	// Reruns saved events
+	optMap["RERUN_SELECTED"].args  = "";
+	optMap["RERUN_SELECTED"].help  = "Rerun saved events";
+	optMap["RERUN_SELECTED"].help  += "  arg is list of run #[, directory]\n";
+	optMap["RERUN_SELECTED"].name  = "Rerun saved events";
+	optMap["RERUN_SELECTED"].type  = 1;
+	optMap["RERUN_SELECTED"].ctgr  = "control";
+
 	
 
 	// Physics
