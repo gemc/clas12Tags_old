@@ -124,16 +124,15 @@ Starting with 4.3.1:
 By default the target cell is filled with liquid hydrogen by specifying the "lh2" target variation. 
 To use liquid deuterium instead use the variation "lD2" instead:
 
-```
- <option name="SWITCH_MATERIALTO" value="G4_lH2, LD2"/>
-```
-
 To use an empty target instead, use the SWITCH_MATERIALTO option.
 ```
  <option name="SWITCH_MATERIALTO" value="G4_lH2, G4_Galactic"/>
 ```
 
-In 4.3.0 to use the LD2 target you still need to set SWITCH_MATERIALTO to LD2, as the variation is not there. 
+In 4.3.0 to use the LD2 target you still need to set SWITCH_MATERIALTO to LD2, as the variation is not there:
+```
+ <option name="SWITCH_MATERIALTO" value="G4_lH2, LD2"/>
+```
 
 <br><br>
 
