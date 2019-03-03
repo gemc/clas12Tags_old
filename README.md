@@ -122,7 +122,7 @@ Hydrogen, Deuterium or empty target
 
 Starting with 4.3.1: 
 By default the target cell is filled with liquid hydrogen by specifying the "lh2" target variation. 
-To use liquid deuterium instead use the variation "lD2" instead:
+To use liquid deuterium instead use the variation "lD2" instead.
 
 To use an empty target instead, use the SWITCH_MATERIALTO option.
 ```
