@@ -118,13 +118,14 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 Hydrogen, Deuterium or empty target
 -----------------------------------
 
-By default the target cell is filled with liquid hydrogen. To use liquid deuterium instead use the SWITCH_MATERIALTO option:
+By default the target cell is filled with liquid hydrogen by specifying the "lh2" target variation. 
+To use liquid deuterium instead use the variation "lD2" instead:
 
 ```
  <option name="SWITCH_MATERIALTO" value="G4_lH2, LD2"/>
 ```
 
-To use an empty target instead:
+To use an empty target instead, use the SWITCH_MATERIALTO option.
 ```
  <option name="SWITCH_MATERIALTO" value="G4_lH2, G4_Galactic"/>
 ```
