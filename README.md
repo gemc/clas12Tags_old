@@ -86,7 +86,7 @@ Run Configurations
 - Run group B Winter 2019:
 
   - Central detector shifted 30 mm upstream
-  - target (LH2) at (1.2, 1.1, -30) mm
+  - target (LD2) at (1.2, 1.1, -30) mm
   - HTCC shfted 19.5mm upstream 
   - FT On configuration
   - FMT not present
