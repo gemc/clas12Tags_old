@@ -9,9 +9,9 @@
 	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
 
 	<!--ctof, cad  -->
-	<detector name="experiments/clas12/ctof/ctof"      factory="TEXT" variation="cad"/>
-	<detector name="experiments/clas12/ctof/javacad/"  factory="CAD"/>
-	<detector name="experiments/clas12/cnd/cnd"        factory="TEXT" variation="original"/>
+	<detector name="experiments/clas12/ctof/ctof"        factory="TEXT" variation="cad"/>
+	<detector name="experiments/clas12/ctof/javacad19/"  factory="CAD"/>
+	<detector name="experiments/clas12/cnd/cnd"          factory="TEXT" variation="original"/>
 
 	<!--high threshold cherenkov -->
 	<detector name="experiments/clas12/htcc/htcc"      factory="TEXT" variation="original"/>
@@ -83,7 +83,6 @@
 	<!-- torus magnet: 2cm-->
 	<option name="PRODUCTIONCUTFORVOLUMES" value="BoreShield, CenterTube, DownstreamShieldingPlate, DownstreamVacuumJacket, WarmBoreTube, apex, Shield1, Shield2, Shield3, Shield4, Shield5, Shield6, Shield7, shell1a, shell1b, shell2a, shell2b, shell3a, shell3b, shell4a, shell4b, shell5a, shell5b, shell6a, shell6b, 20" />
 
-
 	<!--  Target and central detectors are all shifted upstream by 19.4mm -->
 	<detector name="target">    <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="svt">       <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
@@ -91,7 +90,12 @@
 	<detector name="BMT">       <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="FMT">       <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="ctof">      <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+	<detector name="cnd">       <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 
-
+	<detector name="htccBigGasVolume">     <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+	<detector name="htccEntryDishVolume">  <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+	<detector name="htccEntryConeVolume">  <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+	<detector name="htccEntryDishCone">    <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+	<detector name="htcc">                 <position x="0*mm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 
 </gcard>
