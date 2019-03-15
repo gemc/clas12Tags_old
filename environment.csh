@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/tcsh -f
 
 if( "$1" != "" ) then
 	setenv CLAS12TAG $1
