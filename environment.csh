@@ -1,5 +1,7 @@
 #!/bin/tcsh -f
 
+# tcsh instead of csh as some distributions of Linux with obsolete versions of csh
+
 if( "$1" != "" ) then
 	setenv CLAS12TAG $1
 else
