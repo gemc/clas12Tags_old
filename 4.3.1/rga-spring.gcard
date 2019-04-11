@@ -92,10 +92,10 @@
 	<detector name="ctof">      <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="cnd">       <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 
-	<detector name="htccBigGasVolume">     <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
-	<detector name="htccEntryDishVolume">  <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
-	<detector name="htccEntryConeVolume">  <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
-	<detector name="htccEntryDishCone">    <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
-	<detector name="htcc">                 <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+	<detector name="htccBigGasVolume">     <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>
+	<detector name="htccEntryDishVolume">  <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>
+	<detector name="htccEntryConeVolume">  <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>
+	<detector name="htccEntryDishCone">    <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>
+	<detector name="htcc">                 <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>
 
 </gcard>
