@@ -241,8 +241,7 @@ void MDetectorConstruction::isSensitive(detector detect)
 	
 	string sensi   = detect.sensitivity;
 
-	// mirrors are recorded as flux
-	if(sensi.find("mirror:") != string::npos) sensi = "flux";
+	if(sensi.find("mirror:") != string::npos) sensi = "mirror";
 
 	if(sensi != "no" )
 	{

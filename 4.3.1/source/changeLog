@@ -1,6 +1,22 @@
 Changelog for GEMC
 ==================
 
+4/18/19
+
+ - added mirror hit process routine as standalone routine and bank
+
+3/26/19
+
+ - added FILTER_HITS options: when set to 1, do not write events if there are not hits.
+
+3/25/19
+
+- making sure initWithRunNumber is not loading calibration constants before activating event for all hit processes
+
+2/25/19
+
+ - Updated LUND documentation on Info tab
+
 1/31/19
 
  - Richard Holmes: The RERUN_SELECTED option allows one to rerun multiple events whose RNG state was saved in a previous pass.
