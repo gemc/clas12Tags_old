@@ -314,7 +314,7 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 The simulations in preparation of the first experiment should use the default version FTOn.
 FTOff will be used only by experts for special studies in preparation for the engineering run.
 
-<a href="url"><img src=ftOn.png" align="left" width="400" ></a>
+<a href="url"><img src=./ftOn.png" align="left" width="400" ></a>
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
 
 <br><br>
