@@ -1,8 +1,6 @@
 
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
-<a align="center" href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/4.3.0/clas12.png" align="center" width="850" ></a>
-
 ![Alt CLAS12](clas12.png?raw=true "The CLAS12 detector in the simulation. The electron beam is going from left to right.")
 
 
@@ -316,7 +314,7 @@ The other available configuration is "FTOff" (Figure 1, Right): the Forward Tagg
 The simulations in preparation of the first experiment should use the default version FTOn.
 FTOff will be used only by experts for special studies in preparation for the engineering run.
 
-<a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOn.png" align="left" width="400" ></a>
+<a href="url"><img src=ftOn.png" align="left" width="400" ></a>
 <a href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/ftOff.png" align="left" width="400" ></a>
 
 <br><br>
