@@ -145,8 +145,8 @@ In development:
 	- FTOF Time resolution updated based on data
 	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/rerunEvents.html">SAVE_SELECTED, RERUN_SELECTED</a> to save RNG state for certain particles, detector
 	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/ancestry.html"> SAVE_ALL_ANCESTORS </a> to save complete particles hierarchy in output (evio2root also updated)
-	- gcards for rg-a different run-periods:soon:
-	- gcards for rg-b different run-periods:soon:
+	- gcards for rg-a different run-periods
+	- gcards for rg-b different run-periods
 	- ec, pcal digitization removed obsolete constants
 	- moved ftof shield in the correct position
 
