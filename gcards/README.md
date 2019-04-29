@@ -69,3 +69,7 @@ Run Configurations
 
 
 
+The RG A and B numbers come from the engineering group survey:
+
+<a align="center" href="url"><img src="https://github.com/gemc/clas12Tags/blob/master/gcards/surveyCyril.png" align="center" width="850" ></a>
+
