@@ -103,6 +103,12 @@ Each tag has the production gcard inside its directory. To use: change the path 
 
 <br><br>
 
+GCARDS and Various CLAS12 experiments
+=====================================
+
+See  <a href="https://github.com/gemc/clas12Tags/tree/master/gcards"> gcards and experiments</a>.
+
+
 
 Software, Geometry Tags
 =======================
@@ -154,8 +160,14 @@ In development:
 	- Support alternative, run dependent configurations :soon:
 	- Geometry variation as a gcard option :soon:
 	- Extend beam background merging to all detectors :soon:
+	- Option written in JSON format
+	- Time propagation in DC digitization
+	- 3D Cylindrical map field
 
 
+- 4.4.0:
+
+	- geant4 10.5 support
 
 <br>
 
