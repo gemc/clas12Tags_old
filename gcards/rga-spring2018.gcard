@@ -92,6 +92,11 @@
 	<detector name="ctof">      <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="cnd">       <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 
+	<!-- solenoid volume and field map shifted upstream by 19.4 mm -->
+	<detector name="solenoid">  <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+	<option name="DISPLACE_FIELDMAP"     value="clas12-newSolenoid, 0*cm, 0*cm, -1.94*cm" />
+
+	<!--  HTCC shifted upstream by 10 mm -->
 	<detector name="htccBigGasVolume">     <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>
 	<detector name="htccEntryDishVolume">  <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>
 	<detector name="htccEntryConeVolume">  <position x="0*cm"  y="0*cm"  z="-1.0*cm"  />  </detector>

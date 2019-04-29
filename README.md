@@ -140,15 +140,13 @@ In development:
 
 <br>
 
-- 4.3.1 (By March 2019):
+- 4.3.1 (By May 2019):
 
 	- FTOF Time resolution updated based on data
 	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/rerunEvents.html">SAVE_SELECTED, RERUN_SELECTED</a> to save RNG state for certain particles, detector
 	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/ancestry.html"> SAVE_ALL_ANCESTORS </a> to save complete particles hierarchy in output (evio2root also updated)
-	- Gemc configuration written to evio file with json strings :soon:
 	- gcards for rg-a different run-periods:soon:
 	- gcards for rg-b different run-periods:soon:
-	- gcards for rg-k different run-periods:soon:
 	- ec, pcal digitization removed obsolete constants
 	- moved ftof shield in the correct position
 
@@ -163,6 +161,7 @@ In development:
 	- Option written in JSON format
 	- Time propagation in DC digitization
 	- 3D Cylindrical map field
+   - Gemc configuration written to evio file with json strings :soon:
 
 
 - 4.4.0:
