@@ -1,0 +1,16 @@
+<gcard>
+
+	<!-- Torus -->
+	<detector name="cad/" factory="CAD" />
+
+	<!-- Solenoid
+	<detector name="solenoid" factory="TEXT" variation="original"/>
+	-->
+
+	<detector name="../targets/target"     factory="TEXT" variation="lH2"/>
+	<detector name="../fc/forwardCarriage" factory="TEXT" variation="original"/>
+
+	<option name="geometry" value="1400x1200"/>
+	<option name="NO_FIELD" value="all"/>
+	
+</gcard>

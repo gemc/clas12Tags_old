@@ -155,6 +155,7 @@ In development:
 
 - 4.3.2:
 
+	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
 	- Support alternative, run dependent configurations :soon:
 	- Geometry variation as a gcard option :soon:
 	- Extend beam background merging to all detectors :soon:
@@ -381,17 +382,14 @@ To produce:
 
 1. create new tag dir
 2. cp experiments and gcard form old tag to keep track of new changes
-2. change gcard to point to new location
-3. change environment.csh to point to the new tag
-4. copy $GEMC to source and clean up:
+3. make links from ../gcards
+4. change environment.csh to point to the new tag
+5. copy $GEMC to source and clean up. From the tag:
 
 	- cd $GEMC
 	- scons -c
-	- cd newtag
-	- cp -r $GEMC source
-	- cd source
-	- rm -rf .git*
-	- cd api
-	- rm -rf .git*
+	- cd -
+	- cp -r $GEMC source ; cd source ; rm -rf .git*
+	- rm -rf api ; cp -r /opt/projects/gemc/api . ; cd api ;  rm -rf .git*
 
 5. change gemc.cc tag to new tag
