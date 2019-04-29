@@ -28,10 +28,6 @@ To run gemc use the tagged gcard:
 
 <br><br>
 
-
-
-<br><br>
-
 Magnetic Fields
 ---------------
 
