@@ -1,0 +1,19 @@
+<gcard>
+
+	<detector name="dc" factory="TEXT" variation="java"/>
+	<detector name="../fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
+
+   <option name="geometry" value="1400x1000"/>
+	
+	<option name="BEAM_P"     value="e-, 5.0*GeV, 27*deg, 0*deg"/>
+	<option name="INTEGRATEDRAW" value="dc"/>
+	
+	<option name="OUTPUT" value="evio, out.ev"/>
+
+	<option name="SAVE_ALL_MOTHERS" value="1"/>
+
+	<option name="PHYSICS" value="FTFP_BERT + STD"/>
+
+	<option name="SCALE_FIELD" value="TorusSymmetric, -1"/>
+
+</gcard>
