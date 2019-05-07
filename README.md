@@ -149,6 +149,9 @@ In development:
 	- gcards for rg-b different run-periods
 	- ec, pcal digitization removed obsolete constants
 	- moved ftof shield in the correct position
+	- Option written in JSON format :soon:
+	- 3D Cylindrical map field :soon:
+	- Time propagation in DC digitization :soon:
 
 
 <br>
@@ -159,10 +162,6 @@ In development:
 	- Support alternative, run dependent configurations :soon:
 	- Geometry variation as a gcard option :soon:
 	- Extend beam background merging to all detectors :soon:
-	- Option written in JSON format :soon:
-	- Time propagation in DC digitization :soon:
-	- 3D Cylindrical map field :soon:
-  	- Gemc configuration written to evio file with json strings :soon:
 
 <br>
 
