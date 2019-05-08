@@ -11,9 +11,21 @@ void goptions::setGoptions()
 	// help = Long explanation.
 	// name = Short description.
 	// type = 1 for argumenst that are strings, 0 for numbers.
-	
+	// argsJSONTypes: S = string, F = float, VS = vector of strings
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
 	// Generator
-	optMap["BEAM_P"].args  = "e-, 11*GeV, 0*deg, 0*deg, [optional KE]";
+	// ---------
+
+	optMap["BEAM_P"].args  = "e-, 11*GeV, 0*deg, 0*deg";
 	optMap["BEAM_P"].help  = "Beam particle, momentum, angles (in respect of z-axis). \n";
 	optMap["BEAM_P"].help += "      Example: -BEAM_P=\"e-, 6*GeV, 15*deg, 20*deg\" sets 6 GeV electrons 15 degrees in theta, 20 degrees in phi. \n";
 	optMap["BEAM_P"].help += "      Use -BEAM_P=\"show_all\" to print the list of G4 supported particles.\n";
@@ -21,8 +33,10 @@ void goptions::setGoptions()
 	optMap["BEAM_P"].name  = "Primary particle, Energy, Theta, Phi";
 	optMap["BEAM_P"].type  = 1;
 	optMap["BEAM_P"].ctgr  = "generator";
-	
-	optMap["SPREAD_P"].args  = "0*GeV, 0*deg, 0*deg, [optional KE]";
+	optMap["BEAM_P"].argsJSONDescription  = "particleID, momentum, theta, phi";
+	optMap["BEAM_P"].argsJSONTypes        = "S, F, F, F";
+
+	optMap["SPREAD_P"].args  = "0*GeV, 0*deg, 0*deg";
 	optMap["SPREAD_P"].help  = "Spread Primary Particle energy and angles (in respect of z-axis). \n";
 	optMap["SPREAD_P"].help += "      Example: -SPREAD_P=\"0*GeV, 10*deg, 20*deg\" spreads 10 degrees in theta, 20 degrees in phi. \n";
 	optMap["SPREAD_P"].help += "      If the word flat is added as last argument to the option, theta is flat instead of cos(theta). \n";
@@ -30,7 +44,9 @@ void goptions::setGoptions()
 	optMap["SPREAD_P"].name  = "delta_Energy, delta_Theta, delta_phi";
 	optMap["SPREAD_P"].type  = 1;
 	optMap["SPREAD_P"].ctgr  = "generator";
-	
+	optMap["SPREAD_P"].argsJSONDescription  = "denergy, dtheta, dphi";
+	optMap["SPREAD_P"].argsJSONTypes        = "F, F, F";
+
 	optMap["ALIGN_ZAXIS"].args  = "no";
 	optMap["ALIGN_ZAXIS"].help  = "Align z axis to a custom direction. Options:\n";
 	optMap["ALIGN_ZAXIS"].help += "      - \"beamp\"  aligns z axis to the beam directions specified by BEAM_P.\n";
@@ -38,19 +54,25 @@ void goptions::setGoptions()
 	optMap["ALIGN_ZAXIS"].name  = "Align z axis to a custom direction.";
 	optMap["ALIGN_ZAXIS"].type  = 1;
 	optMap["ALIGN_ZAXIS"].ctgr  = "generator";
-	
+	optMap["ALIGN_ZAXIS"].argsJSONDescription  = "to:";
+	optMap["ALIGN_ZAXIS"].argsJSONTypes        = "S";
+
 	optMap["BEAM_V"].args = "(0, 0, 0)cm";
 	optMap["BEAM_V"].help = "Primary Particle Vertex. Example: -BEAM_V=\"(0, 0, -20)cm\". ";
 	optMap["BEAM_V"].name = "Primary Particle Vertex";
 	optMap["BEAM_V"].type = 1;
 	optMap["BEAM_V"].ctgr = "generator";
-	
+	optMap["BEAM_V"].argsJSONDescription  = "vx vy vz unit";
+	optMap["BEAM_V"].argsJSONTypes        = "F F F S";
+
 	optMap["SPREAD_V"].args = "(0, 0)cm";
 	optMap["SPREAD_V"].help = "Spread Primary Particle Radius, Z position. Example: -SPREAD_V=\"(0.1, 10)cm\". ";
 	optMap["SPREAD_V"].name = "Primary Particle Vertex Spread";
 	optMap["SPREAD_V"].type = 1;
 	optMap["SPREAD_V"].ctgr = "generator";
-	
+	optMap["SPREAD_V"].argsJSONDescription  = "dr dz unit";
+	optMap["SPREAD_V"].argsJSONTypes  = "F F S";
+
 	optMap["POLAR"].args  = "100, 0*deg, 0*deg";
 	optMap["POLAR"].help  = "Primary Particle polarization percentage and angles  (in respect of z-axis). \n";
 	optMap["POLAR"].help += "      Example: -POLAR=\"90, 90*deg, 270*deg\" sets 90% polarization 90 degrees in theta, 270 degrees in phi. \n";
@@ -58,19 +80,25 @@ void goptions::setGoptions()
 	optMap["POLAR"].name  = "Primary Particle polarization in %, Theta, Phi";
 	optMap["POLAR"].type  = 1;
 	optMap["POLAR"].ctgr  = "generator";
-	
+	optMap["POLAR"].argsJSONDescription  = "percentage theta phi";
+	optMap["POLAR"].argsJSONTypes  = "F F F";
+
 	optMap["N"].arg  = 0;
 	optMap["N"].help = "Number of events to be simulated.";
 	optMap["N"].name = "Number of events to be simulated";
 	optMap["N"].type = 0;
 	optMap["N"].ctgr = "generator";
-	
+	optMap["N"].argsJSONDescription  = "nevents";
+	optMap["N"].argsJSONTypes  = "F";
+
 	optMap["EVTN"].arg  = 1;
 	optMap["EVTN"].help = "Starting Event Number";
 	optMap["EVTN"].name = "Starting Event Number";
 	optMap["EVTN"].type = 0;
 	optMap["EVTN"].ctgr = "generator";
-	
+	optMap["EVTN"].argsJSONDescription  = "startEventNumber";
+	optMap["EVTN"].argsJSONTypes  = "F";
+
 	optMap["ION_P"].args  = "no";
 	optMap["ION_P"].help  = "Primary particle is an ion. Sets Z, A and Charge of the primary particle. Setting the charge is optional. \n";
 	optMap["ION_P"].help += "      Example 1: -ION_P=\"6 12\" sets the Z to 6, A to 12. Charge will be Z. \n";
@@ -79,8 +107,9 @@ void goptions::setGoptions()
 	optMap["ION_P"].name  = "Primary particle is an ion. Sets A, Z and Charge of the primary particle. ";
 	optMap["ION_P"].type  = 1;
 	optMap["ION_P"].ctgr  = "generator";
-	
-	
+	optMap["ION_P"].argsJSONDescription  = "isPrimaryAPion";
+	optMap["ION_P"].argsJSONTypes  = "S";
+
 	optMap["INPUT_GEN_FILE"].args = "gemc_internal";
 	optMap["INPUT_GEN_FILE"].help = "Generator Input. Current availables file formats:\n";
 	optMap["INPUT_GEN_FILE"].help += "      LUND. \n";
@@ -88,35 +117,72 @@ void goptions::setGoptions()
 	optMap["INPUT_GEN_FILE"].name = "Generator Input File";
 	optMap["INPUT_GEN_FILE"].type = 1;
 	optMap["INPUT_GEN_FILE"].ctgr = "generator";
-	
+	optMap["INPUT_GEN_FILE"].argsJSONDescription  = "type, filename";
+	optMap["INPUT_GEN_FILE"].argsJSONTypes  = "S S";
+
 	optMap["MERGE_LUND_BG"].args = "no";
 	optMap["MERGE_LUND_BG"].help = "LUND Input file to merge background events\n";
 	optMap["MERGE_LUND_BG"].help += "      example: -MERGE_LUND_BG=\"background.dat\" \n";
 	optMap["MERGE_LUND_BG"].name = "LUND Input file to merge background events";
 	optMap["MERGE_LUND_BG"].type = 1;
 	optMap["MERGE_LUND_BG"].ctgr = "generator";
-	
+	optMap["MERGE_LUND_BG"].argsJSONDescription  = "bgLundfilename";
+	optMap["MERGE_LUND_BG"].argsJSONTypes  = "S";
+
 	optMap["MERGE_BGHITS"].args = "no";
 	optMap["MERGE_BGHITS"].help = "ASCII file to merge background hits\n";
 	optMap["MERGE_BGHITS"].help += "      example: -MERGE_BGHITS=\"background.dat\" \n";
 	optMap["MERGE_BGHITS"].name = "ASCII file to merge background hits";
 	optMap["MERGE_BGHITS"].type = 1;
 	optMap["MERGE_BGHITS"].ctgr = "generator";
-	
-	
-	
+	optMap["MERGE_BGHITS"].argsJSONDescription  = "bgfilename";
+	optMap["MERGE_BGHITS"].argsJSONTypes  = "S";
+
 	optMap["NGENP"].arg  = 10;
 	optMap["NGENP"].help = "Max Number of Generated Particles to save in the Output.";
 	optMap["NGENP"].name = "Max Number of Generated Particles to save in the Output";
 	optMap["NGENP"].type = 0;
 	optMap["NGENP"].ctgr = "generator";
-	
+	optMap["NGENP"].argsJSONDescription  = "maxGenToSave";
+	optMap["NGENP"].argsJSONTypes  = "F";
+
 	optMap["STEER_BEAM"].arg = 0;
 	optMap["STEER_BEAM"].type = 0;
 	optMap["STEER_BEAM"].ctgr = "generator";
 	optMap["STEER_BEAM"].name = "STEER_BEAM";
 	optMap["STEER_BEAM"].help = "Steer the beam, and translate the vertex, of an StdHep file by the amount specified in Beam_P, Beam_V, Spread_V \n";
-	
+	optMap["STEER_BEAM"].argsJSONDescription  = "steerBeam";
+	optMap["STEER_BEAM"].argsJSONTypes  = "F";
+
+	optMap["SKIPNGEN"].arg  = 0;
+	optMap["SKIPNGEN"].help = "Skip N events";
+	optMap["SKIPNGEN"].name = "Skip N events";
+	optMap["SKIPNGEN"].type = 0;
+	optMap["SKIPNGEN"].ctgr = "generator";
+	optMap["SKIPNGEN"].argsJSONDescription  = "nEventsToSkip";
+	optMap["SKIPNGEN"].argsJSONTypes  = "F";
+
+	optMap["PROPAGATE_DVERTEXTIME"].arg  = 0;
+	optMap["PROPAGATE_DVERTEXTIME"].help = "Calculate propogation time of detached vertex events and fire them at this later time. \n";
+	optMap["PROPAGATE_DVERTEXTIME"].help += "         0: Off (default)\n";
+	optMap["PROPAGATE_DVERTEXTIME"].help += "         1: On\n";
+	optMap["PROPAGATE_DVERTEXTIME"].name = "Calculate Propogation Time";
+	optMap["PROPAGATE_DVERTEXTIME"].type = 0;
+	optMap["PROPAGATE_DVERTEXTIME"].ctgr = "generator";
+	optMap["PROPAGATE_DVERTEXTIME"].argsJSONDescription  = "propagateTimeFromDetachedVertex";
+	optMap["PROPAGATE_DVERTEXTIME"].argsJSONTypes  = "F";
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	// Cosmic Ray
+	// ----------
+
 	optMap["COSMICRAYS"].args = "no";
 	optMap["COSMICRAYS"].help = "Cosmic Generator. The model has a (cos(theta), p) probability function:\n\n";
 	optMap["COSMICRAYS"].help += "              a^(b*cos(theta))/(c*p^2). \n\n";
@@ -131,20 +197,25 @@ void goptions::setGoptions()
 	optMap["COSMICRAYS"].name = "Cosmic Generator";
 	optMap["COSMICRAYS"].type = 1;
 	optMap["COSMICRAYS"].ctgr = "generator";
-	
+
 	optMap["COSMICAREA"].args = "0*cm, 0*cm, 0*cm, 50*cm";
 	optMap["COSMICAREA"].help = "Target (x,y,z) location and radius of area of interest";
 	optMap["COSMICAREA"].name = "Target (x,y,z) location and radius of area of interest";
 	optMap["COSMICAREA"].type = 1;
 	optMap["COSMICAREA"].ctgr = "generator";
 	
-	optMap["FORCE_MUON_RADIATIVE_DECAY"].arg = 0;
-	optMap["FORCE_MUON_RADIATIVE_DECAY"].help = "Force muon radiative decay";
-	optMap["FORCE_MUON_RADIATIVE_DECAY"].name = "Muon rad decay BR 100%";
-	optMap["FORCE_MUON_RADIATIVE_DECAY"].type = 0;
-	optMap["FORCE_MUON_RADIATIVE_DECAY"].ctgr = "generator";
-	
+
+
+
+
+
+
+
+
+
 	// Luminosity Beam
+	// ---------------
+
 	optMap["LUMI_P"].args  = "e-, 11*GeV, 0*deg, 0*deg";
 	optMap["LUMI_P"].help  = "Luminosity Particle, momentum, angles (in respect of z-axis). \n";
 	optMap["LUMI_P"].help += "            Example: -LUMI_P=\"proton, 1*GeV, 25*deg, 2*deg\" sets 1 GeV protons, 25 degrees in theta, 2 degrees in phi. \n";
@@ -215,23 +286,15 @@ void goptions::setGoptions()
 	optMap["LUMI2_EVENT"].type = 1;
 	optMap["LUMI2_EVENT"].ctgr = "luminosity";
 	
-	optMap["SKIPNGEN"].arg  = 0;
-	optMap["SKIPNGEN"].help = "Skip N events";
-	optMap["SKIPNGEN"].name = "Skip N events";
-	optMap["SKIPNGEN"].type = 0;
-	optMap["SKIPNGEN"].ctgr = "generator";
-	
-	// disabled by default
-	optMap["PROPAGATE_DVERTEXTIME"].arg  = 0;
-	optMap["PROPAGATE_DVERTEXTIME"].help = "Calculate propogation time of detached vertex events and fire them at this later time. \n";
-	optMap["PROPAGATE_DVERTEXTIME"].help += "         0: Off (default)\n";
-	optMap["PROPAGATE_DVERTEXTIME"].help += "         1: On\n";								  
-	optMap["PROPAGATE_DVERTEXTIME"].name = "Calculate Propogation Time";
-	optMap["PROPAGATE_DVERTEXTIME"].type = 0;
-	optMap["PROPAGATE_DVERTEXTIME"].ctgr = "generator";
-	
+
+
+
+
+
 	
 	// MySQL Database
+	// --------------
+
 	optMap["DBHOST"].args = "no";
 	optMap["DBHOST"].help = "Selects mysql server host name.";
 	optMap["DBHOST"].name = "mysql server host name";
@@ -261,13 +324,16 @@ void goptions::setGoptions()
 	optMap["DBPORT"].name = "Select mysql server port";
 	optMap["DBPORT"].type = 0;
 	optMap["DBPORT"].ctgr = "mysql";
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 	// Verbosity
+	// ---------
+
 	optMap["G4P_VERBOSITY"].arg  = 1;
 	optMap["G4P_VERBOSITY"].help = "Controls Physical Volumes Construction Log Output.";
 	optMap["G4P_VERBOSITY"].name = "Logical Volume Verbosity";
@@ -356,18 +422,21 @@ void goptions::setGoptions()
 	optMap["MIRROR_VERBOSITY"].ctgr = "verbosity";
 	
 	
-	
-	
-	
+
+
+
+
 	
 	// Run Control
+	// -----------
+
 	optMap["EXEC_MACRO"].args = "no";
 	optMap["EXEC_MACRO"].help = "Executes commands in macro file.";
 	optMap["EXEC_MACRO"].name = "Executes commands in macro file";
 	optMap["EXEC_MACRO"].type = 1;
 	optMap["EXEC_MACRO"].ctgr = "control";
 	optMap["EXEC_MACRO"].repe  = 1;
-	
+
 	optMap["CHECK_OVERLAPS"].arg  = 0;
 	optMap["CHECK_OVERLAPS"].help  = "Checks Overlapping Volumes:\n";
 	optMap["CHECK_OVERLAPS"].help += "      1.  Check Overlaps at Construction Time\n";
@@ -426,7 +495,7 @@ void goptions::setGoptions()
 	optMap["EVN"].name = "Initial Event Number";
 	optMap["EVN"].type = 0;
 	optMap["EVN"].ctgr = "control";
-	
+
 	optMap["ENERGY_CUT"].arg  = -1.;
 	optMap["ENERGY_CUT"].help = "Set an energy cut in MeV below which no particle will be tracked further. -1. turns this off.";
 	optMap["ENERGY_CUT"].name = "Tracking Energy cut (in MeV)";
@@ -515,8 +584,8 @@ void goptions::setGoptions()
 	optMap["RUN_WEIGHTS"].help += "      Will simulate 10% of events with run number 11 conditions, 70% run 12 and 20% run 13.\n";
 	optMap["RUN_WEIGHTS"].type  = 1;
 	optMap["RUN_WEIGHTS"].ctgr  = "control";
-	
-	
+
+
 	optMap["RFSETUP"].args = "no";
 	optMap["RFSETUP"].name = "Radio-frequency signal";
 	optMap["RFSETUP"].help = "Radio-frequency signal. This are a minium of 2 parameters for one given RF signal:\n";
@@ -529,78 +598,76 @@ void goptions::setGoptions()
 	optMap["RFSETUP"].help += "      -RFSETUP=\"0.5, 80, 30\" \n";
 	optMap["RFSETUP"].type = 1;
 	optMap["RFSETUP"].ctgr = "control";
-	
+
 	optMap["RFSTART"].args = "eventVertex, 0, 0, 0";
 	optMap["RFSTART"].name = "Radio-frequency time model";
 	optMap["RFSTART"].help = "Radio-frequency time model. Available options are:\n";
 	optMap["RFSTART"].help += "      \"eventVertex, 0, 0, 0\" (default): the RF time is the event start time + the light time-distance of the first particle from the point (0,0,0)\n";
 	optMap["RFSTART"].help += "      \"eventTime\".....................: the RF time is identical to the event start time\n";
 	optMap["RFSTART"].ctgr = "control";
-	
+
+
+
+
+
+
 	// Output
+	// ------
+
 	optMap["OUTPUT"].args = "no, output";
 	optMap["OUTPUT"].help = "Type of output, output filename. Supported output: evio, txt. Example: -OUTPUT=\"evio, out.ev\"";
 	optMap["OUTPUT"].name = "Type of output, output filename. ";
 	optMap["OUTPUT"].type = 1;
 	optMap["OUTPUT"].ctgr = "output";
 	
-	// disabled by default
 	optMap["INTEGRATEDRAW"].args = "no";
 	optMap["INTEGRATEDRAW"].help = "Activates integrated geant4 raw output for system(s). Example: -INTEGRATEDRAW=\"DC, TOF\"";
 	optMap["INTEGRATEDRAW"].name = "Activates integrated geant4 raw output for system(s)";
 	optMap["INTEGRATEDRAW"].type = 1;
 	optMap["INTEGRATEDRAW"].ctgr = "output";
 	
-	// disabled by default
 	optMap["INTEGRATEDDGT"].args = "yes";
 	optMap["INTEGRATEDDGT"].help = "De-activates integrated digitized output for system(s). Example: -INTEGRATEDDGT=\"DC, TOF\"";
 	optMap["INTEGRATEDDGT"].name = "De-activates integrated digitized output for system(s). ";
 	optMap["INTEGRATEDDGT"].type = 1;
 	optMap["INTEGRATEDRAW"].ctgr = "output";
 	
-	// disabled by default
 	optMap["ALLRAWS"].args = "no";
 	optMap["ALLRAWS"].help = "Activates step-by-step output for system(s). Example: -ALLRAWS=\"DC, TOF\"";
 	optMap["ALLRAWS"].name = "Activates step-by-step output for system(s). ";
 	optMap["ALLRAWS"].type = 1;
 	optMap["ALLRAWS"].ctgr = "output";
 	
-	// disabled by default
 	optMap["SIGNALVT"].args = "no";
 	optMap["SIGNALVT"].help = "Activates voltage (t) output for system(s). Example: -SIGNALVT=\"DC, TOF\"";
 	optMap["SIGNALVT"].name = "Activates voltage (t) output for system(s). ";
 	optMap["SIGNALVT"].type = 1;
 	optMap["SIGNALVT"].ctgr = "output";
-	
-	// disabled by default
+
 	optMap["ELECTRONICNOISE"].args = "no";
 	optMap["ELECTRONICNOISE"].help = "Activates electronic noise routines for system(s). Example: -ELECTRONICNOISE=\"dc, ftof\"";
 	optMap["ELECTRONICNOISE"].name = "Activates electronic noise routines for system(s). ";
 	optMap["ELECTRONICNOISE"].type = 1;
 	optMap["ELECTRONICNOISE"].ctgr = "output";
-	
-	// voltage versus time resolution, in ns
+
 	optMap["VTRESOLUTION"].arg = 0.1;
 	optMap["VTRESOLUTION"].help = "Voltage versus time resolution, in ns";
 	optMap["VTRESOLUTION"].name = "Voltage versus time resolution, in ns.";
 	optMap["VTRESOLUTION"].type = 0;
 	optMap["VTRESOLUTION"].ctgr = "output";
 	
-	// voltage versus time resolution, in ns
 	optMap["FILTER_NULL_VARIABLES"].arg = 0;
 	optMap["FILTER_NULL_VARIABLES"].help = "If set to 1, filters out variables with no valuable info in the output.";
 	optMap["FILTER_NULL_VARIABLES"].name = "If set to 1, filters out variables with no valuable info in the output.";
 	optMap["FILTER_NULL_VARIABLES"].type = 0;
 	optMap["FILTER_NULL_VARIABLES"].ctgr = "output";
-	
-	// voltage versus time resolution, in ns
+
 	optMap["FILTER_HITS"].arg = 0;
 	optMap["FILTER_HITS"].help = "If set to 1, do not write output if there are no hits in the detectors";
 	optMap["FILTER_HITS"].name = "If set to 1, do not write output if there are no hits in the detectors";
 	optMap["FILTER_HITS"].type = 0;
 	optMap["FILTER_HITS"].ctgr = "output";
-	
-	// No output if there are no hadrons
+
 	optMap["FILTER_HADRONS"].arg = 0;
 	optMap["FILTER_HADRONS"].help = "If set to 1, do not write events if there are no hadrons. Otherwise if \n";
 	optMap["FILTER_HADRONS"].help += "nonzero write only events having a hadron with matching ID. For example\n";
@@ -608,7 +675,7 @@ void goptions::setGoptions()
 	optMap["FILTER_HADRONS"].name = "If set to 1 (or >1), do not write output if there are no (matching) hadrons in the detectors";
 	optMap["FILTER_HADRONS"].type = 0;
 	optMap["FILTER_HADRONS"].ctgr = "output";
-	
+
 	// sampling time of electronics (typically FADC), and number of sampling / event
 	// the VT output is sampled every TSAMPLING nanoseconds to produce a ADC
 	// the default number of samples is 500 ADC points, at 4ns intervals (total electronic event time = 2 microseconds)
@@ -617,7 +684,7 @@ void goptions::setGoptions()
 	optMap["TSAMPLING"].name = "Sampling time of electronics (typically FADC)";
 	optMap["TSAMPLING"].type = 1;
 	optMap["TSAMPLING"].ctgr = "output";
-	
+
 	// Activates RNG saving for selected events
 	optMap["SAVE_SELECTED"].args  = "";
 	optMap["SAVE_SELECTED"].help  = "Save events with selected hit types\n";
@@ -635,9 +702,14 @@ void goptions::setGoptions()
 	optMap["RERUN_SELECTED"].type  = 1;
 	optMap["RERUN_SELECTED"].ctgr  = "control";
 	
-	
-	
+
+
+
+
+
+
 	// Physics
+	// -------
 	optMap["PHYSICS"].args = "STD + FTFP_BERT";
 	optMap["PHYSICS"].help =  "  Physics List. The list is modular. \n\n";
 	optMap["PHYSICS"].help +=  "     For example, 'STD' would only activate the standard electromagnetic processes, while\n";
@@ -668,7 +740,7 @@ void goptions::setGoptions()
 	optMap["PHYSICS"].name = "Choice of Physics List";
 	optMap["PHYSICS"].type = 1;
 	optMap["PHYSICS"].ctgr = "physics";
-	
+
 	optMap["SYNRAD"].arg  = 0;
 	optMap["SYNRAD"].help = " Adds Synchrotron Radiation";
 	optMap["SYNRAD"].help +=  "     Possible values:\n";
@@ -678,19 +750,16 @@ void goptions::setGoptions()
 	optMap["SYNRAD"].name = " Adds Synchrotron radiation";
 	optMap["SYNRAD"].type = 0;
 	optMap["SYNRAD"].ctgr = "physics";
-	
-	// voltage versus time resolution, in ns
-	optMap["FASTMCMODE"].arg   = 0;   // 1: production cut set to 5m. 2: turn off all physics but transportation
-	optMap["FASTMCMODE"].help  = "Activate FASTMC Mode. Possible values: \n\n";
-	optMap["FASTMCMODE"].help += "       0: No FASTMC (default).\n";
-	optMap["FASTMCMODE"].help += "       1: Disable secondaries, disable hit processes.\n";
-	optMap["FASTMCMODE"].help += "       2: Disable all physics but transportation, disable hit process.\n";
-	optMap["FASTMCMODE"].help += "       10: Disable secondaries, hit processes are enabled.\n";
-	optMap["FASTMCMODE"].help += "       20: Disable all physics but transportation, hit processes are enabled.\n";
-	optMap["FASTMCMODE"].name  = "Activate FASTMC Mode if non zero.";
-	optMap["FASTMCMODE"].type  = 0;
-	optMap["FASTMCMODE"].ctgr  = "output";
-	
+
+	optMap["FORCE_MUON_RADIATIVE_DECAY"].arg = 0;
+	optMap["FORCE_MUON_RADIATIVE_DECAY"].help = "Force muon radiative decay";
+	optMap["FORCE_MUON_RADIATIVE_DECAY"].name = "Muon rad decay BR 100%";
+	optMap["FORCE_MUON_RADIATIVE_DECAY"].type = 0;
+	optMap["FORCE_MUON_RADIATIVE_DECAY"].ctgr = "physics";
+
+
+
+	// materials
 	optMap["HALL_MATERIAL"].args = "G4_AIR";
 	optMap["HALL_MATERIAL"].help = "Composition of the Experimental Hall. \n";
 	optMap["HALL_MATERIAL"].help += "            Air normal simulation\n";
@@ -698,73 +767,69 @@ void goptions::setGoptions()
 	optMap["HALL_MATERIAL"].help += "            Vacuum (default)\n";
 	optMap["HALL_MATERIAL"].name = "Composition of the Experimental Hall";
 	optMap["HALL_MATERIAL"].type = 1;
-	optMap["HALL_MATERIAL"].ctgr = "physics";
+	optMap["HALL_MATERIAL"].ctgr = "materials";
 	
 	optMap["DEFAULT_MATERIAL"].args = "none";
 	optMap["DEFAULT_MATERIAL"].help = "Default material for missing material field.\n";
 	optMap["DEFAULT_MATERIAL"].name = "Default material for missing material field";
 	optMap["DEFAULT_MATERIAL"].type = 1;
-	optMap["DEFAULT_MATERIAL"].ctgr = "physics";
-	
+	optMap["DEFAULT_MATERIAL"].ctgr = "materials";
+
 	optMap["SWITCH_MATERIALTO"].args = "none";
 	optMap["SWITCH_MATERIALTO"].help = "Switches a material for another. Usage: -SWITCH_MATERIALTO=\"old, new\" \n";
 	optMap["SWITCH_MATERIALTO"].name = "Switches a material for another. ";
 	optMap["SWITCH_MATERIALTO"].type = 1;
-	optMap["SWITCH_MATERIALTO"].ctgr = "physics";
+	optMap["SWITCH_MATERIALTO"].ctgr = "materials";
 	optMap["SWITCH_MATERIALTO"].repe  = 1;
-	
+
 	optMap["CHANGEVOLUMEMATERIALTO"].args = "none";
 	optMap["CHANGEVOLUMEMATERIALTO"].help = "Changes a volume material. Usage: -CHANGEVOLUMEMATERIALTO=\"volume, new material\" \n";
 	optMap["CHANGEVOLUMEMATERIALTO"].name = "Changes a volume material. ";
 	optMap["CHANGEVOLUMEMATERIALTO"].type = 1;
-	optMap["CHANGEVOLUMEMATERIALTO"].ctgr = "physics";
+	optMap["CHANGEVOLUMEMATERIALTO"].ctgr = "materials";
 	optMap["CHANGEVOLUMEMATERIALTO"].repe  = 1;
-	
-	
+
+
+	// EM Fields
+
 	optMap["HALL_FIELD"].args = "no";
 	optMap["HALL_FIELD"].help = "Magnetic Field of the Hall. \n";
 	optMap["HALL_FIELD"].name = "Magnetic Field of the Hall";
 	optMap["HALL_FIELD"].type = 1;
-	optMap["HALL_FIELD"].ctgr = "physics";
-	
-	optMap["HALL_DIMENSIONS"].args = "20*m, 20*m, 20*m";
-	optMap["HALL_DIMENSIONS"].help = "(x,y,z) semi-dimensions of the experimental Hall.\n";
-	optMap["HALL_DIMENSIONS"].name = "(x,y,z) semi-dimensions of the experimental Hall.";
-	optMap["HALL_DIMENSIONS"].type = 1;
-	optMap["HALL_DIMENSIONS"].ctgr = "physics";
-	
+	optMap["HALL_FIELD"].ctgr = "fields";
+
 	optMap["FIELD_DIR"].args = "env";
 	optMap["FIELD_DIR"].help = "Magnetic Field Maps Location. \n";
 	optMap["FIELD_DIR"].name = "Magnetic Field Maps Location";
 	optMap["FIELD_DIR"].type = 1;
-	optMap["FIELD_DIR"].ctgr = "physics";
+	optMap["FIELD_DIR"].ctgr = "fields";
 	
 	optMap["NO_FIELD"].args = "none";
 	optMap["NO_FIELD"].help = "Sets Magnetic Field of a volume to zero. \"all\" means no magnetic field at all. \n";
 	optMap["NO_FIELD"].name = "Sets Magnetic Field of a volume to zero. \"all\" means no magnetic field at all ";
 	optMap["NO_FIELD"].type = 1;
-	optMap["NO_FIELD"].ctgr = "physics";
+	optMap["NO_FIELD"].ctgr = "fields";
 	optMap["NO_FIELD"].repe  = 0;
-	
-	optMap["G4FIELDCACHESIZE"].args = 3;
+
+	optMap["G4FIELDCACHESIZE"].arg  = 3;
 	optMap["G4FIELDCACHESIZE"].help = "Sets Geant4 Magnetic Field Cache Size (in mm) \n";
 	optMap["G4FIELDCACHESIZE"].name = "Sets Geant4 Magnetic Field Cache Size (in mm). ";
 	optMap["G4FIELDCACHESIZE"].type = 1;
-	optMap["G4FIELDCACHESIZE"].ctgr = "physics";
+	optMap["G4FIELDCACHESIZE"].ctgr = "fields";
 	optMap["G4FIELDCACHESIZE"].repe  = 0;
-	
+
 	optMap["PHYS_VERBOSITY"].arg = 0;
 	optMap["PHYS_VERBOSITY"].help = "Physics List Verbosity";
 	optMap["PHYS_VERBOSITY"].name = "Physics List Verbosity";
 	optMap["PHYS_VERBOSITY"].type = 0;
-	optMap["PHYS_VERBOSITY"].ctgr = "physics";
+	optMap["PHYS_VERBOSITY"].ctgr = "fields";
 	
 	// by default set max field step to 1 cm. Notice: it has to be greater than the min!
 	optMap["MAX_FIELD_STEP"].arg =  0;
 	optMap["MAX_FIELD_STEP"].help = "Sets Maximum Acceptable Step in Magnetic Field (in mm).\n";
 	optMap["MAX_FIELD_STEP"].name = "Sets Maximum Acceptable Step in Magnetic Field (in mm) ";
 	optMap["MAX_FIELD_STEP"].type = 0;
-	optMap["MAX_FIELD_STEP"].ctgr = "physics";
+	optMap["MAX_FIELD_STEP"].ctgr = "fields";
 	
 	optMap["SCALE_FIELD"].args  = "no, 1";
 	optMap["SCALE_FIELD"].help  = "Scales Magnetic Field by a factor.\n";
@@ -773,9 +838,11 @@ void goptions::setGoptions()
 	optMap["SCALE_FIELD"].help += "      Example: -SCALE_FIELD=\"srr-solenoid, 0.5\"\n";
 	optMap["SCALE_FIELD"].name  = "Electro-Magnetic Field scale";
 	optMap["SCALE_FIELD"].type  = 1;
-	optMap["SCALE_FIELD"].ctgr  = "physics";
+	optMap["SCALE_FIELD"].ctgr  = "fields";
 	optMap["SCALE_FIELD"].repe  = 1;
-	
+	optMap["SCALE_FIELD"].argsJSONDescription = "name, scale";
+	optMap["SCALE_FIELD"].argsJSONTypes  = "S, F";
+
 	optMap["DISPLACE_FIELDMAP"].args  = "no";
 	optMap["DISPLACE_FIELDMAP"].help  = "Displace Magnetic Field map from the lab origin.\n";
 	optMap["DISPLACE_FIELDMAP"].help += "      Usage:\n";
@@ -783,7 +850,7 @@ void goptions::setGoptions()
 	optMap["DISPLACE_FIELDMAP"].help += "      Example: -DISPLACE_FIELDMAP=\"srr-solenoid, 3.5*mm, 0*mm, 0*mm\"\n";
 	optMap["DISPLACE_FIELDMAP"].name  = "Displace Magnetic Field map from the lab origin.";
 	optMap["DISPLACE_FIELDMAP"].type  = 1;
-	optMap["DISPLACE_FIELDMAP"].ctgr  = "physics";
+	optMap["DISPLACE_FIELDMAP"].ctgr  = "fields";
 	optMap["DISPLACE_FIELDMAP"].repe  = 1;
 	
 	optMap["ROTATE_FIELDMAP"].args  = "no";
@@ -793,30 +860,18 @@ void goptions::setGoptions()
 	optMap["ROTATE_FIELDMAP"].help += "      Example: -ROTATE_FIELDMAP=\"srr-solenoid, 0*deg, 0*deg, 2*deg\"\n";
 	optMap["ROTATE_FIELDMAP"].name  = "Rotate Magnetic Field map.";
 	optMap["ROTATE_FIELDMAP"].type  = 1;
-	optMap["ROTATE_FIELDMAP"].ctgr  = "physics";
+	optMap["ROTATE_FIELDMAP"].ctgr  = "fields";
 	optMap["ROTATE_FIELDMAP"].repe  = 1;
 	
 	optMap["ACTIVEFIELDS"].args  = "none";
 	optMap["ACTIVEFIELDS"].help  = "List of activated fields\n";
 	optMap["ACTIVEFIELDS"].name  = "List of activated fields";
 	optMap["ACTIVEFIELDS"].type  = 1;
-	optMap["ACTIVEFIELDS"].ctgr  = "physics";
-	optMap["ACTIVEFIELDS"].repe  = 1;
-	
-	optMap["PRODUCTIONCUT"].arg   = 10;
-	optMap["PRODUCTIONCUT"].help  = "Production cut for root, in mm\n";
-	optMap["PRODUCTIONCUT"].name  = "Production cut for root, in mm";
-	optMap["PRODUCTIONCUT"].type  = 0;
-	optMap["PRODUCTIONCUT"].ctgr  = "physics";
-	
-	optMap["PRODUCTIONCUTFORVOLUMES"].args   = "no";
-	optMap["PRODUCTIONCUTFORVOLUMES"].help  = "Production cut for volumes (separated by commas), in mm\n";
-	optMap["PRODUCTIONCUTFORVOLUMES"].help += "      Example: \"outerMount, taggerInnerShield, 50\" will set the production cut for the volumes outerMount and taggerInnerShield to 5cm\n";
-	optMap["PRODUCTIONCUTFORVOLUMES"].name  = "Production cut for volumes, in mm";
-	optMap["PRODUCTIONCUTFORVOLUMES"].type  = 1;
-	optMap["PRODUCTIONCUTFORVOLUMES"].ctgr  = "physics";
-	optMap["PRODUCTIONCUTFORVOLUMES"].repe  = 1;
-	
+	optMap["ACTIVEFIELDS"].ctgr  = "fields";
+	optMap["ACTIVEFIELDS"].repe  = 0;
+	optMap["ACTIVEFIELDS"].argsJSONDescription  = "ACTIVEFIELDS";
+	optMap["ACTIVEFIELDS"].argsJSONTypes        = "VS";
+
 	optMap["FIELD_PROPERTIES"].args  = "no";
 	optMap["FIELD_PROPERTIES"].help  = "Mapped field minimum step, integration method, interpolation\n\n";
 	optMap["FIELD_PROPERTIES"].help += "      Usage:\n";
@@ -839,17 +894,52 @@ void goptions::setGoptions()
 	optMap["FIELD_PROPERTIES"].help += "       Note: specifying interpolation method is optional. \"linear\" is the default.\n";
 	optMap["FIELD_PROPERTIES"].name  = "Mapped field minimum step, integration method, interpolation";
 	optMap["FIELD_PROPERTIES"].type  = 1;
-	optMap["FIELD_PROPERTIES"].ctgr  = "physics";
+	optMap["FIELD_PROPERTIES"].ctgr  = "fields";
 	optMap["FIELD_PROPERTIES"].repe  = 1;
-	
-	
+
+
+
+	// transportation
 	optMap["REMOVESENSITIVITY"].args = "none";
 	optMap["REMOVESENSITIVITY"].help = "Removes a volumes sensitivity. Usage: -REMOVESENSITIVITY=volumename1, volumename2, ... \n";
 	optMap["REMOVESENSITIVITY"].name = "Changes a volumes sensitivity. ";
 	optMap["REMOVESENSITIVITY"].type = 1;
-	optMap["REMOVESENSITIVITY"].ctgr = "physics";
-	
-	
+	optMap["REMOVESENSITIVITY"].ctgr = "transportation";
+
+	optMap["PRODUCTIONCUT"].arg   = 10;
+	optMap["PRODUCTIONCUT"].help  = "Production cut for root, in mm\n";
+	optMap["PRODUCTIONCUT"].name  = "Production cut for root, in mm";
+	optMap["PRODUCTIONCUT"].type  = 0;
+	optMap["PRODUCTIONCUT"].ctgr  = "transportation";
+
+	optMap["PRODUCTIONCUTFORVOLUMES"].args   = "no";
+	optMap["PRODUCTIONCUTFORVOLUMES"].help  = "Production cut for volumes (separated by commas), in mm\n";
+	optMap["PRODUCTIONCUTFORVOLUMES"].help += "      Example: \"outerMount, taggerInnerShield, 50\" will set the production cut for the volumes outerMount and taggerInnerShield to 5cm\n";
+	optMap["PRODUCTIONCUTFORVOLUMES"].name  = "Production cut for volumes, in mm";
+	optMap["PRODUCTIONCUTFORVOLUMES"].type  = 1;
+	optMap["PRODUCTIONCUTFORVOLUMES"].ctgr  = "transportation";
+	optMap["PRODUCTIONCUTFORVOLUMES"].repe  = 1;
+
+	// voltage versus time resolution, in ns
+	optMap["FASTMCMODE"].arg   = 0;   // 1: production cut set to 5m. 2: turn off all physics but transportation
+	optMap["FASTMCMODE"].help  = "Activate FASTMC Mode. Possible values: \n\n";
+	optMap["FASTMCMODE"].help += "       0: No FASTMC (default).\n";
+	optMap["FASTMCMODE"].help += "       1: Disable secondaries, disable hit processes.\n";
+	optMap["FASTMCMODE"].help += "       2: Disable all physics but transportation, disable hit process.\n";
+	optMap["FASTMCMODE"].help += "       10: Disable secondaries, hit processes are enabled.\n";
+	optMap["FASTMCMODE"].help += "       20: Disable all physics but transportation, hit processes are enabled.\n";
+	optMap["FASTMCMODE"].name  = "Activate FASTMC Mode if non zero.";
+	optMap["FASTMCMODE"].type  = 0;
+	optMap["FASTMCMODE"].ctgr  = "transportation";
+
+	optMap["HALL_DIMENSIONS"].args = "20*m, 20*m, 20*m";
+	optMap["HALL_DIMENSIONS"].help = "(x,y,z) semi-dimensions of the experimental Hall.\n";
+	optMap["HALL_DIMENSIONS"].name = "(x,y,z) semi-dimensions of the experimental Hall.";
+	optMap["HALL_DIMENSIONS"].type = 1;
+	optMap["HALL_DIMENSIONS"].ctgr = "transportation";
+
+
+
 	// General
 	optMap["DF"].args  = "no";
 	optMap["DF"].help  = "Selects Detector System and Factory type. \n";
@@ -859,7 +949,7 @@ void goptions::setGoptions()
 	optMap["DF"].type  = 1;
 	optMap["DF"].ctgr  = "general";
 	optMap["DF"].repe  = 1;
-	
+
 }
 
 

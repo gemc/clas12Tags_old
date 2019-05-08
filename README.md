@@ -388,7 +388,8 @@ To produce:
 	- cd $GEMC
 	- scons -c
 	- cd -
-	- cp -r $GEMC source ; cd source ; rm -rf .git*
+	- cp -r $GEMC source ; cd source ; rm -rf .git* ; rm .sconsign.dblite
+	- find ./  -type f  -name .DS_Store  -exec rm -f {} \;
 	- rm -rf api ; cp -r /opt/projects/gemc/api . ; cd api ;  rm -rf .git*
 
 5. change gemc.cc tag to new tag

@@ -1,6 +1,33 @@
 Changelog for GEMC
 ==================
 
+5/8/19
+
+ - added JSON ouput for all generator options
+
+5/7/19
+
+ - first implementation of JSON output for the options
+ - output implemention of JSON options for txt and evio
+
+5/6/19
+
+ - reorg of gemc_option categories
+ - only write option map out if output is specified
+ - adding json format output for option map (in process)
+
+5/1/19
+
+ - fixed dc setting of NWIRES.
+ - added flight time to tdc in dc
+
+
+4/25/19
+
+ - Richard Holmes: added FILTER_HADRONS options: when set to 1, do not write events if there are no hadrons.
+   Otherwise if nonzero write only events having a hadron with matching ID. For example -FILTER_HADRONS=2212 for protons.
+   Also, do not print progress if evtN hasn't changed.
+
 4/18/19
 
  - added mirror hit process routine as standalone routine and bank
