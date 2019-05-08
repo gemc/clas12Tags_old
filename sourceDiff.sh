@@ -30,18 +30,19 @@ echo
 # doing the diff one dir up
 cd ..
 
-# diff summary printed on screen
+# diff summary printed on screen. Ignoring objects, moc files, libraries and gemc executable
 echo DIFF OUTPUT:
 echo
-diff -r -q source clas12Tags/$tagVersion/source | grep -v \.git | grep -v sconsign\.dblite | grep -v gemc\.cc
+diff -x '*.o' -x 'moc_*.cc' -x '*.a' -x 'gemc' -r -q source clas12Tags/$tagVersion/source | grep -v \.git | grep -v sconsign\.dblite | grep -v gemc\.cc
 echo
 echo
 
 # assuming format like:
 # Files source/utilities/options.h and clas12Tags/4.3.1/source/utilities/options.h differ
+# ignoring .o
 
-set sourcesChanged = `diff -r -q source clas12Tags/$tagVersion/source | grep -v gemc.cc | grep differ | awk '{print $2}'`
-set tagFiles       = `diff -r -q source clas12Tags/$tagVersion/source | grep -v gemc.cc | grep differ | awk '{print $4}'`
+set sourcesChanged = `diff -x '*.o' -x 'moc_*.cc' -x '*.a' -x 'gemc' -r -q source clas12Tags/$tagVersion/source | grep -v gemc.cc | grep differ | awk '{print $2}'`
+set tagFiles       = `diff -x '*.o' -x 'moc_*.cc' -x '*.a' -x 'gemc' -r -q source clas12Tags/$tagVersion/source | grep -v gemc.cc | grep differ | awk '{print $4}'`
 
 echo FILES CHANGED:
 set i = 1
