@@ -18,6 +18,12 @@ set TAGTOINSTALL = $1
 set ncpu = `getconf _NPROCESSORS_ONLN`
 set opt = " -j"$ncpu" "
 
+# Temp: forcing max 10 processes as the scons system
+# checks independently that the libraries exist
+if($ncpu > 20) then
+	set opt = " -j20"
+endif
+
 
 echo
 echo Installing gemc clas12 tag $TAGTOINSTALL on $OSRELEASE
