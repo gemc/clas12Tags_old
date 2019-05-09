@@ -15,8 +15,13 @@ endif
 
 set TAGTOINSTALL = $1
 
+set ncpu = `getconf _NPROCESSORS_ONLN`
+set opt = " -j"$ncpu" "
+
+
 echo
 echo Installing gemc clas12 tag $TAGTOINSTALL on $OSRELEASE
+echo Using $ncpu cpus for the compilation
 
 # making sure we got the latest version
 git pull
@@ -24,7 +29,7 @@ git pull
 
 cd $TAGTOINSTALL/source
 scons -c
-scons -j4 OPT=1
+scons $opt OPT=1
 mkdir -p bin/$OSRELEASE
 
 # cp could not work if the executable is in use, but "mv" will work
