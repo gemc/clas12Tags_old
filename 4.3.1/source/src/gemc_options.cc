@@ -180,7 +180,7 @@ void goptions::setGoptions()
 	//
 	//
 	//
-	// Cosmic Ray
+	// ` Ray
 	// ----------
 
 	optMap["COSMICRAYS"].args = "no";
@@ -197,24 +197,36 @@ void goptions::setGoptions()
 	optMap["COSMICRAYS"].name = "Cosmic Generator";
 	optMap["COSMICRAYS"].type = 1;
 	optMap["COSMICRAYS"].ctgr = "generator";
+	optMap["COSMICRAYS"].argsJSONDescription  = "parameterization, minP, maxP";
+	optMap["COSMICRAYS"].argsJSONTypes  = "S F F";
 
 	optMap["COSMICAREA"].args = "0*cm, 0*cm, 0*cm, 50*cm";
 	optMap["COSMICAREA"].help = "Target (x,y,z) location and radius of area of interest";
 	optMap["COSMICAREA"].name = "Target (x,y,z) location and radius of area of interest";
 	optMap["COSMICAREA"].type = 1;
 	optMap["COSMICAREA"].ctgr = "generator";
-	
-
-
-
-
-
-
-
-
-
+	optMap["COSMICAREA"].argsJSONDescription  = "x, y, z, radius";
+	optMap["COSMICAREA"].argsJSONTypes  = "F F F F";
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	// Luminosity Beam
 	// ---------------
+
+	optMap["LUMI_EVENT"].args = "0, 0*ns, 2*ns";
+	optMap["LUMI_EVENT"].help = "Luminosity Particle Parameters: number of Particles/Event, Time Window, Time Between Bunches\n";
+	optMap["LUMI_EVENT"].help += "            Example: -LUMI_EVENT=\"10000, 120*ns, 2*ns\" simulate 10K particles per event distributed over 120 ns, at 2ns intervals. \n";
+	optMap["LUMI_EVENT"].name = "Luminosity Particle Parameters";
+	optMap["LUMI_EVENT"].type = 1;
+	optMap["LUMI_EVENT"].ctgr = "luminosity";
+	optMap["LUMI_EVENT"].argsJSONDescription  = "nparticles, timeWindow, bunchTime";
+	optMap["LUMI_EVENT"].argsJSONTypes  = "S F F";
 
 	optMap["LUMI_P"].args  = "e-, 11*GeV, 0*deg, 0*deg";
 	optMap["LUMI_P"].help  = "Luminosity Particle, momentum, angles (in respect of z-axis). \n";
@@ -223,7 +235,9 @@ void goptions::setGoptions()
 	optMap["LUMI_P"].name  = "Luminosity Particle, Energy, Theta, Phi";
 	optMap["LUMI_P"].type  = 1;
 	optMap["LUMI_P"].ctgr = "luminosity";
-	
+	optMap["LUMI_P"].argsJSONDescription  = "particleID, momentum, theta, phi";
+	optMap["LUMI_P"].argsJSONTypes        = "S, F, F, F";
+
 	optMap["LUMI_SPREAD_P"].args  = "0*GeV, 0*deg, 0*deg";
 	optMap["LUMI_SPREAD_P"].help  = "Spread Luminosity Particle energy and angles (in respect of z-axis). \n";
 	optMap["LUMI_SPREAD_P"].help += "      Example: -LUMI_SPREAD_P=\"0*GeV, 10*deg, 20*deg\" spreads 10 degrees in theta, 20 degrees in phi. \n";
@@ -231,26 +245,34 @@ void goptions::setGoptions()
 	optMap["LUMI_SPREAD_P"].name  = "delta_Energy, delta_Theta, delta_phi";
 	optMap["LUMI_SPREAD_P"].type  = 1;
 	optMap["LUMI_SPREAD_P"].ctgr  = "generator";
-	
+	optMap["LUMI_SPREAD_P"].argsJSONDescription  = "denergy, dtheta, dphi";
+	optMap["LUMI_SPREAD_P"].argsJSONTypes        = "F, F, F";
+
 	optMap["LUMI_V"].args = "(0, 0, -20)cm";
 	optMap["LUMI_V"].help = "Luminosity Particle Vertex. Example: -LUMI_V=\"(0, 0, -20)cm\". ";
 	optMap["LUMI_V"].name = "Luminosity Particle Vertex";
 	optMap["LUMI_V"].type = 1;
 	optMap["LUMI_V"].ctgr = "luminosity";
-	
+	optMap["LUMI_V"].argsJSONDescription  = "vx vy vz unit";
+	optMap["LUMI_V"].argsJSONTypes        = "F F F S";
+
 	optMap["LUMI_SPREAD_V"].args = "(0, 0)cm";
 	optMap["LUMI_SPREAD_V"].help = "Spread Luminosity Particle Radius, Z position. Example: -SPREAD_V=\"(0.1, 10)cm\". ";
 	optMap["LUMI_SPREAD_V"].name = "Luminosity Particle Vertex Spread";
 	optMap["LUMI_SPREAD_V"].type = 1;
 	optMap["LUMI_SPREAD_V"].ctgr = "luminosity";
-	
-	optMap["LUMI_EVENT"].args = "0, 0*ns, 2*ns";
-	optMap["LUMI_EVENT"].help = "Luminosity Particle Parameters: number of Particles/Event, Time Window, Time Between Bunches\n";
-	optMap["LUMI_EVENT"].help += "            Example: -LUMI_EVENT=\"10000, 120*ns, 2*ns\" simulate 10K particles per event distributed over 120 ns, at 2ns intervals. \n";
-	optMap["LUMI_EVENT"].name = "Luminosity Particle Parameters";
-	optMap["LUMI_EVENT"].type = 1;
-	optMap["LUMI_EVENT"].ctgr = "luminosity";
-	
+	optMap["LUMI_SPREAD_V"].argsJSONDescription  = "dr dz unit";
+	optMap["LUMI_SPREAD_V"].argsJSONTypes  = "F F S";
+
+	optMap["LUMI2_EVENT"].args = "0, 2*ns";
+	optMap["LUMI2_EVENT"].help = "Luminosity Particle 2 Parameters: number of Particles/Event, Time Between Bunches. The Time Window is specified with the LUMI_EVENT flag\n";
+	optMap["LUMI2_EVENT"].help += "            Example: -LUMI2_EVENT=\"10000, 2*ns\" simulate 10K particles per event at 2ns intervals. \n";
+	optMap["LUMI2_EVENT"].name = "Luminosity Particle 2 Parameters";
+	optMap["LUMI2_EVENT"].type = 1;
+	optMap["LUMI2_EVENT"].ctgr = "luminosity";
+	optMap["LUMI2_EVENT"].argsJSONDescription  = "nparticles, timeWindow, bunchTime";
+	optMap["LUMI2_EVENT"].argsJSONTypes  = "S F F";
+
 	optMap["LUMI2_P"].args  = "proton, 50*GeV, 175*deg, 180*deg";
 	optMap["LUMI2_P"].help  = "Luminosity Particle 2, momentum, angles (in respect of z-axis). \n";
 	optMap["LUMI2_P"].help += "            Example: -LUMI2_P=\"proton, 1*GeV, 25*deg, 2*deg\" sets 1 GeV protons, 25 degrees in theta, 2 degrees in phi. \n";
@@ -258,7 +280,9 @@ void goptions::setGoptions()
 	optMap["LUMI2_P"].name  = "Luminosity Particle 2, Energy, Theta, Phi";
 	optMap["LUMI2_P"].type  = 1;
 	optMap["LUMI2_P"].ctgr = "luminosity";
-	
+	optMap["LUMI2_P"].argsJSONDescription  = "particleID, momentum, theta, phi";
+	optMap["LUMI2_P"].argsJSONTypes        = "S, F, F, F";
+
 	optMap["LUMI2_SPREAD_P"].args  = "0*GeV, 0*deg, 0*deg";
 	optMap["LUMI2_SPREAD_P"].help  = "Spread Luminosity Particle 2 energy and angles (in respect of z-axis). \n";
 	optMap["LUMI2_SPREAD_P"].help += "      Example: -LUMI2_SPREAD_P=\"0*GeV, 10*deg, 20*deg\" spreads 10 degrees in theta, 20 degrees in phi. \n";
@@ -266,32 +290,33 @@ void goptions::setGoptions()
 	optMap["LUMI2_SPREAD_P"].name  = "delta_Energy, delta_Theta, delta_phi";
 	optMap["LUMI2_SPREAD_P"].type  = 1;
 	optMap["LUMI2_SPREAD_P"].ctgr  = "generator";
-	
+	optMap["LUMI2_SPREAD_P"].argsJSONDescription  = "denergy, dtheta, dphi";
+	optMap["LUMI2_SPREAD_P"].argsJSONTypes        = "F, F, F";
+
 	optMap["LUMI2_V"].args = "(4, 0, 50)cm";
 	optMap["LUMI2_V"].help = "Luminosity Particle 2 Vertex. Example: -LUMI2_V=\"(0, 0, -20)cm\". ";
 	optMap["LUMI2_V"].name = "Luminosity Particle 2 Vertex";
 	optMap["LUMI2_V"].type = 1;
 	optMap["LUMI2_V"].ctgr = "luminosity";
-	
+	optMap["LUMI2_V"].argsJSONDescription  = "vx vy vz unit";
+	optMap["LUMI2_V"].argsJSONTypes        = "F F F S";
+
 	optMap["LUMI2_SPREAD_V"].args = "(0, 0)cm";
 	optMap["LUMI2_SPREAD_V"].help = "Spread Luminosity Particle 2 Radius, Z position. Example: -SPREAD_V=\"(0.1, 10)cm\". ";
 	optMap["LUMI2_SPREAD_V"].name = "Luminosity Particle Vertex 2 Spread";
 	optMap["LUMI2_SPREAD_V"].type = 1;
 	optMap["LUMI2_SPREAD_V"].ctgr = "luminosity";
-	
-	optMap["LUMI2_EVENT"].args = "0, 2*ns";
-	optMap["LUMI2_EVENT"].help = "Luminosity Particle 2 Parameters: number of Particles/Event, Time Between Bunches. The Time Window is specified with the LUMI_EVENT flag\n";
-	optMap["LUMI2_EVENT"].help += "            Example: -LUMI2_EVENT=\"10000, 2*ns\" simulate 10K particles per event at 2ns intervals. \n";
-	optMap["LUMI2_EVENT"].name = "Luminosity Particle 2 Parameters";
-	optMap["LUMI2_EVENT"].type = 1;
-	optMap["LUMI2_EVENT"].ctgr = "luminosity";
-	
-
-
-
-
-
-	
+	optMap["LUMI2_SPREAD_V"].argsJSONDescription  = "denergy, dtheta, dphi";
+	optMap["LUMI2_SPREAD_V"].argsJSONTypes        = "F, F, F";
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	// MySQL Database
 	// --------------
 
@@ -300,37 +325,49 @@ void goptions::setGoptions()
 	optMap["DBHOST"].name = "mysql server host name";
 	optMap["DBHOST"].type = 1;
 	optMap["DBHOST"].ctgr = "mysql";
-	
+	optMap["DBHOST"].argsJSONDescription  = "mysqlServer";
+	optMap["DBHOST"].argsJSONTypes        = "S";
+
 	optMap["DATABASE"].args = "no";
 	optMap["DATABASE"].help = "Selects mysql Database.";
 	optMap["DATABASE"].name = "mysql Database";
 	optMap["DATABASE"].type = 1;
 	optMap["DATABASE"].ctgr = "mysql";
-	
+	optMap["DATABASE"].argsJSONDescription  = "mysqlDatabase";
+	optMap["DATABASE"].argsJSONTypes        = "S";
+
 	optMap["DBUSER"].args = "gemc";
 	optMap["DBUSER"].help = "Select mysql user name";
 	optMap["DBUSER"].name = "Select mysql user name";
 	optMap["DBUSER"].type = 1;
 	optMap["DBUSER"].ctgr = "mysql";
-	
+	optMap["DBUSER"].argsJSONDescription  = "mysqlUserName";
+	optMap["DBUSER"].argsJSONTypes        = "S";
+
 	optMap["DBPSWD"].args = "no";
 	optMap["DBPSWD"].help = "mysql password";
 	optMap["DBPSWD"].name = "Select mysql password";
 	optMap["DBPSWD"].type = 1;
 	optMap["DBPSWD"].ctgr = "mysql";
-	
+	optMap["DBPSWD"].argsJSONDescription  = "mysqlUserPwd";
+	optMap["DBPSWD"].argsJSONTypes        = "S";
+
 	optMap["DBPORT"].arg = 0;
 	optMap["DBPORT"].help = "Select mysql server port.";
 	optMap["DBPORT"].name = "Select mysql server port";
 	optMap["DBPORT"].type = 0;
 	optMap["DBPORT"].ctgr = "mysql";
-
-
-
-
-
-
-
+	optMap["DBPORT"].argsJSONDescription  = "mysqlPort";
+	optMap["DBPORT"].argsJSONTypes        = "F";
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	// Verbosity
 	// ---------
 
@@ -339,31 +376,43 @@ void goptions::setGoptions()
 	optMap["G4P_VERBOSITY"].name = "Logical Volume Verbosity";
 	optMap["G4P_VERBOSITY"].type = 0;
 	optMap["G4P_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["G4P_VERBOSITY"].type = 0;
+	optMap["G4P_VERBOSITY"].ctgr = "verbosity";
+	optMap["G4P_VERBOSITY"].argsJSONDescription  = "G4P_VERBOSITY";
+	optMap["G4P_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["GEO_VERBOSITY"].arg  = 1;
 	optMap["GEO_VERBOSITY"].help = "Controls Geometry Construction Log Output.";
 	optMap["GEO_VERBOSITY"].name = "Geometry Verbosity";
 	optMap["GEO_VERBOSITY"].type = 0;
 	optMap["GEO_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["GEO_VERBOSITY"].argsJSONDescription  = "GEO_VERBOSITY";
+	optMap["GEO_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["GUI_VERBOSITY"].arg  = 1;
 	optMap["GUI_VERBOSITY"].help = "Controls GUI Construction Log Output.";
 	optMap["GUI_VERBOSITY"].name = "GUI Verbosity";
 	optMap["GUI_VERBOSITY"].type = 0;
 	optMap["GUI_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["GUI_VERBOSITY"].argsJSONDescription  = "GUI_VERBOSITY";
+	optMap["GUI_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["HIT_VERBOSITY"].arg  = 1;
 	optMap["HIT_VERBOSITY"].help = "Controls Hits Log Output. ";
 	optMap["HIT_VERBOSITY"].name = "Hit Verbosity";
 	optMap["HIT_VERBOSITY"].type = 0;
 	optMap["HIT_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["HIT_VERBOSITY"].argsJSONDescription  = "HIT_VERBOSITY";
+	optMap["HIT_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["CATCH"].args = "Maurizio";
 	optMap["CATCH"].help = "Catch volumes matching the given string.";
 	optMap["CATCH"].name = "Volume catcher";
 	optMap["CATCH"].type = 1;
 	optMap["CATCH"].ctgr = "verbosity";
-	
+	optMap["CATCH"].argsJSONDescription  = "CATCH";
+	optMap["CATCH"].argsJSONTypes        = "S";
+
 	optMap["FIELD_VERBOSITY"].arg   = 0;
 	optMap["FIELD_VERBOSITY"].help  = "Controls Electro-Magnetic Fields Log Output:\n";
 	optMap["FIELD_VERBOSITY"].help += "  0: no log";
@@ -372,61 +421,81 @@ void goptions::setGoptions()
 	optMap["FIELD_VERBOSITY"].name  = "Electro-Magnetic Fields Verbosity";
 	optMap["FIELD_VERBOSITY"].type  = 0;
 	optMap["FIELD_VERBOSITY"].ctgr  = "verbosity";
-	
+	optMap["FIELD_VERBOSITY"].argsJSONDescription  = "FIELD_VERBOSITY";
+	optMap["FIELD_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["PRINT_EVENT"].arg  = 1000;
 	optMap["PRINT_EVENT"].help = "-PRINT_EVENT=N: Print Event Number every N events.";
 	optMap["PRINT_EVENT"].name = "Print Event Modulus";
 	optMap["PRINT_EVENT"].type = 0;
 	optMap["PRINT_EVENT"].ctgr = "verbosity";
-	
+	optMap["PRINT_EVENT"].argsJSONDescription  = "PRINT_EVENT";
+	optMap["PRINT_EVENT"].argsJSONTypes        = "F";
+
 	optMap["BANK_VERBOSITY"].arg  = 1;
 	optMap["BANK_VERBOSITY"].help = "Controls Bank Log Output.";
 	optMap["BANK_VERBOSITY"].name = "Bank Output Verbosity";
 	optMap["BANK_VERBOSITY"].type = 0;
 	optMap["BANK_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["BANK_VERBOSITY"].argsJSONDescription  = "BANK_VERBOSITY";
+	optMap["BANK_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["PHY_VERBOSITY"].arg  = 1;
 	optMap["PHY_VERBOSITY"].help = "Controls Physics List Log Output.";
 	optMap["PHY_VERBOSITY"].name = "Physics List Verbosity";
 	optMap["PHY_VERBOSITY"].type = 0;
 	optMap["PHY_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["PHY_VERBOSITY"].argsJSONDescription  = "PHY_VERBOSITY";
+	optMap["PHY_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["GEN_VERBOSITY"].arg  = 0;
 	optMap["GEN_VERBOSITY"].help = "Controls Geant4 Generator Verbosity.";
 	optMap["GEN_VERBOSITY"].name = "Geant4 Generator Verbosity";
 	optMap["GEN_VERBOSITY"].type = 0;
 	optMap["GEN_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["GEN_VERBOSITY"].argsJSONDescription  = "GEN_VERBOSITY";
+	optMap["GEN_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["G4TRACK_VERBOSITY"].arg  = 0;
 	optMap["G4TRACK_VERBOSITY"].help = "Controls Geant4 Track Verbosity.";
 	optMap["G4TRACK_VERBOSITY"].name = "Geant4 Track Verbosity";
 	optMap["G4TRACK_VERBOSITY"].type = 0;
 	optMap["G4TRACK_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["G4TRACK_VERBOSITY"].argsJSONDescription  = "G4TRACK_VERBOSITY";
+	optMap["G4TRACK_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["MATERIAL_VERBOSITY"].arg  = 0;
 	optMap["MATERIAL_VERBOSITY"].help = "Controls Geant4 Material Verbosity.";
 	optMap["MATERIAL_VERBOSITY"].name = "Geant4 Material Verbosity";
 	optMap["MATERIAL_VERBOSITY"].type = 0;
 	optMap["MATERIAL_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["MATERIAL_VERBOSITY"].argsJSONDescription  = "MATERIAL_VERBOSITY";
+	optMap["MATERIAL_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["PARAMETER_VERBOSITY"].arg  = 0;
 	optMap["PARAMETER_VERBOSITY"].help = "Controls Parameters Verbosity.";
 	optMap["PARAMETER_VERBOSITY"].name = "Parameters Verbosity";
 	optMap["PARAMETER_VERBOSITY"].type = 0;
 	optMap["PARAMETER_VERBOSITY"].ctgr = "verbosity";
-	
+	optMap["PARAMETER_VERBOSITY"].argsJSONDescription  = "PARAMETER_VERBOSITY";
+	optMap["PARAMETER_VERBOSITY"].argsJSONTypes        = "F";
+
 	optMap["MIRROR_VERBOSITY"].arg  = 0;
 	optMap["MIRROR_VERBOSITY"].help = "Controls Mirrors Verbosity.";
 	optMap["MIRROR_VERBOSITY"].name = "Mirrors Verbosity";
 	optMap["MIRROR_VERBOSITY"].type = 0;
 	optMap["MIRROR_VERBOSITY"].ctgr = "verbosity";
-	
-	
-
-
-
-
-	
+	optMap["MIRROR_VERBOSITY"].argsJSONDescription  = "MIRROR_VERBOSITY";
+	optMap["MIRROR_VERBOSITY"].argsJSONTypes        = "F";
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	// Run Control
 	// -----------
 
@@ -561,11 +630,11 @@ void goptions::setGoptions()
 	optMap["RECORD_PASSBY"].type = 0;
 	optMap["RECORD_PASSBY"].ctgr = "control";
 	
-	optMap["RECORD_MIRRORS"].arg = 0;
-	optMap["RECORD_MIRRORS"].name = "Set to one if you want to save mirror hits in the output";
-	optMap["RECORD_MIRRORS"].help = "Set to one if you want to save mirror hits in the output. Default is 0.\n";
-	optMap["RECORD_MIRRORS"].type = 0;
-	optMap["RECORD_MIRRORS"].ctgr = "control";
+	optMap["RECORD_OPTICALPHOTONS"].arg = 0;
+	optMap["RECORD_OPTICALPHOTONS"].name = "Set to one if you want to save mirror hits in the output";
+	optMap["RECORD_OPTICALPHOTONS"].help = "Set to one if you want to save mirror hits in the output. Default is 0.\n";
+	optMap["RECORD_OPTICALPHOTONS"].type = 0;
+	optMap["RECORD_OPTICALPHOTONS"].ctgr = "control";
 	
 	optMap["RUNNO"].arg  = 1;
 	optMap["RUNNO"].name = "Run Number. Controls the geometry and calibration parameters";
