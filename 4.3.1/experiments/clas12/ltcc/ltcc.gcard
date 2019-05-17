@@ -10,7 +10,7 @@
 	<option name="geometry" value="1400x1200"/>
 
 	<option name="INTEGRATEDRAW"   value="ltcc"/>
-	<option name="RECORD_MIRRORS"  value="1"/>
+	<option name="RECORD_OPTICALPHOTONS"  value="1"/>
 	<option name="RECORD_PASSBY"   value="1"/>
 
 
