@@ -14,6 +14,8 @@ For Q/A on CLAS12 simulations you can use the [CLAS12 Discourse](https://clas12.
 
 ### Current PRODUCTION version: **4.3.0**, compatible with **COATJAVA 5.7.4** and above. JLAB_SOFTWARE version: 2.3
 
+This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.3.0
+
 <hr>
 
 To use the latest production tag (currently 4.3.0):
