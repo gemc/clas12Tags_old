@@ -1,0 +1,39 @@
+<gcard>
+
+	<!-- possible variations
+	 - lH2,
+	 - lD2,
+	 - 118Sn
+	 - 12C
+	 - 208Pb
+	 - 27Al
+	 - 63Cu
+	 - ND3
+	 - PolTarg
+	 - elaborate
+	 -->
+
+	<detector name="target" factory="TEXT" variation="lD2"/>
+	<detector name="cad/" factory="CAD"/>
+
+	<option name="FIELD_PROPERTIES" value="clas12-newSolenoid, 1*mm, G4ClassicalRK4, linear"/>
+
+	<!-- PolTarg
+	 <detector name="target" factory="TEXT" variation="PolTarg"/>
+	 <detector name="PolTarg/" factory="CAD"/>
+	 / -->
+
+	<option name="geometry" value="1400x1200"/>
+	
+	<option name="BEAM_P" value="e-, 11.0*GeV, 0*deg, 0*deg"/>
+	<option name="PHYSICS" value="FTFP_BERT_HP + STD + PhotoNuclear"/>
+
+	<option name="MAX_FIELD_STEP" value="100"/>
+	<option name="MAX_X_POS" value="100"/>
+	<option name="MAX_Y_POS" value="100"/>
+	<option name="MAX_Z_POS" value="300"/>
+
+	<option name="SPREAD_V" value="(0.01, 0)cm"/>
+	<option name="BEAM_V" value="(0, 0, -4.5)cm"/>
+
+</gcard>
