@@ -158,7 +158,7 @@ In development:
 	- 3D Cylindrical map field :soon:
 	- Time propagation in DC digitization :soon:
 	- BMT digitization with global coordinates instead of locals :soon:
-	- rga_fall2018 variations for: FTOF, EC, PCAL geometry services :soon:
+	- rga_fall2018 variations for: FTOF, EC, PCAL, CTOF geometry services :soon:
 	- default variation for DC geometry service :soon:
 	- ltcc variarions for different run periods :soon:
 	- target position added to ctof digitization shift :soon:
