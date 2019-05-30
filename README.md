@@ -161,6 +161,7 @@ In development:
 	- rga_fall2018 variations for: FTOF, EC, PCAL geometry services :soon:
 	- default variation for DC geometry service :soon:
 	- ltcc variarions for different run periods :soon:
+	- target position added to ctof digitization shift :soon:
 
 
 <br>
