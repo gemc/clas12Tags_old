@@ -153,9 +153,13 @@ In development:
 	- gcards for rg-b different run-periods
 	- ec, pcal digitization removed obsolete constants
 	- moved ftof shield in the correct position
-	- Option written in JSON format :soon:
+	- Option written in JSON format 
 	- 3D Cylindrical map field :soon:
 	- Time propagation in DC digitization :soon:
+	- BMT digitization with global coordinates instead of locals :soon:
+	- rga_fall2018 variations for: FTOF, EC, PCAL geometry services :soon:
+	- default variation for DC geometry service :soon:
+	- ltcc variarions for different run periods :soon:
 
 
 <br>
@@ -166,6 +170,8 @@ In development:
 	- Support alternative, run dependent configurations :soon:
 	- Geometry variation as a gcard option :soon:
 	- Extend beam background merging to all detectors :soon:
+	- arbitrary number of sequential rotations in the detector definition :soon:
+
 
 <br>
 
