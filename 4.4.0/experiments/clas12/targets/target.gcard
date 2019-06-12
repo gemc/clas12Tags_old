@@ -13,7 +13,7 @@
 	 - elaborate
 	 -->
 
-	<detector name="target" factory="TEXT" variation="lD2"/>
+	<detector name="target" factory="TEXT" variation="lH2"/>
 	<detector name="cad/" factory="CAD"/>
 
 	<option name="FIELD_PROPERTIES" value="clas12-newSolenoid, 1*mm, G4ClassicalRK4, linear"/>

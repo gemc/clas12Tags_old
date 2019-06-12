@@ -4,12 +4,12 @@
 	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lD2"/>
 
 	<!-- central detectors 	-->
-	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="java"/>
+	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
 	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
 	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
 
 	<!--ctof, cad  -->
-	<detector name="experiments/clas12/ctof/ctof"        factory="TEXT" variation="cad"/>
+	<detector name="experiments/clas12/ctof/ctof"        factory="TEXT" variation="rga_fall2018"/>
 	<detector name="experiments/clas12/ctof/javacad19/"  factory="CAD"/>
 	<detector name="experiments/clas12/cnd/cnd"          factory="TEXT" variation="original"/>
 
@@ -30,10 +30,10 @@
 	<!-- forward carriage -->
 	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
 
-	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="java"/>
-	<detector name="experiments/clas12/ftof/ftof"          factory="TEXT" variation="java"/>
-	<detector name="experiments/clas12/ec/ec"              factory="TEXT" variation="java"/>
-	<detector name="experiments/clas12/pcal/pcal"          factory="TEXT" variation="java"/>
+	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/ftof/ftof"          factory="TEXT" variation="rga_fall2018"/>
+	<detector name="experiments/clas12/ec/ec"              factory="TEXT" variation="rga_fall2018"/>
+	<detector name="experiments/clas12/pcal/pcal"          factory="TEXT" variation="rga_fall2018"/>
 	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
 	<detector name="experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
 	<detector name="experiments/clas12/ltcc/cad/"          factory="CAD"/>

@@ -1,12 +1,15 @@
 #!/bin/csh -f
 
 # script to show differences between source and a tag source
-# if second option prompt is given, then the script will ask for user input
+#
+# if second option "prompt" is given, then the script will ask for user input
 # to copy each file into the tag
 
-# note: if gemc.cc has differences other than the tag version, it will be considered as well
-# make sure that the tag source version is the right one
+# note:
+# 1. if gemc.cc has differences other than the tag version, it will be considered as well (make sure that the sourceTAG version is the right one)
+# 2. the script will be run one directory up from clas12tags
 set sourceTAG = "2.8"
+set prompt = "no"
 
 if( "$1" != "" ) then
 	set tagVersion = $1
@@ -15,8 +18,6 @@ else
 	exit
 endif
 
-
-set prompt = "no"
 if( "$2" == "prompt" ) then
 	set prompt = "yes"
 endif
