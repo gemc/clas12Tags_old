@@ -1,0 +1,115 @@
+<gxml>
+<volume name="RICH_s4_Volume" color="444444" style="wireframe" material="Air_Opt" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="fc" />
+<volume name="Aluminum" color="4444ff" style="0" material="G4_Al" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="CFRP" color="44ff44" style="0" material="CarbonFiber" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="MirrorSupport" color="ffbf00" style="0" material="CarbonFiber" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="TedlarWrapping" color="444444" style="0" material="G4_AIR" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_1" color="664444" style="0" material="aerogel_sector4_layer201_component1" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_2" color="664444" style="0" material="aerogel_sector4_layer201_component2" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_3" color="664444" style="0" material="aerogel_sector4_layer201_component3" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_4" color="664444" style="0" material="aerogel_sector4_layer201_component4" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_5" color="664444" style="0" material="aerogel_sector4_layer201_component5" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_6" color="664444" style="0" material="aerogel_sector4_layer201_component6" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_7" color="664444" style="0" material="aerogel_sector4_layer201_component7" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_8" color="664444" style="0" material="aerogel_sector4_layer201_component8" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_9" color="664444" style="0" material="aerogel_sector4_layer201_component9" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_10" color="664444" style="0" material="aerogel_sector4_layer201_component10 " position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_11" color="664444" style="0" material="aerogel_sector4_layer201_component11" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_12" color="664444" style="0" material="aerogel_sector4_layer201_component12" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_13" color="664444" style="0" material="aerogel_sector4_layer201_component13" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_14" color="664444" style="0" material="aerogel_sector4_layer201_component14" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_15" color="664444" style="0" material="aerogel_sector4_layer201_component15" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="201_16" color="664444" style="0" material="aerogel_sector4_layer201_component16" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_1" color="664444" style="0" material="aerogel_sector4_layer202_component1" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_2" color="664444" style="0" material="aerogel_sector4_layer202_component2" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_3" color="664444" style="0" material="aerogel_sector4_layer202_component3" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_4" color="664444" style="0" material="aerogel_sector4_layer202_component4" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_5" color="664444" style="0" material="aerogel_sector4_layer202_component5" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_6" color="664444" style="0" material="aerogel_sector4_layer202_component6" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_7" color="664444" style="0" material="aerogel_sector4_layer202_component7" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_8" color="664444" style="0" material="aerogel_sector4_layer202_component8" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_9" color="664444" style="0" material="aerogel_sector4_layer202_component9" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_10" color="664444" style="0" material="aerogel_sector4_layer202_component10" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_11" color="664444" style="0" material="aerogel_sector4_layer202_component11" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_12" color="664444" style="0" material="aerogel_sector4_layer202_component12" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_13" color="664444" style="0" material="aerogel_sector4_layer202_component13" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_14" color="664444" style="0" material="aerogel_sector4_layer202_component14" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_15" color="664444" style="0" material="aerogel_sector4_layer202_component15" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_16" color="664444" style="0" material="aerogel_sector4_layer202_component16" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_17" color="664444" style="0" material="aerogel_sector4_layer202_component17" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_18" color="664444" style="0" material="aerogel_sector4_layer202_component18" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_19" color="664444" style="0" material="aerogel_sector4_layer202_component19" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_20" color="664444" style="0" material="aerogel_sector4_layer202_component20" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_21" color="664444" style="0" material="aerogel_sector4_layer202_component21" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="202_22" color="664444" style="0" material="aerogel_sector4_layer202_component22" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_1" color="664444" style="0" material="aerogel_sector4_layer203_component1" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_2" color="664444" style="0" material="aerogel_sector4_layer203_component2" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_3" color="664444" style="0" material="aerogel_sector4_layer203_component3" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_4" color="664444" style="0" material="aerogel_sector4_layer203_component4" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_5" color="664444" style="0" material="aerogel_sector4_layer203_component5" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_6" color="664444" style="0" material="aerogel_sector4_layer203_component6" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_7" color="664444" style="0" material="aerogel_sector4_layer203_component7" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_8" color="664444" style="0" material="aerogel_sector4_layer203_component8" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_9" color="664444" style="0" material="aerogel_sector4_layer203_component9" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_10" color="664444" style="0" material="aerogel_sector4_layer203_component10" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_11" color="664444" style="0" material="aerogel_sector4_layer203_component11" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_12" color="664444" style="0" material="aerogel_sector4_layer203_component12" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_13" color="664444" style="0" material="aerogel_sector4_layer203_component13" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_14" color="664444" style="0" material="aerogel_sector4_layer203_component14" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_15" color="664444" style="0" material="aerogel_sector4_layer203_component15" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_16" color="664444" style="0" material="aerogel_sector4_layer203_component16" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_17" color="664444" style="0" material="aerogel_sector4_layer203_component17" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_18" color="664444" style="0" material="aerogel_sector4_layer203_component18" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_19" color="664444" style="0" material="aerogel_sector4_layer203_component19" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_20" color="664444" style="0" material="aerogel_sector4_layer203_component20" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_21" color="664444" style="0" material="aerogel_sector4_layer203_component21" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_22" color="664444" style="0" material="aerogel_sector4_layer203_component22" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_23" color="664444" style="0" material="aerogel_sector4_layer203_component23" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_24" color="664444" style="0" material="aerogel_sector4_layer203_component24" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_25" color="664444" style="0" material="aerogel_sector4_layer203_component25" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_26" color="664444" style="0" material="aerogel_sector4_layer203_component26" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_27" color="664444" style="0" material="aerogel_sector4_layer203_component27" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_28" color="664444" style="0" material="aerogel_sector4_layer203_component28" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_29" color="664444" style="0" material="aerogel_sector4_layer203_component29" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_30" color="664444" style="0" material="aerogel_sector4_layer203_component30" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_31" color="664444" style="0" material="aerogel_sector4_layer203_component31" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="203_32" color="664444" style="0" material="aerogel_sector4_layer203_component32" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_1" color="664444" style="0" material="aerogel_sector4_layer204_component1" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_2" color="664444" style="0" material="aerogel_sector4_layer204_component2" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_3" color="664444" style="0" material="aerogel_sector4_layer204_component3" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_4" color="664444" style="0" material="aerogel_sector4_layer204_component4" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_5" color="664444" style="0" material="aerogel_sector4_layer204_component5" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_6" color="664444" style="0" material="aerogel_sector4_layer204_component6" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_7" color="664444" style="0" material="aerogel_sector4_layer204_component7" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_8" color="664444" style="0" material="aerogel_sector4_layer204_component8" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_9" color="664444" style="0" material="aerogel_sector4_layer204_component9" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_10" color="664444" style="0" material="aerogel_sector4_layer204_component10" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_11" color="664444" style="0" material="aerogel_sector4_layer204_component11" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_12" color="664444" style="0" material="aerogel_sector4_layer204_component12" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_13" color="664444" style="0" material="aerogel_sector4_layer204_component13" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_14" color="664444" style="0" material="aerogel_sector4_layer204_component14" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_15" color="664444" style="0" material="aerogel_sector4_layer204_component15" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_16" color="664444" style="0" material="aerogel_sector4_layer204_component16" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_17" color="664444" style="0" material="aerogel_sector4_layer204_component17" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_18" color="664444" style="0" material="aerogel_sector4_layer204_component18" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_19" color="664444" style="0" material="aerogel_sector4_layer204_component19" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_20" color="664444" style="0" material="aerogel_sector4_layer204_component20" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_21" color="664444" style="0" material="aerogel_sector4_layer204_component21" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_22" color="664444" style="0" material="aerogel_sector4_layer204_component22" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_23" color="664444" style="0" material="aerogel_sector4_layer204_component23" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_24" color="664444" style="0" material="aerogel_sector4_layer204_component24" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_25" color="664444" style="0" material="aerogel_sector4_layer204_component25" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_26" color="664444" style="0" material="aerogel_sector4_layer204_component26" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_27" color="664444" style="0" material="aerogel_sector4_layer204_component27" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_28" color="664444" style="0" material="aerogel_sector4_layer204_component28" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_29" color="664444" style="0" material="aerogel_sector4_layer204_component29" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_30" color="664444" style="0" material="aerogel_sector4_layer204_component30" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="204_31" color="664444" style="0" material="aerogel_sector4_layer204_component31" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" />
+<volume name="304_1" color="ff5733" style="0" material="G4_GLASS_PLATE" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" hitType="mirror" sensitivity="mirror: rich_AlMgF2" identifiers="id manual 81"  />
+<volume name="302_2" color="ff5733" style="0" material="G4_GLASS_PLATE" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" hitType="mirror" sensitivity="mirror: rich_AlMgF2" identifiers="id manual 82"  />
+<volume name="302_1" color="ff5733" style="0" material="G4_GLASS_PLATE" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" hitType="mirror" sensitivity="mirror: rich_AlMgF2" identifiers="id manual 83" />
+<volume name="301_1" color="ff5733" style="0" material="G4_GLASS_PLATE" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" hitType="mirror" sensitivity="mirror: rich_AlMgF2" identifiers="id manual 84" />
+<volume name="301_2" color="ff5733" style="0" material="G4_GLASS_PLATE" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" hitType="mirror" sensitivity="mirror: rich_AlMgF2" identifiers="id manual 85" />
+<volume name="303_2" color="ff5733" style="0" material="G4_GLASS_PLATE" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" hitType="mirror" sensitivity="mirror: rich_AlMgF2" identifiers="id manual 86" />
+<volume name="303_1" color="ff5733" style="0" material="G4_GLASS_PLATE" position="0.000000*cm 0.000000*cm 0.000000*cm" rotation="0 0 0" mother="RICH_s4_Volume" hitType="mirror" sensitivity="mirror: rich_AlMgF2" identifiers="id manual 87" />
+</gxml>
