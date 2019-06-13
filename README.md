@@ -155,7 +155,6 @@ In development:
 	- ec, pcal digitization removed obsolete constants
 	- moved ftof shield in the correct position
 	- Option written in JSON format 
-	- 3D Cylindrical map field :soon:
 	- rga_fall2018 variations for: FTOF, EC, PCAL, CTOF geometry services 
 	- default variation for DC geometry service 
 	- ltcc variarions for different run periods :soon:
@@ -173,6 +172,7 @@ In development:
 	- arbitrary number of sequential rotations in the detector definition :soon:
 	- Time propagation in DC digitization :soon:
 	- BMT digitization with global coordinates instead of locals :soon:
+	- 3D Cylindrical map field :soon:
 
 
 <br>
