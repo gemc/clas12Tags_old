@@ -166,7 +166,7 @@ In development:
 - 4.3.2:
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
-	- Support alternative, run dependent configurations :soon:
+	- Passing geometry variation to digitization routines :soon:
 	- Geometry variation as a gcard option :soon:
 	- Extend beam background merging to all detectors :soon:
 	- arbitrary number of sequential rotations in the detector definition :soon:
