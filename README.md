@@ -145,7 +145,7 @@ In development:
 
 <br>
 
-- 4.3.1 (By May 2019):
+- 4.3.1:
 
 	- FTOF Time resolution updated based on data
 	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/rerunEvents.html">SAVE_SELECTED, RERUN_SELECTED</a> to save RNG state for certain particles, detector
@@ -158,7 +158,7 @@ In development:
 	- rga_fall2018 variations for: FTOF, EC, PCAL, CTOF geometry services 
 	- default variation for DC geometry service 
 	- ltcc variarions for different run periods :soon:
-	- target position added to ctof digitization shift
+	- target position added to BMT, CTOF digitization position shift
 
 
 <br>
