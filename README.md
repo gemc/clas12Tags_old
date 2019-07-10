@@ -157,8 +157,10 @@ In development:
 	- Option written in JSON format 
 	- rga_fall2018 variations for: FTOF, EC, PCAL, CTOF geometry services 
 	- default variation for DC geometry service 
-	- ltcc variarions for different run periods :soon:
-	- target position added to BMT, CTOF digitization position shift
+	- ltcc variarions for different run periods 
+	- added Geometry variation as a gcard option: DIGITIZATION_VARIATION, to be used by digitization routines.
+	- target position added to BMT, CTOF digitization position shift, read from CCDB using DIGITIZATION_VARIATION
+	- Extend beam background merging to all detectors
 
 
 <br>
@@ -167,8 +169,6 @@ In development:
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
 	- Passing geometry variation to digitization routines :soon:
-	- Geometry variation as a gcard option :soon:
-	- Extend beam background merging to all detectors :soon:
 	- arbitrary number of sequential rotations in the detector definition :soon:
 	- Time propagation in DC digitization :soon:
 	- BMT digitization with global coordinates instead of locals :soon:
