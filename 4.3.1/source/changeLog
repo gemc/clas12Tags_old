@@ -1,6 +1,16 @@
 Changelog for GEMC
 ==================
 
+7/10/19
+- added DIGITIZATION_VARIATION, to be used by digitization routines.
+
+7/8/19
+ - added background merging for FTOF, EC, PCAL, FT_CAL, FT_HODO, LTCC, HTCC
+
+6/17/19
+
+ - number of events made long int
+
 6/14/19
 
 - added target position from CCDB (fixed variation, todo: detector-dependent variation mechanism) to MM and CTOF routines.
