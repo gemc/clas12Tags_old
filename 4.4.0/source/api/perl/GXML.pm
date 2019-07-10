@@ -37,6 +37,7 @@ sub print {
 		printf INFO (" material=\"%s\"", $det->{"material"});
 		printf INFO (" position=\"%s\"", $det->{"pos"});
 		printf INFO (" rotation=\"%s\"", $det->{"rotation"});
+        printf INFO (" mother=\"%s\"", $det->{"mother"});
 		if($det->{"sensitivity"} ne "no"){
 			printf INFO (" sensitivity=\"%s\"", $det->{"sensitivity"});
 			if($det->{"hitType"} ne "no"){
