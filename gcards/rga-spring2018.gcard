@@ -34,7 +34,7 @@
 	<detector name="experiments/clas12/ftof/ftof"          factory="TEXT" variation="rga_fall2018"/>
 	<detector name="experiments/clas12/ec/ec"              factory="TEXT" variation="rga_fall2018"/>
 	<detector name="experiments/clas12/pcal/pcal"          factory="TEXT" variation="rga_fall2018"/>
-	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="original"/>
+	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="rga_spring2018"/>
 	<detector name="experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
 	<detector name="experiments/clas12/ltcc/cad/"          factory="CAD"/>
 
@@ -72,6 +72,8 @@
 	<!--  RF Signal needs event time window defined by LUMI_EVENT -->
 	<option name="LUMI_EVENT"  value="0, 248.5*ns, 4*ns" />
 	<option name="RFSETUP"     value="0.499, 40, 20" />
+
+	<!--  Reference position set as target shift below -->
 	<option name="RFSTART"     value="eventVertex, 0, 0, -19.4" />
 
 	<!-- production threshold for passive volumes -->

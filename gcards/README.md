@@ -59,3 +59,5 @@ The RG A and B numbers come from the engineering group survey:
 
 ![Alt engineering survey](surveyCyril.png?raw=true "engineering survey")
 
+Overlap is detected for volume segment_hyp_s2_2:1
+apparently fully encapsulating volume cyl_mirrors_s2left_2:1          at the same level !
