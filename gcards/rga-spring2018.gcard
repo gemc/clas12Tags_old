@@ -67,6 +67,7 @@
 
 	<!--  Run Number 11, picked up by digitization routines -->
 	<option name="RUNNO"    value="11" />
+	<option name="DIGITIZATION_VARIATION"  value="rga_spring2018" />
 
 
 	<!--  RF Signal needs event time window defined by LUMI_EVENT -->
