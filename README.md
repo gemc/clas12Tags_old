@@ -160,7 +160,7 @@ In development:
 	- ltcc variarions for different run periods 
 	- added Geometry variation as a gcard option: DIGITIZATION_VARIATION, to be used by digitization routines.
 	- target position added to BMT, CTOF digitization position shift, read from CCDB using DIGITIZATION_VARIATION
-	- Extend beam background merging to all detectors
+	- beam background merging is extended to all detectors
 
 
 <br>
