@@ -1,5 +1,5 @@
-ftof.panel1a.ncounters | 5 | na | number of counters in panel | carman, guerra | carman@jlab.org, jguerra@jlab.org | none | none | 06/03/13
-ftof.panel1b.ncounters | 5 | na | number of counters in panel | carman, guerra | carman@jlab.org, jguerra@jlab.org | none | none | 06/03/13
+ftof.panel1a.ncounters | 23 | na | number of counters in panel | carman, guerra | carman@jlab.org, jguerra@jlab.org | none | none | 06/03/13
+ftof.panel1b.ncounters | 62 | na | number of counters in panel | carman, guerra | carman@jlab.org, jguerra@jlab.org | none | none | 06/03/13
 ftof.panel2.ncounters | 5 | na | number of counters in panel | carman, guerra | carman@jlab.org, jguerra@jlab.org | none | none | 06/03/13
 ftof_p1a_s1.dimension0 | 20.150 | cm | dimension 0 | carman, guerra | carman@jlab.org, jguerra@jlab.org | none | none | 06/03/13
 ftof_p1a_s1.dimension1 | 200.000 | cm | dimension 1 | carman, guerra | carman@jlab.org, jguerra@jlab.org | none | none | 06/03/13
