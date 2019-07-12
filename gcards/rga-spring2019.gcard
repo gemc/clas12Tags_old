@@ -10,7 +10,7 @@
 
 	<!--ctof, cad  -->
 	<detector name="experiments/clas12/ctof/ctof"        factory="TEXT" variation="rga_fall2018"/>
-	<detector name="experiments/clas12/ctof/javacad19/"  factory="CAD"/>
+	<detector name="experiments/clas12/ctof/javacad30/"  factory="CAD"/>
 	<detector name="experiments/clas12/cnd/cnd"          factory="TEXT" variation="original"/>
 
 	<!--high threshold cherenkov -->
