@@ -168,7 +168,6 @@ In development:
 - 4.3.2:
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
-	- Passing geometry variation to digitization routines :soon:
 	- arbitrary number of sequential rotations in the detector definition :soon:
 	- Time propagation in DC digitization :soon:
 	- BMT digitization with global coordinates instead of locals :soon:
