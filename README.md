@@ -172,6 +172,8 @@ In development:
 	- Time propagation in DC digitization :soon:
 	- BMT digitization with global coordinates instead of locals :soon:
 	- 3D Cylindrical map field :soon:
+	- Rich sector 4 passive materials
+	- Rich sector 4 digitization :soon:
 
 
 <br>
