@@ -174,6 +174,8 @@ In development:
 	- 3D Cylindrical map field :soon:
 	- Rich sector 4 passive materials
 	- Rich sector 4 digitization :soon:
+   - Hipo 4 output  :soon:
+   - Background merging memory check
 
 
 <br>
