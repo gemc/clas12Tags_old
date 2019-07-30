@@ -175,7 +175,7 @@ In development:
 	- Rich sector 4 passive materials
 	- Rich sector 4 digitization :soon:
    - Hipo 4 output  :soon:
-   - Background merging memory check
+   - Background merging memory check :soon:
 
 
 <br>
