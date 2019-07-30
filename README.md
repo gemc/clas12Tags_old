@@ -168,14 +168,14 @@ In development:
 - 4.3.2:
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
-	- arbitrary number of sequential rotations in the detector definition :soon:
-	- Time propagation in DC digitization :soon:
-	- BMT digitization with global coordinates instead of locals :soon:
-	- 3D Cylindrical map field :soon:
 	- Rich sector 4 passive materials
-	- Rich sector 4 digitization :soon:
-   - Hipo 4 output  :soon:
    - Background merging memory check :soon:
+   - Hipo 4 output  :soon:
+	- arbitrary number of sequential rotations in the detector definition :soon:
+	- 3D Cylindrical map field :soon:
+	- BMT digitization with global coordinates instead of locals :soon:
+	- Time propagation in DC digitization :soon:
+	- Rich sector 4 digitization :soon:
 
 
 <br>
