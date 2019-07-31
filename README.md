@@ -169,13 +169,14 @@ In development:
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
 	- Rich sector 4 passive materials
-   - Background merging memory check :soon:
-   - Hipo 4 output  :soon:
+   	- Background merging memory check :soon:
+   	- Hipo 4 output  :soon:
 	- arbitrary number of sequential rotations in the detector definition :soon:
-	- 3D Cylindrical map field :soon:
 	- BMT digitization with global coordinates instead of locals :soon:
+	- TOFs resolutions pars from CCDB
 	- Time propagation in DC digitization :soon:
 	- Rich sector 4 digitization :soon:
+	- 3D Cylindrical map field :soon:
 
 
 <br>
