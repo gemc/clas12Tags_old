@@ -161,6 +161,7 @@ In development:
 	- added Geometry variation as a gcard option: DIGITIZATION_VARIATION, to be used by digitization routines.
 	- target position added to BMT, CTOF digitization position shift, read from CCDB using DIGITIZATION_VARIATION
 	- beam background merging is extended to all detectors
+	- FTOF and CTOF resolutions matched to data
 
 
 <br>
