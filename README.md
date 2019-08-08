@@ -177,8 +177,8 @@ In development:
 	- TOFs resolutions pars from CCDB
 	- Time propagation in DC digitization :soon:
 	- Rich sector 4 digitization :soon:
-	- 3D Cylindrical map field :soon:
-
+	- 3D Cylindrical map field :soon: 
+	- Detector time signal shift to match data :soon:
 
 <br>
 
