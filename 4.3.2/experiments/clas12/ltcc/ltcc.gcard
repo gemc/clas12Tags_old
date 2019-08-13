@@ -1,8 +1,7 @@
 <gcard>
 	
-	<detector name="experiment/clas12/fc/forwardCarriage"  factory="TEXT" variation="TorusSymmetric"/>
- 	<detector name="experiment/clas12/ftof/ftof"           factory="TEXT" variation="default"/>
-	<detector name="ltcc" factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
+	<detector name="ltcc" factory="TEXT" variation="rga_spring2018"/>
 	<detector name="cad_cone/" factory="CAD"/>
 	<detector name="cad/"      factory="CAD"/>
 
