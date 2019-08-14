@@ -90,7 +90,8 @@ if ($GVERSION != "1") then
 	sed -i '' s/"const char .*"/'const char *GEMC_VERSION = "gemc 4.3.2" ; '/ gemc.cc
 endif
 
-# changing initializeBMTConstants to initialize before processID
+# changing initializeBMTConstants and initializeFMTConstants to initialize before processID
 cd hitprocess/clas12/micromegas
 sed -i '' s/'initializeBMTConstants(-1)'/'initializeBMTConstants(1)'/ BMT_hitprocess.cc
+sed -i '' s/'initializeFMTConstants(-1)'/'initializeFMTConstants(1)'/ FMT_hitprocess.cc
 
