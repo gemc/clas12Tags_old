@@ -174,7 +174,8 @@ In development:
    	- Hipo 4 output  :soon:
 	- arbitrary number of sequential rotations in the detector definition :soon:
 	- BMT digitization with global coordinates instead of locals :soon:
-	- TOFs resolutions pars from CCDB
+	- TOFs resolutions pars from CCDB :soon:
+	- Move LUND vertex based on gcard entry :soon: 
 	- Time propagation in DC digitization :soon:
 	- Rich sector 4 digitization :soon:
 	- 3D Cylindrical map field :soon: 
