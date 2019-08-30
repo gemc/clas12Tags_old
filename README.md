@@ -21,9 +21,9 @@ This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.3.1
 
 To load production tag 4.3.1:
 
-source /group/clas12/packages/setup.csh
+```source /group/clas12/packages/setup.csh
 
-module load clas12/2.0
+module load clas12/2.0```
 
 
 
