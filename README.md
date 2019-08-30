@@ -2,12 +2,12 @@
 The clas12Tags are a series of clas12 specific tags of the GEMC source code and geometry, installed in /group/clas12/gemc.
 
 ![Alt CLAS12](clas12.png?raw=true "The CLAS12 detector in the simulation. The electron beam is going from left to right.")
+###### The CLAS12 detector in the simulation. The electron beam is going from left to right.
 
 <br>
 
 For Q/A on CLAS12 simulations you can use the [CLAS12 Discourse](https://clas12.discourse.group).
 
-###### The CLAS12 detector in the simulation. The electron beam is going from left to right.
 
 
 
