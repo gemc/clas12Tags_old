@@ -43,9 +43,9 @@ The Run Configurations are also detailed on this page:
 
 <a href="https://github.com/gemc/clas12Tags/tree/master/gcards"> gcards and experiments</a>.
 
+<br>
 <hr>
-
-<br><br>
+<br>
 
 Magnetic Fields
 ---------------
@@ -58,9 +58,10 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
  <option name="SCALE_FIELD" value="clas12-newSolenoid, 0.6"/>
 ```
 
+<br>
 <hr>
+<br>
 
-<br><br>
 
 Hydrogen, Deuterium or empty target
 -----------------------------------
@@ -73,7 +74,9 @@ To use an empty target instead, use the SWITCH_MATERIALTO option.
  <option name="SWITCH_MATERIALTO" value="G4_lH2, G4_Galactic"/>
 ```
 
-<br><br>
+<br>
+<hr>
+<br>
 
 
 Removing a detector or a volume
@@ -88,20 +91,24 @@ To remove individual elements, use the existance tag in the gcard. For example, 
         </detector>
 ```
 
-<br><br>
+<br>
+<hr>
+<br>
 
-How to install
-----------------
+Docker 
+------
 
 GEMC is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> using docker</a>.
 
-<br><br>
+<br>
+<hr>
+<br>
 
 How to get and compile the clas12Tags
 -------------------------------------
 
 The clas12tags can be installed on top of an existing [jlab installation.
-For 4.3.0 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
+For 4.3.1 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
 
 1. clone https://github.com/gemc/clas12Tags
 2. cd to the tag you want to use
@@ -110,10 +117,10 @@ For 4.3.0 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/source
 This will compile a gemc executable in that directory. Remember to use the full path to that executable when running gemc,
 otherwise the OS will pick up the default from the $GEMC env variable.
 
-Each tag has the production gcard inside its directory. To use: change the path from 
-``` /group/clas12/gemc/4.3.0 ``` to the proper location of your disk.
 
-<br><br>
+<br>
+<hr>
+<br>
 
 
 
@@ -124,26 +131,6 @@ Software, Geometry Tags
 	
 Production:
 -----------
-
-<br>
-
-- 4.3.0: **COATJAVA: 5.7.4**, **JLAB_VERSION: 2.3**:
-
-	- Updated DC geometry using latest survey (May 18 Entry in DB) 
-	- Fixed bug that prevented material name from being displayed in the GUI
-	- 3d cartesian field map support
-	- new geant4 version: 10.4.p02
-	- 51 micron tungsten shield (for bst) surrounding the target
-	- calorimeters: reading ecal effective velocity from CCDB
-	- change htcc time offset table to use the same used in reconstruction
-	- Tony Forest: Added polarized target geometry/material and cad volume.
-
-
-<br>
-
-
-In development:
----------------
 
 <br>
 
@@ -165,6 +152,12 @@ In development:
 	- beam background merging is extended to all detectors
 	- FTOF and CTOF resolutions matched to data
 
+
+<br>
+
+
+In development:
+---------------
 
 <br>
 
@@ -196,6 +189,19 @@ In development:
 
 Previous Tags:
 --------------
+
+- 4.3.0: **COATJAVA: 5.7.4**, **JLAB_VERSION: 2.3**:
+
+	- Updated DC geometry using latest survey (May 18 Entry in DB) 
+	- Fixed bug that prevented material name from being displayed in the GUI
+	- 3d cartesian field map support
+	- new geant4 version: 10.4.p02
+	- 51 micron tungsten shield (for bst) surrounding the target
+	- calorimeters: reading ecal effective velocity from CCDB
+	- change htcc time offset table to use the same used in reconstruction
+	- Tony Forest: Added polarized target geometry/material and cad volume.
+
+
 
 - 4a.2.4: **COATJAVA: 5b.6.1**, **JLAB_VERSION: 2.2**:
 
