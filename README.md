@@ -12,24 +12,39 @@ For Q/A on CLAS12 simulations you can use the [CLAS12 Discourse](https://clas12.
 
 <br>
 
-### Current PRODUCTION version: **4.3.0**, compatible with **COATJAVA 5.7.4** and above. JLAB_SOFTWARE version: 2.3
+### Current PRODUCTION version: **4.3.1**, compatible with **COATJAVA 6.3.1** and above. CLAS12 Software Environment version: 2.0
 
-This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.3.0
+This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.3.1
 
 <hr>
 
-To use the latest production tag (currently 4.3.0):
+To load production tag 4.3.1:
 
-```source /group/clas12/gemc/environment.csh```
+source /group/clas12/packages/setup.csh
+
+module load clas12/2.0
+
 
 
 <br>
 
-To run gemc use the tagged gcard:
+To run GEMC you can select one of the gcards in /group/clas12/gemc/gcards. For example:
 
-```gemc /group/clas12/gemc/4.3.0/clas12.gcard -N=nevents -USE_GUI=0 ```
+```gemc /group/clas12/gemc/gcards/rga-fall2018.gcard -N=nevents -USE_GUI=0 ```
 
+<hr>
 
+GCARDS related to CLAS12 experiments
+====================================
+
+You can find here a collaction of gcards and YAML file for various CLAS12 experiments.
+The Run Configurations are also detailed on this page:
+
+<a href="https://github.com/gemc/clas12Tags/tree/master/gcards"> gcards and experiments</a>.
+
+<br><br>
+
+<hr>
 
 <br><br>
 
@@ -49,20 +64,12 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
 Hydrogen, Deuterium or empty target
 -----------------------------------
 
-
-
-Starting with 4.3.1: 
-By default the target cell is filled with liquid hydrogen by specifying the "lh2" target variation. 
+By default the target cell is filled with liquid hydrogen by specifying the "lh2" target variation.
 To use liquid deuterium instead use the variation "lD2" instead.
 
 To use an empty target instead, use the SWITCH_MATERIALTO option.
 ```
  <option name="SWITCH_MATERIALTO" value="G4_lH2, G4_Galactic"/>
-```
-
-In 4.3.0 to use the LD2 target you still need to set SWITCH_MATERIALTO to LD2, as the variation is not there:
-```
- <option name="SWITCH_MATERIALTO" value="G4_lH2, LD2"/>
 ```
 
 <br><br>
@@ -85,7 +92,7 @@ To remove individual elements, use the existance tag in the gcard. For example, 
 How to install
 ----------------
 
-Starting with 4a.2.4 gemc is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> using docker</a>.
+GEMC is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> using docker</a>.
 
 <br><br>
 
@@ -107,12 +114,6 @@ Each tag has the production gcard inside its directory. To use: change the path 
 
 <br><br>
 
-GCARDS and Various CLAS12 experiments
-=====================================
-
-See  <a href="https://github.com/gemc/clas12Tags/tree/master/gcards"> gcards and experiments</a>.
-
-<br><br>
 
 
 Software, Geometry Tags
