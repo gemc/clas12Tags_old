@@ -43,8 +43,6 @@ The Run Configurations are also detailed on this page:
 
 <a href="https://github.com/gemc/clas12Tags/tree/master/gcards"> gcards and experiments</a>.
 
-<br><br>
-
 <hr>
 
 <br><br>
@@ -59,6 +57,8 @@ Example on how to run at 80% torus field (inbending) and 60% solenoid field:
  <option name="SCALE_FIELD" value="TorusSymmetric, -0.8"/>
  <option name="SCALE_FIELD" value="clas12-newSolenoid, 0.6"/>
 ```
+
+<hr>
 
 <br><br>
 
