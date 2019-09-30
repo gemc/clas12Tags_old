@@ -104,6 +104,26 @@ GEMC is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> usin
 <hr>
 <br>
 
+
+Detector Sources
+----------------
+
+The CLAS12 systems are kept in the <a href="https://github.com/gemc/detectors"> detector git repository</a>.
+
+<br>
+<hr>
+<br>
+
+
+Geometry Services
+-----------------
+
+The CLAS12 geometry services are kept in the <a href="https://github.com/JeffersonLab/clas12-offline-software/blob/development/common-tools/clas-jcsg/src/main/java/org/jlab/detector/geant4/v2/"> java geant4 factory git repository</a>.
+
+<br>
+<hr>
+<br>
+
 How to get and compile the clas12Tags
 -------------------------------------
 
