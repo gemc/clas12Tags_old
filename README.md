@@ -108,6 +108,7 @@ GEMC is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> usin
 Detector Sources
 ----------------
 
+The GEMC detector api is located on the <a href=" https:// github.com/gemc/api"> git repository</a>.
 The CLAS12 systems are kept in the <a href="https://github.com/gemc/detectors"> detector git repository</a>.
 
 <br>
