@@ -1,10 +1,10 @@
 <gcard>
-<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
-<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lH2"/>
+	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
+	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lH2"/>
 
-<!-- central detectors 	-->
-<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
-<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
+	<!-- central detectors 	-->
+	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
 
 	<option name="geometry" value="1400x1200"/>
 

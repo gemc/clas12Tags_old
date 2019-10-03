@@ -1,14 +1,29 @@
 <gcard>
 
-	<!-- Torus -->
-	<detector name="cad/" factory="CAD" />
-
-	<!-- Solenoid
-	<detector name="solenoid" factory="TEXT" variation="original"/>
+	<!-- Torus
+	<detector name="experiments/clas12/magnets/cad/" factory="CAD" />
 	-->
 
-	<detector name="../targets/target"     factory="TEXT" variation="lH2"/>
-	<detector name="../fc/forwardCarriage" factory="TEXT" variation="original"/>
+	<!-- Solenoid -->
+	<detector name="experiments/clas12/magnets/solenoid" factory="TEXT" variation="original"/>
+
+
+	<detector name="experiments/clas12/targets/target"     factory="TEXT" variation="lH2"/>
+	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="original"/>
+
+
+
+	<!-- central detectors 	-->
+	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
+	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
+
+	<!--ctof, cad  -->
+	<detector name="experiments/clas12/ctof/ctof"                              factory="TEXT" variation="rga_spring2018"/>
+	<detector name="experiments/clas12/ctof/javacad_rga_spring2018/"           factory="CAD"/>
+	<detector name="experiments/clas12/ctof/javacad_rga_spring2018_upstream/"  factory="CAD"/>
+	<detector name="experiments/clas12/cnd/cnd"                                factory="TEXT" variation="original"/>
+
 
 	<option name="geometry" value="1400x1200"/>
 	<option name="NO_FIELD" value="all"/>
