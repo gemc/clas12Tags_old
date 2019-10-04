@@ -7,7 +7,8 @@
 # Copy pcal content to ftof, then remove pcal. ETC.
 
 set GVERSION = 4.3.2
-set NEVENTS = 500
+set NEVENTS = 10000
+
 
 setenv GEMC_DATA_DIR /opt/projects/gemc/clas12Tags/$GVERSION/
 

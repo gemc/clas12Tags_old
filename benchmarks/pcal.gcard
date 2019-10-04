@@ -73,7 +73,7 @@
 
 	<option name="LUMI_EVENT"     value="2, 1*ns, 1*ns" />
 	<option name="LUMI_P"         value="proton, 2.0*GeV, 90*deg, 0*deg" />
-	<option name="LUMI_SPREAD_P"  value="0*GeV, 10*deg, 10*deg" />
+	<option name="LUMI_SPREAD_P"  value="0*GeV, 10*deg, 180*deg" />
 	<option name="LUMI_V"         value="(0.0, 0.0, 0)cm" />
 	<option name="LUMI_SPREAD_V"  value="(0.03, 0.03)cm" />
 
