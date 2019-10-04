@@ -7,9 +7,6 @@
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
 	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
 
-	<!-- micromegas -->
-	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
-
 	<!--ctof, cad  -->
 	<detector name="experiments/clas12/ctof/ctof"                factory="TEXT" variation="default"/>
 	<detector name="experiments/clas12/ctof/javacad_default/"    factory="CAD"/>
@@ -25,40 +22,43 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- unchangeble conditions -->
 	<option name="SAVE_ALL_MOTHERS"      value="0"/>
 	<option name="RECORD_OPTICALPHOTONS" value="1"/>

@@ -7,25 +7,25 @@
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
 	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
 
-	<!-- micromegas -->
+	<!--ctof, cad  -->
+	<detector name="experiments/clas12/ctof/ctof"                factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/ctof/javacad_default/"    factory="CAD"/>
+
+	<!-- cnd  -->
+	<detector name="experiments/clas12/cnd/cnd"                  factory="TEXT" variation="original"/>
+
+	<!-- solenoid -->
+	<option name="HALL_FIELD"  value="clas12-newSolenoid"/>
+	<detector name="experiments/clas12/magnets/solenoid" factory="TEXT" variation="original"/>
+	<option name="SCALE_FIELD" value="clas12-newSolenoid, -1"/>
+	<option name="FIELD_PROPERTIES" value="clas12-newSolenoid, 1*mm, G4ClassicalRK4, linear"/>
+
+	<!-- micromegas have to go after solenoid cause of field in process ID-->
 	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
 
 
 
-
 	
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
