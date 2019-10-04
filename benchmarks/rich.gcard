@@ -3,15 +3,15 @@
 	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
 	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lH2"/>
 
-	<!-- bst 	-->
+	<!-- bst -->
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
 	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
 
-	<!--ctof, cad  -->
+	<!--ctof -->
 	<detector name="experiments/clas12/ctof/ctof"                factory="TEXT" variation="default"/>
 	<detector name="experiments/clas12/ctof/javacad_default/"    factory="CAD"/>
 
-	<!-- cnd  -->
+	<!-- cnd -->
 	<detector name="experiments/clas12/cnd/cnd"                  factory="TEXT" variation="original"/>
 
 	<!-- solenoid -->
@@ -26,9 +26,6 @@
 	<!--high threshold cherenkov -->
 	<detector name="experiments/clas12/htcc/htcc"      factory="TEXT" variation="original"/>
 
-	<!-- Beamline configuration: FT is used -->
-	<detector name="experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
-
 	<!-- beamline, forward carriage, torus -->
 	<detector name="experiments/clas12/beamline/cadBeamline/" factory="CAD"/>
 	<detector name="experiments/clas12/beamline/vacuumLine/"  factory="CAD"/>
@@ -41,10 +38,8 @@
 	<!-- dc -->
 	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
 
-	<!-- ltcc -->
-	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="default"/>
-	<detector name="experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
-	<detector name="experiments/clas12/ltcc/cad/"          factory="CAD"/>
+	<!-- ft -->
+	<detector name="experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
 
 	<!-- rich -->
 	<detector name="experiments/clas12/rich_sector4/rich"          factory="TEXT" variation="java"/>
@@ -52,8 +47,13 @@
 
 
 
+
+
 	
 
+
+
+	
 
 
 
@@ -69,7 +69,7 @@
 
 	<!-- beam conditions -->
 	<option name="BEAM_P"    value="e-, 7*GeV, 20.0*deg, 0*deg"/>
-	<option name="SPREAD_P"  value="0*GeV, 5*deg, 20*deg" />
+	<option name="SPREAD_P"  value="0*GeV, 5*deg, 180*deg" />
 
 	<option name="LUMI_EVENT"     value="2, 1*ns, 1*ns" />
 	<option name="LUMI_P"         value="proton, 2.0*GeV, 90*deg, 0*deg" />

@@ -69,7 +69,7 @@
 
 	<!-- beam conditions -->
 	<option name="BEAM_P"    value="e-, 7*GeV, 20.0*deg, 0*deg"/>
-	<option name="SPREAD_P"  value="0*GeV, 5*deg, 20*deg" />
+	<option name="SPREAD_P"  value="0*GeV, 5*deg, 180*deg" />
 
 	<option name="LUMI_EVENT"     value="2, 1*ns, 1*ns" />
 	<option name="LUMI_P"         value="proton, 2.0*GeV, 90*deg, 0*deg" />
