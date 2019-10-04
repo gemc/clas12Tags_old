@@ -38,26 +38,26 @@
 	<option name="SCALE_FIELD" value="TorusSymmetric, -1"/>
 	<option name="FIELD_PROPERTIES" value="TorusSymmetric,     2*mm, G4ClassicalRK4, linear"/>
 
+	<!-- dc -->
+	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
 
+	<!-- ltcc -->
+	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
+	<detector name="experiments/clas12/ltcc/cad/"          factory="CAD"/>
 
+	<!-- rich -->
+	<detector name="experiments/clas12/rich/rich"          factory="TEXT" variation="java"/>
+	<detector name="experiments/clas12/rich/javacad/"      factory="CAD"/>
 
+	<!-- ftof -->
+	<detector name="experiments/clas12/ftof/ftof"          factory="TEXT" variation="default"/>
 
+	<!-- pcal -->
+	<detector name="experiments/clas12/pcal/pcal"          factory="TEXT" variation="default"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<!-- ec -->
+	<detector name="experiments/clas12/ec/ec"              factory="TEXT" variation="default"/>
 
 	<!-- unchangeble conditions -->
 	<option name="SAVE_ALL_MOTHERS"      value="0"/>

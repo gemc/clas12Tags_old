@@ -1,81 +1,86 @@
 <gcard>
-	
 	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
-	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/targets/cad/" factory="CAD"/>
-	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/targets/target" factory="TEXT" variation="cad"/>
+	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
+	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lH2"/>
+
+	<!-- bst 	-->
+	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/bstShield/bstShield"   factory="TEXT" variation="w51"/>
+
+	<!-- micromegas -->
+	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
+
+	<!--ctof, cad  -->
+	<detector name="experiments/clas12/ctof/ctof"                factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/ctof/javacad_default/"    factory="CAD"/>
+
+	<!-- cnd  -->
+	<detector name="experiments/clas12/cnd/cnd"                  factory="TEXT" variation="original"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
-	<!-- central detectors 	-->
-	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/cnd/cnd"               factory="TEXT" variation="original"/>
-	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/bst/bst"               factory="TEXT" variation="java"/>
-	<detector name="/opt/projects/gemc/clas12Tags/4a.2.3/experiments/clas12/micromegas/micromegas" factory="TEXT" variation="michel"/>
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<!-- unchangeble conditions -->
-	<option name="SAVE_ALL_MOTHERS" value="0"/>
-	<option name="RECORD_MIRRORS"   value="1"/>
-	<option name="PHYSICS" value="FTFP_BERT + STD + Optical"/>
-	<option name="OUTPUT"   value="evio, out.ev"/>
-	<option name="PRINT_EVENT"    value="10" />
-	
-	
+	<option name="SAVE_ALL_MOTHERS"      value="0"/>
+	<option name="RECORD_OPTICALPHOTONS" value="1"/>
+	<option name="PHYSICS"               value="FTFP_BERT + STD + Optical"/>
+	<option name="OUTPUT"                value="evio, out.ev"/>
+	<option name="PRINT_EVENT"           value="10" />
+
+
 	<!-- beam conditions -->
 	<option name="BEAM_P"    value="e-, 7*GeV, 20.0*deg, 0*deg"/>
-	<option name="SPREAD_P"  value="0*GeV, 5*deg, 5*deg" />
-	
+	<option name="SPREAD_P"  value="0*GeV, 5*deg, 20*deg" />
+
 	<option name="LUMI_EVENT"     value="2, 1*ns, 1*ns" />
 	<option name="LUMI_P"         value="proton, 2.0*GeV, 90*deg, 0*deg" />
 	<option name="LUMI_SPREAD_P"  value="0*GeV, 10*deg, 10*deg" />
 	<option name="LUMI_V"         value="(0.0, 0.0, 0)cm" />
 	<option name="LUMI_SPREAD_V"  value="(0.03, 0.03)cm" />
-	
+
 	<option name="LUMI2_EVENT"     value="2, 1*ns" />
 	<option name="LUMI2_P"         value="gamma, 2.0*GeV, 20*deg, 0*deg" />
 	<option name="LUMI2_SPREAD_P"  value="0*GeV, 10*deg, 180*deg" />
 	<option name="LUMI2_V"         value="(0.0, 0.0, 0)cm" />
 	<option name="LUMI2_SPREAD_V"  value="(0.03, 0.03)cm" />
-	
-	
+
 </gcard>
