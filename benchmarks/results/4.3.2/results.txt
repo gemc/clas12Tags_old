@@ -5,26 +5,26 @@
  > results/4.3.2/dc.txt
  > Total gemc time: 959.18 seconds.  Events only time: 935.136 seconds. 
  > results/4.3.2/ecAll.txt
- > Total gemc time: 5836.92 seconds.  Events only time: 5752.89 seconds. 
+ > Total gemc time: 3019.74 seconds.  Events only time: 2940.32 seconds. 
  > results/4.3.2/ft.txt
- > Total gemc time: 1841.42 seconds.  Events only time: 1817.49 seconds. 
+ > Total gemc time: 717.039 seconds.  Events only time: 693.802 seconds. 
  > results/4.3.2/ftof.txt
- > Total gemc time: 2386.02 seconds.  Events only time: 2315.2 seconds. 
+ > Total gemc time: 322.806 seconds.  Events only time: 249.48 seconds. 
  > results/4.3.2/htcc.txt
- > Total gemc time: 816.641 seconds.  Events only time: 807.851 seconds. 
+ > Total gemc time: 424.922 seconds.  Events only time: 415.989 seconds. 
  > results/4.3.2/ltcc.txt
- > Total gemc time: 2319.44 seconds.  Events only time: 2249.58 seconds. 
+ > Total gemc time: 311.213 seconds.  Events only time: 238.184 seconds. 
  > results/4.3.2/mm.txt
- > Total gemc time: 592.703 seconds.  Events only time: 585.203 seconds. 
+ > Total gemc time: 321.431 seconds.  Events only time: 313.517 seconds. 
  > results/4.3.2/pcal.txt
- > Total gemc time: 4261.71 seconds.  Events only time: 4188.15 seconds. 
+ > Total gemc time: 2256.16 seconds.  Events only time: 2178.5 seconds. 
  > results/4.3.2/rich.txt
- > Total gemc time: 2061.26 seconds.  Events only time: 1995.62 seconds. 
+ > Total gemc time: 1119.2 seconds.  Events only time: 1053.01 seconds. 
  > results/4.3.2/solenoid.txt
- > Total gemc time: 358.289 seconds.  Events only time: 354.774 seconds. 
+ > Total gemc time: 186.595 seconds.  Events only time: 183.069 seconds. 
  > results/4.3.2/svt.txt
- > Total gemc time: 21.8866 seconds.  Events only time: 20.1439 seconds. 
+ > Total gemc time: 12.4096 seconds.  Events only time: 10.638 seconds. 
  > results/4.3.2/target.txt
- > Total gemc time: 12.7433 seconds.  Events only time: 11.8891 seconds. 
+ > Total gemc time: 6.86763 seconds.  Events only time: 6.00909 seconds. 
  > results/4.3.2/torus.txt
- > Total gemc time: 1827.02 seconds.  Events only time: 1805.18 seconds. 
+ > Total gemc time: 662.561 seconds.  Events only time: 641.352 seconds. 

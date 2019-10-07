@@ -7,7 +7,7 @@
 # Copy pcal content to ftof, then remove pcal. ETC.
 
 set GVERSION = 4.3.2
-set NEVENTS = 5000
+set NEVENTS = 1000
 
 
 setenv GEMC_DATA_DIR /opt/projects/gemc/clas12Tags/$GVERSION/
@@ -20,17 +20,15 @@ echo
 
 mkdir -p results/$GVERSION
 
-foreach g (`\ls *.gcard`)
-	set c = `echo $g | awk -F. '{print $1}'`
+foreach g (ltcc ftof)
+#foreach d (target svt ctof cnd solenoid mm htcc torus ft dc rich ltcc ftof pcal ecAll)
+
 	echo
-	echo $c $c $c $c $c $c $c $c $c
-	echo $c $c $c $c $c $c $c $c $c
-	echo $c $c $c $c $c $c $c $c $c
-	echo $c $c $c $c $c $c $c $c $c
+	echo $g $g $g $g $g
 	echo
 
-	rm -f $c.txt
-	gemc $g -USE_GUI=0 -N=$NEVENTS  > $c.txt
+	rm -f $g.txt
+	gemc $g".gcard" -USE_GUI=0 -N=$NEVENTS  > $g.txt
 
-	mv $c.txt results/$GVERSION
+	mv $g.txt results/$GVERSION
 end
