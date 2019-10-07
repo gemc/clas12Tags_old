@@ -35,11 +35,11 @@
 	<option name="SCALE_FIELD" value="TorusSymmetric, -1"/>
 	<option name="FIELD_PROPERTIES" value="TorusSymmetric,     2*mm, G4ClassicalRK4, linear"/>
 
-	<!-- dc -->
-	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
-
 	<!-- ft -->
 	<detector name="experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
+
+	<!-- dc -->
+	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
 
 	<!-- rich -->
 	<detector name="experiments/clas12/rich_sector4/rich"          factory="TEXT" variation="java"/>

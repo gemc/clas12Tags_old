@@ -1,0 +1,30 @@
+ > results/4.3.2/cnd.txt
+ > Total gemc time: 16.8208 seconds.  Events only time: 13.5182 seconds. 
+ > results/4.3.2/ctof.txt
+ > Total gemc time: 15.6631 seconds.  Events only time: 12.486 seconds. 
+ > results/4.3.2/dc.txt
+ > Total gemc time: 959.18 seconds.  Events only time: 935.136 seconds. 
+ > results/4.3.2/ecAll.txt
+ > Total gemc time: 5836.92 seconds.  Events only time: 5752.89 seconds. 
+ > results/4.3.2/ft.txt
+ > Total gemc time: 1841.42 seconds.  Events only time: 1817.49 seconds. 
+ > results/4.3.2/ftof.txt
+ > Total gemc time: 2386.02 seconds.  Events only time: 2315.2 seconds. 
+ > results/4.3.2/htcc.txt
+ > Total gemc time: 816.641 seconds.  Events only time: 807.851 seconds. 
+ > results/4.3.2/ltcc.txt
+ > Total gemc time: 2319.44 seconds.  Events only time: 2249.58 seconds. 
+ > results/4.3.2/mm.txt
+ > Total gemc time: 592.703 seconds.  Events only time: 585.203 seconds. 
+ > results/4.3.2/pcal.txt
+ > Total gemc time: 4261.71 seconds.  Events only time: 4188.15 seconds. 
+ > results/4.3.2/rich.txt
+ > Total gemc time: 2061.26 seconds.  Events only time: 1995.62 seconds. 
+ > results/4.3.2/solenoid.txt
+ > Total gemc time: 358.289 seconds.  Events only time: 354.774 seconds. 
+ > results/4.3.2/svt.txt
+ > Total gemc time: 21.8866 seconds.  Events only time: 20.1439 seconds. 
+ > results/4.3.2/target.txt
+ > Total gemc time: 12.7433 seconds.  Events only time: 11.8891 seconds. 
+ > results/4.3.2/torus.txt
+ > Total gemc time: 1827.02 seconds.  Events only time: 1805.18 seconds. 

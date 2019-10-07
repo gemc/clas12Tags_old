@@ -32,8 +32,11 @@
 	<detector name="experiments/clas12/beamline/beamline"     factory="TEXT" variation="FTOn"/>
 	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
 	<detector name="experiments/clas12/magnets/cad/"     factory="CAD" />
-	<option name="NO_FIELD" value="TorusSymmetric"/>
+	<option name="SCALE_FIELD" value="TorusSymmetric, -1"/>
 	<option name="FIELD_PROPERTIES" value="TorusSymmetric,     2*mm, G4ClassicalRK4, linear"/>
+
+	<!-- ft -->
+	<detector name="experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
 
 	<!-- dc -->
 	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
@@ -44,9 +47,6 @@
 
 
 	
-
-
-
 
 
 

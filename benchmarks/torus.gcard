@@ -35,9 +35,9 @@
 	<option name="SCALE_FIELD" value="TorusSymmetric, -1"/>
 	<option name="FIELD_PROPERTIES" value="TorusSymmetric,     2*mm, G4ClassicalRK4, linear"/>
 
-	<!-- dc -->
-	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
 
+
+	
 	
 
 	
