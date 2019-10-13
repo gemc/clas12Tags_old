@@ -47,6 +47,20 @@ The Run Configurations are also detailed on this page:
 <hr>
 <br>
 
+Portal to Off-site farms CLAS12 Simulations
+===========================================
+
+Check the off-site farms status, and submits simulations jobs.
+
+<a href="https://gemc.jlab.org/web_interface/index.php"> CLAS12 Simulation Submission Portal</a>.
+
+<br>
+<hr>
+<br>
+
+
+
+
 Magnetic Fields
 ---------------
 
