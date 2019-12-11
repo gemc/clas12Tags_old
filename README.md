@@ -201,6 +201,9 @@ In development:
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
 	- Rich sector 4 passive materials
+	- FMT "bonus" variation with 3 layers
+	- RTPC for the Bonus experiment :soon:
+	- Target for the Bonus experiment :soon:
    	- Background merging memory check :soon:
    	- Hipo 4 output  :soon:
 	- arbitrary number of sequential rotations in the detector definition :soon:
