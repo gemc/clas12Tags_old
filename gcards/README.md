@@ -14,6 +14,7 @@ Run Configurations
   - Torus polarity: -1, 1, -0.75, 0.75
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
+  - Beam energies: 10594.0 and 6423.13 MeV
 
 - Run group A, K Fall 2018:
 
@@ -26,6 +27,21 @@ Run Configurations
   - Torus polarity: -1, 1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
+  - Beam energies: 10604.1, 10600.0, and 7546.26 MeV
+
+- Run group K low energy Fall 2018:
+
+  - Central detector shifted 30 mm upstream
+  - target (LH2) at (1.2, 1.1, -30) mm
+  - HTCC shfted 20 mm upstream
+  - FT Off configuration
+  - FMT not present
+  - LTCC sectors: 3 (50% C4F10), 5 (N2)
+  - Torus polarity: 1,
+  - Solenoid polarity: -1
+  - Beam Current: from 5 to 75 nA
+  - Beam energies: 6535.36 MeV
+
 
 - Run group B Winter 2019:
 
@@ -38,6 +54,7 @@ Run Configurations
   - Torus polarity: -1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
+  - Beam energies: 10598.6, 10409.6, and 10199.8 MeV
 
 - Run group A Spring 2019:
 
@@ -50,7 +67,7 @@ Run Configurations
   - Torus polarity: -1,
   - Solenoid polarity: -1
   - Beam Current: from 5 to 75 nA
-
+  - Beam energies: 10199.8 MeV
 
 
 
