@@ -51,8 +51,8 @@
 
 	<!-- beam conditions -->
 	<option name="BEAM_P"   value="e-, 10.6*GeV, 0.0*deg, 0*deg"/>
-	<option name="BEAM_V"    value="(0, 0, -3)cm"/>
-	<option name="SPREAD_V"  value="(0.0, 2.5)cm"/>
+	<option name="BEAM_V"    value="(0, 0, -10)cm"/>
+	<option name="SPREAD_V"  value="(0.9, 2.5)cm"/>
 
 	<option name="SAVE_ALL_MOTHERS" value="0"/>
 	<option name="RECORD_OPTICALPHOTONS"   value="1"/>
@@ -89,8 +89,7 @@
 	<!-- torus magnet: 2cm-->
 	<option name="PRODUCTIONCUTFORVOLUMES" value="BoreShield, CenterTube, DownstreamShieldingPlate, DownstreamVacuumJacket, WarmBoreTube, apex, Shield1, Shield2, Shield3, Shield4, Shield5, Shield6, Shield7, shell1a, shell1b, shell2a, shell2b, shell3a, shell3b, shell4a, shell4b, shell5a, shell5b, shell6a, shell6b, 20" />
 
-	<!--  Target and central detectors are all shifted upstream by 30 mm -->
-	<detector name="target">    <position x="0.12*cm"  y="0.11*cm"  z="-3.00*cm"  />  </detector>
+	<!-- central detectors are all shifted upstream by 30 mm -->
 	<detector name="svt">       <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />  </detector>
 	<detector name="bstShield"> <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />  </detector>
 	<detector name="BMT">       <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />  </detector>
