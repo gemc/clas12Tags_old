@@ -1,6 +1,6 @@
 <gcard>
 	<!-- target. Single polarized target cell for RGC-->
-  <detector name="experiments/clas12/detectors/clas12/targets/target" factory="TEXT" variation="1NH3"/>
+  	<detector name="experiments/clas12/clas12/targets/target" factory="TEXT" variation="1NH3"/>
 
 	<!-- central detectors 	-->
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
