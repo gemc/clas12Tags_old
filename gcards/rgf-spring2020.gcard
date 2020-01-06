@@ -3,7 +3,7 @@
 	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="bonus"/>
 
 	<!-- central detectors 	-->
-	<detector name="experiments/clas12/rtpc/rtpc"             factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/rtpc/rtpc"             factory="TEXT" variation="original"/>
 	<detector name="experiments/clas12/micromegas/micromegas" factory="TEXT" variation="rgf_spring2020"/>
 
 	<!--ctof, cad  -->
