@@ -204,6 +204,9 @@ In development:
 	- FMT "bonus" variation with 3 layers
 	- RTPC for the Bonus experiment 
 	- Target for the Bonus experiment 
+	- GUI background color changed to white
+	- Neutrals particles color changed to blue
+	- Double radius for hits above thresholds
 	- BMT digitization with global coordinates instead of locals :soon:
 	- TOFs resolutions pars from CCDB 
 	- Move LUND vertex based on gcard entry :soon: 
