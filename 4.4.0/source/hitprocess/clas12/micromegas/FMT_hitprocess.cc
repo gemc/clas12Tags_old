@@ -20,6 +20,7 @@ using namespace CLHEP;
 using namespace ccdb;
 
 static fmtConstants initializeFMTConstants(int runno)
+//static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "default") 
 {
 	// all these constants should be read from CCDB
 	fmtConstants fmtc;
