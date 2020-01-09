@@ -202,17 +202,12 @@ In development:
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
 	- Rich sector 4 passive materials
 	- FMT "bonus" variation with 3 layers
-	- RTPC for the Bonus experiment :soon:
-	- Target for the Bonus experiment :soon:
-   	- Background merging memory check :soon:
-   	- Hipo 4 output  :soon:
-	- arbitrary number of sequential rotations in the detector definition :soon:
+	- RTPC for the Bonus experiment 
+	- Target for the Bonus experiment 
 	- BMT digitization with global coordinates instead of locals :soon:
-	- TOFs resolutions pars from CCDB :soon:
+	- TOFs resolutions pars from CCDB 
 	- Move LUND vertex based on gcard entry :soon: 
 	- Time propagation in DC digitization :soon:
-	- Rich sector 4 digitization :soon:
-	- 3D Cylindrical map field :soon: 
 	- Detector time signal shift to match data :soon:
 
 <br>
@@ -220,6 +215,16 @@ In development:
 - 4.4.0:
 
 	- geant4 10.5 support
+   	- Background merging memory check :soon:
+	
+	
+- 4.4.1:
+
+   	- Hipo 4 output  :soon:
+	- arbitrary number of sequential rotations in the detector definition :soon:
+	- Rich sector 4 digitization :soon:
+	- 3D Cylindrical map field :soon: 
+
 
 <br>
 
