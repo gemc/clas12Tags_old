@@ -19,8 +19,8 @@ using namespace CLHEP;
 #include <CCDB/CalibrationGenerator.h>
 using namespace ccdb;
 
-static fmtConstants initializeFMTConstants(int runno)
-//static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "default") 
+//static fmtConstants initializeFMTConstants(int runno)
+static fmtConstants initializeFMTConstants(int runno, string digiVariation = "default")
 {
 	// all these constants should be read from CCDB
 	fmtConstants fmtc;
@@ -35,7 +35,7 @@ static fmtConstants initializeFMTConstants(int runno)
 	else
 		fmtc.connection = "mysql://clas12reader@clasdb.jlab.org/clas12";
 
-	fmtc.variation  = "default";
+	fmtc.variation  = digiVariation;
 	auto_ptr<Calibration> calib(CalibrationGenerator::CreateCalibration(fmtc.connection));
 	vector<vector<double> > data;
 	//Load the geometrical constant for all layers
@@ -54,7 +54,7 @@ static fmtConstants initializeFMTConstants(int runno)
 
 	
 	//Load the geometrical constant for all layers
-	sprintf(fmtc.database,"/geometry/fmt/fmt_layer_noshim");
+	sprintf(fmtc.database,"/geometry/fmt/fmt_layer_noshim:11:%s", digiVariation.c_str());
 	data.clear(); calib->GetCalib(data,fmtc.database);
 	fmtc.Z0.resize(data.size());
 	fmtc.alpha.resize(data.size());
@@ -277,9 +277,11 @@ map< string, vector <int> >  FMT_HitProcess :: multiDgt(MHit* aHit, int hitn)
 
 void FMT_HitProcess::initWithRunNumber(int runno)
 {
+	string digiVariation = gemcOpt.optMap["DIGITIZATION_VARIATION"].args;
+
 	if(fmtc.runNo != runno) {
 		cout << " > Initializing " << HCname << " digitization for run number " << runno << endl;
-		fmtc = initializeFMTConstants(runno);
+		fmtc = initializeFMTConstants(runno, digiVariation);
 		fmtc.runNo = runno;
 	}
 }
