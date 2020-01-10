@@ -201,9 +201,9 @@ In development:
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
 	- Rich sector 4 passive materials
-	- FMT "bonus" variation with 3 layers
-	- RTPC for the Bonus experiment 
-	- Target for the Bonus experiment 
+	- FMT use "rgf_spring2020" variation with 3 layers and in retrieving Z0 in the digitization
+	- RTPC geometry and digitization for the Bonus experiment 
+	- Target geometry for the Bonus experiment 
 	- GUI background color changed to white
 	- Neutrals particles color changed to blue
 	- Double radius for hits above thresholds
