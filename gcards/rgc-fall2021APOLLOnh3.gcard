@@ -1,19 +1,7 @@
 <gcard>
-	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 
-	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
-	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="cad"/>
--->
-        <!-- PolTarg  only uncomment the CAD factory for the Dual target
-
-        <detector name="detectors/clas12/targets/target" factory="TEXT" variation="PolTarg"/>
-
-        <detector name="detectors/clas12/targets/target" factory="TEXT" variation="1ND3"/>
-        <detector name="detectors/clas12/targets/PolTarg/" factory="CAD"/>
-        <detector name="detectors/clas12/targets/target" factory="TEXT" variation="1NH3"/>
-
--->
-        <detector name="detectors/clas12/targets/APOLLO/" factory="CAD"/>
-        <detector name="detectors/clas12/targets/target" factory="TEXT" variation="APOLLOnh3"/>
+        <!-- Single Cell Polarized target APOLLO-->
+        <detector name="experiments/clas12/targets/APOLLO/" factory="CAD"/>
+        <detector name="experiments/clas12/targets/target" factory="TEXT" variation="APOLLOnh3"/>
 
 	<!-- central detectors 	-->
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
@@ -34,9 +22,9 @@
 
 
 	<!-- Beamline configuration: FT is used -->
-	<detector name="detectors/clas12/beamline/cadBeamlineELMO/" factory="CAD"/>
-	<detector name="detectors/clas12/beamline/vacuumLine/"  factory="CAD"/>
-	<detector name="detectors/clas12/beamline/beamline"     factory="TEXT" variation="ELMO"/>
+	<detector name="experiments/clas12/beamline/cadBeamlineELMO/" factory="CAD"/>
+	<detector name="experiments/clas12/beamline/vacuumLine/"  factory="CAD"/>
+	<detector name="experiments/clas12/beamline/beamline"     factory="TEXT" variation="ELMO"/>
 
 	<!-- forward carriage -->
 	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
