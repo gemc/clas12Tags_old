@@ -217,12 +217,13 @@ In development:
 
 - 4.4.0:
 
-	- geant4 10.5 support
-   	- Background merging memory check :soon:
-	
-	
-- 4.4.1:
+	- geant4 10.6 support
 
+<br>
+		
+- Future releases:
+
+   	- Background merging memory check :soon:
    	- Hipo 4 output  :soon:
 	- arbitrary number of sequential rotations in the detector definition :soon:
 	- Rich sector 4 digitization :soon:
