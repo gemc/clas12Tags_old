@@ -207,8 +207,9 @@ In development:
 	- GUI background color changed to white
 	- Neutrals particles color changed to blue
 	- Double radius for hits above thresholds
-	- BMT digitization with global coordinates instead of locals :soon:
+	- allow two sequential rotations in the detector definition
 	- TOFs resolutions pars from CCDB 
+	- BMT digitization with global coordinates instead of locals :soon:
 	- Move LUND vertex based on gcard entry :soon: 
 	- Time propagation in DC digitization :soon:
 	- Detector time signal shift to match data :soon:
@@ -225,7 +226,6 @@ In development:
 
    	- Background merging memory check :soon:
    	- Hipo 4 output  :soon:
-	- arbitrary number of sequential rotations in the detector definition :soon:
 	- Rich sector 4 digitization :soon:
 	- 3D Cylindrical map field :soon: 
 
