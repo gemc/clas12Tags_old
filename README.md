@@ -187,6 +187,8 @@ Production:
 	- target position added to BMT, CTOF digitization position shift, read from CCDB using DIGITIZATION_VARIATION
 	- beam background merging is extended to all detectors
 	- FTOF and CTOF resolutions matched to data
+        - option RECORD_MIRRORS renamed RECORD_OPTICALPHOTONS
+
 
 
 <br>
@@ -209,7 +211,6 @@ In development:
 	- Double radius for hits above thresholds
 	- allow two sequential rotations in the detector definition
 	- TOFs resolutions pars from CCDB 
-	- option RECORD_MIRRORS renamed RECORD_OPTICALPHOTONS
 	- BMT digitization with global coordinates instead of locals :soon:
 	- Move LUND vertex based on gcard entry :soon: 
 	- Time propagation in DC digitization :soon:
