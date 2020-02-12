@@ -222,12 +222,18 @@ In development:
 
 	- geant4 10.6 support
 
+
+<br>
+
+- 4.4.1:
+
+   	- Hipo 4 output  :soon:
+
 <br>
 		
 - Future releases:
 
    	- Background merging memory check :soon:
-   	- Hipo 4 output  :soon:
 	- Rich sector 4 digitization :soon:
 	- 3D Cylindrical map field :soon: 
 
