@@ -212,7 +212,7 @@ In development:
 	- allow two sequential rotations in the detector definition
 	- TOFs resolutions pars from CCDB 
 	- BMT digitization with global coordinates instead of locals :soon:
-	- Move LUND vertex based on gcard entry :soon: 
+	- Move LUND vertex based on gcard entry 
 	- Time propagation in DC digitization :soon:
 	- Detector time signal shift to match data :soon:
 
