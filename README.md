@@ -35,6 +35,16 @@ To run GEMC you can select one of the gcards in /group/clas12/gemc/gcards. For e
 
 <hr>
 
+
+Feedback
+========
+
+Please use CLAS12 discourse for feedback on anything clas12tags related:
+
+https://clas12.discourse.group
+
+
+
 GCARDS related to CLAS12 experiments
 ====================================
 
