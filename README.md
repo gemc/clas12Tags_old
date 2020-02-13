@@ -43,7 +43,9 @@ Please use CLAS12 discourse for feedback on anything clas12tags related:
 
 https://clas12.discourse.group
 
-
+<br>
+<hr>
+<br>
 
 GCARDS related to CLAS12 experiments
 ====================================
@@ -240,7 +242,12 @@ In development:
 
 <br>
 
-- 4.4.1:
+
+Numbering scheme changes to two numbers. hipo4 breaks backward compatibility.
+<br>
+
+
+- 5.0:
 
    	- Hipo 4 output  :soon:
 
