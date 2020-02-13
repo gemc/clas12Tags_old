@@ -112,9 +112,14 @@ To remove individual elements, use the existance tag in the gcard. For example, 
 Docker 
 ------
 
-GEMC is distributed  <a href="https://gemc.jlab.org/gemc/html/docker.html"> using docker</a>.
+GEMC is distributed using docker, see some <a href="https://gemc.jlab.org/gemc/html/docker.html"> examples of using docker with gemc</a>.
 
 <br>
+
+Use this container with the clas12tags:
+
+```jeffersonlab/clas12simulations:iprod```
+
 <hr>
 <br>
 
