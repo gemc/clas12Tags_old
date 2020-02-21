@@ -14,7 +14,7 @@ using namespace ccdb;
 #include "CLHEP/Units/PhysicalConstants.h"
 using namespace CLHEP;
 
-static ftofConstants initializeFTOFConstants(int runno) {
+static ftofConstants initializeFTOFConstants(int runno, string digiVariation = "default") {
 	ftofConstants ftc;
 	
 	// do not initialize at the beginning, only after the end of the first event,
@@ -114,7 +114,7 @@ static ftofConstants initializeFTOFConstants(int runno) {
 	
 	cout << "FTOF:Getting time_offset" << endl;
 	
-	sprintf(ftc.database,"/calibration/ftof/time_offsets:%d",ftc.runNo);
+	sprintf(ftc.database,"/calibration/ftof/time_offsets:%d%s",ftc.runNo, digiVariation.c_str());
 	data.clear();
 	calib->GetCalib(data, ftc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
