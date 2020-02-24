@@ -123,8 +123,6 @@ static ftofConstants initializeFTOFConstants(int runno, string digiVariation = "
 		ftc.toff_LR[isec - 1][ilay - 1].push_back(data[row][3]);
 		ftc.toff_RFpad[isec-1][ilay-1].push_back(data[row][4]);
 		ftc.toff_P2P[isec-1][ilay-1].push_back(data[row][5]);
-		ftc.timeShift[isec-1][ilay-1].push_back(data[row][6]);
-
 	}
 	
 	cout << "FTOF:Getting tdc_conv" << endl;
@@ -148,10 +146,6 @@ static ftofConstants initializeFTOFConstants(int runno, string digiVariation = "
 			ftc.tres[isec][ilay].resize(ftc.npaddles[ilay]);
 		}
 	}
-
-
-
-
 
 	for (unsigned row = 0; row < data.size(); row++) {
 		isec = data[row][0] - 1;
@@ -334,7 +328,7 @@ map<string, double> ftof_HitProcess::integrateDgt(MHit* aHit, int hitn) {
 		- ftc.toff_RFpad[sector-1][panel-1][paddle-1]
 		- ftc.toff_P2P[sector-1][panel-1][paddle-1];
 		
-		tdcu = (ftc.timeShift[sector-1][panel-1][paddle-1]/2 + tU + timeWalkU) / tdcconv;
+		tdcu = (tU + timeWalkU) / tdcconv;
 		tdc  = G4RandGauss::shoot(tU+ timeWalk, sqrt(2) * ftc.tres[sector - 1][panel - 1][paddle - 1]) / tdcconv;
 		
 	}
