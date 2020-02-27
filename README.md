@@ -228,10 +228,8 @@ In development:
 	- Double radius for hits above thresholds
 	- allow two sequential rotations in the detector definition
 	- TOFs resolutions pars from CCDB 
-	- BMT digitization with global coordinates instead of locals :soon:
 	- Move LUND vertex based on gcard entry 
-	- Time propagation in DC digitization :soon:
-	- Detector time signal shift to match data :soon:
+	- Detector time signal shift to match data: FTOF and DC
 
 <br>
 
@@ -258,6 +256,9 @@ Numbering scheme changes to two numbers. hipo4 breaks backward compatibility.
    	- Background merging memory check :soon:
 	- Rich sector 4 digitization :soon:
 	- 3D Cylindrical map field :soon: 
+	- BMT digitization with global coordinates instead of locals :soon:
+	- Time propagation in DC digitization :soon:
+	- Detector time signal shift to match data :soon:
 
 
 <br>
