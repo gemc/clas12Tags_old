@@ -222,7 +222,8 @@ In development:
 
 <br>
 
-Numbering scheme changes to two numbers. hipo4 breaks backward compatibility.
+Numbering scheme changes: hipo4 breaks backward compatibility. So this release is "major".
+Also, from now on we go to two numbers only.
 
 - 5.0:
 
@@ -232,7 +233,7 @@ Numbering scheme changes to two numbers. hipo4 breaks backward compatibility.
 		
 - Future releases:
 
-   	- Background merging memory check :soon:
+	- Background merging memory check :soon:
 	- Rich sector 4 digitization :soon:
 	- 3D Cylindrical map field :soon: 
 	- BMT digitization with global coordinates instead of locals :soon:
