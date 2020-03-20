@@ -13,13 +13,13 @@ For Q/A on CLAS12 simulations you can use the [CLAS12 Discourse](https://clas12.
 
 <br>
 
-### Current PRODUCTION version: **4.3.1**, compatible with **COATJAVA 6.3.1** and above. CLAS12 Software Environment version: 2.0
+### Current PRODUCTION version: **4.3.2**, compatible with **COATJAVA 6.5.3** and above. CLAS12 Software Environment version: 2.1
 
-This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.3.1
+This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.3.2
 
 <hr>
 
-To load production tag 4.3.1:
+To load production tag 4.3.2:
 
 ```source /group/clas12/packages/setup.csh```
 
@@ -130,7 +130,7 @@ GEMC is distributed using docker, see some <a href="https://gemc.jlab.org/gemc/h
 
 Use this container with the clas12tags:
 
-```jeffersonlab/clas12simulations:iprod```
+```jeffersonlab/clas12tags:4.3.2```
 
 <hr>
 <br>
