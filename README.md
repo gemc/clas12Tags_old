@@ -187,24 +187,20 @@ Production:
 
 <br>
 
-- 4.3.1:
+- 4.3.2:
 
-	- FTOF Time resolution updated based on data
-	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/rerunEvents.html">SAVE_SELECTED, RERUN_SELECTED</a> to save RNG state for certain particles, detector
-	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/ancestry.html"> SAVE_ALL_ANCESTORS </a> to save complete particles hierarchy in output (evio2root also updated)
-	- gcards for rg-a different run-periods
-	- gcards for rg-b different run-periods
-	- ec, pcal digitization removed obsolete constants
-	- moved ftof shield in the correct position
-	- Option written in JSON format 
-	- rga_fall2018 variations for: FTOF, EC, PCAL, CTOF geometry services 
-	- default variation for DC geometry service 
-	- ltcc variarions for different run periods 
-	- added Geometry variation as a gcard option: DIGITIZATION_VARIATION, to be used by digitization routines.
-	- target position added to BMT, CTOF digitization position shift, read from CCDB using DIGITIZATION_VARIATION
-	- beam background merging is extended to all detectors
-	- FTOF and CTOF resolutions matched to data
-        - option RECORD_MIRRORS renamed RECORD_OPTICALPHOTONS
+	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
+	- Rich sector 4 passive materials
+	- FMT use "rgf_spring2020" variation with 3 layers and in retrieving Z0 in the digitization
+	- RTPC geometry and digitization for the Bonus experiment
+	- Target geometry for the Bonus experiment
+	- GUI background color changed to white
+	- Neutrals particles color changed to blue
+	- Double radius for hits above thresholds
+	- allow two sequential rotations in the detector definition
+	- TOFs resolutions pars from CCDB
+	- Move LUND vertex based on gcard entry
+	- Detector time signal shift to match data: FTOF and DC
 
 
 
@@ -216,34 +212,17 @@ In development:
 
 <br>
 
-- 4.3.2:
-
-	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
-	- Rich sector 4 passive materials
-	- FMT use "rgf_spring2020" variation with 3 layers and in retrieving Z0 in the digitization
-	- RTPC geometry and digitization for the Bonus experiment 
-	- Target geometry for the Bonus experiment 
-	- GUI background color changed to white
-	- Neutrals particles color changed to blue
-	- Double radius for hits above thresholds
-	- allow two sequential rotations in the detector definition
-	- TOFs resolutions pars from CCDB 
-	- Move LUND vertex based on gcard entry 
-	- Detector time signal shift to match data: FTOF and DC
-
-<br>
-
 - 4.4.0:
 
 	- geant4 10.6 support
+	- conform all detectors to read RUNNO and DIGITIZATION_VARIATIONS in the digitization
+	- add time offsets for: EC, LTCC
+
 
 
 <br>
-
 
 Numbering scheme changes to two numbers. hipo4 breaks backward compatibility.
-<br>
-
 
 - 5.0:
 
@@ -269,6 +248,28 @@ Numbering scheme changes to two numbers. hipo4 breaks backward compatibility.
 Previous Tags:
 --------------
 
+- 4.3.1:
+
+	- FTOF Time resolution updated based on data
+	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/rerunEvents.html">SAVE_SELECTED, RERUN_SELECTED</a> to save RNG state for certain particles, detector
+	- Option  <a href="https://gemc.jlab.org/gemc/html/documentation/ancestry.html"> SAVE_ALL_ANCESTORS </a> to save complete particles hierarchy in output (evio2root also updated)
+	- gcards for rg-a different run-periods
+	- gcards for rg-b different run-periods
+	- ec, pcal digitization removed obsolete constants
+	- moved ftof shield in the correct position
+	- Option written in JSON format
+	- rga_fall2018 variations for: FTOF, EC, PCAL, CTOF geometry services
+	- default variation for DC geometry service
+	- ltcc variarions for different run periods
+	- added Geometry variation as a gcard option: DIGITIZATION_VARIATION, to be used by digitization routines.
+	- target position added to BMT, CTOF digitization position shift, read from CCDB using DIGITIZATION_VARIATION
+	- beam background merging is extended to all detectors
+	- FTOF and CTOF resolutions matched to data
+	- option RECORD_MIRRORS renamed RECORD_OPTICALPHOTONS
+
+<br>
+
+
 - 4.3.0: **COATJAVA: 5.7.4**, **JLAB_VERSION: 2.3**:
 
 	- Updated DC geometry using latest survey (May 18 Entry in DB) 
@@ -280,6 +281,7 @@ Previous Tags:
 	- change htcc time offset table to use the same used in reconstruction
 	- Tony Forest: Added polarized target geometry/material and cad volume.
 
+<br>
 
 
 - 4a.2.4: **COATJAVA: 5b.6.1**, **JLAB_VERSION: 2.2**:
