@@ -161,7 +161,7 @@ How to get and compile the clas12Tags
 -------------------------------------
 
 The clas12tags can be installed on top of an existing [jlab installation.
-For 4.3.1 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
+For 4.3.2 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
 
 1. clone https://github.com/gemc/clas12Tags
 2. cd to the tag you want to use
@@ -187,7 +187,7 @@ Production:
 
 <br>
 
-- 4.3.2:
+- 4.3.2 (paired with Coatjava version 6.5.3)
 
 	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
 	- Rich sector 4 passive materials
