@@ -12,7 +12,6 @@ public:
 	
 	// runNo is mandatory variable to keep track of run number changes
 	int    runNo;
-	string variation;
 	string date;
 	string connection;
 	char   database[80];
@@ -32,7 +31,8 @@ public:
 	
 	//timing: TDC calibration constants
 	vector<double> timing[nsect][nlayer][5];
-	
+	double tdc_global_offset;
+
 	//veff: effective velocity (cm/ns)
 	vector<double> veff[nsect][nlayer];
 	

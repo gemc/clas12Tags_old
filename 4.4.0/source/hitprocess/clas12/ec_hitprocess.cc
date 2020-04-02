@@ -10,7 +10,7 @@ using namespace ccdb;
 // gemc headers
 #include "ec_hitprocess.h"
 
-static ecConstants initializeECConstants(int runno)
+static ecConstants initializeECConstants(int runno, string digiVariation = "default")
 {
 	ecConstants ecc;
 
@@ -29,8 +29,6 @@ static ecConstants initializeECConstants(int runno)
 	} else {
 		ecc.connection = "mysql://clas12reader@clasdb.jlab.org/clas12";
 	}
-	
-	ecc.variation  = "default";
 
 	ecc.NSTRIPS             = 36;
 	
@@ -89,6 +87,12 @@ static ecConstants initializeECConstants(int runno)
 		ecc.timing[isec-1][ilay-1][3].push_back(data[row][6]);
 		ecc.timing[isec-1][ilay-1][4].push_back(data[row][7]);
 	}
+
+	// ========== Initialization of timing offset ===========
+	sprintf(ecc.database,"/calibration/ec/tdc_global_offset:%d:%s", ecc.runNo, digiVariation.c_str());
+	data.clear(); calib->GetCalib(data,ecc.database);
+	ecc.tdc_global_offset = data[0][3];
+
 
 	// ======== Initialization of EC effective velocities ===========
 	sprintf(ecc.database,"/calibration/ec/effective_velocity:%d",ecc.runNo);
@@ -258,7 +262,7 @@ map<string, double> ec_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 			double EC_GeV = G4RandGauss::shoot(EC_npe,sigma)/1000./ecc.ADC_GeV_to_evio/G/ecc.pmtPEYld;
 			if (EC_GeV>0) {
 				ADC = EC_GeV;
-				TDC = (tInfos.time+Ttota/tInfos.nsteps)*ecc.TDC_time_to_evio + a0 + a2/sqrt(ADC);
+				TDC = (tInfos.time+Ttota/tInfos.nsteps)*ecc.TDC_time_to_evio + a0 + a2/sqrt(ADC) + ecc.tdc_global_offset;
 				//				cout<<tInfos.time<<" "<<Ttota/tInfos.nsteps<<" "<<a0<<" "<<a2/sqrt(ADC)<<endl;
 			}
 		}
@@ -448,9 +452,11 @@ vector<MHit*> ec_HitProcess :: electronicNoise()
 
 void ec_HitProcess::initWithRunNumber(int runno)
 {
+	string digiVariation = gemcOpt.optMap["DIGITIZATION_VARIATION"].args;
+
 	if(ecc.runNo != runno) {
 		cout << " > Initializing " << HCname << " digitization for run number " << runno << endl;
-		ecc = initializeECConstants(runno);
+		ecc = initializeECConstants(runno, digiVariation);
 		ecc.runNo = runno;
 	}
 }

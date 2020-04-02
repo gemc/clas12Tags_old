@@ -11,7 +11,7 @@ using namespace ccdb;
 // gemc headers
 #include "pcal_hitprocess.h"
 
-static pcConstants initializePCConstants(int runno)
+static pcConstants initializePCConstants(int runno, string digiVariation = "default")
 {
 	pcConstants pcc;
 	
@@ -31,9 +31,7 @@ static pcConstants initializePCConstants(int runno)
 	} else {
 		pcc.connection = "mysql://clas12reader@clasdb.jlab.org/clas12";
 	}
-	
-	pcc.variation  = "default";
-	
+
 	pcc.TDC_time_to_evio    = 1.      ;
 	pcc.ADC_GeV_to_evio     = 1./10000; // MIP based calibration is nominally 10 channels/MeV
 	pcc.pmtPEYld            = 11.5    ; // Number of p.e. divided by the energy deposited in MeV. See EC NIM paper table 1.
@@ -85,7 +83,14 @@ static pcConstants initializePCConstants(int runno)
 		pcc.timing[isec-1][ilay-1][3].push_back(data[row][6]);
 		pcc.timing[isec-1][ilay-1][4].push_back(data[row][7]);
 	}
-	
+
+	// ========== Initialization of timing offset ===========
+	// ========== Initialization of timing offset ===========
+	sprintf(pcc.database,"/calibration/ec/tdc_global_offset:%d:%s", pcc.runNo, digiVariation.c_str());
+	data.clear(); calib->GetCalib(data, pcc.database);
+	pcc.tdc_global_offset = data[0][3];
+
+
 	sprintf(pcc.database,"/calibration/ec/effective_velocity:%d",pcc.runNo);
 	data.clear(); calib->GetCalib(data,pcc.database);
 	
@@ -244,7 +249,7 @@ map<string, double> pcal_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 			double PC_GeV = G4RandGauss::shoot(PC_npe,sigma)/1000./pcc.ADC_GeV_to_evio/G/pcc.pmtPEYld;
 			if (PC_GeV>0) {
 				ADC = PC_GeV;
-				TDC = (tInfos.time+Ttota/tInfos.nsteps)*pcc.TDC_time_to_evio + a0 + a2/sqrt(ADC);
+				TDC = (tInfos.time+Ttota/tInfos.nsteps)*pcc.TDC_time_to_evio + a0 + a2/sqrt(ADC) + pcc.tdc_global_offset;
 			}
 		}
 	}
@@ -433,9 +438,11 @@ double pcal_HitProcess :: voltage(double charge, double time, double forTime)
 
 void pcal_HitProcess::initWithRunNumber(int runno)
 {
+	string digiVariation = gemcOpt.optMap["DIGITIZATION_VARIATION"].args;
+
 	if(pcc.runNo != runno) {
 		cout << " > Initializing " << HCname << " digitization for run number " << runno << endl;
-		pcc = initializePCConstants(runno);
+		pcc = initializePCConstants(runno, digiVariation);
 		pcc.runNo = runno;
 	}
 }
