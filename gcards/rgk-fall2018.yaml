@@ -50,23 +50,29 @@ configuration:
     MAGFIELDS:
       magfieldSolenoidMap: Symm_solenoid_r601_phi1_z1201_13June2018.dat
       magfieldTorusMap: Symm_torus_r2501_phi16_z251_24Apr2018.dat
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
     CND:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
     CTOF:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
     CVT:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
+    DCHB:
+      variation: rga_fall2018_mc
+      dcGeometryVariation: rga_fall2018_mc
+    DCTB:
+      variation: rga_fall2018_mc
+      dcGeometryVariation: rga_fall2018_mc
     EC:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
     FTOFHB:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
     FTOFTB:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
     EBHB:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
     EBTB:
-      variation: rga_fall2018
+      variation: rga_fall2018_mc
       
 mime-types:
   - binary/data-hipo
