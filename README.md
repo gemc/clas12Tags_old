@@ -217,7 +217,8 @@ In development:
 	- geant4 10.6 support :white_check_mark:
 	- conform all detectors to read RUNNO and DIGITIZATION_VARIATIONS in the digitization :white_check_mark:
 	- add time offsets for: LTCC :white_check_mark:
-	- add time offsets for: EC, PCAL
+	- add time offsets for: EC, PCAL :white_check_mark:
+	- HTCC mc_gain implementation
 
 
 
