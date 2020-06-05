@@ -15,12 +15,17 @@ using namespace ccdb;
 #include "CLHEP/Units/PhysicalConstants.h"
 using namespace CLHEP;
 
-static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "default") {
+static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "default", string digiSnapshotTime = "no") {
 	ctofConstants ctc;
 	
 	// do not initialize at the beginning, only after the end of the first event,
 	// with the proper run number coming from options or run table
 	if(runno == -1) return ctc;
+	string timestamp = "";
+	if(digiSnapshotTime != "no") {
+		timestamp = ":"+digiSnapshotTime;
+	}
+
 	cout << "Entering initializeCTOF" << endl;
 	
 	ctc.runNo = runno;
@@ -47,7 +52,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 	unique_ptr<Calibration> calib(CalibrationGenerator::CreateCalibration(ctc.connection));
 	cout << "Connecting to " << ctc.connection << "/calibration/ctof" << endl;
 	
-	sprintf(ctc.database, "/calibration/ctof/attenuation:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/calibration/ctof/attenuation:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
@@ -58,7 +63,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 		ctc.attlen[isec - 1][ilay - 1][1].push_back(data[row][4]);
 	}
 	
-	sprintf(ctc.database, "/calibration/ctof/effective_velocity:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/calibration/ctof/effective_velocity:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
@@ -69,7 +74,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 		ctc.veff[isec - 1][ilay - 1][1].push_back(data[row][4]);
 	}
 	
-	sprintf(ctc.database, "/calibration/ctof/status:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/calibration/ctof/status:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
@@ -80,7 +85,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 		ctc.status[isec - 1][ilay - 1][1].push_back(data[row][4]);
 	}
 	
-	sprintf(ctc.database, "/calibration/ctof/gain_balance:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/calibration/ctof/gain_balance:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
@@ -93,7 +98,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 	
 	/* For future use in HitProcess
 	 cout<<"Getting time_walk"<<endl;
-	 sprintf(ctc.database,"/calibration/ctof/time_walk:%d:%s",ctc.runNo, digiVariation.c_str());
+	 sprintf(ctc.database,"/calibration/ctof/time_walk:%d:%s%s",ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	 data.clear() ; calib->GetCalib(data,ctc.database);
 	 for(unsigned row = 0; row < data.size(); row++)
 	 {
@@ -107,7 +112,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 	 }
 	 */
 	
-	sprintf(ctc.database, "/calibration/ctof/time_offsets:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/calibration/ctof/time_offsets:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
@@ -119,7 +124,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 		ctc.toff_P2P[isec-1][ilay-1].push_back(data[row][5]);
 	}
 	
-	sprintf(ctc.database, "/calibration/ctof/tdc_conv:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/calibration/ctof/tdc_conv:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
@@ -131,7 +136,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 	}
 	
 	
-	sprintf(ctc.database, "/geometry/ctof/ctof:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/geometry/ctof/ctof:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 	for (unsigned row = 0; row < data.size(); row++) {
@@ -146,7 +151,7 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 
 
 	cout << "CTOF:Setting time resolution" << endl;
-	sprintf(ctc.database, "/calibration/ctof/tres:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database, "/calibration/ctof/tres:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear();
 	calib->GetCalib(data, ctc.database);
 
@@ -202,23 +207,13 @@ static ctofConstants initializeCTOFConstants(int runno, string digiVariation = "
 
 
 	// now connecting to target geometry to get its position
-	sprintf(ctc.database,"/geometry/target:%d:%s", ctc.runNo, digiVariation.c_str());
+	sprintf(ctc.database,"/geometry/target:%d:%s%s", ctc.runNo, digiVariation.c_str(), timestamp.c_str());
 	data.clear(); calib->GetCalib(data,ctc.database);
 	ctc.targetZPos = data[0][3]*cm;
 
 	return ctc;
 }
 
-void ctof_HitProcess::initWithRunNumber(int runno) {
-
-	string digiVariation = gemcOpt.optMap["DIGITIZATION_VARIATION"].args;
-
-	if (ctc.runNo != runno) {
-		cout << " > Initializing " << HCname << " digitization for run number " << runno << endl;
-		ctc = initializeCTOFConstants(runno, digiVariation);
-		ctc.runNo = runno;
-	}
-}
 
 map<string, double> ctof_HitProcess::integrateDgt(MHit* aHit, int hitn)
 {
@@ -563,6 +558,19 @@ double ctof_HitProcess::voltage(double charge, double time, double forTime) {
 	//return DGauss(forTime, ctc.vpar, charge, time);
 	return PulseShape(forTime, ctc.vpar, charge, time);
 }
+
+void ctof_HitProcess::initWithRunNumber(int runno) {
+
+	string digiVariation    = gemcOpt.optMap["DIGITIZATION_VARIATION"].args;
+	string digiSnapshotTime = gemcOpt.optMap["DIGITIZATION_TIMESNAP"].args;
+
+	if (ctc.runNo != runno) {
+		cout << " > Initializing " << HCname << " digitization for run number " << runno << endl;
+		ctc = initializeCTOFConstants(runno, digiVariation, digiSnapshotTime);
+		ctc.runNo = runno;
+	}
+}
+
 
 // this static function will be loaded first thing by the executable
 ctofConstants ctof_HitProcess::ctc = initializeCTOFConstants(-1);
