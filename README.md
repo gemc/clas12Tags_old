@@ -218,7 +218,8 @@ In development:
 	- conform all detectors to read RUNNO and DIGITIZATION_VARIATIONS in the digitization :white_check_mark:
 	- add time offsets for: LTCC :white_check_mark:
 	- add time offsets for: EC, PCAL :white_check_mark:
-	- HTCC mc_gain implementation
+	- HTCC mc_gain implementation :white_check_mark:
+	- conform all detectors to read DIGITIZATION_TIMESTAMP in the digitization :white_check_mark:
 
 
 
