@@ -56,6 +56,8 @@ The Run Configurations are also detailed on this page:
 <a href="https://github.com/gemc/clas12Tags/tree/master/gcards"> gcards and experiments</a>.
 
 <br>
+Starting with clas12tags 4.4.0 the configuration files are located in the tag folder in the "config" directory.
+<br>
 <hr>
 <br>
 
@@ -220,6 +222,8 @@ In development:
 	- add time offsets for: EC, PCAL :white_check_mark:
 	- HTCC mc_gain implementation :white_check_mark:
 	- conform all detectors to read DIGITIZATION_TIMESTAMP in the digitization :white_check_mark:
+	- dc, ec, htcc resolution matching (in progress)
+	- gcards, yaml files from 4.4.0 and on in a dedicated “config” subdir :white_check_mark:
 
 
 
