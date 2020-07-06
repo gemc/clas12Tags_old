@@ -1,7 +1,7 @@
 <gcard>
 	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
 	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
-	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lH2"/>
+	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lD2"/>
 
 	<!-- central detectors 	-->
 	<detector name="experiments/clas12/bst/bst"               factory="TEXT" variation="default"/>
@@ -34,7 +34,7 @@
 	<detector name="experiments/clas12/ftof/ftof"          factory="TEXT" variation="rga_fall2018"/>
 	<detector name="experiments/clas12/ec/ec"              factory="TEXT" variation="rga_fall2018"/>
 	<detector name="experiments/clas12/pcal/pcal"          factory="TEXT" variation="rga_fall2018"/>
-	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="rgb_spring2019"/>
+	<detector name="experiments/clas12/ltcc/ltcc"          factory="TEXT" variation="rgb_winter2019"/>
 	<detector name="experiments/clas12/ltcc/cad_cone/"     factory="CAD"/>
 	<detector name="experiments/clas12/ltcc/cad/"          factory="CAD"/>
 
@@ -69,7 +69,7 @@
 
 	<!--  Run Number 11, picked up by digitization routines -->
 	<option name="RUNNO"    value="11" />
-	<option name="DIGITIZATION_VARIATION"  value="rga_fall2018_mc" />
+	<option name="DIGITIZATION_VARIATION"  value="rga_fall2018_bg" />
 
 	<!--  Do not track staff after the apex -->
 	<option name="MAX_Z_POS" value="8000"/>
@@ -111,7 +111,7 @@
 	<detector name="htccEntryDishCone">    <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="htcc">                 <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 
-	
+
 	<detector name="FMT">
 		<existence exist="no" />
 	</detector>

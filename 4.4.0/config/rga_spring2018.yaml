@@ -60,6 +60,7 @@ configuration:
     DCHB:
       variation: rga_spring2018_mc
       dcGeometryVariation: rga_spring2018_mc
+      dcT2DFunc: "Polynomial"
     DCTB:
       variation: rga_spring2018_mc
       dcGeometryVariation: rga_spring2018_mc
