@@ -20,10 +20,10 @@
 
 
 	<!-- Beamline configuration: FT is used -->
-	<detector name="experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOff"/>
-	<detector name="experiments/clas12/beamline/cadBeamline/" factory="CAD"/>
-	<detector name="experiments/clas12/beamline/vacuumLine/"  factory="CAD"/>
-	<detector name="experiments/clas12/beamline/beamline"     factory="TEXT" variation="FTOff"/>
+	<detector name="experiments/clas12/ft/ft"                      factory="TEXT" variation="FTOff"/>
+	<detector name="experiments/clas12/beamline/cadBeamlineFTOFF/" factory="CAD"/>
+	<detector name="experiments/clas12/beamline/vacuumLine/"       factory="CAD"/>
+	<detector name="experiments/clas12/beamline/beamline"          factory="TEXT" variation="FTOff"/>
 
 	<!-- forward carriage -->
 	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
