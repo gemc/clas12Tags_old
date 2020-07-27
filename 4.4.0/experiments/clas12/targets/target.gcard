@@ -3,18 +3,8 @@
 
 	<!-- other variations include: lH2, lD2, ND3, "elaborate"  -->
 
-	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="transverse"/>
-
-	<detector name="experiments/clas12/dc/dc" factory="TEXT" variation="default"/>
-
-	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
-
-      <!-- Beamline configuration: FT is used -->
-        <detector name="experiments/clas12/ft/ft"                 factory="TEXT" variation="FTOn"/>
-        <detector name="experiments/clas12/beamline/cadBeamline/" factory="CAD"/>
-        <detector name="experiments/clas12/beamline/vacuumLine/"  factory="CAD"/>
-        <detector name="experiments/clas12/beamline/beamline"     factory="TEXT" variation="FTOn"/>
-
+	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lH2e"/>
+	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
 
 	<!-- PolTarg
 	<detector name="target" factory="TEXT" variation="PolTarg"/>

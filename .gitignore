@@ -4,3 +4,4 @@ lib
 moc*
 */source/gemc
 *.sconsign.dblite
+.DS_Store
