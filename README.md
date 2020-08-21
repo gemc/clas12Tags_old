@@ -222,7 +222,7 @@ In development:
 	- add time offsets for: EC, PCAL :white_check_mark:
 	- HTCC mc_gain implementation :white_check_mark:
 	- conform all detectors to read DIGITIZATION_TIMESTAMP in the digitization :white_check_mark:
-	- dc, ec, htcc resolution matching (in progress)
+	- dc, ec, htcc resolution matching :white_check_mark:
 	- gcards, yaml files from 4.4.0 and on in a dedicated “config” subdir :white_check_mark:
 
 
