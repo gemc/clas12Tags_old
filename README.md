@@ -189,30 +189,6 @@ Production:
 
 <br>
 
-- 4.3.2 (paired with Coatjava version 6.5.3)
-
-	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
-	- Rich sector 4 passive materials
-	- FMT use "rgf_spring2020" variation with 3 layers and in retrieving Z0 in the digitization
-	- RTPC geometry and digitization for the Bonus experiment
-	- Target geometry for the Bonus experiment
-	- GUI background color changed to white
-	- Neutrals particles color changed to blue
-	- Double radius for hits above thresholds
-	- allow two sequential rotations in the detector definition
-	- TOFs resolutions pars from CCDB
-	- Move LUND vertex based on gcard entry
-	- Detector time signal shift to match data: FTOF and DC
-
-
-
-<br>
-
-
-In development:
----------------
-
-<br>
 
 - 4.4.0:
 
@@ -229,24 +205,29 @@ In development:
 
 <br>
 
+
+In development:
+---------------
+
+<br>
+
 Numbering scheme changes: hipo4 breaks backward compatibility. So this release is "major".
 Also, from now on we go to two numbers only.
 
 - 5.0:
 
    	- Hipo 4 output  :soon:
+	- 3D Cylindrical map field :soon:
+
+<br>
 
 <br>
 		
-- Future releases:
+- Other TODOs:
 
-	- Background merging memory check :soon:
 	- Rich sector 4 digitization :soon:
-	- 3D Cylindrical map field :soon: 
 	- BMT digitization with global coordinates instead of locals :soon:
 	- Time propagation in DC digitization :soon:
-	- Detector time signal shift to match data :soon:
-
 
 <br>
 
@@ -255,6 +236,24 @@ Also, from now on we go to two numbers only.
 
 Previous Tags:
 --------------
+
+- 4.3.2 (paired with Coatjava version 6.5.3)
+
+	- FILTER_HADRONS option to write out events that have hit from specific hadrons in them
+	- Rich sector 4 passive materials
+	- FMT use "rgf_spring2020" variation with 3 layers and in retrieving Z0 in the digitization
+	- RTPC geometry and digitization for the Bonus experiment
+	- Target geometry for the Bonus experiment
+	- GUI background color changed to white
+	- Neutrals particles color changed to blue
+	- Double radius for hits above thresholds
+	- allow two sequential rotations in the detector definition
+	- TOFs resolutions pars from CCDB
+	- Move LUND vertex based on gcard entry
+	- Detector time signal shift to match data: FTOF and DC
+
+<br>
+
 
 - 4.3.1:
 
