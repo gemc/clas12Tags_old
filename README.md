@@ -127,12 +127,13 @@ Docker
 ------
 
 GEMC is distributed using docker, see some <a href="https://gemc.jlab.org/gemc/html/docker.html"> examples of using docker with gemc</a>.
+The <a href="https://hub.docker.com/repository/docker/jeffersonlab/clas12software/tags?page=1"> jefferson lab docker hub </a> stores the current and archived images.
 
 <br>
 
 Use this container with the clas12tags:
 
-```jeffersonlab/clas12tags:4.3.2```
+```jeffersonlab/clas12tags:4.4.0```
 
 <hr>
 <br>
@@ -163,7 +164,7 @@ How to get and compile the clas12Tags
 -------------------------------------
 
 The clas12tags can be installed on top of an existing [jlab installation.
-For 4.3.2 it's JLAB_VERSION 2.3](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.3_install.html):
+For 4.4.0 it's JLAB_VERSION 2.4](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.4_install.html):
 
 1. clone https://github.com/gemc/clas12Tags
 2. cd to the tag you want to use
