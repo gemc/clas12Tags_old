@@ -13,17 +13,17 @@ For Q/A on CLAS12 simulations you can use the [CLAS12 Discourse](https://clas12.
 
 <br>
 
-### Current PRODUCTION version: **4.3.2**, compatible with **COATJAVA 6.5.3** and above. CLAS12 Software Environment version: 2.1
+### Current PRODUCTION version: **4.4.0**, compatible with **COATJAVA 6.5.6.1** and above.
 
-This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.3.2
+This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.4.0
 
 <hr>
 
-To load production tag 4.3.2:
+To load production tag 4.4.0:
 
 ```source /group/clas12/packages/setup.csh```
 
-```module load clas12/2.0```
+```module load clas12/2.4```
 
 
 
@@ -236,6 +236,16 @@ Also, from now on we go to two numbers only.
 
 Previous Tags:
 --------------
+
+From 4.3.2 and on the module is used for the environment.
+To use these archived tags:
+
+To load production tag 4.3.2:
+
+```source /group/clas12/packages/setup.csh```
+
+```module load clas12/2.0```
+
 
 - 4.3.2 (paired with Coatjava version 6.5.3)
 
