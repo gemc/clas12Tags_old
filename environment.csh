@@ -14,7 +14,7 @@ setenv GEMC_VERSION $CLAS12TAG
 setenv GEMC_DATA_DIR /group/clas12/gemc/$CLAS12TAG
 setenv FIELD_DIR /site/12gev_phys/noarch/data
 
-if($CLAS12TAG == 4.4.0) then
+if($CLAS12TAG == 4.4.0 || $CLAS12TAG == 4.4.1) then
 	source /site/12gev_phys/softenv.csh 2.4 keepmine
 else if($CLAS12TAG == 4.3.0 || $CLAS12TAG == 4.3.1 || $CLAS12TAG == 4.3.2) then
 	source /site/12gev_phys/softenv.csh 2.3 keepmine
