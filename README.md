@@ -210,6 +210,13 @@ Production:
 In development:
 ---------------
 
+
+<br>
+
+- 4.4.1:
+
+	- z tracking limit changed to 9m from 8m in the gcards :white_check_mark:
+
 <br>
 
 Numbering scheme changes: hipo4 breaks backward compatibility. So this release is "major".
