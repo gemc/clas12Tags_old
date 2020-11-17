@@ -191,18 +191,15 @@ Production:
 <br>
 
 
-- 4.4.0:
+- 4.4.1:
 
-	- geant4 10.6 support :white_check_mark:
-	- conform all detectors to read RUNNO and DIGITIZATION_VARIATIONS in the digitization :white_check_mark:
-	- add time offsets for: LTCC :white_check_mark:
-	- add time offsets for: EC, PCAL :white_check_mark:
-	- HTCC mc_gain implementation :white_check_mark:
-	- conform all detectors to read DIGITIZATION_TIMESTAMP in the digitization :white_check_mark:
-	- dc, ec, htcc resolution matching :white_check_mark:
-	- gcards, yaml files from 4.4.0 and on in a dedicated “config” subdir :white_check_mark:
+	- z tracking limit changed to 9m from 8m in the gcards :white_check_mark:
 
+To load production tag 4.4.1:
 
+```source /group/clas12/packages/setup.csh```
+
+```module load clas12/2.4.1```
 
 <br>
 
@@ -211,11 +208,6 @@ In development:
 ---------------
 
 
-<br>
-
-- 4.4.1:
-
-	- z tracking limit changed to 9m from 8m in the gcards :white_check_mark:
 
 <br>
 
@@ -245,14 +237,31 @@ Also, from now on we go to two numbers only.
 Previous Tags:
 --------------
 
-From 4.3.2 and on the module is used for the environment.
-To use these archived tags:
 
-To load production tag 4.3.2:
+
+From 4.3.2 and on the module is used for the environment.
+
+<br>
+
+
+- 4.4.0:
+
+	- geant4 10.6 support :white_check_mark:
+	- conform all detectors to read RUNNO and DIGITIZATION_VARIATIONS in the digitization :white_check_mark:
+	- add time offsets for: LTCC :white_check_mark:
+	- add time offsets for: EC, PCAL :white_check_mark:
+	- HTCC mc_gain implementation :white_check_mark:
+	- conform all detectors to read DIGITIZATION_TIMESTAMP in the digitization :white_check_mark:
+	- dc, ec, htcc resolution matching :white_check_mark:
+	- gcards, yaml files from 4.4.0 and on in a dedicated “config” subdir :white_check_mark:
+
+To load production tag 4.4.0:
 
 ```source /group/clas12/packages/setup.csh```
 
-```module load clas12/2.0```
+```module load clas12/2.4```
+
+<br>
 
 
 - 4.3.2 (paired with Coatjava version 6.5.3)
@@ -269,6 +278,12 @@ To load production tag 4.3.2:
 	- TOFs resolutions pars from CCDB
 	- Move LUND vertex based on gcard entry
 	- Detector time signal shift to match data: FTOF and DC
+
+To load production tag 4.3.2:
+
+```source /group/clas12/packages/setup.csh```
+
+```module load clas12/2.0```
 
 <br>
 
