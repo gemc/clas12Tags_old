@@ -22,6 +22,10 @@
 #include "evioFileChannel.hxx"
 using namespace evio;
 
+// Hipo
+#include "hipo4/writer.h"
+#include "hipoSchemas.h"
+
 // geant4
 #include "G4ThreeVector.hh"
 
@@ -203,18 +207,18 @@ public:
 
 class ancestorInfo
 {
- public:
-  ancestorInfo() {};
-  ~ancestorInfo() {};
-  int pid;
-  int tid;
-  int mtid;
-  double trackE;
-  G4ThreeVector p;
-  G4ThreeVector vtx;
+public:
+	ancestorInfo() {};
+	~ancestorInfo() {};
+	int pid;
+	int tid;
+	int mtid;
+	double trackE;
+	G4ThreeVector p;
+	G4ThreeVector vtx;
 
-  int    getVariableFromStringI(string);
-  double getVariableFromStringD(string);
+	int    getVariableFromStringI(string);
+	double getVariableFromStringD(string);
 };
 
 
@@ -233,6 +237,15 @@ public:
 
 	ofstream        *txtoutput;
 	evioFileChannel *pchan;
+
+	// hipo schema and writer
+	// The schemas have to be added to the writer before openning
+	// the file, since they are written into the header of the file.
+	// Thus the schema has to be declared in this base class
+	void initializeHipo(string outputfile);
+	hipo::writer    *hipoWriter;
+	HipoSchema      *hipoSchema;
+
 };
 
 /// \class outputFactory
@@ -277,11 +290,11 @@ public:
 	// write fadc mode 1 (full signal shape) - jlab hybrid banks. This uses the translation table to write the crate/slot/channel
 	virtual void writeFADCMode1(outputContainer*, vector<hitOutput>, int) = 0;
 
-        // write fadc mode 1 (full signal shape) - jlab hybrid banks. This uses the translation table to write the crate/slot/channel
-        // This method should be called once at the end of event action, and the 1st argument 
-        // is a map<int crate_id, vector<hitoutput> (vector of all hits from that crate) >
+	// write fadc mode 1 (full signal shape) - jlab hybrid banks. This uses the translation table to write the crate/slot/channel
+	// This method should be called once at the end of event action, and the 1st argument
+	// is a map<int crate_id, vector<hitoutput> (vector of all hits from that crate) >
 	virtual void writeFADCMode1( map<int, vector<hitOutput> >, int)  = 0;
-        
+
 	// write fadc mode 7 (integrated mode) - jlab hybrid banks. This uses the translation table to write the crate/slot/channel
 	virtual void writeFADCMode7(outputContainer*, vector<hitOutput>, int) = 0;
 
@@ -289,7 +302,6 @@ public:
 	virtual void writeEvent(outputContainer*) = 0;
 
 	string outputType;
-
 	virtual ~outputFactory(){;}
 };
 
@@ -300,6 +312,10 @@ typedef outputFactory *(*outputFactoryInMap)();
 outputFactory *getOutputFactory(map<string, outputFactoryInMap>*, string);
 
 map<string, outputFactoryInMap> registerOutputFactories();
+
+
+
+
 
 
 #endif

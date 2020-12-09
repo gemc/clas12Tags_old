@@ -134,7 +134,7 @@ map<string, double> htcc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 	vector<identifier> identity = aHit->GetId();
 	int idsector = identity[0].id;
 	int idring   = identity[1].id;
-	int idhalf   = identity[2].id;
+	int idhalf   = identity[2].id; // layer is half sector (1 or 2)
 	int thisPid  = aHit->GetPID();
 
 	if(aHit->isBackgroundHit == 1) {
@@ -143,12 +143,20 @@ map<string, double> htcc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 		double nphe     = aHit->GetCharge();
 		double stepTime = aHit->GetTime()[0];
 
-		dgtz["sector"] = idsector;
-		dgtz["ring"]   = idring;
-		dgtz["half"]   = idhalf;
-		dgtz["nphe"]   = nphe;
-		dgtz["time"]   = stepTime;
 		dgtz["hitn"]   = hitn;
+
+		dgtz["sector"]    = idsector;
+		dgtz["layer"]     = idhalf;
+		dgtz["component"] = idring;
+		dgtz["ADC_order"] = 0;
+		dgtz["ADC_ADC"]   = (int) nphe*100;
+		dgtz["ADC_time"]  = (stepTime*24.0/1000);
+		dgtz["ADC_ped"]   = 0;
+
+		dgtz["TDC_order"] = 0;
+		dgtz["TDC_TDC"]   = (int) stepTime;
+
+
 
 		return dgtz;
 	}
@@ -156,23 +164,23 @@ map<string, double> htcc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 
 	trueInfos tInfos(aHit);
 	
-	int ndetected;
 	// if anything else than a photon hits the PMT
 	// the nphe is the particle id
 	// and identifiers are negative
 	// this should be changed, what if we still have a photon later?
-	dgtz["sector"] = -idsector;
-	dgtz["ring"]   = -idring;
-	dgtz["half"]   = -idhalf;
-	dgtz["nphe"]   = thisPid;
-	dgtz["time"]   = tInfos.time;
-	dgtz["hitn"]   = hitn;
-	
-	
 	// if the particle is not an opticalphoton return bank filled with negative identifiers
-	if(thisPid != 0)
+	if(thisPid != 0) {
 		return dgtz;
-	
+
+		dgtz["sector"]    = -idsector;
+		dgtz["layer"]     = -idhalf;
+		dgtz["component"] = -idring;
+	}
+
+
+	int ndetected;
+
+
 	// Since the HTCC hit involves a PMT which detects photons with a certain quantum efficiency (QE)
 	// we want to implement QE here in a flexible way:
 	
@@ -282,14 +290,24 @@ map<string, double> htcc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 		}
 	}
 	
-	dgtz["sector"] = idsector;
-	dgtz["ring"]   = idring;
-	dgtz["half"]   = idhalf;
-	//	dgtz["nphe"]   = ndetected*htccc.mc_gain[idsector-1][idhalf-1][idring-1];
-	dgtz["nphe"]   = G4RandGauss::shoot(ndetected*htccc.mc_gain[idsector-1][idhalf-1][idring-1], ndetected*htccc.mc_smear[idsector-1][idhalf-1][idring-1]);
-	dgtz["time"]   = tInfos.time + htccc.tshift[idsector-1][idhalf-1][idring-1];
+
+	double adc  = 100 * G4RandGauss::shoot(ndetected*htccc.mc_gain[idsector-1][idhalf-1][idring-1], ndetected*htccc.mc_smear[idsector-1][idhalf-1][idring-1]);
+	double time = tInfos.time + htccc.tshift[idsector-1][idhalf-1][idring-1];
+
 	dgtz["hitn"]   = hitn;
-	
+
+	dgtz["sector"]    = idsector;
+	dgtz["layer"]     = idhalf;
+	dgtz["component"] = idring;
+	dgtz["ADC_order"] = 0;
+	dgtz["ADC_ADC"]   = (int) adc;
+	dgtz["ADC_time"]  = (int) (time*24.0/1000);
+	dgtz["ADC_ped"]   = 0;
+
+	dgtz["TDC_order"] = 0;
+	dgtz["TDC_TDC"]   = (int) (time*24.0/1000);
+
+
 	// decide if write an hit or not
 	writeHit = true;
 	// define conditions to reject hit

@@ -6,9 +6,8 @@
 # to copy each file into the tag
 
 # note:
-# 1. if gemc.cc has differences other than the tag version, it will be considered as well (make sure that the sourceTAG version is the right one)
+# 1. if gemc.cc has differences other than the tag version, it will be considered as well
 # 2. the script will be run one directory up from clas12tags
-set sourceTAG = "2.8"
 set prompt = "no"
 
 if( "$1" != "" ) then
@@ -86,8 +85,12 @@ endif
 cd clas12Tags/$tagVersion/source
 set GVERSION = `grep GEMC\_VERSION gemc.cc | grep $tagVersion | wc | awk '{print $1}'`
 if ($GVERSION != "1") then
-	echo gemc tag version is not $tagVersion. Fixing it.
-	sed -i '' s/"const char .*"/'const char *GEMC_VERSION = "gemc 4.3.2" ; '/ gemc.cc
+	echo gemc tag version is not $tagVersion. Fixing it with
+	set newContent1='const char *GEMC_VERSION = "gemc '
+	set newContent2=$tagVersion'"'
+	set newContent="$newContent1$newContent2 ;"
+	echo "$newContent"
+	sed -i '' s/"const char .*"/"$newContent"/ gemc.cc
 endif
 
 # changing initializeBMTConstants and initializeFMTConstants to initialize before processID
