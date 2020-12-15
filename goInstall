@@ -1,47 +1,43 @@
-#!/bin/csh -f
-
+#!/bin/zsh
+set -x
 # Script to compile a gemc tag and install it inside a bin/$OSRELEASE subdir of source
 #
 # Warning: must be run at the top dir location where the tags sub-dir are located
 # Make sure the api is present
 
-if($#argv != 1) then
-	echo " "
+
+if [ "$#" -ne 1 ]; then
+  	echo " "
 	echo "Usage:   "
-	echo  "  >> goInstall <version>"
+	echo  "  >> $0 <version>"
 	echo
-	exit 0
-endif
+	exit 1
+fi
 
-set TAGTOINSTALL = $1
+TAGTOINSTALL=$1
+if [[ ! -d $TAGTOINSTALL ]]; then
+	echo $TAGTOINSTALL clas12tag does not exists, exiting
+	exit 1
+fi
 
-set ncpu = `getconf _NPROCESSORS_ONLN`
-
-# Temp: forcing max 10 processes as the scons system
-# checks independently that the libraries exist
-if($ncpu > 20) then
-	set ncpu = 20
-endif
-set opt = " -j"$ncpu" "
-
+ncpu=$(getconf _NPROCESSORS_ONLN)
+# setting max parallel compilation to 20 (check periodically, this was causing problems)
+if [ "$ncpu" -ge 20 ]; then
+	ncpu=20
+fi
 
 echo
 echo Installing gemc clas12 tag $TAGTOINSTALL on $OSRELEASE
 echo Using $ncpu cpus for the compilation
 
-# making sure we got the latest version
-git pull
-
+opt=' -j'$ncpu' OPT=1'
 
 cd $TAGTOINSTALL/source
 scons -c
-scons $opt OPT=1
+scons "$opt" 
 mkdir -p bin/$OSRELEASE
 
 # cp could not work if the executable is in use, but "mv" will work
 mv gemc bin/$OSRELEASE
 cp bin/$OSRELEASE/gemc ./
-
-
-
 
