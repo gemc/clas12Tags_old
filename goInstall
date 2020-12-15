@@ -30,11 +30,11 @@ echo
 echo Installing gemc clas12 tag $TAGTOINSTALL on $OSRELEASE
 echo Using $ncpu cpus for the compilation
 
-opt=' -j'$ncpu' OPT=1'
+alias -g opt=' -j'$ncpu' OPT=1'
 
 cd $TAGTOINSTALL/source
 scons -c
-scons "$opt" 
+scons opt
 mkdir -p bin/$OSRELEASE
 
 # cp could not work if the executable is in use, but "mv" will work
