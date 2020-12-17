@@ -1,8 +1,11 @@
                   ec  |              bankid  |                                        ec bank ID  | 1600   |                  Di  
-                  ec  |              sector  |                                     sector number  |    1   |                  Di  
-                  ec  |               stack  |                                      stack number  |    2   |                  Di  
-                  ec  |                view  |                                              view  |    3   |                  Di  
-                  ec  |               strip  |                                      strip number  |    4   |                  Di  
-                  ec  |                 ADC  |                                          ADC Left  |    5   |                  Di  
-                  ec  |                 TDC  |                                         TDC Right  |    6   |                  Di  
+                  ec  |              sector  |                                      sector (1-6)  |    1   |                  Di  
+                  ec  |               layer  |                                      layer (1..9)  |    2   |                  Di  
+                  ec  |           component  |                                             strip  |    3   |                  Di  
+                  ec  |           ADC_order  |                                          always 0  |    4   |                  Di  
+                  ec  |             ADC_ADC  |                                         ADC value  |    5   |                  Di  
+                  ec  |            ADC_time  |                               time from pulse fit  |    6   |                  Dd  
+                  ec  |             ADC_ped  |                      pedestal from pulse analysis  |    7   |                  Di  
+                  ec  |           TDC_order  |                                          always 2  |    8   |                  Di  
+                  ec  |             TDC_TDC  |                                         TDC value  |    9   |                  Di  
                   ec  |                hitn  |                                        hit number  |   99   |                  Di  
