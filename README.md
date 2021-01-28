@@ -217,6 +217,7 @@ Also, from now on we go to two numbers only.
 - 5.0:
 
    	- Hipo 4 output  :soon:
+   	- Added star (*) to INTEGRATEDRAW option: -INTEGRATEDRAW="*" will activate the true info for all sensitive detectors
 	- pcal and ec hitprocesses merged into one: ecal
 	
 	  - production threshold for both set to 3mm (was 1mm for pcal, 5mm for ec)
