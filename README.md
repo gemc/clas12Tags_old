@@ -217,7 +217,10 @@ Also, from now on we go to two numbers only.
 - 5.0:
 
    	- Hipo 4 output  :soon:
-	- 3D Cylindrical map field :soon:
+	- pcal and ec hitprocesses merged into one: ecal
+	
+	  - production threshold for both set to 3mm (was 1mm for pcal, 5mm for ec)
+	  - hit process routine is now "ecal" for both
 
 <br>
 
