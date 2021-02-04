@@ -722,8 +722,9 @@ void goptions::setGoptions()
 	optMap["OUTPUT"].ctgr = "output";
 	
 	optMap["INTEGRATEDRAW"].args = "no";
-	optMap["INTEGRATEDRAW"].help = "Activates integrated geant4 raw output for system(s). Example: -INTEGRATEDRAW=\"DC, TOF\"";
-	optMap["INTEGRATEDRAW"].name = "Activates integrated geant4 raw output for system(s)";
+	optMap["INTEGRATEDRAW"].help = "Activates integrated geant4 true info output for system(s). Example: -INTEGRATEDRAW=\"dc, ftof\"";
+	optMap["INTEGRATEDRAW"].help = "To acticate the true info for all sensitive detectors:  -INTEGRATEDRAW=\"*\"";
+	optMap["INTEGRATEDRAW"].name = "Activates integrated geant4 true info output for system(s)";
 	optMap["INTEGRATEDRAW"].type = 1;
 	optMap["INTEGRATEDRAW"].ctgr = "output";
 	
@@ -731,7 +732,7 @@ void goptions::setGoptions()
 	optMap["INTEGRATEDDGT"].help = "De-activates integrated digitized output for system(s). Example: -INTEGRATEDDGT=\"DC, TOF\"";
 	optMap["INTEGRATEDDGT"].name = "De-activates integrated digitized output for system(s). ";
 	optMap["INTEGRATEDDGT"].type = 1;
-	optMap["INTEGRATEDRAW"].ctgr = "output";
+	optMap["INTEGRATEDDGT"].ctgr = "output";
 	
 	optMap["ALLRAWS"].args = "no";
 	optMap["ALLRAWS"].help = "Activates step-by-step output for system(s). Example: -ALLRAWS=\"DC, TOF\"";
