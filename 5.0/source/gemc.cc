@@ -55,7 +55,7 @@ const char *GEMC_VERSION = "gemc 5.0" ;
 #include "outputFactory.h"
 #include "HitProcess.h"
 #include "PhysicsList.h"
-#include "options.h"
+#include "gemcOptions.h"
 #include "dmesg_init.h"
 #include "run_conditions.h"
 #include "fieldFactory.h"
@@ -63,7 +63,7 @@ const char *GEMC_VERSION = "gemc 5.0" ;
 #include "mirrors_factory.h"
 #include "parameter_factory.h"
 #include "string_utilities.h"
-#include "utils.h"
+#include "gemcUtils.h"
 #include "ActionInitialization.h"
 
 // c++ headers
@@ -416,7 +416,7 @@ int main( int argc, char **argv )
 
 	
 	delete runManager;
-	return 1;
+	return 0;
 }
 
 

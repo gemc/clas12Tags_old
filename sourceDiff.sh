@@ -64,12 +64,12 @@ end
 echo
 
 
-# not checking gemc.cc
-set maincc = `diff source/gemc.cc clas12Tags/$tagVersion/source/gemc.cc | grep -v GEMC\_VERSION | head -1`
+# not checking gemc.cc if the version is the only change
+set maincc = `diff source/gemc.cc clas12Tags/$tagVersion/source/gemc.cc | grep -v 32c32 | grep -v GEMC_VERSION | grep -v "\-\-\-" | wc | awk '{print $1}'`
 # if the differentce is NOT GEMC_VERSION (line 32)
-if ("$maincc" != "32c32") then
+if ("$maincc" != "0") then
 	if ($prompt == "no") then
-		echo FOUND gemc.cc differences other than the tag version
+		echo FOUND gemc.cc differences other than the tag version: "$maincc"
 		diff source/gemc.cc clas12Tags/$tagVersion/source/gemc.cc | grep -v GEMC\_VERSION
 	else
 		echo
