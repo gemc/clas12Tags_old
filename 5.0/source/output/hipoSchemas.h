@@ -8,6 +8,7 @@ public:
 
 	hipo::schema runConfigSchema;
 	hipo::schema runRFSchema;
+	hipo::schema trueInfoSchema;
 
 	// detectors
 	hipo::schema bmtADCSchema;

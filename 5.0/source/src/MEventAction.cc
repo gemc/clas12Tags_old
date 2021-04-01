@@ -26,9 +26,9 @@ vector<int> MEventAction::vector_otids(vector<int> tids)
 	for(unsigned int t=0; t<tids.size(); t++)
 	{
 		if(hierarchy.find(tids[t]) != hierarchy.end())
-		otids.push_back(hierarchy[tids[t]]);
+			otids.push_back(hierarchy[tids[t]]);
 		else
-		otids.push_back(0);
+			otids.push_back(0);
 	}
 	return otids;
 }
@@ -39,7 +39,7 @@ vector<int> vector_zint(int size)
 {
 	vector<int> zints;
 	for(int t=0; t<size; t++)
-		zints.push_back(0);
+	zints.push_back(0);
 	
 	return zints;
 }
@@ -48,7 +48,7 @@ vector<G4ThreeVector> vector_zthre(int size)
 {
 	vector<G4ThreeVector> zthre;
 	for(int t=0; t<size; t++)
-		zthre.push_back(G4ThreeVector(0,0,0));
+	zthre.push_back(G4ThreeVector(0,0,0));
 	
 	return zthre;
 }
@@ -57,7 +57,7 @@ vector<int> vector_mtids(map<int, TInfos> tinfos, vector<int> tids)
 {
 	vector<int> mtids;
 	for(unsigned int t=0; t<tids.size(); t++)
-		mtids.push_back(tinfos[tids[t]].mtid);
+	mtids.push_back(tinfos[tids[t]].mtid);
 	
 	return mtids;
 }
@@ -66,7 +66,7 @@ vector<int> vector_mpids(map<int, TInfos> tinfos, vector<int> tids)
 {
 	vector<int> mpids;
 	for(unsigned int t=0; t<tids.size(); t++)
-		mpids.push_back(tinfos[tids[t]].mpid);
+	mpids.push_back(tinfos[tids[t]].mpid);
 	
 	return mpids;
 }
@@ -75,7 +75,7 @@ vector<G4ThreeVector> vector_mvert(map<int, TInfos> tinfos, vector<int> tids)
 {
 	vector<G4ThreeVector> mvert;
 	for(unsigned int t=0; t<tids.size(); t++)
-		mvert.push_back(tinfos[tids[t]].mv);
+	mvert.push_back(tinfos[tids[t]].mv);
 	
 	return mvert;
 }
@@ -93,7 +93,7 @@ MEventAction::MEventAction(goptions opts, map<string, double> gpars)
 	MAXP             = (int) gemcOpt.optMap["NGENP"].arg;
 	FILTER_HITS      = (int) gemcOpt.optMap["FILTER_HITS"].arg;
 	FILTER_HADRONS   = (int) gemcOpt.optMap["FILTER_HADRONS"].arg;
-	FILTER_HIGHMOM   = (int) gemcOpt.optMap["FILTER_HIGHMOM"].arg;	
+	FILTER_HIGHMOM   = (int) gemcOpt.optMap["FILTER_HIGHMOM"].arg;
 	rw               = runWeights(opts);
 	
 	WRITE_ALLRAW     = replaceCharInStringWithChars(gemcOpt.optMap["ALLRAWS"].args, ",", "  ");
@@ -105,16 +105,17 @@ MEventAction::MEventAction(goptions opts, map<string, double> gpars)
 	fastMCMode       = gemcOpt.optMap["FASTMCMODE"].arg;  // fast mc = 2 will increase prodThreshold and maxStep to 5m
 	
 	requestedNevents = (long int) gemcOpt.optMap["N"].arg ;
-	
+	ntoskip        = gemcOpt.optMap["SKIPNGEN"].arg;
+
 	
 	// fastMC mode will set SAVE_ALL_MOTHERS to 1
 	// a bit cluncky for now
 	if(fastMCMode>0)
-	SAVE_ALL_MOTHERS = 1;
+		SAVE_ALL_MOTHERS = 1;
 	
 	// SAVE_ALL_ANCESTORS will set SAVE_ALL_MOTHERS to nonzero
 	if (SAVE_ALL_ANCESTORS && (SAVE_ALL_MOTHERS == 0))
-	SAVE_ALL_MOTHERS = 1;
+		SAVE_ALL_MOTHERS = 1;
 	
 	tsampling  = get_number(get_info(gemcOpt.optMap["TSAMPLING"].args).front());
 	nsamplings = get_number(get_info(gemcOpt.optMap["TSAMPLING"].args).back());
@@ -141,7 +142,7 @@ MEventAction::MEventAction(goptions opts, map<string, double> gpars)
 	// SAVE_SELECTED parameters
 	string arg = gemcOpt.optMap["SAVE_SELECTED"].args;
 	if (arg == "" || arg == "no")
-	ssp.enabled = false;
+		ssp.enabled = false;
 	else
 	{
 		vector<string> values;
@@ -157,7 +158,7 @@ MEventAction::MEventAction(goptions opts, map<string, double> gpars)
 			ssp.hiLim     = get_number(values[3]);
 			ssp.variable  = values[4];
 			if (values.size() == 5)
-			ssp.dir = "./";
+				ssp.dir = "./";
 			else
 			{
 				ssp.dir = values[5];
@@ -176,7 +177,7 @@ MEventAction::MEventAction(goptions opts, map<string, double> gpars)
 MEventAction::~MEventAction()
 {
 	if(SAVE_ALL_MOTHERS>1)
-	lundOutput->close();
+		lundOutput->close();
 }
 
 void MEventAction::BeginOfEventAction(const G4Event* evt)
@@ -190,9 +191,9 @@ void MEventAction::BeginOfEventAction(const G4Event* evt)
 	
 	MPrimaryGeneratorAction* pga = (MPrimaryGeneratorAction*)(runManager->GetUserPrimaryGeneratorAction());
 	if (pga->doneRerun())
-	return;
+		return;
 	if (pga->isRerun())
-	evtN = pga->rerunEvent();
+		evtN = pga->rerunEvent();
 	
 	rw.getRunNumber(evtN);
 	bgMap.clear();
@@ -234,9 +235,14 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 {
 	if ((gen_action->isFileOpen() == false) ||
 		 (gen_action->doneRerun() == true))
-	return;
-	
-	
+		return;
+
+	// completely skip the event
+	// (still need to increase event number)
+	if(evtN <= ntoskip) {
+		evtN++;
+		return;
+	}
 	
 	MHitCollection* MHC;
 	int nhits;
@@ -255,21 +261,19 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 	
 	
 	// if FILTER_HADRONS is set, checking if there are any (matching) hadrons
-	if (FILTER_HADRONS == 1 || abs(FILTER_HADRONS) > 99) 
-	{
+	if (FILTER_HADRONS == 1 || abs(FILTER_HADRONS) > 99) {
 		int foundHad = 0;
-		for (map<string, sensitiveDetector*>::iterator it = SeDe_Map.begin(); it!= SeDe_Map.end(); it++) 
-		{
+		for (map<string, sensitiveDetector*>::iterator it = SeDe_Map.begin(); it!= SeDe_Map.end(); it++) {
 			MHC = it->second->GetMHitCollection();
-			if (MHC) nhits = MHC->GetSize();
-			else nhits = 0;
-			for (int h=0; h<nhits; h++)
-			{
+			if (MHC) {
+				nhits = MHC->GetSize();
+			} else {
+				nhits = 0;
+			}
+			for (int h=0; h<nhits; h++) {
 				vector<int>           pids = (*MHC)[h]->GetPIDs();
-				for (vector<int>::const_iterator pit = pids.begin(); pit != pids.end(); pit++)
-				{
-					if ((FILTER_HADRONS == 1 && abs(*pit) > 99) || *pit == FILTER_HADRONS)
-					{
+				for (vector<int>::const_iterator pit = pids.begin(); pit != pids.end(); pit++) {
+					if ((FILTER_HADRONS == 1 && abs(*pit) > 99) || *pit == FILTER_HADRONS) {
 						foundHad = 1;
 						break;
 					}
@@ -282,36 +286,36 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 	}
 	
 	// if FILTER_HIGHMOM is set, checking if there is  any high mom hits
-	if (FILTER_HIGHMOM != 0) 
-	  {
-	    int foundHighmom = 0;
-	    for (map<string, sensitiveDetector*>::iterator it = SeDe_Map.begin(); it!= SeDe_Map.end(); it++) 
-	      {
-		MHC = it->second->GetMHitCollection();
-		if (MHC) nhits = MHC->GetSize();
-		else nhits = 0;
-		for (int h=0; h<nhits; h++)
-		  {
-		    vector<G4ThreeVector>           mmts = (*MHC)[h]->GetMoms();
-		    for(unsigned int t=0; t<mmts.size(); t++){
-// 		      	cout << "mom " << mmts[t].mag() << endl;
-			if (mmts[t].mag()>FILTER_HIGHMOM)
-			  {
-// 		      	cout << "mom " << mmts[t].mag() << endl;			    
-			    foundHighmom = 1;
-			    break;
-			  }
-		    }
+	if (FILTER_HIGHMOM != 0)
+	{
+		int foundHighmom = 0;
+		for (map<string, sensitiveDetector*>::iterator it = SeDe_Map.begin(); it!= SeDe_Map.end(); it++)
+		{
+			MHC = it->second->GetMHitCollection();
+			if (MHC) nhits = MHC->GetSize();
+			else nhits = 0;
+			for (int h=0; h<nhits; h++)
+			{
+				vector<G4ThreeVector>           mmts = (*MHC)[h]->GetMoms();
+				for(unsigned int t=0; t<mmts.size(); t++){
+					// 		      	cout << "mom " << mmts[t].mag() << endl;
+					if (mmts[t].mag()>FILTER_HIGHMOM)
+					{
+						// 		      	cout << "mom " << mmts[t].mag() << endl;
+						foundHighmom = 1;
+						break;
+					}
+				}
 
-		  }
-	      }
-	    
-	    // stop here if there are no  any high mom hits
-	    if (not foundHighmom) return;
-	  }	
-	  
+			}
+		}
+
+		// stop here if there are no  any high mom hits
+		if (not foundHighmom) return;
+	}
+
 	if(evtN%Modulo == 0 )
-	cout << hd_msg << " Starting Event Action Routine " << evtN << "  Run Number: " << rw.runNo << endl;
+		cout << hd_msg << " Starting Event Action Routine " << evtN << "  Run Number: " << rw.runNo << endl;
 	
 	
 	// building the tracks set database with all the tracks in all the hits
@@ -330,7 +334,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 				
 				for(unsigned int t=0; t<tids.size(); t++) {
 					if((*MHC)[h]->isBackgroundHit == 0)
-					track_db.insert(tids[t]);
+						track_db.insert(tids[t]);
 				}
 				
 				if(SAVE_ALL_MOTHERS>1)
@@ -343,7 +347,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 					// only put the first step of a particular track
 					// (don't fill if track exist already)
 					for(unsigned int t=0; t<tids.size(); t++)
-						if(bgMap.find(tids[t]) == bgMap.end())
+					if(bgMap.find(tids[t]) == bgMap.end())
 						bgMap[tids[t]] = BGParts(pids[t], tims[t], vtxs[t], mmts[t]);
 				}
 			}
@@ -356,7 +360,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 	set<int>::iterator it;
 	
 	// the container is full only if /tracking/storeTrajectory 2
-	G4TrajectoryContainer *trajectoryContainer = nullptr; 
+	G4TrajectoryContainer *trajectoryContainer = nullptr;
 	
 	set<int> track_db2 = track_db;
 	if(SAVE_ALL_MOTHERS)
@@ -365,7 +369,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 		momDaughter.clear();
 		
 		if(VERB>3)
-		cout << " >> Total number of tracks " << trajectoryContainer->size() << endl;
+			cout << " >> Total number of tracks " << trajectoryContainer->size() << endl;
 		
 		while(trajectoryContainer && track_db.size())
 		{
@@ -379,7 +383,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 				// adding track in mom daughter relationship
 				// for all tracks
 				if(momDaughter.find(tid) == momDaughter.end())
-				momDaughter[tid] = trj->GetParentID();
+					momDaughter[tid] = trj->GetParentID();
 				
 				// is this track involved in a hit?
 				// if yes, add it to the track map db
@@ -401,7 +405,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 		{
 			int ancestor = itm->first;
 			if(momDaughter[ancestor] == 0)
-			hierarchy[itm->first] = itm->first;
+				hierarchy[itm->first] = itm->first;
 			
 			while (momDaughter[ancestor] != 0)
 			{
@@ -432,14 +436,14 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 		{
 			vector<int> bgtIDs;
 			for(map<int, BGParts>::iterator it = bgMap.begin(); it != bgMap.end(); it++)
-				bgtIDs.push_back(it->first);
+			bgtIDs.push_back(it->first);
 			
 			for(unsigned i=0; i<bgtIDs.size(); i++)
 			{
 				int daughter = bgtIDs[i];
 				int momCheck = 0;
 				if(momDaughter.find(daughter) != momDaughter.end())
-				momCheck = momDaughter[daughter];
+					momCheck = momDaughter[daughter];
 				
 				while(momCheck != 0)
 				{
@@ -449,13 +453,13 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 						// so if daughter is found, delete it
 						// daughter may already be deleted before
 						if(bgMap.find(daughter) != bgMap.end())
-						bgMap.erase(bgMap.find(daughter));
+							bgMap.erase(bgMap.find(daughter));
 					}
 					// going up one generation
 					if(momDaughter.find(momCheck) != momDaughter.end())
-					momCheck = momDaughter[momCheck];
+						momCheck = momDaughter[momCheck];
 					else
-					momCheck = 0;
+						momCheck = 0;
 				}
 			}
 		}
@@ -465,17 +469,36 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 	// Making sure the output routine exists in the ProcessOutput map
 	// If no output selected, or HitProcess not found, end current event
 	map<string, outputFactoryInMap>::iterator ito = outputFactoryMap->find(outContainer->outType);
-	if(ito == outputFactoryMap->end())
-	{
-		if(outContainer->outType != "no")
-		cout << hd_msg << " Warning: output type <" << outContainer->outType
-		<< "> is not registered in the outContainerput Factory. " << endl
-		<< "      This event will not be written out." << endl;
+	if(ito == outputFactoryMap->end()) {
+		if(outContainer->outType != "no") {
+			cout << hd_msg << " Warning: output type <" << outContainer->outType
+			<< "> is not registered in the outContainerput Factory. " << endl
+			<< "      This event will not be written out." << endl;
+		}
 		evtN++;
 		return;
 	}
 	outputFactory *processOutputFactory = getOutputFactory(outputFactoryMap, outContainer->outType);
-	
+
+	// configuration contains:
+	// number of hits in the hit collection for each sensitive detector
+	map<string, double> configuration;
+	for(map<string, sensitiveDetector*>::iterator it = SeDe_Map.begin(); it!= SeDe_Map.end(); it++) {
+		MHC = it->second->GetMHitCollection();
+
+		if (MHC) {
+			if (MHC->GetSize() > 0) {
+				string hitType = it->first;
+
+				if(WRITE_INTRAW.find(hitType) != string::npos || WRITE_INTRAW == "*") {
+					configuration[hitType] = MHC->GetSize();
+				}
+			}
+		}
+	}
+
+
+	processOutputFactory->prepareEvent(outContainer, &configuration);
 	
 	// Header Bank contains event number
 	// Need to change this to read DB header bank
@@ -534,7 +557,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 		
 		
 		for(unsigned i=0; i<rfvalues.size(); i++)
-			rfsetup += rfvalues[i] + " " ;
+		rfsetup += rfvalues[i] + " " ;
 		
 		FrequencySyncSignal rfs(rfsetup);
 		processOutputFactory->writeRFSignal(outContainer, rfs, getBankFromMap("rf", banksMap));
@@ -567,15 +590,15 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 	}
 	
 	if(SAVE_ALL_MOTHERS>1)
-	saveBGPartsToLund();
+		saveBGPartsToLund();
 	
 	
 	
 	map<int, vector<hitOutput> > hit_outputs_from_AllSD;
 	
-	
-	for(map<string, sensitiveDetector*>::iterator it = SeDe_Map.begin(); it!= SeDe_Map.end(); it++)
-	{
+	// loop over sensitive detectors
+	// if there are hits, process them and/or write true infos out
+	for(map<string, sensitiveDetector*>::iterator it = SeDe_Map.begin(); it!= SeDe_Map.end(); it++) {
 		MHC = it->second->GetMHitCollection();
 		
 		// adding background if existing
@@ -584,18 +607,16 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 		for(auto bgh: currentBackground) {
 			if(bgh != nullptr) {
 				if(MHC)
-				MHC->insert(new MHit(bgh->energy, bgh->timeFromEventStart, bgh->nphe, bgh->identity));
+					MHC->insert(new MHit(bgh->energy, bgh->timeFromEventStart, bgh->nphe, bgh->identity));
 			}
 		}
 		
 		if (MHC) nhits = MHC->GetSize();
 		else nhits = 0;
 		
-		
 		// The same ProcessHit Routine must apply to all the hits  in this HitCollection.
 		// Instantiating the ProcessHitRoutine only once for the first hit.
-		if(nhits)
-		{
+		if(nhits) {
 			//  the bank idtag is the one that corresponds to the hitType
 			//MHit* aHit = (*MHC)[0];
 
@@ -604,14 +625,13 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 			
 			string hitType = it->first;
 			
-			
 			HitProcess *hitProcessRoutine = getHitProcess(hitProcessMap, hitType);
 			if(!hitProcessRoutine)
-			return;
+				return;
 			
-			if(fastMCMode == 0 || fastMCMode > 9)
-			hitProcessRoutine->init(hitType, gemcOpt, gPars);
-			
+			if(fastMCMode == 0 || fastMCMode > 9) {
+				hitProcessRoutine->init(hitType, gemcOpt, gPars);
+			}
 			bool WRITE_TRUE_INTEGRATED = 0;
 			bool WRITE_TRUE_ALL = 0;
 			if(WRITE_INTRAW.find(hitType) != string::npos || WRITE_INTRAW == "*") WRITE_TRUE_INTEGRATED = 1;
@@ -624,22 +644,20 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 			for(unsigned pi = 0; pi<MPrimaries.size(); pi++) {
 				MPrimaries[pi].pSum.push_back(summaryForParticle("na"));
 				if(fastMCMode > 0)
-				MPrimaries[pi].fastMC.push_back(fastMCForParticle("na"));
+					MPrimaries[pi].fastMC.push_back(fastMCForParticle("na"));
 			}
 			
-			for(int h=0; h<nhits; h++)
-			{
+			for(int h=0; h<nhits; h++) {
 				MHit* aHit = (*MHC)[h];
 				
 				// electronic noise hits disable? Why? TODO
 				if(aHit->isElectronicNoise)
-				continue;
+					continue;
 				
 				hitOutput thisHitOutput;
 				
 				// mother particle infos
-				if(SAVE_ALL_MOTHERS)
-				{
+				if(SAVE_ALL_MOTHERS) {
 					// setting track infos before processing the hit
 					vector<int> tids = aHit->GetTIds();
 					vector<int> otids = vector_otids(tids);
@@ -655,11 +673,10 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 					// then we count it as ONE hit by the track
 					vector<int> hitByPrimary;
 					for(unsigned pi = 0; pi<MPrimaries.size(); pi++)
-						hitByPrimary.push_back(0);
+					hitByPrimary.push_back(0);
 					
 					// all these vector have the same length.
-					for(unsigned pi = 0; pi<MPrimaries.size(); pi++)
-					{
+					for(unsigned pi = 0; pi<MPrimaries.size(); pi++) {
 						vector<double> edeps = aHit->GetEdep();
 						vector<double> times = aHit->GetTime();
 						MPrimaries[pi].pSum.back().nphe = aHit->GetTIds().size();
@@ -667,15 +684,13 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 							MPrimaries[pi].fastMC.back().pOrig  = aHit->GetMom();
 							MPrimaries[pi].fastMC.back().pSmear = hitProcessRoutine->psmear(aHit->GetMom());
 						}
-						for(unsigned ss =0; ss<edeps.size(); ss++)
-						{
-							if(otids[ss] == (int) pi+1)
-							{
+						for(unsigned ss =0; ss<edeps.size(); ss++) {
+							if(otids[ss] == (int) pi+1) {
 								MPrimaries[pi].pSum.back().etot += edeps[ss];
 								hitByPrimary[pi]++;
 								// getting fastest time - should we put threshold here?
 								if(MPrimaries[pi].pSum.back().t < 0 || MPrimaries[pi].pSum.back().t > times[ss])
-								MPrimaries[pi].pSum.back().t = times[ss];
+									MPrimaries[pi].pSum.back().t = times[ss];
 								
 							}
 						}
@@ -683,11 +698,9 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 						if(hitByPrimary[pi]) MPrimaries[pi].pSum.back().stat++;
 						
 						if(MPrimaries[pi].pSum.back().etot > 0 || MPrimaries[pi].pSum.back().nphe > 0)
-						MPrimaries[pi].pSum.back().dname = hitType;
+							MPrimaries[pi].pSum.back().dname = hitType;
 					}
-				}
-				else
-				{
+				} else {
 					// filling mother infos with zeros
 					int thisHitSize = aHit->GetId().size();
 					vector<int>           zint  = vector_zint(thisHitSize);
@@ -699,17 +712,16 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 				}
 				
 				if(fastMCMode == 0 || fastMCMode > 9)
-				thisHitOutput.setRaws(hitProcessRoutine->integrateRaw(aHit, h+1, WRITE_TRUE_INTEGRATED));
+					thisHitOutput.setRaws(hitProcessRoutine->integrateRaw(aHit, h+1, WRITE_TRUE_INTEGRATED));
 				
 				if(WRITE_TRUE_ALL && (fastMCMode == 0 || fastMCMode > 9))
-				thisHitOutput.setAllRaws(hitProcessRoutine->allRaws(aHit, h+1));
+					thisHitOutput.setAllRaws(hitProcessRoutine->allRaws(aHit, h+1));
 				
 				
 				allRawOutput.push_back(thisHitOutput);
 				
 				string vname = aHit->GetId()[aHit->GetId().size()-1].name;
-				if(VERB > 4 || vname.find(catch_v) != string::npos)
-				{
+				if(VERB > 4 || vname.find(catch_v) != string::npos) {
 					cout << hd_msg << " Hit " << h + 1 << " --  total number of steps this hit: " << aHit->GetPos().size() << endl;
 					cout << aHit->GetId();
 					double Etot = 0;
@@ -736,7 +748,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 			
 			
 			if(VERB > 4)
-			for(unsigned pi = 0; pi<MPrimaries.size(); pi++)
+				for(unsigned pi = 0; pi<MPrimaries.size(); pi++)
 			{
 				cout << " Particle " << pi + 1 << " has " << MPrimaries[pi].pSum.size() << " particle summaries:" << endl;
 				for(unsigned ss =0; ss<MPrimaries[pi].pSum.size(); ss++)
@@ -881,7 +893,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 			
 			// Check whether to save RNG
 			if (ssp.enabled && ssp.decision == false)
-			for (int h = 0; h < nhits; ++h)
+				for (int h = 0; h < nhits; ++h)
 			{
 				// Check if masked ID matches targetId
 				int id = allDgtOutput[h].getIntDgtVar ("id");
@@ -891,21 +903,21 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 				for (; j >= 0; --j)
 				{
 					if (ssp.targetId[j] != 'x' && id2 % 10 != atoi (ssp.targetId.substr(j,1).c_str()))
-					break;
+						break;
 					id2 /= 10;
 				}
 				if (j >= 0)
-				continue;
+					continue;
 				
 				// Check pid
 				int pid = allRawOutput[h].getIntRawVar ("pid");
 				if (pid != ssp.targetPid)
-				continue;
+					continue;
 				
 				// Check given variable
 				double varval = allRawOutput[h].getIntRawVar (ssp.variable);
 				if (varval == -99)
-				varval = allDgtOutput[h].getIntDgtVar (ssp.variable);
+					varval = allDgtOutput[h].getIntDgtVar (ssp.variable);
 				if (varval == -99)
 				{
 					cout << "Unknown variable " << ssp.variable << " for SAVE_SELECTED, exiting" << endl;
@@ -996,7 +1008,7 @@ void MEventAction::EndOfEventAction(const G4Event* evt)
 	}
 	
 	if(evtN%Modulo == 0 )
-	cout << hd_msg << " End of Event " << evtN << " Routine..." << endl << endl;
+		cout << hd_msg << " End of Event " << evtN << " Routine..." << endl << endl;
 	
 	// Increase event number. Notice: this is different than evt->GetEventID()
 	evtN++;
@@ -1019,9 +1031,9 @@ void MEventAction::saveBGPartsToLund()
 	
 	int i = 1;
 	for(map<int, BGParts>::iterator it = bgMap.begin(); it != bgMap.end(); it++)
-		*lundOutput << i++ << "\t0\t1\t" << it->second.pid << "\t0\t" << it->first << "\t"
-		<< it->second.p.x()/GeV << "\t" << it->second.p.y()/GeV << "\t" << it->second.p.z()/GeV << "\t" << it->second.time << "\t0\t"
-		<< it->second.v.x()/cm  << "\t" << it->second.v.y()/cm  << "\t" << it->second.v.z()/cm << endl;
+	*lundOutput << i++ << "\t0\t1\t" << it->second.pid << "\t0\t" << it->first << "\t"
+	<< it->second.p.x()/GeV << "\t" << it->second.p.y()/GeV << "\t" << it->second.p.z()/GeV << "\t" << it->second.time << "\t0\t"
+	<< it->second.v.x()/cm  << "\t" << it->second.v.y()/cm  << "\t" << it->second.v.z()/cm << endl;
 }
 
 

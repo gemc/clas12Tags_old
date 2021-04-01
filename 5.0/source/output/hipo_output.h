@@ -29,6 +29,9 @@ public:
 	~hipo_output(){;}  ///< event is deleted in WriteEvent routine
 	static outputFactory *createOutput() {return new hipo_output;}
 	
+	// prepare event
+	virtual void prepareEvent(outputContainer* output, map<string, double> *configuration) ;
+
 	// record the simulation conditions on the file
 	void recordSimConditions(outputContainer*, map<string, string>);
 	
@@ -77,7 +80,66 @@ public:
 	void writeEvent(outputContainer*) ;
 
 	hipo::event *outEvent = nullptr;
-	
+	hipo::bank *trueInfoBank;
+
+	// map from hittype to hipo detector id
+	// defined here: https://github.com/JeffersonLab/clas12-offline-software/blob/8ed53986f8b1a2e6f3c5a63b1e6f6d7fd88020c9/common-tools/clas-detector/src/main/java/org/jlab/detector/base/DetectorType.java
+	map<string, int> detectorID = {
+		{"BMT",     1},
+		{"BST",     2},
+		{"CND",     3},
+		{"CTOF",    4},
+		{"DC",      6},
+		{"ECAL",    7},
+		{"FMT",     8},
+		{"FTCAL",  10},
+		{"FTHODO", 11},
+		{"FTTRK",  13},
+		{"FTOF",   12},
+		{"HTCC",   15},
+		{"LTCC",   16},
+		{"RICH",   18},
+		{"RTPC",   19},
+		{"BAND",   21}
+	};
+
+	// returns detectorID from map, given hitType
+	int getDetectorID(string hitType) ;
+
+	// true info variable names are changed a bit in hipo schema
+	map<string, string> trueInfoNamesMap = {
+		{"pid",     "pid"},
+		{"mpid",    "mpid"},
+		{"tid",     "tid"},
+		{"mtid",    "mtid"},
+		{"otid",    "otid"},
+		{"trackE",  "trackE"},
+		{"totEdep", "totEdep"},
+		{"avg_x",   "avgX"},
+		{"avg_y",   "avgY"},
+		{"avg_z",   "avgZ"},
+		{"avg_lx",  "avgLx"},
+		{"avg_ly",  "avgLy"},
+		{"avg_lz",  "avgLz"},
+		{"px",      "px"},
+		{"py",      "py"},
+		{"pz",      "pz"},
+		{"vx",      "vx"},
+		{"vy",      "vy"},
+		{"vz",      "vz"},
+		{"mvx",     "mvx"},
+		{"mvy",     "mvy"},
+		{"mvz",     "mvz"},
+		{"avg_t",   "avgT"},
+		{"nsteps",  "nsteps"},
+		{"procID",  "procID"},
+		{"hitn",    "hitn"}
+
+	};
+
+	// returns hipo name from true info var name
+	string getHipoVariableName(string trueInfoVar) ;
+
 };
 
 

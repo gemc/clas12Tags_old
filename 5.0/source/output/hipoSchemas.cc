@@ -19,6 +19,7 @@ HipoSchema :: HipoSchema()
 	// Detectors: https://github.com/JeffersonLab/clas12-offline-software/blob/development/etc/bankdefs/hipo4/data.json
 	runConfigSchema = hipo::schema("RUN::config", 10000, 11);
 	runRFSchema     = hipo::schema("RUN::rf",     10000, 12);
+	trueInfoSchema  = hipo::schema("MC::True",       40, 4);
 
 	// detectors
 	bmtADCSchema    = hipo::schema("BMT::adc",    20100, 11);
@@ -66,6 +67,7 @@ HipoSchema :: HipoSchema()
 
 	runConfigSchema.parse("run/I, event/I, unixtime/I, trigger/L, timestamp/L, type/B,mode/B, torus/F, solenoid/F");
 	runRFSchema.parse("id/S, time/F");
+	trueInfoSchema.parse("detector/B, pid/I, mpid/I, tid/I, mtid/I, otid/I, trackE/F, totEdep/F, avgX/F, avgY/F, avgZ/F, avgLx/F, avgLy/F, avgLz/F, px/F, py/F, pz/F, vx/F, vy/F, vz/F, mvx/F, mvy/F, mvz/F, avgT/F, nsteps/I, procID/I, hitn/I");
 
 	// detectors
 	bmtADCSchema.parse(    "sector/B, layer/B, component/S, order/B, ADC/I, time/F, ped/S, integral/I, timestamp/L");
@@ -123,10 +125,10 @@ HipoSchema :: HipoSchema()
 	schemasToLoad["BST::adc"]     = bstADCSchema;
 	schemasToLoad["CTOF::adc"]    = ctofADCSchema;
 	schemasToLoad["CTOF::tdc"]    = ctofTDCSchema;
-	schemasToLoad["FMT::adc"]     = fmtADCSchema;
 	schemasToLoad["DC::tdc"]      = dcTDCSchema;
 	schemasToLoad["ECAL::adc"]    = ecalADCSchema;
 	schemasToLoad["ECAL::tdc"]    = ecalTDCSchema;
+	schemasToLoad["FMT::adc"]     = fmtADCSchema;
 	schemasToLoad["FT_CAL::adc"]  = ftcalADCSchema;
 	schemasToLoad["FT_HODO::adc"] = fthodoADCSchema;
 	schemasToLoad["FT_TRK::adc"]  = ftrkTDCSchema;
@@ -136,6 +138,8 @@ HipoSchema :: HipoSchema()
 	schemasToLoad["HTCC::tdc"]    = htccTDCSchema;
 	schemasToLoad["LTCC::adc"]    = ltccADCSchema;
 	schemasToLoad["LTCC::tdc"]    = ltccTDCSchema;
+
+	schemasToLoad["MC::True"]    = trueInfoSchema;
 
 	cout << " Done defining Hipo4 schemas." << endl;
 
@@ -159,6 +163,7 @@ hipo::schema HipoSchema :: getSchema(string schemaName, int type) {
 }
 
 
+
 void outputContainer::initializeHipo(string outputFile) {
 
 	hipoSchema = new HipoSchema();
@@ -172,7 +177,7 @@ void outputContainer::initializeHipo(string outputFile) {
 	for (auto &schema: hipoSchema->schemasToLoad) {
 		hipoWriter->getDictionary().addSchema(schema.second);
 	}
-	
+
 	hipoWriter->open(outputFile.c_str());
 
 }
