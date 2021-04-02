@@ -76,7 +76,6 @@
 
 	<!--  Time window defined by LUMI_EVENT -->
 	<option name="LUMI_EVENT"  value="0, 248.5*ns, 4*ns" />
-
 	<!--  Uncomment this (and replace the LUMI_EVENT Above) to simulate 10^35 luminosity beam on a 5cm liquid hydrogen target, use 124K e- / event   -->
 	<!--  Scale accordingly for different target / luminosity  -->
 	<!--
@@ -87,7 +86,8 @@
 	<option name="RFSETUP"        value="0.499, 40, 20" />
 	-->
 
-	<!--  RF setup and Reference position set as target shift below -->
+	<!--  RF Signal needs event time window defined by LUMI_EVENT -->
+	<!--  Reference position set as target shift below -->
 	<option name="RFSETUP"     value="0.499, 40, 20" />
 	<option name="RFSTART"     value="eventVertex, 0, 0, -19.4" />
 
