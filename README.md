@@ -133,7 +133,7 @@ The <a href="https://hub.docker.com/repository/docker/jeffersonlab/clas12softwar
 
 Use this container with the clas12tags:
 
-```jeffersonlab/clas12tags:4.4.0```
+```jeffersonlab/clas12tags:4.4.1```
 
 <hr>
 <br>
@@ -191,6 +191,7 @@ Production:
 <br>
 
 
+
 - 4.4.1:
 
 	- z tracking limit changed to 9m from 8m in the gcards :white_check_mark:
@@ -207,7 +208,9 @@ To load production tag 4.4.1:
 In development:
 ---------------
 
+- 4.4.2:
 
+	- bug fix in torus field linear interpolation routine
 
 <br>
 
