@@ -16,7 +16,6 @@
 /// - Banks Format.
 /// - Materials.
 /// \section platforms Platforms Supported:
-/// - <i> Windows 7 to come October 2016 </i>
 /// - Linux (32, 64)
 /// - Mac OS X
 /// \section docs Documentation:
@@ -109,7 +108,6 @@ int main( int argc, char **argv )
 {
 	clock_t startTime = clock();
 	cout << endl;
-	
 	
 	goptions gemcOpt;
 	gemcOpt.setGoptions();
