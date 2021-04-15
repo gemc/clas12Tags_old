@@ -708,7 +708,7 @@ void MDetectorConstruction::assignProductionCuts(vector<string> volumes)
 		// the last element is the actual volume cut
 		for(unsigned v=0; v<volsProdCuts.size() - 1; v++) {
 			detector volumeWithCut = findDetector(volsProdCuts[v]);
-			if(volumeWithCut.name != "notfound") {
+			if(volumeWithCut.name != "notfound"  && volumeWithCut.GetLogical() != nullptr)	{
 				volumesForThisRegion += volumeWithCut.name + " ";
 				SeRe_Map[regionName]->AddRootLogicalVolume(volumeWithCut.GetLogical());
 			} else {
