@@ -63,8 +63,8 @@ static fmtConstants initializeFMTConstants(int runno, string digiVariation = "de
 	fmtc.alpha.resize(data.size());
 	for(unsigned row = 0; row < data.size(); row++)
 	{
-		fmtc.Z0[row]=data[row][1];
-		fmtc.alpha[row]=data[row][2]*degree;
+	    fmtc.Z0[row]=data[row][1];
+            fmtc.alpha[row]=data[row][2]*degree;
 
 	}
 	// Number of strips and pixels
@@ -150,11 +150,9 @@ map<string, double>FMT_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 
 vector<identifier>  FMT_HitProcess :: processID(vector<identifier> id, G4Step* aStep, detector Detector)
 {
-	double x, y, z;
 	G4ThreeVector   xyz    = aStep->GetPostStepPoint()->GetPosition();
-	x = xyz.x();
-	y = xyz.y();
-	z = xyz.z();
+	G4ThreeVector  lxyz    = aStep->GetPreStepPoint()->GetTouchableHandle()->GetHistory()->GetTopTransform().TransformPoint(xyz); ///< Local Coordinates of interaction
+
 	double point[4] = {xyz.x(), xyz.y(), xyz.z(),10};
 	double fieldValue[6] = {0, 0, 0, 0, 0, 0};
 
@@ -163,7 +161,7 @@ vector<identifier>  FMT_HitProcess :: processID(vector<identifier> id, G4Step* a
 
 	int layer  = 1*yid[0].id + yid[1].id - 1 ; // modified on 7/27/2015 to match new geometry (Frederic Georges)
 	int sector = yid[2].id;
-	
+
 	G4FieldManager *fmanager = aStep->GetPostStepPoint()->GetPhysicalVolume()->GetLogicalVolume()->GetFieldManager();
 
 	// if no field manager, the field is zero
@@ -194,7 +192,7 @@ vector<identifier>  FMT_HitProcess :: processID(vector<identifier> id, G4Step* a
 	//yid[3].id = fmts.FindStrip(layer-1, sector-1, x, y, z);
 	double depe = aStep->GetTotalEnergyDeposit();
 	//cout << "resolMM " << layer << " " << x << " " << y << " " << z << " " << depe << " " << aStep->GetTrack()->GetTrackID() << endl;
-	vector<double> multi_hit = fmts.FindStrip(layer-1, sector-1, x, y, z, depe, fmtc);
+	vector<double> multi_hit = fmts.FindStrip(layer-1, sector-1, lxyz.x(), lxyz.y(), lxyz.z(), depe, fmtc);
 	
 	int n_multi_hits = multi_hit.size()/2;
 	
