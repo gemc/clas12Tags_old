@@ -13,7 +13,7 @@ For Q/A on CLAS12 simulations you can use the [CLAS12 Discourse](https://clas12.
 
 <br>
 
-### Current PRODUCTION version: **4.4.1**, compatible with **COATJAVA 6.5.6.1** and above.
+### Current PRODUCTION version: **4.4.2**, compatible with **COATJAVA 6.5.6.1** and above.
 
 This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.4.2
 
