@@ -13,17 +13,17 @@ For Q/A on CLAS12 simulations you can use the [CLAS12 Discourse](https://clas12.
 
 <br>
 
-### Current PRODUCTION version: **4.4.0**, compatible with **COATJAVA 6.5.6.1** and above.
+### Current PRODUCTION version: **4.4.1**, compatible with **COATJAVA 6.5.6.1** and above.
 
-This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.4.0
+This points GEMC_DATA_DIR (geometry location) to /group/clas12/gemc/4.4.2
 
 <hr>
 
-To load production tag 4.4.0:
+To load production tag 4.4.2:
 
 ```source /group/clas12/packages/setup.csh```
 
-```module load clas12/2.4```
+```module load clas12```
 
 
 
@@ -56,7 +56,7 @@ The Run Configurations are also detailed on this page:
 <a href="https://github.com/gemc/clas12Tags/tree/master/gcards"> gcards and experiments</a>.
 
 <br>
-Starting with clas12tags 4.4.0 the configuration files are located in the tag folder in the "config" directory.
+Starting with clas12tags 4.4.2 the configuration files are located in the tag folder in the "config" directory.
 <br>
 <hr>
 <br>
@@ -164,7 +164,7 @@ How to get and compile the clas12Tags
 -------------------------------------
 
 The clas12tags can be installed on top of an existing [jlab installation.
-For 4.4.0 it's JLAB_VERSION 2.4](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.4_install.html):
+For 4.4.2 it's JLAB_VERSION 2.4](https://www.jlab.org/12gev_phys/packages/sources/ceInstall/2.4_install.html):
 
 1. clone https://github.com/gemc/clas12Tags
 2. cd to the tag you want to use
@@ -190,11 +190,16 @@ Production:
 
 <br>
 
+- 4.4.2:
+
+	- bug fix in torus field linear interpolation routine
+	- added passive materials in the central detector region
+	- fmt routine use local coordinates
+ 
+
+<br>
 
 
-- 4.4.1:
-
-	- z tracking limit changed to 9m from 8m in the gcards :white_check_mark:
 
 To load production tag 4.4.1:
 
@@ -208,11 +213,6 @@ To load production tag 4.4.1:
 In development:
 ---------------
 
-- 4.4.2:
-
-	- bug fix in torus field linear interpolation routine
-
-<br>
 
 Numbering scheme changes: hipo4 breaks backward compatibility. So this release is "major".
 Also, from now on we go to two numbers only.
@@ -246,6 +246,17 @@ Previous Tags:
 From 4.3.2 and on the module is used for the environment.
 
 <br>
+- 4.4.1:
+
+	- z tracking limit changed to 9m from 8m in the gcards :white_check_mark:
+
+To load production tag 4.4.0:
+
+```source /group/clas12/packages/setup.csh```
+
+```module load clas12/2.4```
+
+```module switch gemc 4.4.1```
 
 
 - 4.4.0:
@@ -264,6 +275,8 @@ To load production tag 4.4.0:
 ```source /group/clas12/packages/setup.csh```
 
 ```module load clas12/2.4```
+
+```module switch gemc 4.4.0```
 
 <br>
 
@@ -288,6 +301,7 @@ To load production tag 4.3.2:
 ```source /group/clas12/packages/setup.csh```
 
 ```module load clas12/2.0```
+
 
 <br>
 
