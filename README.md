@@ -195,6 +195,8 @@ Production:
 	- bug fix in torus field linear interpolation routine
 	- added passive materials in the central detector region
 	- fmt routine use local coordinates
+	- removed some overlaps
+	- removed target 1mm xy shifts
  
 
 <br>
