@@ -105,10 +105,6 @@
 	<option name="DISPLACE_FIELDMAP"     value="clas12-newSolenoid, 0*cm, 0*cm, -3.00*cm" />
 
 	<!--  HTCC shifted upstream by 19.4 mm -->
-	<detector name="htccBigGasVolume">     <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
-	<detector name="htccEntryDishVolume">  <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
-	<detector name="htccEntryConeVolume">  <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
-	<detector name="htccEntryDishCone">    <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="htcc">                 <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 
 
