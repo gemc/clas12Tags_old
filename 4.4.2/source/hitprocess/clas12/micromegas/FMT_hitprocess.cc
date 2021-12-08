@@ -7,6 +7,7 @@
 #include "G4Field.hh"
 #include "G4CachedMagneticField.hh"
 #include "CLHEP/Vector/ThreeVector.h"
+#include "Randomize.hh"
 
 
 // CLHEP units
@@ -81,7 +82,14 @@ static fmtConstants initializeFMTConstants(int runno, string digiVariation = "de
 	}
 
 	fmtc.Lor_Angle.Initialize(runno);
-	
+
+	// get hit time distribution parameters
+	sprintf(fmtc.database,"/calibration/mvt/fmt_time:%d:%s%s", fmtc.runNo, digiVariation.c_str(), timestamp.c_str());
+	data.clear(); calib->GetCalib(data,fmtc.database);
+	fmtc.Twindow  = data[0][4]*ns;
+	fmtc.Tmean    = data[0][4]*ns;
+	fmtc.Tsigma   = data[0][5]*ns;
+	  
 	return fmtc;
 }
 
@@ -105,6 +113,7 @@ map<string, double>FMT_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 		dgtz["strip"]  = strip;
 		dgtz["Edep"]   = totEdep;
 		dgtz["ADC"]    = int(1e6*totEdep/fmtc.w_i);
+		dgtz["time"]   = fmtc.Twindow*G4UniformRand();
 
 		return dgtz;
 	}
@@ -129,6 +138,7 @@ map<string, double>FMT_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 	dgtz["strip"]  = strip;
 	dgtz["Edep"]   = tInfos.eTot;
 	dgtz["ADC"]   = (int) (tInfos.eTot*1e6/fmtc.w_i);
+	dgtz["time"]   = fmtc.Tmean+fmtc.Tsigma*G4RandGauss::shoot(0., 1.0);
 	
 	if (strip==-1) {
 		dgtz["Edep"]   = 0;
