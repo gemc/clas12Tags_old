@@ -5,6 +5,7 @@
 #include "G4FieldManager.hh"
 #include "G4Field.hh"
 #include "CLHEP/Vector/ThreeVector.h"
+#include "Randomize.hh"
 
 #include <CCDB/Calibration.h>
 #include <CCDB/Model/Assignment.h>
@@ -94,6 +95,12 @@ static bmtConstants initializeBMTConstants(int runno, string digiVariation = "de
 	
 	bmtc.Lor_Angle.Initialize(runno);
 
+	// get hit time distribution parameters
+	sprintf(bmtc.database,"/calibration/mvt/bmt_time:%d:%s%s", bmtc.runNo, digiVariation.c_str(), timestamp.c_str());
+	data.clear(); calib->GetCalib(data,bmtc.database);
+	bmtc.Twindow  = data[0][3]*ns;
+	bmtc.Tmean    = data[0][4]*ns;
+	bmtc.Tsigma   = data[0][5]*ns;
 
 	// now connecting to target geometry to get its position
 	sprintf(bmtc.database,"/geometry/target:%d:%s%s", bmtc.runNo, digiVariation.c_str(), timestamp.c_str());
@@ -123,7 +130,8 @@ map<string, double>  BMT_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 		dgtz["strip"]  = strip;
 		dgtz["Edep"]   = totEdep;
 		dgtz["ADC"]    = int(1e6*totEdep/bmtc.w_i);
-		
+		dgtz["time"]   = bmtc.Twindow*G4UniformRand();
+
 		return dgtz;
 	}
 	
@@ -147,11 +155,13 @@ map<string, double>  BMT_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 	dgtz["sector"] = sector;
 	dgtz["strip"]  = strip;
 	dgtz["Edep"]   = tInfos.eTot;
-	dgtz["ADC"]   = int(1e6*tInfos.eTot/bmtc.w_i);
-	
+	dgtz["ADC"]    = int(1e6*tInfos.eTot/bmtc.w_i);
+	dgtz["time"]   = bmtc.Tmean+bmtc.Tsigma*G4RandGauss::shoot(0., 1.0);
+
 	if (strip==-1) {
-		dgtz["Edep"]  = 0;
-		dgtz["ADC"]   = 0;
+		dgtz["Edep"]   = 0;
+		dgtz["ADC"]    = 0;
+		dgtz["time"]   = 0;
 	}
 	
 	// decide if write an hit or not
