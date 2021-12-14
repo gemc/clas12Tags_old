@@ -156,25 +156,22 @@ map<string, double> htcc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 		dgtz["TDC_order"] = 0;
 		dgtz["TDC_TDC"]   = (int) stepTime;
 
-
-
 		return dgtz;
 	}
 	
 
 	trueInfos tInfos(aHit);
-	
-	// if anything else than a photon hits the PMT
-	// the nphe is the particle id
-	// and identifiers are negative
-	// this should be changed, what if we still have a photon later?
-	// if the particle is not an opticalphoton return bank filled with negative identifiers
-	if(thisPid != 0) {
+
+	// return if the particle is not an opticalphoton
+	// notice: the optical photon PID changed from 0 to -22 with 10.7
+	if(thisPid != MHit::OPTICALPHOTONPID) {
+
 		return dgtz;
 
 		dgtz["sector"]    = -idsector;
 		dgtz["layer"]     = -idhalf;
 		dgtz["component"] = -idring;
+
 	}
 
 
@@ -195,14 +192,13 @@ map<string, double> htcc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 	
 	vector<double> Energies = aHit->GetEs();
 	
-	
 	// this needs to be optimized
 	// uaing the return value of insert is unnecessary
 	
 	for(unsigned int s=0; s<tids.size(); s++)
 	{
 		// selecting optical photons
-		if(pids[s] == 0)
+		if(pids[s] == -22)
 		{
 			// insert this step into the set of track ids (set can only have unique values).
 			pair< set<int> ::iterator, bool> newtrack = TIDS.insert(tids[s]);
@@ -419,7 +415,7 @@ map< int, vector <double> > htcc_HitProcess :: chargeTime(MHit* aHit, int hitn)
 	for(unsigned int s=0; s<tids.size(); s++)
 	{
 		// selecting optical photons
-		if(pids[s] == 0)
+		if(pids[s] == MHit::OPTICALPHOTONPID)
 		{
 			// insert this step into the set of track ids (set can only have unique values).
 			pair< set<int> ::iterator, bool> newtrack = TIDS.insert(tids[s]);
