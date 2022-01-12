@@ -420,6 +420,12 @@ int main( int argc, char **argv )
 }
 
 
+// introducing OPTICALPHOTONPID here to be semi-transparent to G4 changes
+// this pid changed from 0 to -22 with geant4 10.7
+int MHit::OPTICALPHOTONPID = -22;
+
+
+
 
 
 

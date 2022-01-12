@@ -169,10 +169,18 @@ map<string, double> htcc_HitProcess :: integrateDgt(MHit* aHit, int hitn)
 	dgtz["hitn"]   = hitn;
 	
 	
-	// if the particle is not an opticalphoton return bank filled with negative identifiers
-	if(thisPid != 0)
+	// return if the particle is not an opticalphoton
+	// notice: the optical photon PID changed from 0 to -22 with 10.7
+	if(thisPid != MHit::OPTICALPHOTONPID) {
+
 		return dgtz;
-	
+
+		dgtz["sector"]    = -idsector;
+		dgtz["layer"]     = -idhalf;
+		dgtz["component"] = -idring;
+
+	}
+
 	// Since the HTCC hit involves a PMT which detects photons with a certain quantum efficiency (QE)
 	// we want to implement QE here in a flexible way:
 	
