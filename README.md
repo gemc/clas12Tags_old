@@ -194,20 +194,23 @@ Production:
 
 	- bug fix in torus field linear interpolation routine
 	- added passive materials in the central detector region
+	- added HTCC passive materials: window and entry cone
 	- fmt routine use local coordinates
 	- removed some overlaps
 	- removed target 1mm xy shifts
- 
+	- fix 4.4.2 and 5.0 conform to OPTICALPHOTONPID. notice: this does depend on the geant4 version.
+	- fix to airgap overlap
+
 
 <br>
 
 
 
-To load production tag 4.4.1:
+To load production tag 4.4.2:
 
 ```source /group/clas12/packages/setup.csh```
 
-```module load clas12/2.4.1```
+```module load clas12```
 
 <br>
 
@@ -221,9 +224,12 @@ Also, from now on we go to two numbers only.
 
 - 5.0:
 
-   	- Hipo 4 output  :soon:
-   	- Added star "\*" to INTEGRATEDRAW option: -INTEGRATEDRAW="\*" will activate the true info for all sensitive detectors
+	- Hipo 4 output
+	- Added star "\*" to INTEGRATEDRAW option: -INTEGRATEDRAW="\*" will activate the true info for all sensitive detectors
 	- pcal and ec hitprocesses merged into one: ecal
+	- cnd direct and indirect hits are now two separate hit entries and use the standard hipo identifiers sector layer component
+
+
 	
 <br>
 
@@ -232,7 +238,6 @@ Also, from now on we go to two numbers only.
 - Other TODOs:
 
 	- Rich sector 4 digitization :soon:
-	- BMT digitization with global coordinates instead of locals :soon:
 	- Time propagation in DC digitization :soon:
 
 <br>
@@ -245,14 +250,11 @@ Previous Tags:
 
 
 
-From 4.3.2 and on the module is used for the environment.
-
-<br>
 - 4.4.1:
 
 	- z tracking limit changed to 9m from 8m in the gcards :white_check_mark:
 
-To load production tag 4.4.0:
+To load production tag 4.4.1:
 
 ```source /group/clas12/packages/setup.csh```
 
@@ -260,6 +262,7 @@ To load production tag 4.4.0:
 
 ```module switch gemc 4.4.1```
 
+<br>
 
 - 4.4.0:
 
