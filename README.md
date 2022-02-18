@@ -194,7 +194,9 @@ Production:
 
 	- bug fix in torus field linear interpolation routine
 	- added passive materials in the central detector region
-	- added HTCC passive materials: window and entry cone
+	- added HTCC passive materials: windows and cones for default, fall18 and spring18 variations
+	- added HTCC variations and corresponding shifts to gcards
+	- added rich sector 4 java variation to gcards
 	- fmt routine use local coordinates
 	- removed some overlaps
 	- removed target 1mm xy shifts
