@@ -202,6 +202,9 @@ Production:
 	- removed target 1mm xy shifts
 	- fix 4.4.2 and 5.0 conform to OPTICALPHOTONPID. notice: this does depend on the geant4 version.
 	- fix to airgap overlap
+	- added band digitization 
+
+	
 
 
 <br>
@@ -230,6 +233,7 @@ Also, from now on we go to two numbers only.
 	- Added star "\*" to INTEGRATEDRAW option: -INTEGRATEDRAW="\*" will activate the true info for all sensitive detectors
 	- pcal and ec hitprocesses merged into one: ecal
 	- cnd direct and indirect hits are now two separate hit entries and use the standard hipo identifiers sector layer component
+	- BAND downstream/ upstream  hits are now two separate hit entries and use the standard hipo identifiers sector layer component
 
 
 	
