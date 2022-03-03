@@ -196,12 +196,15 @@ Production:
 	- added passive materials in the central detector region
 	- added HTCC passive materials: windows and cones for default, fall18 and spring18 variations
 	- added HTCC variations and corresponding shifts to gcards
-	- added rich sector 4 java variation geometry and entry in gcards
+	- added rich sector 4 java variation geometry and entry in gcards (passive materials only)
 	- fmt routine use local coordinates
 	- removed some overlaps
 	- removed target 1mm xy shifts
 	- fix 4.4.2 and 5.0 conform to OPTICALPHOTONPID. notice: this does depend on the geant4 version.
 	- fix to airgap overlap
+	- added band digitization 
+
+	
 
 
 <br>
@@ -230,6 +233,7 @@ Also, from now on we go to two numbers only.
 	- Added star "\*" to INTEGRATEDRAW option: -INTEGRATEDRAW="\*" will activate the true info for all sensitive detectors
 	- pcal and ec hitprocesses merged into one: ecal
 	- cnd direct and indirect hits are now two separate hit entries and use the standard hipo identifiers sector layer component
+	- BAND downstream/ upstream  hits are now two separate hit entries and use the standard hipo identifiers sector layer component
 
 
 	
