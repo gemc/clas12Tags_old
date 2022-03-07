@@ -202,7 +202,8 @@ Production:
 	- removed target 1mm xy shifts
 	- fix 4.4.2 and 5.0 conform to OPTICALPHOTONPID. notice: this does depend on the geant4 version.
 	- fix to airgap overlap
-	- added band digitization 
+	- added band geometry and digitization 
+	- bus cable width fix for BST
 
 	
 
