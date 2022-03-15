@@ -1,4 +1,8 @@
 <gcard>
+
+
+
+	
 	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
 	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="APOLLOnh3"/>
 
@@ -122,6 +126,8 @@
 	<detector name="htcc">                 <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="htccEntryWindow">      <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="htccExitWindow">       <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
+
+
 
 
 	<detector name="FMT">

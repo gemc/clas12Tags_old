@@ -1,4 +1,7 @@
 <gcard>
+	<!-- band detector upstream of the target -->
+	<detector name="experiments/clas12/band/band" factory="TEXT" variation="main"/>
+
 	<!-- target. Notice variation give the target type. Can be: lH2, lD2, ND3 -->
 	<detector name="experiments/clas12/targets/cad/"   factory="CAD"/>
 	<detector name="experiments/clas12/targets/target" factory="TEXT" variation="lD2"/>
@@ -122,7 +125,12 @@
 	<detector name="htccEntryWindow">      <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 	<detector name="htccExitWindow">       <position x="0*cm"  y="0*cm"  z="-1.94*cm"  />  </detector>
 
-
+	<!-- band moved with solenoid by 30 mm -->
+	<detector name="band">                 <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />  </detector>
+	<detector name="upstreamBeampipe">     <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />  </detector>
+	<detector name="upstreamSupportpipes"> <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />  </detector>
+	<detector name="mvt_ebox">             <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />  </detector>
+	
 	<detector name="FMT">
 		<existence exist="no" />
 	</detector>
