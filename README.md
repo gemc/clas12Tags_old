@@ -133,7 +133,7 @@ The <a href="https://hub.docker.com/repository/docker/jeffersonlab/clas12softwar
 
 Use this container with the clas12tags:
 
-```jeffersonlab/clas12tags:4.4.1```
+```jeffersonlab/clas12tags:4.4.2```
 
 <hr>
 <br>
@@ -233,8 +233,8 @@ Also, from now on we go to two numbers only.
 	- Hipo 4 output
 	- Added star "\*" to INTEGRATEDRAW option: -INTEGRATEDRAW="\*" will activate the true info for all sensitive detectors
 	- pcal and ec hitprocesses merged into one: ecal
-	- cnd direct and indirect hits are now two separate hit entries and use the standard hipo identifiers sector layer component
-	- BAND downstream/ upstream  hits are now two separate hit entries and use the standard hipo identifiers sector layer component
+	- cnd direct and indirect hits are now two separate hit entries and use the standard hipo identifiers sector layer component 
+	- BAND downstream/ upstream  hits are now two separate hit entries and use the standard hipo identifiers sector layer component :soon:
 
 
 	
@@ -242,10 +242,11 @@ Also, from now on we go to two numbers only.
 
 <br>
 		
-- Other TODOs:
+- In development:
 
-	- Rich sector 4 digitization :soon:
-	- Time propagation in DC digitization :soon:
+	- Binary Field Map Using cMag
+	- Upgrade geant4 to 10.7 or 11
+	- Remove EVIO or use EVIO 6
 
 <br>
 
