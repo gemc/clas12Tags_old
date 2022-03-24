@@ -248,6 +248,8 @@ Also, from now on we go to two numbers only.
 	- Upgrade geant4 to 10.7 or 11
 	- Remove EVIO or use EVIO 6
 	- Thresholds implementation
+	- Add config bank GECM::config
+	- Add raster bank RASTER::adc
 
 <br>
 
