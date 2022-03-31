@@ -237,19 +237,23 @@ Also, from now on we go to two numbers only.
 	- BAND downstream/ upstream  hits are now two separate hit entries and use the standard hipo identifiers sector layer component :soon:
 
 
+
 	
 <br>
 
-<br>
-		
-- In development:
-
+- 5.1:
 	- Binary Field Map Using cMag
+	- Add raster bank RASTER::adc
+
+- 5.2:
 	- Upgrade geant4 to 10.7 or 11
+		
+		
+- Future developments:
+
 	- Remove EVIO or use EVIO 6
 	- Thresholds implementation
 	- Add config bank GECM::config
-	- Add raster bank RASTER::adc
 
 <br>
 
