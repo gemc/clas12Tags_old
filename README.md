@@ -196,14 +196,19 @@ Production:
 	- added passive materials in the central detector region
 	- added HTCC passive materials: windows and cones for default, fall18 and spring18 variations
 	- added HTCC variations and corresponding shifts to gcards
+	- better airgap to fit into htcc and also no interference with target 
 	- added rich sector 4 java variation geometry and entry in gcards (passive materials only)
-	- fmt routine use local coordinates
-	- removed some overlaps
-	- removed target 1mm xy shifts
-	- fix 4.4.2 and 5.0 conform to OPTICALPHOTONPID. notice: this does depend on the geant4 version.
-	- fix to airgap overlap
-	- added band geometry and digitization 
 	- bus cable width fix for BST
+	- fmt routine use local coordinates
+	- added time signal and changed BMT step size to 100 um
+	- added geantino digitization for BMT
+	- FMT mod slim by maxime for rgm
+	- adding step limiter for chargedgeantino
+	- added RG-C configuration
+	- removed target 1mm xy shifts
+	- removing torlon ring adapted from cad target
+	- fix 4.4.2 and 5.0 conform to OPTICALPHOTONPID. notice: this does depend on the geant4 version.
+	- added band geometry and digitization 
 
 	
 
