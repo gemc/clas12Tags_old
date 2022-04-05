@@ -244,6 +244,7 @@ Also, from now on we go to two numbers only.
 - 5.1:
 	- Binary Field Map Using cMag
 	- Add raster bank RASTER::adc
+	- Add config bank GECM::config
 
 - 5.2:
 	- Upgrade geant4 to 10.7 or 11
@@ -253,7 +254,8 @@ Also, from now on we go to two numbers only.
 
 	- Remove EVIO or use EVIO 6
 	- Thresholds implementation
-	- Add config bank GECM::config
+	- Fix LTCC box volumes and overlaps
+	- Passive Material addition / fixes as needed
 
 <br>
 
