@@ -1,0 +1,7 @@
+                  dc  |              bankid  |                                        dc bank ID  | 1300   |                  Di  
+                  dc  |              sector  |                                     sector (1..6)  |    1   |                  Di  
+                  dc  |               layer  |                                     layer (1..36)  |    2   |                  Di  
+                  dc  |           component  |                              wire number (1..112)  |    3   |                  Di  
+                  dc  |           TDC_order  |                        order: value is 2 in gemc)  |    4   |                  Di  
+                  dc  |             TDC_TDC  |                                         TDC value  |    5   |                  Di  
+                  dc  |                hitn  |                                        hit number  |   99   |                  Di  
