@@ -6,6 +6,12 @@
 	<detector name="../targets/target"  factory="TEXT" variation="lH2"/>
 	<detector name="./band" factory="TEXT" variation="main"/>
 
+	<detector name="../targets/target"  factory="TEXT" variation="lH2"/>
+
+	<detector name="../upstreamBeampipe/upstreamBeampipe"         factory="TEXT" variation="main"/>
+	<detector name="../upstreamSupportpipes/upstreamSupportpipes" factory="TEXT" variation="main"/>
+
+
 	<!--  Target and central detectors are all shifted upstream by 30 mm -->
 	<detector name="target">    <position x="0.12*cm"  y="0.11*cm"  z="-3.00*cm"  /> </detector>
 	<detector name="svt">       <position x="0*cm"     y="0*cm"     z="-3.00*cm"  />	</detector>

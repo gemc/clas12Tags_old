@@ -4,7 +4,7 @@
                  fmt  |           component  |                                      strip number  |    3   |                  Di  
                  fmt  |           ADC_order  |                                          always 0  |    4   |                  Di  
                  fmt  |             ADC_ADC  |                                               ADC  |    5   |                  Di  
-                 fmt  |            ADC_time  |                                          always 0  |    6   |                  Dd  
+                 fmt  |            ADC_time  |                                              time  |    6   |                  Dd  
                  fmt  |             ADC_ped  |                                          always 0  |    7   |                  Di  
                  fmt  |                hitn  |                                        hit number  |   99   |                  Di  
                  bmt  |              bankid  |                                       bmt bank ID  |  200   |                  Di  
@@ -13,6 +13,6 @@
                  bmt  |           component  |                                      strip number  |    3   |                  Di  
                  bmt  |           ADC_order  |                                          always 0  |    4   |                  Di  
                  bmt  |             ADC_ADC  |                                               ADC  |    5   |                  Di  
-                 bmt  |            ADC_time  |                                          always 0  |    6   |                  Dd  
+                 bmt  |            ADC_time  |                                              time  |    6   |                  Dd  
                  bmt  |             ADC_ped  |                                          always 0  |    7   |                  Di  
                  bmt  |                hitn  |                                        hit number  |   99   |                  Di  
