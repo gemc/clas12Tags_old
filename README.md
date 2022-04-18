@@ -573,15 +573,13 @@ To produce:
 -----------
 
 1. create new tag dir
-2. cp experiments and gcard form old tag to keep track of new changes
-3. make links from ../gcards
-4. change environment.csh to point to the new tag
-5. copy $GEMC to source and clean up. From the tag:
+2. cp experiments and gcard form previous tag
+5. copy $GEMC to source and clean up:
 
 	- cd $GEMC
 	- scons -c
-	- cd -
-	- cp -r $GEMC source ; cd source ; rm -rf .git* ; rm .sconsign.dblite
+	- cd <NEWTAG>
+	- cp -r /opt/projects/gemc/source source ; cd source ; rm -rf .git* ; rm .sconsign.dblite
 	- find ./  -type f  -name .DS_Store  -exec rm -f {} \;
 	- rm -rf api ; cp -r /opt/projects/gemc/api . ; cd api ;  rm -rf .git*
 
