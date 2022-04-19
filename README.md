@@ -574,7 +574,7 @@ To produce:
 
 1. create new tag dir
 2. cp experiments and gcard form previous tag
-5. copy $GEMC to source and clean up:
+3. copy $GEMC to source and clean up:
 
 	- cd $GEMC
 	- scons -c
@@ -583,4 +583,4 @@ To produce:
 	- find ./  -type f  -name .DS_Store  -exec rm -f {} \;
 	- rm -rf api ; cp -r /opt/projects/gemc/api . ; cd api ;  rm -rf .git*
 
-5. change gemc.cc tag to new tag
+4. change gemc.cc tag to new tag. Check PHOTONID if necessary
