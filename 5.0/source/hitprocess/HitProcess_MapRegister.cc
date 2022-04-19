@@ -9,6 +9,7 @@
 //#include "clas12/atof_hitprocess.h"           ///< Alert TOF
 #include "clas12/alert/myatof_hitprocess.h"     ///< Alert TOF
 #include "clas12/alert/ahdc_hitprocess.h"       ///< Alert Drift Chamber
+#include "clas12/band_hitprocess.h"		         ///< BAND
 #include "clas12/svt/bst_hitprocess.h"          ///< Barrel Silicon Tracker (bst)
 #include "clas12/cnd_hitprocess.h"              ///< Central Neutron Detector
 #include "clas12/ctof_hitprocess.h"             ///< Central TOF
@@ -85,7 +86,6 @@ map<string, HitProcess_Factory> HitProcess_Map(string experiments)
 			hitMap["ltcc"]     = &ltcc_HitProcess::createHitClass;
 			hitMap["rich"]     = &rich_HitProcess::createHitClass;
 			hitMap["rtpc"]     = &rtpc_HitProcess::createHitClass;
-
 		} else if(EXP == "HPS") {
 			// Aprime
 			hitMap["SVT"]        = &SVT_HitProcess::createHitClass;
