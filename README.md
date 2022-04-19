@@ -248,20 +248,20 @@ Also, from now on we go to two numbers only.
 
 - 5.1:
 	- Binary Field Map Using cMag
-	- Add raster bank RASTER::adc
-	- Add config bank GECM::config
-	- Adding 45 (deuterium), 46 (tritium), 47 (alpha), 49 (helium3) 
+	- Add raster bank RASTER::adc :soon:
+	- Add config bank GECM::config :soon:
+	- Adding 45 (deuterium), 46 (tritium), 47 (alpha), 49 (helium3) :soon:
 
 - 5.2:
-	- Upgrade geant4 to 10.7 or 11
+	- Upgrade geant4 to 10.7 or 11 :soon:
 		
 		
 - Future developments:
 
-	- Remove EVIO or use EVIO 6
-	- Thresholds implementation
-	- Fix LTCC box volumes and overlaps
-	- Passive Material addition / fixes as needed
+	- Remove EVIO or use EVIO 6 :soon:
+	- Thresholds implementation :soon:
+	- Fix LTCC box volumes and overlaps :soon:
+	- Passive Material addition / fixes as needed :soon:
 
 <br>
 
