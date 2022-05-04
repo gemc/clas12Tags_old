@@ -239,7 +239,7 @@ Also, from now on we go to two numbers only.
 	- Added star "\*" to INTEGRATEDRAW option: -INTEGRATEDRAW="\*" will activate the true info for all sensitive detectors
 	- pcal and ec hitprocesses merged into one: ecal
 	- cnd direct and indirect hits are now two separate hit entries and use the standard hipo identifiers sector layer component 
-	- BAND downstream/ upstream  hits are now two separate hit entries and use the standard hipo identifiers sector layer component :soon:
+	- BAND downstream/ upstream  hits are now two separate hit entries and use the standard hipo identifiers sector layer component
 
 
 
