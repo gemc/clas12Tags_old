@@ -250,7 +250,7 @@ Also, from now on we go to two numbers only.
 - 5.1:
 	- Binary Field Map Using cMag
 	- Add config bank GECM::config 
-	- Adding 45 (deuteron), 46 (tritium), 47 (alpha), 49 (helium3)
+	- Adding 45 (deuteron), 46 (triton), 47 (alpha), 49 (helium3)
 	- Add raster bank RASTER::adc :soon:
 
 <br><br>
