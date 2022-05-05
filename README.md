@@ -249,9 +249,9 @@ Also, from now on we go to two numbers only.
 
 - 5.1:
 	- Binary Field Map Using cMag
-	- Add config bank GECM::config 
-	- Adding 45 (deuteron, pdg=1000010020), 46 (triton, pdg=1000010030), 47 (alpha, pdg=1000020040), 49 (He3, pdg=1000020030)
-	- Add raster bank RASTER::adc :soon:
+	- Added config bank GECM::config 
+	- Added 45 (deuteron, pdg=1000010020), 46 (triton, pdg=1000010030), 47 (alpha, pdg=1000020040), 49 (He3, pdg=1000020030)
+	- Added raster bank RASTER::adc :soon:
 
 <br><br>
 
