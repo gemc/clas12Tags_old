@@ -12,8 +12,17 @@ using namespace CLHEP;
 // hipo4
 #include "hipo4/writer.h"
 
-map<string, double> hipo_output::fieldScales = {};
+// ccdb
+#include <CCDB/Calibration.h>
+#include <CCDB/Model/Assignment.h>
+#include <CCDB/CalibrationGenerator.h>
+using namespace ccdb;
 
+
+map<string, double> hipo_output::fieldScales = {};
+int hipo_output::rasterInitialized = -99;
+double hipo_output::rasterP0[2] = {0, 0};
+double hipo_output::rasterP1[2] = {0, 0};
 
 // record the simulation conditions
 // the format is a string for each variable
@@ -63,7 +72,9 @@ void hipo_output :: recordSimConditions(outputContainer* output, map<string, str
 	// file need to be opened after user configuration is added
 	output->hipoWriter->addUserConfig("GEMC::config",  bigData);
 	output->initializeHipo(true);
-	
+
+
+
 }
 
 // returns detectorID from map, given hitType
@@ -79,12 +90,12 @@ int hipo_output :: getDetectorID(string hitType) {
 
 // returns hipo name from true info var name
 string hipo_output :: getHipoVariableName(string trueInfoVar) {
+	
 	if(trueInfoNamesMap.find(trueInfoVar) != trueInfoNamesMap.end() ) {
 		return trueInfoNamesMap[trueInfoVar];
 	} else {
 		return trueInfoVar;
 	}
-	
 }
 
 
@@ -144,7 +155,42 @@ void hipo_output :: writeHeader(outputContainer* output, map<string, double> dat
 	}
 	
 	outEvent->addStructure(runConfigBank);
-	
+
+
+	// RASTER constant initialization
+	if ( rasterInitialized == -99 ) {
+
+	// loading raster p0 and p1 from CCDB
+	string digiVariation = output->gemcOpt.optMap["DIGITIZATION_VARIATION"].args;
+	int runno = output->gemcOpt.optMap["RUNNO"].arg;
+	string database =  "/calibration/raster/adc_to_position";
+
+	string connection = "mysql://clas12reader@clasdb.jlab.org/clas12";
+
+	if (getenv("CCDB_CONNECTION") != nullptr) {
+		connection = (string) getenv("CCDB_CONNECTION");
+	}
+
+	vector<vector<double> > dbdata;
+
+	unique_ptr<Calibration> calib(CalibrationGenerator::CreateCalibration(connection));
+	database = database + ":" + to_string(runno) + ":" + digiVariation;
+	cout << " Connecting to " << connection << database << " to retrive raster parameters" << endl;
+
+	dbdata.clear();
+	calib->GetCalib(dbdata, database);
+
+	if ( dbdata.size() == 2 ) {
+		for (unsigned row = 0; row < dbdata.size(); row++) {
+			rasterP0[row] = dbdata[row][3];
+			rasterP1[row] = dbdata[row][4];
+		}
+
+		cout << " Raster Parameters: p0(x,y) = " << rasterP0[0] << ", " << rasterP0[1] << "), p1(x, y) = " << rasterP1[0] << ", " << rasterP1[1] << ")" << endl;
+	}
+		rasterInitialized = 1;
+	}
+
 }
 
 
@@ -350,6 +396,42 @@ void hipo_output :: writeGenerated(outputContainer* output, vector<generatedPart
 	outEvent->addStructure(lundParticleBank);
 	
 	
+	
+	// raster:
+	// sector=0
+	// layer=0
+	// order=0
+	// ADC=0
+	// time=0
+	//
+	// given vx, vy of the first particle
+	// component = 1=vx 2=vy
+	// vx = p0(0) + p1(0)*pedestal
+	// vy = p0(1) + p1(1)*pedestal
+	// ped = (vx - p0) / p1
+	// p0, p1 from  /calibration/raster/adc_to_position
+	
+	
+	short components[2] = {1, 2};
+	short peds[2];
+	
+	peds[0] = (short) ((vx[0]/cm - rasterP0[0] ) / rasterP1[0]);
+	peds[1] = (short) ((vy[0]/cm - rasterP0[1] ) / rasterP1[1]);
+
+	hipo::bank rasterBank(output->hipoSchema->rasterADCSchema, 2);
+	
+	// zero var infos
+	for(int j=0; j<2; j++) {
+		rasterBank.putByte("sector",     j, 0);
+		rasterBank.putByte("layer",      j, 0);
+		rasterBank.putShort("component", j, components[j]);
+		rasterBank.putByte("order",      j, 0);
+		rasterBank.putInt("ADC",         j, 0);
+		rasterBank.putFloat("time",      j, 0);
+		rasterBank.putShort("ped",       j, peds[j]);
+	}
+	outEvent->addStructure(rasterBank);
+
 }
 
 void hipo_output :: writeAncestors (outputContainer* output, vector<ancestorInfo> ainfo, gBank bank)

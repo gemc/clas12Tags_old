@@ -24,6 +24,9 @@ class hipo_output : public outputFactory
 {
 private:
 	static map<string, double> fieldScales;
+	static int rasterInitialized;
+	static double rasterP0[2];
+	static double rasterP1[2];
 
 public:
 	~hipo_output(){
@@ -153,6 +156,9 @@ public:
 
 	// returns hipo name from true info var name
 	string getHipoVariableName(string trueInfoVar) ;
+	
+	
+	
 
 };
 
