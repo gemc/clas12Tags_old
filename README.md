@@ -255,11 +255,11 @@ Also, from now on we go to two numbers only.
 		- given vx, vy of the first particle: 
 		- component = 1=vx 2=vy
 		- ped = (vx - p0) / p1, where p0, p1 from  /calibration/raster/adc_to_position
-	- Added raster option:  
-	  RASTER_VERTEX: Generate the x, y generated partice vertexes randomly in an ellipse defined by the x, y radii, around their values.
+	- Added raster option RASTER_VERTEX:
+	  Randomizes the x, y generated partice vertexes in an ellipse defined by the x, y radii, around their values.
           If the third argument "reset" is given, the vertexes are centered at zero
           
-	   - example 1: -RASTER_VERTEX="2*cm, 3*cm"
+           - example 1: -RASTER_VERTEX="2*cm, 3*cm"
            - example 2: -RASTER_VERTEX="2*cm, 3*cm, reset" 
  
 
