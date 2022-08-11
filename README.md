@@ -107,6 +107,37 @@ To use an empty target instead, use the SWITCH_MATERIALTO option.
 <br>
 
 
+
+
+Event Vertex
+------------
+
+While the gcards takes care of the target volumes positions (for example, in rga_spring2019 it is moved upstream by 3cm),
+it is up to the generators and the LUND files to place the event in the correct location.
+
+The surveyed target positions are listed below:<br>
+
+
+ - rga_spring2018</b>: -1.94cm
+ - rga_fall2018</b>:  -3.0cm
+ - rgk_fall2018_FTOn</b>:  -3.0cm
+ - rgk_fall2018_FTOff</b>:  -3.0cm
+ - rgb_spring2019</b>: -3.0cm
+ - rga_spring2019</b>: -3.0cm
+ - rgb_fall2019</b>:   -3.0cm
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
 Removing a detector or a volume
 -------------------------------
 
