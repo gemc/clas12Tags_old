@@ -115,7 +115,8 @@ Event Vertex
 While the gcards takes care of the target volumes positions (for example, in rga_spring2019 it is moved upstream by 3cm),
 it is up to the generators and the LUND files to place the event in the correct location.
 
-The surveyed target positions are listed below:<br>
+The <a href="https://github.com/gemc/clas12Tags/tree/master/5.1/config"> surveyed target positions</a>.
+  are listed below:<br>
 
 
  - rga_spring2018</b>: -1.94cm
