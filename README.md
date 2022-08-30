@@ -257,8 +257,7 @@ To load production tag 4.4.2:
 <br>
 
 
-In development:
----------------
+<br><br>
 
 
 Numbering scheme changes: hipo4 breaks backward compatibility. So this release is "major".
@@ -277,6 +276,8 @@ Also, from now on we go to two numbers only.
 	
 <br><br>
 
+In development:
+---------------
 
 - 5.1:
 	- Binary Field Map Using cMag
@@ -292,7 +293,11 @@ Also, from now on we go to two numbers only.
           
            - example 1: -RASTER_VERTEX="2*cm, 3*cm"
            - example 2: -RASTER_VERTEX="2*cm, 3*cm, reset" 
- 
+ 	- Removed some problematic LTCC volumes from cad imports (side frame and some nose volumes). This will be revised and added later.
+ 	- Fixed PRINT_EVENT calling g4random 
+ 	- Reverting to geant4-standard RanecuEngine - this can also show more accurate seeds status
+ 	- Added nan checks for LUND files
+
 
 <br><br>
 
