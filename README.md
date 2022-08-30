@@ -297,12 +297,13 @@ In development:
  	- Fixed PRINT_EVENT calling g4random 
  	- Reverting to geant4-standard RanecuEngine - this can also show more accurate seeds status
  	- Added nan checks for LUND files
+	- Upgrade geant4 to 10.7.p03
 
 
 <br><br>
 
 - 5.2:
-	- Upgrade geant4 to 10.7 or 11 :soon:
+	- Upgrade geant4 to 11.0 :soon:
 		
 <br><br>
 		
