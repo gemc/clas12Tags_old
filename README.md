@@ -292,18 +292,36 @@ In development:
           If the third argument "reset" is given, the vertexes are centered at zero
           
            - example 1: -RASTER_VERTEX="2*cm, 3*cm"
+             
+             This randomizes the vertexes around the original LUND values.
+           
            - example 2: -RASTER_VERTEX="2*cm, 3*cm, reset" 
+
+             This randomizes the vertexes around zero.
+
  	- Removed some problematic LTCC volumes from cad imports (side frame and some nose volumes). This will be revised and added later.
  	- Fixed PRINT_EVENT calling g4random 
  	- Reverting to geant4-standard RanecuEngine - this can also show more accurate seeds status
- 	- Added nan checks for LUND files
-	- Upgrade geant4 to 10.7.p03
+ 	- Added nan checks for LUND files numbers
+ 	- Added nan checks for values to field getters
+	- Added raster option BEAM_SPOT:
+	  Randomizes the x, y generated partice vertexes in an ellipse defined by the x, y radii and sigmas, using a gaussian, around their values.
+	  An additional parameters defines the eliipse counterclockwise rotation along the z-axis.
+	  If the sixth and final argument "reset" is given, the vertexes are centered at zero.
+
+           - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.3*cm, 22*deg"
+             
+             This randomizes the vertexes around the original LUND values, using a gaussian with those centers and sigmas, rotated 22 degrees around z.
+
+           - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.3*cm, 22*deg, reset"
+             
+             This randomizes the vertexes around zero, using a gaussian with those centers and sigmas, rotated 22 degrees around z.
 
 
 <br><br>
 
 - 5.2:
-	- Upgrade geant4 to 11.0 :soon:
+	- Upgrade geant4 to 10.7.p03 :soon:
 		
 <br><br>
 		
