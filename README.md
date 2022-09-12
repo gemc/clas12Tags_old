@@ -300,8 +300,9 @@ In development:
              This randomizes the vertexes around zero.
 
  	- Removed some problematic LTCC volumes from cad imports (side frame and some nose volumes). This will be revised and added later.
- 	- Fixed PRINT_EVENT calling g4random 
- 	- Reverting to geant4-standard RanecuEngine - this can also show more accurate seeds status
+ 	- Fixed PRINT_EVENT calling g4random.
+ 	- Using new (geant4-standard) MixMaxRng - this also show more accurate seeds status.
+ 	- New EVENT_VERBOSITY flag for dedicated event verbosity
  	- Added nan checks for LUND files numbers
  	- Added nan checks for values to field getters
 	- Added raster option BEAM_SPOT:

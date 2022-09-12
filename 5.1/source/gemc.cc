@@ -28,7 +28,7 @@
 /// \author \n &copy; Maurizio Ungaro
 /// \author e-mail: ungaro@jlab.org\n\n\n
 
-const char *GEMC_VERSION = "gemc 5.1";
+const char *GEMC_VERSION = "gemc 5.1" ;
 
 // G4 headers
 #include "G4RunManager.hh"
@@ -128,11 +128,13 @@ int main( int argc, char **argv )
 	
 	
 	// random seed initialization
-	CLHEP::HepRandom::setTheEngine(new CLHEP::MTwistEngine);
+	// notice MTwistEngine cannot print 2 seeds, it only print the whole engine status which is huge
+//	G4Random::setTheEngine(new CLHEP::MTwistEngine);
+	G4Random::setTheEngine(new CLHEP::MixMaxRng);
+
 	G4int seed;
 	
-	if(gemcOpt.optMap["RANDOM"].args=="TIME")
-	{
+	if(gemcOpt.optMap["RANDOM"].args=="TIME") {
 		gemc_splash.message(" Initializing CLHEP Random Engine from local time " \
 							+ stringify((double) time(nullptr)) \
 							+ ", cpu clock "        \
@@ -140,9 +142,7 @@ int main( int argc, char **argv )
 							+ " and process id "    \
 							+ stringify(getpid()) + ".");
 		seed = (G4int) ( (double) time(nullptr)- (double) clock()-getpid() );
-	}
-	else
-	{
+	} else {
 		seed = atoi(gemcOpt.optMap["RANDOM"].args.c_str());
 		gemc_splash.message(" Initializing CLHEP Random Engine from user defined seed.");
 	}
@@ -295,6 +295,7 @@ int main( int argc, char **argv )
 
 		outputFactory *processOutputFactory  = getOutputFactory(&outputFactoryMap, outContainer.outType);
 		processOutputFactory->recordSimConditions(&outContainer, sim_condition);
+
 		// then deleting process output pointer, not needed anymore
 		delete processOutputFactory;
 	}
@@ -416,7 +417,7 @@ int main( int argc, char **argv )
 
 // introducing OPTICALPHOTONPID here to be semi-transparent to G4 changes
 // this pid changed from 0 to -22 with geant4 10.7
-int MHit::OPTICALPHOTONPID = 0;
+int MHit::OPTICALPHOTONPID = -22;
 
 
 
