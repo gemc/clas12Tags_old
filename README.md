@@ -287,10 +287,19 @@ In development:
 		- given vx, vy of the first particle: 
 		- component = 1=vx 2=vy
 		- ped = (vx - p0) / p1, where p0, p1 from  /calibration/raster/adc_to_position
+	- Removed some problematic LTCC volumes from cad imports (side frame and some nose volumes). This will be revised and added later
+	- Fixed PRINT_EVENT calling g4random
+	- Using new (geant4-standard) MixMaxRng - this also show more accurate seeds status
+	- New EVENT_VERBOSITY flag for dedicated event verbosity
+	- Added nan checks for LUND files numbers
+	- Added nan checks for values to field getters
+	- Raster w/o beam spot :soon:
+
+- RASTER_VERTEX:
 	- Added raster option RASTER_VERTEX:
 	  Randomizes the x, y generated partice vertexes in an ellipse defined by the x, y radii, around their values.
           If the third argument "reset" is given, the vertexes are centered at zero
-          
+```
            - example 1: -RASTER_VERTEX="2*cm, 3*cm"
              
              This randomizes the vertexes around the original LUND values.
@@ -298,25 +307,24 @@ In development:
            - example 2: -RASTER_VERTEX="2*cm, 3*cm, reset" 
 
              This randomizes the vertexes around zero.
-
- 	- Removed some problematic LTCC volumes from cad imports (side frame and some nose volumes). This will be revised and added later.
- 	- Fixed PRINT_EVENT calling g4random.
- 	- Using new (geant4-standard) MixMaxRng - this also show more accurate seeds status.
- 	- New EVENT_VERBOSITY flag for dedicated event verbosity
- 	- Added nan checks for LUND files numbers
- 	- Added nan checks for values to field getters
+```
+- BEAM_SPOT:
 	- Added raster option BEAM_SPOT:
 	  Randomizes the x, y generated partice vertexes in an ellipse defined by the x, y radii and sigmas, using a gaussian, around their values.
 	  An additional parameters defines the eliipse counterclockwise rotation along the z-axis.
 	  If the sixth and final argument "reset" is given, the vertexes are centered at zero.
 
+```
            - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.3*cm, 22*deg"
              
-             This randomizes the vertexes around the original LUND values, using a gaussian with those centers and sigmas, rotated 22 degrees around z.
+             This randomizes the vertexes around the original LUND values. 
+	     A gaussian is used with those centers and sigmas, rotated 22 degrees around z.
 
            - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.3*cm, 22*deg, reset"
              
-             This randomizes the vertexes around zero, using a gaussian with those centers and sigmas, rotated 22 degrees around z.
+             This randomizes the vertexes around zero.
+	     A gaussian ise used with those centers and sigmas, rotated 22 degrees around z.
+```
 
 
 <br><br>
