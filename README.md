@@ -294,6 +294,9 @@ In development:
 	- Added nan checks for LUND files numbers
 	- Added nan checks for values to field getters
 	- Raster w/o beam spot :soon:
+	- Thresholds for CND using values, sigmas from CCDB /calibration/cnd/Thresholds
+	- Thresholds for CTOF, FTOF using values from CCDB /calibration/c[f]tof/threshold
+	- Efficiency for CTOF, FTOF using values from CCDB /calibration/c[f]tof/efficiency
 
 - RASTER_VERTEX:
 	- Added raster option RASTER_VERTEX:
