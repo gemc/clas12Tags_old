@@ -65,7 +65,6 @@ vector<string> init_dmesg(goptions gemcOpt)
 	commands.push_back("/vis/verbose 0");
  	commands.push_back("/vis/viewer/flush");
 	commands.push_back("/process/setVerbose 0 all");
-	commands.push_back("/run/printProgress 1");
 
 	
     // Tell GEANT4 to check for overlaps. This method has changed in GEANT 4.10.0 to check overlap of each
