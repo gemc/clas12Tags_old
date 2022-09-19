@@ -313,21 +313,23 @@ In development:
              This randomizes the vertexes around zero.
 ```
 - BEAM_SPOT:
+
 	- Added raster option BEAM_SPOT:
-	  Randomizes the x, y generated partice vertexes in an ellipse defined by the x, y radii and sigmas, using a gaussian, around their values.
+	  Randomizes the x, y generated partice vertexes in an ellipse defined by the x, y radii and sigmas.
+	  By default the randomization is relative to the LUND vertex values.
 	  An additional parameters defines the eliipse counterclockwise rotation along the z-axis.
-	  If the sixth and final argument "reset" is given, the vertexes are centered at zero.
+	  If the sixth and final argument "reset" is given, the vertexes are relative to (VX, VY) = (0, 0).
 
 ```
-           - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.3*cm, 22*deg"
+           - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.1*cm, 22*deg"
              
-             This randomizes the vertexes around the original LUND values. 
-	     A gaussian is used with those centers and sigmas, rotated 22 degrees around z.
+             This randomizes the vertexes around the original LUND values, but shifted by (VX, VY) = (2, 3)cm 
+	     A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
 
-           - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.3*cm, 22*deg, reset"
+           - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.1*cm, 22*deg, reset"
              
-             This randomizes the vertexes around zero.
-	     A gaussian ise used with those centers and sigmas, rotated 22 degrees around z.
+             This randomizes the vertexes around (VX, VY) = (0, 0), but shifted by (VX, VY) = (2, 3)cm
+	     A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
 ```
 
 
