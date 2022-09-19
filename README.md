@@ -298,6 +298,7 @@ In development:
 	- Thresholds for CND using values, sigmas from CCDB /calibration/cnd/Thresholds
 	- Thresholds for CTOF, FTOF using values from CCDB /calibration/c[f]tof/threshold
 	- Efficiency for CTOF, FTOF using values from CCDB /calibration/c[f]tof/efficiency
+	- Added gcards in 5.1/config with added suffix _txtField to use the text fields instead of the binary field maps.
 
 - RASTER_VERTEX:
 	- Added raster option RASTER_VERTEX:
