@@ -325,12 +325,12 @@ In development:
            - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.1*cm, 22*deg"
              
              This randomizes the vertexes around the original LUND values, but shifted by (VX, VY) = (2, 3)cm 
-	           A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
+             A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
 
            - example 2: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.1*cm, 22*deg, reset"
              
              This randomizes the vertexes around (VX, VY) = (2, 3)cm
-				 A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
+             A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
 ```
 
 - RANDOMIZE_LUND_VZ:
@@ -343,7 +343,8 @@ In development:
 ```
            - example 1:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm" ";
              
-             This randomizes the z vertex by plus-minus 5cm around the original LUND values and shift it by -3cm
+             This randomizes the z vertex by plus-minus 5cm around the original LUND values,
+	     and shift it by -3cm
 
            - example 2:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm, reset ";
              
