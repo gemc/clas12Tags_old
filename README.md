@@ -341,14 +341,14 @@ In development:
 	  If the third argument "reset" is given, the vertexes are relative to VZ=0.
 
 ```
-           - example 1:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm" ";
+           - example 1:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm ";
              
-             This randomizes the z vertex by plus-minus 5cm around the original LUND values,
+             This randomizes the z vertex by plus-minus 2.5cm around the original LUND values,
 	     and shift it by -3cm
 
            - example 2:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm, reset ";
              
-             This randomizes the z vertex by plus-minus 5cm around VZ = -3cm
+             This randomizes the z vertex by plus-minus 2.5cm around VZ = -3cm
 ```
 
 
