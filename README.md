@@ -294,11 +294,12 @@ In development:
 	- Added nan checks for LUND files numbers
 	- Added nan checks for values to field getters
 	- Added microwell digitization 
-	- Raster w/o beam spot :soon:
 	- Thresholds for CND using values, sigmas from CCDB /calibration/cnd/Thresholds
 	- Thresholds for CTOF, FTOF using values from CCDB /calibration/c[f]tof/threshold
 	- Efficiency for CTOF, FTOF using values from CCDB /calibration/c[f]tof/efficiency
-	- Added gcards in 5.1/config with added suffix _txtField to use the text fields instead of the binary field maps.
+	- Added gcards in 5.1/config with added suffix _txtField to use the text fields instead of the binary field maps
+	- Removed evio support for clas12tags. gemc main still supports evio 
+
 
 - RASTER_VERTEX:
 	- Added raster option RASTER_VERTEX:
@@ -356,7 +357,12 @@ In development:
 
 - 5.2:
 	- Upgrade geant4 to 10.7.p03 :soon:
-		
+
+
+- 5.3:
+	- Raster w/o beam spot :soon:
+
+
 <br><br>
 		
 - Future developments:
