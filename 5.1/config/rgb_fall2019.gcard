@@ -33,7 +33,7 @@
 	<detector name="experiments/clas12/beamline/beamline"     factory="TEXT" variation="FTOn"/>
 
 	<!-- forward carriage -->
-	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="default"/>
+	<detector name="experiments/clas12/fc/forwardCarriage" factory="TEXT" variation="TorusSymmetric"/>
 
 	<detector name="experiments/clas12/dc/dc"              factory="TEXT" variation="default"/>
 	<detector name="experiments/clas12/ftof/ftof"          factory="TEXT" variation="rga_fall2018"/>
@@ -46,8 +46,17 @@
 	<detector name="experiments/clas12/rich_sector4/javacad/" factory="CAD"/>
 
 
-	<!-- CLAS12 Binary Fields from David Heddle cMag  -->
-	<option name="HALL_FIELD"  value="c12BinaryTorusSymmSolenoid2018"/>
+	<!-- you can scale the fields here. Remember torus -1 means e- INBENDING  -->
+	<option name="SCALE_FIELD" value="TorusSymmetric, 1"/>
+	<option name="SCALE_FIELD" value="clas12-newSolenoid, -1"/>
+
+	<!-- hall field  -->
+	<option name="HALL_FIELD"  value="clas12-newSolenoid"/>
+
+	<!-- fields, precise mode -->
+	<option name="FIELD_PROPERTIES" value="TorusSymmetric,     2*mm, G4ClassicalRK4, linear"/>
+	<option name="FIELD_PROPERTIES" value="clas12-newSolenoid, 1*mm, G4ClassicalRK4, linear"/>
+
 
 	<!-- beam conditions -->
 	<option name="BEAM_P"   value="e-, 10.6*GeV, 0.0*deg, 0*deg"/>
