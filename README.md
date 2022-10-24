@@ -336,7 +336,7 @@ In development:
 
 - RANDOMIZE_LUND_VZ:
 
-	- Added raster option RANDOMIZE_LUND_VZ:
+	- Added option RANDOMIZE_LUND_VZ:
 	  Randomizes the z vertexes using, in order: Z shift, DZ sigma.
 	  By default the randomization is relative to the LUND vertex values.
 	  If the third argument "reset" is given, the vertexes are relative to VZ=0.
