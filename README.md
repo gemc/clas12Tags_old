@@ -316,22 +316,21 @@ In development:
 ```
 - BEAM_SPOT:
 
-	- Added raster option BEAM_SPOT:
-	  Randomizes the x, y generated partice vertexes in an ellipse defined by the x, y radii and sigmas.
-	  By default the randomization is relative to the LUND vertex values.
-	  An additional parameters defines the eliipse counterclockwise rotation along the z-axis.
-	  If the sixth and final argument "reset" is given, the vertexes are relative to (VX, VY) = (0, 0).
+	- Randomizes the x, y generated particle vertex shifts in an ellipse defined by the x, y radii and sigmas. An additional parameters defines the ellipse counterclockwise rotation along the z-axis.
+
+By default the shift is relative to the original LUND vertex values.
+If a sixth argument “reset” is given, the vertexes are relative to (VX, VY) = (0, 0)
 
 ```
-           - example 1: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.1*cm, 22*deg"
+          - example 1 (preserves LUND original vertices): -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.1*cm, 22*deg"
              
-             This randomizes the vertexes around the original LUND values, but shifted by (VX, VY) = (2, 3)cm 
-             A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
+             This randomizes the vertexes around the original LUND values, but shifted by (VX, VY) = (2, 3) cm.
+             A gaussian with sigmas (SX, SY) = (0.2, 0.1) cm are used, and the ellipse is rotated 22 degrees around z.
+
 
            - example 2: -BEAM_SPOT="2*cm, 3*cm, 0.2*cm, 0.1*cm, 22*deg, reset"
              
-             This randomizes the vertexes around (VX, VY) = (2, 3)cm
-             A gaussian with sigmas (SX, SY) = (0.2, 0.1)cm are used, rotated 22 degrees around z.
+             Same as above except the randomization is directly applied around (VX, VY) = (2, 3)cm.
 ```
 
 - RANDOMIZE_LUND_VZ:
@@ -342,14 +341,13 @@ In development:
 	  If the third argument "reset" is given, the vertexes are relative to VZ=0.
 
 ```
-           - example 1:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm ";
+           - example 1 (preserves LUND original vertices):  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm"
              
-             This randomizes the z vertex by plus-minus 2.5cm around the original LUND values,
-	     and shift it by -3cm
+             Randomizes the z vertex by plus-minus 2.5cm around the original LUND values, and applies a shift it of -3cm
 
-           - example 2:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm, reset ";
+           - example 2:  -RANDOMIZE_LUND_VZ="-3*cm, 2.5*cm, reset "
              
-             This randomizes the z vertex by plus-minus 2.5cm around VZ = -3cm
+             Randomizes the z vertex by plus-minus 2.5cm around VZ = -3cm
 ```
 
 
