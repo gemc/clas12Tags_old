@@ -293,7 +293,8 @@ In development:
 	- New EVENT_VERBOSITY flag for dedicated event verbosity
 	- Added nan checks for LUND files numbers
 	- Added nan checks for values to field getters
-	- Added microwell digitization 
+	- Added microwell digitization
+	- Added lH2 target variation
 	- Thresholds for CND using values, sigmas from CCDB /calibration/cnd/Thresholds
 	- Thresholds for CTOF, FTOF using values from CCDB /calibration/c[f]tof/threshold
 	- Efficiency for CTOF, FTOF using values from CCDB /calibration/c[f]tof/efficiency
