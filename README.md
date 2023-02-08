@@ -300,6 +300,7 @@ In development:
 	- Efficiency for CTOF, FTOF using values from CCDB /calibration/c[f]tof/efficiency
 	- Added gcards in 5.1/config with added suffix _txtField to use the text fields instead of the binary field maps
 	- Removed evio support for clas12tags. gemc main still supports evio 
+	- added flux bank to hipo output
 
 
 - RASTER_VERTEX:
